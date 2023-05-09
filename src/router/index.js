@@ -3,6 +3,8 @@ import ArtGallery from '/src/views/artGallery/index.vue'
 import Adventure from '/src/views/adventure/index.vue'
 import Friends from '/src/views/friends/index.vue'
 import Breed from '/src/views/breed/index.vue'
+import Foxhound from '/src/views/foxhound/index.vue'
+import Beagle from '/src/views/beagle/index.vue'
 
 const routes = [
     {
@@ -29,6 +31,16 @@ const routes = [
         name:'Breed',
         component:Breed,
     },
+    {
+        path:'/foxhound',
+        name:'Foxhound',
+        component:Foxhound,
+    },
+    {
+        path:'/beagle',
+        name:'Beagle',
+        component:Beagle,
+    }
 ]
 const router = createRouter({
     history:createWebHistory(),
