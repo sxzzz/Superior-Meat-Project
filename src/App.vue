@@ -2,19 +2,26 @@
 <template>
   <div>
     <Header></Header>
-    <h1>testing</h1>
+    <div id="wrapper" class="">
+      <Topnav class=""></Topnav>
+      <div class="">
+        <router-view></router-view>
+      </div>
+
+    </div>
   </div>
 
-  <router-view></router-view>
 
 </template>
 
 <script>
 
 import Header from './components/Header/index.vue';
+import Topnav from "./components/Topnav/index.vue";
 export default {
   components:{
-    Header
+    Header,
+    Topnav
   },
   data(){
     return {
