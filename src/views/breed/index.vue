@@ -17,7 +17,7 @@
             <p class="mt-4 text-base leading-7 text-gray-600">The English Foxhound was originally a hunting dog breed. they were made to hunt fox's.</p>
           </li>
           <li>
-            <router-link to="/breed/beagle"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="./images/Beagle.jpg" alt=""></router-link>
+            <router-link to="/breed/beagle"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="./images/Beagle.jpeg" alt=""></router-link>
             <h3 class="mt-6 text-lg font-semibold leading-8 text-gray-900">Beagles</h3>
             <p class="mt-4 text-base leading-7 text-gray-600">The English Foxhound was originally a hunting dog breed. they were made to hunt fox's.</p>
           </li>
