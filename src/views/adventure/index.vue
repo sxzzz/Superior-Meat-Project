@@ -7,7 +7,7 @@
 
       <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
         <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
-          <img src="./images/01.jpeg" alt="Two models wearing women's black cotton crewneck tee and off-white cotton crewneck tee." class="object-cover object-center group-hover:opacity-75">
+          <img src="./images/tas01.png" alt="" class="object-cover object-center group-hover:opacity-75">
           <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50"></div>
           <div class="flex items-end p-6">
             <div>
@@ -22,7 +22,8 @@
           </div>
         </div>
         <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
-          <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-category-01.jpg" alt="Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters." class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full">
+          <img src="./images/bamboo02.png" alt=""
+               class="object-left group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full">
           <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"></div>
           <div class="flex items-end p-6 sm:absolute sm:inset-0">
             <div>
@@ -37,7 +38,7 @@
           </div>
         </div>
         <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
-          <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-category-02.jpg" alt="Walnut desk organizer set with white modular trays, next to porcelain mug on wooden desk." class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full">
+          <img src="./images/c01.JPG" alt="" class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full">
           <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"></div>
           <div class="flex items-end p-6 sm:absolute sm:inset-0">
             <div>
@@ -65,7 +66,7 @@
 <script>
 
 export default {
-  name:'Team',
+  name:'Adventure',
   data() {
     return {
     }
