@@ -15,13 +15,14 @@ const routes = [
     },
     {
         path:'/hero',
-        name:'Hero',
+        name:'hero',
         component:Hero,
     },
     {
-        path:'/newsDetail',
+        path:'/newsDetail/:id',
         name:'NewsDetail',
         component:NewsDetail,
+        props:true
     },
     {
         path:'/artGallery',
@@ -58,4 +59,22 @@ const router = createRouter({
     history:createWebHistory(),
     routes,
 })
+router.beforeEach((to, from, next) => {
+    if (to.name === 'hero') {
+        console.log(to.meta);
+        const scrollToId = to.query.scrollToId;
+        if (scrollToId) {
+            setTimeout(() => {
+                const targetElement = document.getElementById(scrollToId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - (window.innerHeight / 3),
+                        behavior: 'smooth'
+                    });
+                }
+            }, 300);
+        }
+    }
+    next();
+});
 export default router
