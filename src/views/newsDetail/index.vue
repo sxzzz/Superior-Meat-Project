@@ -61,47 +61,36 @@ export default {
                 id:'180123',
                 date:'Jan 18, 2023',
                 title:'Bridestowe Lavender Field in Tasmania',
-                content:'On the 18th of January 2023 Luna went to a marvellous and astonishing place she had never been to or seen. It was the Bridestowe Lavender Field all the way in Tasmania, the place she was born. Even though she was born in Tasmania she still hadn’t been to a lot of places. \n' +  '\n'+
-                    'On the 10th of January Luna went all the way back to her home for a holiday. Not did she realise that she has gone back to the place she was born. \n' + '\n'+
-                    'The Bridestowe Lavender Field was a miraculous and extraordinary place. The whole place went for hundreds and thousands of miles you could not see the end of the field. It felt like forever. Luna had a wonderful time there.\n'+  '\n'+
-                    'She tried to eat all the bees, but the bees were just too quick. She and her family hiked all around the Lavender field and even saw a giant purple lavender teddy bear.  As they hiked towards it, she got super excited and started jumping all around. When she arrived she sniffed the teddy bear all over. Top to bottom. \n' + '\n'+
-                    'The Bridestowe Lavender Luna loved the place and towards the end of the trip she even tasted lavender ice cream while her brother enjoyed one too and her mom and dad both enjoyed a lavender coffee.',
-                imageUrl:'/src/assets/images/newsDetail/detail01.jpeg'
+                content:'On the 18th of January 2023, Luna embarked on a wondrous journey to a place of enchantment she had never before witnessed. It was the Bridestowe Lavender Field in Tasmania, her birthplace. Despite being born in Tasmania, Luna had yet to explore many destinations. \n' +  '\n'+
+                    'The Bridestowe Lavender Field unveiled itself as a magical realm, brimming with awe-inspiring wonders. Its vast expanse stretched for endless miles, evading the eye\'s reach. Time seemed to cease within its boundless beauty, and Luna reveled in its splendor.\n'+  '\n'+
+                    'She playfully pursued the bees, yearning to taste their sweetness, but they proved elusive, darting away with nimble grace. Luna and her family embarked on a scenic hike across the lavender-laden landscape, and there, they chanced upon a majestic sight—a colossal teddy bear fashioned from purple lavender. Overwhelmed with excitement, Luna leaped joyfully, infusing the air with her exuberance. Upon reaching the lavender bear, she immersed herself in its fragrance, meticulously exploring every nook and cranny. \n' + '\n'+
+                    'The Bridestowe Lavender Field held Luna captive with its allure, and as the trip drew to a close, she savored a delicate indulgence—an exquisite taste of lavender ice cream. Her brother relished it alongside her, while their parents delighted in the fragrant embrace of lavender-infused coffee.',
+                contentCn:'2023年1月18日，Luna踏上神秘之旅，降临未曾窥见的梦幻之境。那是她出生之地，塔斯马尼亚州的Bridestowe薰衣草田。纵使Luna曾在此州诞生，而未曾遨游无边。\n' +'\n'+
+                    'Bridestowe薰衣草田呈现幻境般领域，奇观连连，令人咋舌。薰衣草的海洋延展数百千米，无边尽头不见踪。光阴仿佛在此无边美景中骤停，Luna沉醉其中。\n' +'\n' +
+                    '她兴致高昂地追逐蜜蜂，渴望品味其蜜糖之甘。然而它们机敏躲闪，避开了她的触及。Luna与家人漫游于薰衣草掩映的风景线，偶然间，一幕壮丽景象映入眼帘——一个巨大的紫色薰衣草泰迪熊。Luna欢腾跳跃，充溢着她的热情，空气中翩然起舞。抵达薰衣草熊处，她沉醉于芳香之中，细细触摸每个角落。\n'+'\n'+
+                    'Bridestowe薰衣草田以其诱人的魅力将Luna俘获，随着旅行接近尾声，她品味着一份精致的享受——美味的薰衣草冰淇淋。她的哥哥与她一同品味，而父母则陶醉于薰衣草香气中的咖啡。',
+                imageUrl:'/assets/images/newsDetail/detail01.jpeg'
             },
             {
                 id:'020523',
                 date:'May 02, 2023',
                 title:'Missing Toy',
-                content:'Once upon a time, there was a playful dog named Luna. She loved her toys, especially her favorite teddy bear. One day, Bella could not find her beloved toy anywhere.\n' +'\n'+
-                    'Luna sniffed around the house, searching under sofas and behind curtains. We tried to help too, but the teddy bear seemed to have vanished. Days turned into weeks, and Luna felt sad without her toy.\n' +'\n' +
-                'Finally, during a cleaning of the room, the teddy bear was found stuck between the bed and the wall. Luna wagged her tail with joy, and we were relieved.\n'+'\n'+
-                'Luna learned that sometimes things get lost but can be found again. She cherished her teddy bear even more, knowing how special it was to have it back. From that day on, Luna and her favorite toy were inseparable, bringing happiness to her days once again.',
-                imageUrl:'/src/assets/images/newsDetail/story01.jpeg'
+                content:'Once upon a time, there lived a lively dog named Luna. She delighted in her toys, particularly her cherished teddy bear. One fateful day, Luna\'s beloved companion went missing, nowhere to be found.\n' +'\n'+
+                    'Luna sniffed around, exploring nooks beneath sofas and hiding spots behind curtains. We joined the search, but the teddy bear appeared to have vanished, leaving Luna forlorn. Days melded into weeks, and sadness clung to Luna\'s spirit, aching for the toy\'s return.\n' +'\n' +
+                'At last, while tidying the room, the teddy bear emerged from its hiding place, wedged snugly between the bed and the wall. Luna\'s tail wagged exuberantly, and a wave of relief washed over us.\n'+'\n'+
+                'In that moment, Luna learned the art of losing and finding, realizing that treasures can be misplaced but ultimately discovered anew. Her adoration for the teddy bear deepened, acknowledging its irreplaceable value. Henceforth, Luna and her beloved toy became inseparable, infusing her days with boundless joy once more.',
+                contentCn:'昔日，有一只灵巧的狗名为Luna，她怀抱着钟爱的玩物，特别是那心灵所依的泰迪熊。某天，Bella心爱的玩具竟无影无踪。Luna在宅舍里细嗅徜徉，搜遍沙发下和窗帘后。我们亦共同搜索，但泰迪熊似乎消逝，令Luna心伤萦绕。光阴匆匆流逝，周而复始，Luna在无玩物之日感到悲戚。\n' +'\n'+
+                    '终于，在整理房间时，泰迪熊被发现，困顿在床与墙间。Luna摇尾欢舞，我们也松了一口气。Luna明了时光中物事或会迷失，终将重获其所。她更加珍视心爱的泰迪熊，洞悉其独特之处。自那天起，Luna与心爱玩物再难割舍，为她日日带来无尽欢愉。',
+
+                imageUrl:'/assets/images/newsDetail/story01.jpeg'
             },
             {
                 id:'140523',
                 date:'May 14, 2023',
                 title:'Cutes Pet Kiss',
                 content:'The story is coming soon',
-                imageUrl:'/src/assets/images/newsDetail/kiss.jpeg'
+                imageUrl:'/assets/images/newsDetail/kiss.jpeg'
             },
-            {
-                id:'270123',
-                date:'May 14, 2023',
-                title:'Buttons Cottage',
-                content:'On the 27th and the 28th of January 2023 Luna and her family travelled all the way back to her home, the place she was born. These were the days of the end of the holiday. For both nights Luna stayed at a cosy place. Buttons Cottage down in Nietta in Tasmania.\n'+'\n'+
-                    'Very close to Burnie and Devon Port. It was a huge farmland with many many cows. Luna loved the place and the cows all thought she was a calf (baby cow), Since she was a Foxhound. The cottage was cosy with a big yard that went around the whole house.\n'+'\n'+
-                    'Luna really enjoyed the big yard. She had a wonderful time playing with her family, trying to play with her brother’s soccerball and down ball. The place was just swell. It was perfecto. Every morning Luna would wake up early and go crazy around house just for attention. She really liked to watch the cows and watching TV with her brother.',
-                imageUrl:'/src/assets/images/adventure/buttonsCottage01.jpeg'
-            },
-            {
-                id:'200423',
-                date:'May 14, 2023',
-                title:'Cookie the Labradoodle',
-                content:'On the 15th of April Cookie the Labradoodle came over to Lunas house to stay for a few nights. During their adventure they both went to Pawfield Doggy Park down at Caufield. They both enjoyed playing with other dogs like Dex, a chocolate Labrador and Beau a normal  Labrador. Luna thought she was the strongest dog there apart from Cookie, But she though too soon. Out of nowhere a Boxer came and pounced on Luna. She got a fright and gave a yip. In the nick of one second, she was back to normal forgetting that she got pounced on and had a fright. Instantly she went back to playing like nothing happened and continued chasing Cookie. The Boxer chased both of them and soon enough the three got along and played all together. Just a bit later a Beagle came and joined them. His whole family were vegetarian so the dog as well was vegetarian. He was super skinny unlike other Beagles who are a bit more chubbier. This Beagle has a very good diet. The Beagle joined in the fun and they all played together. They ran around sniffed each other. Played tag. It was wonderful watching the 4 get along really well and not actually fighting. Luna could sense something about the Beagle, like a connection. Luna knew that dog was Beagle. Similar to herself. They both got along great and chased each other until they both had no more energy left to run. Cookie on the other hand had already tired herself out by chasing Luna and the Beagle.',
-                imageUrl:'/src/assets/images/newsDetail/kiss.jpeg'
-            }
-
         ]
         return{
             newsList

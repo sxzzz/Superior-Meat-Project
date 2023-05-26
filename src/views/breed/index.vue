@@ -12,12 +12,12 @@
 
         <ul role="list" class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2">
           <li>
-            <router-link to="/foxhound"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="/src/assets/images/breed/Foxhound02.jpg" alt=""></router-link>
+            <router-link to="/foxhound"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="/assets/images/breed/Foxhound02.jpg" alt=""></router-link>
             <h3 class="mt-6 text-lg font-semibold leading-8 text-gray-900">Foxhounds</h3>
             <p class="mt-4 text-base leading-7 text-gray-600">The English Foxhound was originally a hunting dog breed. they were made to hunt fox's.</p>
           </li>
           <li>
-            <router-link to="/breed/beagle"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="/src/assets/images/breed/Beagle.jpeg" alt=""></router-link>
+            <router-link to="/breed/beagle"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="/assets/images/breed/Beagle.jpeg" alt=""></router-link>
             <h3 class="mt-6 text-lg font-semibold leading-8 text-gray-900">Beagles</h3>
             <p class="mt-4 text-base leading-7 text-gray-600">The English Foxhound was originally a hunting dog breed. they were made to hunt fox's.</p>
           </li>
@@ -29,7 +29,7 @@
       <div class="relative isolate">
         <div class="mx-auto max-w-7xl px-4">
           <div class="mx-auto flex max-w-2xl flex-col gap-8 bg-cyan-600 px-6 py-6 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-10">
-            <img class="h-96 flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-80 lg:max-w-sm" src="/src/assets/images/breed/Foxbeagle.png" alt="">
+            <img class="h-96 flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-80 lg:max-w-sm" src="/assets/images/breed/Foxbeagle.png" alt="">
             <div class="w-full flex-auto py-6">
               <ul role="list" class="grid grid-cols-1 gap-x-6 gap-y-3 text-base leading-7 text-gray-100 sm:grid-cols-2">
                 <li class="flex gap-x-3">

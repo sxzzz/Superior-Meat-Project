@@ -7,6 +7,7 @@ import Friends from '/src/views/friends/index.vue'
 import Breed from '/src/views/breed/index.vue'
 import Foxhound from '/src/views/foxhound/index.vue'
 import Beagle from '/src/views/beagle/index.vue'
+import Story from '/src/views/story/index.vue'
 
 const routes = [
     {
@@ -53,7 +54,12 @@ const routes = [
         path:'/beagle',
         name:'Beagle',
         component:Beagle,
-    }
+    },
+    {
+        path:'/story',
+        name:'Story',
+        component:Story,
+    },
 ]
 const router = createRouter({
     history:createWebHistory(),

@@ -6,7 +6,7 @@
       </div>
       <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none">
         <li class="flex flex-col gap-6 xl:flex-row px-6 sm:px-0">
-          <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="/src/assets/images/friends/annie02.jpeg" alt="">
+          <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="/assets/images/friends/annie02.jpeg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Annie</h3>
             <p class="text-base leading-7 text-gray-600">Bichon Frise</p>
@@ -15,7 +15,7 @@
           </div>
         </li>
         <li class="flex flex-col gap-6 xl:flex-row  px-6 sm:px-0">
-          <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="/src/assets/images/friends/pudding01.jpeg" alt="">
+          <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="/assets/images/friends/pudding01.jpeg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Pudding</h3>
             <p class="text-base leading-7 text-gray-600">Felis Catus</p>
@@ -24,7 +24,7 @@
           </div>
         </li>
         <li class="flex flex-col gap-6 xl:flex-row  px-6 sm:px-0">
-          <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="/src/assets/images/friends/tuan01.jpg" alt="">
+          <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="/assets/images/friends/tuan01.jpg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Tuan Tuan</h3>
             <p class="text-base leading-7 text-gray-600">Felis Catus</p>
@@ -33,7 +33,7 @@
           </div>
         </li>
         <li class="flex flex-col gap-6 xl:flex-row px-6 sm:px-0">
-          <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="/src/assets/images/friends/white01.jpeg" alt="">
+          <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="/assets/images/friends/white01.jpeg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Miss White</h3>
             <p class="text-base leading-7 text-gray-600">Felis Catus</p>

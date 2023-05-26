@@ -7,12 +7,12 @@
 
       <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
         <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
-          <img src="/src/assets/images/adventure/buttonsCottage02.jpeg" alt="" class="object-cover object-center group-hover:opacity-75">
+          <img src="/assets/images/adventure/buttonsCottage02.jpeg" alt="" class="object-cover object-center group-hover:opacity-75">
           <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50"></div>
           <div class="flex items-end p-6">
             <div>
               <h3 class="font-semibold text-white">
-                <router-link :to="`/newsdetail/270123`">
+                <router-link to="/story">
                   <span class="absolute inset-0"></span>
                     Buttons Cottage
                 </router-link>
@@ -22,28 +22,28 @@
           </div>
         </div>
         <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
-          <img src="/src/assets/images/adventure/bamboo02.jpeg" alt=""
+          <img src="/assets/images/adventure/bamboo02.jpeg" alt=""
                class="object-left group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full">
           <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"></div>
           <div class="flex items-end p-6 sm:absolute sm:inset-0">
             <div>
               <h3 class="font-semibold text-white">
-                <a href="#">
+                <router-link to="/story">
                   <span class="absolute inset-0"></span>
                    Luna and Bamboo
-                </a>
+                </router-link>
               </h3>
               <p aria-hidden="true" class="mt-1 text-sm text-white">24/12/2021-5/01/2022</p>
             </div>
           </div>
         </div>
         <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
-          <img src="/src/assets/images/adventure/c01.jpg" alt="" class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full">
+          <img src="/assets/images/adventure/c01.jpg" alt="" class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full">
           <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"></div>
           <div class="flex items-end p-6 sm:absolute sm:inset-0">
             <div>
               <h3 class="font-semibold text-white">
-                <router-link :to="`/newsdetail/200423`">
+                <router-link to="/story">
                   <span class="absolute inset-0"></span>
                    Luna and Cookie
                 </router-link>

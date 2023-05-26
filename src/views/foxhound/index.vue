@@ -9,26 +9,26 @@
                 </div>
                 <div class="lg:basis-1/2 mt-4">
                     <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-                        <img src="/src/assets/images/foxhound/f12.jpeg" alt="" class="aspect-[7/5] w-[28rem] sm:w-[33rem] md:w-[40rem] max-w-none rounded-2xl bg-gray-50 object-cover">
+                        <img src="/assets/images/foxhound/f12.jpeg" alt="" class="aspect-[7/5] w-[28rem] sm:w-[33rem] md:w-[40rem] max-w-none rounded-2xl bg-gray-50 object-cover">
                     </div>
                 </div>
             </div>
         </div>
         <div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl rotate-2">
-                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/src/assets/images/foxhound/f01.jpeg">
+                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/assets/images/foxhound/f01.jpeg">
             </div>
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl -rotate-2">
-                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/src/assets/images/foxhound/f02.jpeg">
+                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/assets/images/foxhound/f02.jpeg">
             </div>
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl rotate-2">
-                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/src/assets/images/foxhound/f03.jpeg">
+                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/assets/images/foxhound/f03.jpeg">
             </div>
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl -rotate-2">
-                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/src/assets/images/foxhound/f03.jpeg">
+                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/assets/images/foxhound/f03.jpeg">
             </div>
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl rotate-2">
-                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/src/assets/images/foxhound/f03.jpeg">
+                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/assets/images/foxhound/f03.jpeg">
             </div>
 
         </div>
