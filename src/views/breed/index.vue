@@ -4,7 +4,8 @@
       <div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
         <div class="mx-auto max-w-2xl lg:mx-0">
           <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Foxhound VS Beagle</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Foxhounds and Beagles are both great breeds, but what do they have in common and what do they not have in common.</p>
+          <p class="mt-6 text-lg leading-8 text-gray-600">Foxhounds and Beagles are both great breeds, but what do they have in common and what do they not have in common. </p>
+          <p class="mt-6 text-lg leading-8 text-gray-600">猎狐犬和比格犬都是很棒的犬种，但它们有什么共同之处和不同之处呢？ </p>
           <div class="mt-10 flex">
             <a href="#" class=" font-semibold leading-6 text-indigo-400" @click="breedComparison">Comparison <span aria-hidden="true">&rarr;</span></a>
           </div>
@@ -13,13 +14,15 @@
         <ul role="list" class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2">
           <li>
             <router-link to="/foxhound"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="/assets/images/breed/Foxhound02.jpg" alt=""></router-link>
-            <h3 class="mt-6 text-lg font-semibold leading-8 text-gray-900">Foxhounds</h3>
-            <p class="mt-4 text-base leading-7 text-gray-600">The English Foxhound was originally a hunting dog breed. they were made to hunt fox's.</p>
+            <h3 class="mt-6 text-lg font-semibold leading-8 text-gray-900">Foxhounds 猎狐犬</h3>
+            <p class="mt-4 text-base leading-7 text-gray-600">A foxhound is a type of large hunting hound bred for strong hunting instincts, a keen sense of smell, and their bark, energy, drive, and speed.</p>
+            <p class="mt-4 text-base leading-7 text-gray-600">猎狐犬是一种大型狩猎猎犬，其培育目的是为了强烈的狩猎本能、敏锐的嗅觉、哮喘、精力、驱动力和速度。</p>
           </li>
           <li>
             <router-link to="/breed/beagle"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="/assets/images/breed/Beagle.jpeg" alt=""></router-link>
-            <h3 class="mt-6 text-lg font-semibold leading-8 text-gray-900">Beagles</h3>
-            <p class="mt-4 text-base leading-7 text-gray-600">The English Foxhound was originally a hunting dog breed. they were made to hunt fox's.</p>
+            <h3 class="mt-6 text-lg font-semibold leading-8 text-gray-900">Beagles 比格犬</h3>
+            <p class="mt-4 text-base leading-7 text-gray-600">The beagle was developed primarily for hunting hare, known as beagling. Possessing a great sense of smell and superior tracking instincts.</p>
+            <p class="mt-4 text-base leading-7 text-gray-600">比格犬主要是为了追踪野兔而培育的，被称为"比格犬狩猎"。比格犬具有敏锐的嗅觉和出色的追踪本能。</p>
           </li>
         </ul>
       </div>

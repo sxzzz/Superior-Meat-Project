@@ -9,11 +9,11 @@
 
 
                 <div class="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
-                    <img src="/assets/images/story/s02.jpeg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                    <img src="/assets/images/story/s10.jpeg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
                 </div>
                 <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
                     <div class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                        <img src="/assets/images/story/s01.jpeg" alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
+                        <img src="/assets/images/story/s09.jpeg" alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
                     </div>
                     <div class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
                         <img src="/assets/images/story/s01.jpeg" alt="Model wearing plain gray basic tee." class="h-full w-full object-cover object-center">
@@ -23,37 +23,80 @@
                     <img src="/assets/images/story/s02.jpeg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center">
                 </div>
 
-                <!-- switch button  -->
-                <div class="flex items-center mt-5">
-                    <button type="button" :class="{'bg-indigo-600': isEnabled, 'bg-gray-200': !isEnabled}"  class="relative inline-flex h-4 w-8 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false" aria-labelledby="annual-billing-label" @click="toggleContent">
-                        <span :class="{'translate-x-5': isCnContent, 'translate-x-0': !isCnContent}" aria-hidden="true" class="pointer-events-none inline-block h-3 w-3 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
-                    </button>
-                    <span class="ml-3 text-sm" id="">
-                        <span class="font-medium text-gray-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
-                            </svg>
-                        </span>
-                    </span>
-                </div>
 
             </div>
 
             <div class="mx-auto max-w-2xl px-4 py-2 sm:px-6 lg:grid lg:max-w-7xl lg:px-8">
                 <div class="py-2 lg:col-span-2 lg:col-start-1 lg:pr-8">
                     <div>
-                        <!-- v-if 非中文 else 中文 -->
-                        <div v-if="!isCnContent" id="buttonsCottageEn" class="space-y-6">
-                            <p class="text-base text-gray-900">On the 27th and 28th of January 2023, Luna and her family traveled all the way back to her home, the place where she was born. These were the last days of their holiday. For both nights, Luna stayed at a cozy place called Buttons Cottage in Nietta, Tasmania, which was very close to Burnie and Devonport. </p>
+                        <!-- switch button  -->
+                        <Switch class="mb-2" :switchObj="bcSwitch" @toggle="toggleContent('bcSwitch')"></Switch>
+                        <div>
+                            <!-- v-if 非中文 else 中文 -->
+                            <div v-if="!bcSwitch.isCnContent" id="buttonsCottageEn" class="space-y-6">
+                                <p class="text-base text-gray-900">On the 27th and 28th of January 2023, Luna and her family traveled all the way back to her home, the place where she was born. These were the last days of their holiday. For both nights, Luna stayed at a cozy place called Buttons Cottage in Nietta, Tasmania, which was very close to Burnie and Devonport. </p>
                                 <p>It was a huge farmland with many cows. Luna loved the place, and the cows all thought she was a calf (baby cow) because she was a Foxhound. The cottage was cozy, with a big yard that surrounded the entire house. Luna truly enjoyed the large yard and had a wonderful time playing with her family, attempting to play with her brother's soccer ball and down ball. The place was just perfect. Every morning, Luna would wake up early and run around the house, seeking attention. She particularly enjoyed watching the cows and watching TV with her brother.</p>
+                            </div>
+                            <div v-else id="buttonsCottageCn" class="space-y-6">
+                                <p class="text-base text-gray-900">2023年1月27日和28日，Luna与亲人踏上回归之路，回到了她诞生的乡野。那是假期尘封的终章，在塔斯马尼亚尼埃塔的Buttons Cottage小屋，伯尼和德文港近在咫尺。</p>
+                                <p>在那片牧场的田野里，牛群簇拥而居。Luna深爱此地，牛儿们却将她当作小牛犊，实则她是猎狐的神采。小屋舒适怡人，周围环抱着宽阔庭院。Luna倾心于那块天地，在那里与亲人欢娱，与哥哥同行踢球。环境如此美好，实在是难以言喻。每个黎明，Luna早早醒来，围绕房舍奔驰，寻求注目。她尤其钟爱观察那些牛群，与哥哥一同欣赏电视画面。</p>
+                            </div>
                         </div>
-                        <div v-else id="buttonsCottageCn" class="space-y-6">
-                            <p class="text-base text-gray-900">2023年1月27日和28日，Luna与亲人踏上回归之路，回到了她诞生的乡野。那是假期尘封的终章，在塔斯马尼亚尼埃塔的Buttons Cottage小屋，伯尼和德文港近在咫尺。</p>
-                            <p>在那片牧场的田野里，牛群簇拥而居。Luna深爱此地，牛儿们却将她当作小牛犊，实则她是猎狐的神采。小屋舒适怡人，周围环抱着宽阔庭院。Luna倾心于那块天地，在那里与亲人欢娱，与哥哥同行踢球。环境如此美好，实在是难以言喻。每个黎明，Luna早早醒来，围绕房舍奔驰，寻求注目。她尤其钟爱观察那些牛群，与哥哥一同欣赏电视画面。</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white">
+                <div class="mx-auto max-w-2xl px-4 py-12 sm:px-6  lg:max-w-7xl lg:px-8">
+                    <div class="mx-auto max-w-3xl text-center">
+                        <div class="flex items-center">
+                            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">Luna and bamboo</h2>
+                            <Switch class="ms-8" :switchObj="lbSwitch" @toggle="toggleContent('lbSwitch')"></Switch>
+                        </div>
+                        <div v-if="!lbSwitch.isCnContent">
+                            <p class="mt-4 text-gray-900">On the 21th of December 2022, Luna's dear friend Bamboo came to stay over, adding a delightful touch to their time together. Bamboo, a lively Border Collie, found pure joy in chasing balls, leaping up to catch them effortlessly. The two dogs reveled in each other's company, and their adventures often took them to the nearby Malbrough Park, where Luna's brother and dad would accompany them. Luna, being a bit less energetic, relied on their outings to tire her out.</p>
+                        </div>
+                        <div v-else>
+                            <p class="mt-4 text-gray-900">2022年12月21日，寂静月夜，Luna的挚友Bamboo来访，共度欢乐光阴。Bamboo是边境牧羊犬，追逐球的乐趣无穷，凌空跃起，口中固执地接住。两犬同欢，纵情公园，驱走疲惫，Malbrough公园，日夜为伴。</p>
+                        </div>
+                    </div>
+                    <div class="mt-16 space-y-16">
+                        <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
+                            <div class="mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4 lg:col-start-1">
+                                <div v-if="!lbSwitch.isCnContent">
+                                    <p class="mt-2 text-gray-900">In the park, Bamboo's lightning speed was evident as he raced after the ball, effortlessly soaring through the air to secure it in his mouth. Luna, ever the faithful companion, trailed closely behind, eagerly pursuing Bamboo until her energy waned, and she sought respite in the comforting shade. Bamboo, too, would pant and catch his breath, his enthusiasm carrying him until they arrived home. Remarkably, Bamboo didn't share Luna's affinity for food, making him a unique character compared to his voracious friend.</p>
+                                </div>
+                                <div v-else>
+                                    <p class="mt-2 text-gray-900">在公园里，Bamboo如闪电般奔驰，速度之快令人叹为观止，追逐着球，巧妙地扑入口中。Luna紧随其后，忠诚伴随，追逐Bamboo，直至力竭，于阴凉处安然躺卧。Bamboo亦同，喘息连连，直至归家，不舍疲倦。</p>
+                                </div>
+                            </div>
+                            <div class="flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8 lg:col-start-6 xl:col-start-5">
+                                <div class="aspect-h-2 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
+                                    <img src="/assets/images/story/s11.jpeg" alt="" class="object-cover object-center">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
+                            <div class="mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4 lg:col-start-8 xl:col-start-9">
+                                <div v-if="!lbSwitch.isCnContent">
+                                    <p class="mt-2 text-gray-900">Despite Luna's occasional annoyance, such as her habit of attempting to pilfer Bamboo's food, their camaraderie remained unwavering. Even in the backyard, their shared moments were filled with joy, with Bamboo darting after the ball while Luna delightedly pursued her swift companion. Their adventures left them both delightfully tired in no time, creating cherished memories for Luna and Bamboo alike.</p>
+                                </div>
+                                <div v-else>
+                                    <p class="mt-2 text-gray-900">然而，Bamboo并非食物之徒，与Luna不同，味蕾无爱。纵然Luna时常有些讨厌，企图夺食Bamboo的盛宴，友谊却始终如一。即便在后院，乐趣满怀，Bamboo追逐球，Luna追逐Bamboo。片刻间，双双疲惫，共享欢乐。岁月如梭，回忆永存，成为Luna与Bamboo珍贵的记忆。</p>
+                                </div>
+                            </div>
+                            <div class="flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8 lg:col-start-1">
+                                <div class="aspect-h-2 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
+                                    <img src="/assets/images/story/s12.jpeg" alt="" class="object-cover object-center">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!--cookies-->
             <div class="bg-white">
@@ -69,45 +112,35 @@
                                 <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                                     <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                                         <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Luna and Cookie </h1>
+                                        <!--通过自定义的toggle事件，触发switch组件中的toggleContent方法（只是点击），这里在本组件重新传入参数并完善具体的点击逻辑-->
 
-                                        <div class="flex items-center mt-5">
-                                            <button type="button" :class="{'bg-indigo-600': isEnabled, 'bg-gray-200': !isEnabled}"  class="relative inline-flex h-4 w-8 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false" aria-labelledby="annual-billing-label" @click="toggleContent">
-                                                <span :class="{'translate-x-5': isCnContent, 'translate-x-0': !isCnContent}" aria-hidden="true" class="pointer-events-none inline-block h-3 w-3 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
-                                            </button>
-                                            <span class="ml-3 text-sm" id="">
-                                                <span class="font-medium text-gray-900">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
-                                                    </svg>
-                                                </span>
-                                            </span>
+                                        <Switch class="mt-2" :switchObj="lcSwitch" @toggle="toggleContent('lcSwitch')"></Switch>
+
+                                        <div>
+                                            <div v-if="!lcSwitch.isCnContent" class="space-y-6">
+                                                <p class="relative mt-3 text-base  text-gray-900 sm:max-w-md lg:max-w-none">On the 16th of April, Cookie the goldendoodle came to Luna's house, ready for a few nights of joy. Their adventure led them to Pawfield Doggy Park in Caulfield, where playful spirits abound. Among the furry companions, Dex, a chocolate Labrador, and Beau, a classic Labrador, joined in the frolic. Luna believed she stood as the mightiest beside Cookie, but her conviction wavered. </p>
+                                                <p>Out of the blue, a Boxer leapt upon Luna, startling her with a yip. Yet, within a fleeting second, her fear subsided, as if erased from memory. Unfazed, she resumed play, chasing Cookie with renewed vigor. The Boxer joined their pursuit, creating a trio of camaraderie. </p>
+                                                <p>Soon thereafter, a Beagle arrived, belonging to a family of herbivores, mirroring their dietary choices. Unlike his plumper Beagle counterparts, this slender fellow owed his physique to a wholesome diet. With exuberance, the Beagle partook in their merriment, a perfect addition to the joyous quartet. They scampered, noses tracing scents, engaged in a lively game of tag. Such harmony unfolded, a spectacle of unity, as the four friends reveled, their playful spirits unyielding.</p>
+                                            </div>
+
+                                            <div v-else class="space-y-6">
+                                                <p class="relative mt-3 text-base  text-gray-900 sm:max-w-md lg:max-w-none"> 在4月16日，Cookie这只金毛贵宾犬来到Luna的家中，为了几个夜晚的欢愉而准备着。他们的冒险从Caulfield的Pawfield公园开始，那里洋溢着欢乐的精灵。在那些毛茸茸的伙伴中，巧克力色拉布拉多犬Dex和经典拉布拉多犬Beau一同加入了嬉戏。Luna相信她是除了Cookie之外最强大的狗，但她的确言之过早。 </p>
+                                                <p>突然间，一只boxer突然扑向Luna，让她惊恐地尖叫了一声。然而，在一瞬间，她的恐惧消失了，仿佛从记忆中抹去一般。毫不畏惧，她恢复了自信，满怀热情地追逐着Cookie。Boxer加入了他们的追逐，形成了一个三人的友谊小组。</p>
+                                                <p>之后不久，一只小猎犬加入了他们的行列。它所属的家庭都是素食者，因此这只狗也是素食主义者。与其他比格犬相比，它身材纤细，得益于健康的饮食。小猎犬兴高采烈地参与他们的欢乐，成为这个快乐四重奏的完美补充。他们追逐嬉戏，鼻尖追寻香气，犹如生命之舞的一幕。和谐绽放，团结如画，四位挚友荡漾着无尽的欢乐气息。</p>
+                                            </div>
                                         </div>
-
-                                        <div v-if="!isCnContent" class="space-y-6">
-                                            <p class="relative mt-6 text-base  text-gray-900 sm:max-w-md lg:max-w-none">On the 15th of April, Cookie the Labradoodle came to Luna's house, ready for a few nights of joy. Their adventure led them to Pawfield Doggy Park in Caulfield, where playful spirits abound. Among the furry companions, Dex, a chocolate Labrador, and Beau, a classic Labrador, joined in the frolic. Luna believed she stood as the mightiest beside Cookie, but her conviction wavered. </p>
-                                            <p>Out of the blue, a Boxer leapt upon Luna, startling her with a yip. Yet, within a fleeting second, her fear subsided, as if erased from memory. Unfazed, she resumed play, chasing Cookie with renewed vigor. The Boxer joined their pursuit, creating a trio of camaraderie. </p>
-                                            <p>Soon thereafter, a Beagle arrived, belonging to a family of herbivores, mirroring their dietary choices. Unlike his plumper Beagle counterparts, this slender fellow owed his physique to a wholesome diet. With exuberance, the Beagle partook in their merriment, a perfect addition to the joyous quartet. They scampered, noses tracing scents, engaged in a lively game of tag. Such harmony unfolded, a spectacle of unity, as the four friends reveled, their playful spirits unyielding.</p>
-                                        </div>
-
-                                        <div v-else class="space-y-6">
-                                            <p class="relative mt-6 text-base  text-gray-900 sm:max-w-md lg:max-w-none"> 在4月15日，Cookie这只拉布拉多迷你贵宾犬来到Luna的家中，为了几个夜晚的欢愉而准备着。他们的冒险从Caulfield的Pawfield公园开始，那里洋溢着欢乐的精灵。在那些毛茸茸的伙伴中，巧克力色拉布拉多犬Dex和经典拉布拉多犬Beau一同加入了嬉戏。Luna相信她是除了Cookie之外最强大的狗，但她的确言之过早。 </p>
-                                            <p>突然间，一只boxer突然扑向Luna，让她惊恐地尖叫了一声。然而，在一瞬间，她的恐惧消失了，仿佛从记忆中抹去一般。毫不畏惧，她恢复了自信，满怀热情地追逐着Cookie。Boxer加入了他们的追逐，形成了一个三人的友谊小组。</p>
-                                            <p>之后不久，一只小猎犬加入了他们的行列。它所属的家庭都是素食者，因此这只狗也是素食主义者。与其他比格犬相比，它身材纤细，得益于健康的饮食。小猎犬兴高采烈地参与他们的欢乐，成为这个快乐四重奏的完美补充。他们追逐嬉戏，鼻尖追寻香气，犹如生命之舞的一幕。和谐绽放，团结如画，四位挚友荡漾着无尽的欢乐气息。</p>
-                                        </div>
-
-
 
                                     </div>
                                     <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                                         <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                                             <div class="relative">
-                                                <img src="/assets/images/story/s03.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                                                <img src="/assets/images/story/s04.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                                                 <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                             </div>
                                         </div>
                                         <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                                             <div class="relative">
-                                                <img src="/assets/images/story/s04.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                                                <img src="/assets/images/story/s07.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                                                 <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                             </div>
                                             <div class="relative">
@@ -121,7 +154,7 @@
                                                 <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                             </div>
                                             <div class="relative">
-                                                <img src="/assets/images/story/s07.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                                                <img src="/assets/images/story/s08.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                                                 <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                             </div>
                                         </div>
@@ -131,35 +164,41 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
-
 
         </div>
     </div>
 
-
-
-
 </template>
 
 <script>
+import Switch from "../../components/switch/index.vue";
 
 export default {
     name:'Story',
+    components: {Switch},
     data() {
         return {
-            isCnContent: false, // 默认显示英文内容
-            isEnabled: false, // 默认未启用
+            bcSwitch: {
+                isCnContent: false,
+                isEnContent: false,
+            },
+            lcSwitch: {
+                isCnContent: false,
+                isEnContent: false,
+            },
+            lbSwitch: {
+                isCnContent: false,
+                isEnContent: false,
+            },
+
         }
     },
     methods:{
-        toggleContent() {
-            this.isCnContent = !this.isCnContent; // 切换显示英文或中文内容
-            this.isEnabled = !this.isEnabled; // 切换启用/未启用状态
-        }
+        toggleContent(switchName) {
+            this[switchName].isCnContent = !this[switchName].isCnContent;
+            this[switchName].isEnContent = !this[switchName].isEnContent;
+        },
     }
 }
 </script>

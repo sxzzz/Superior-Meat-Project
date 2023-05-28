@@ -1,9 +1,9 @@
 <template>
     <div class="bg-white">
-        <div class="text-center mx-auto max-w-7xl px-6 lg:px-8 mt-6">
+        <div class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6">
             <h1 class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text ">Embrace the Journey: Unveiling Life's Tapestry <p class="mt-2">拥抱旅程：揭开生命的织锦</p></h1>
-            <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna, a foxhound hailing from the beautiful city of Hobart in Tasmania, possessed a deep love for the simple pleasures of life—indulging in delicious meals, surrendering to peaceful slumber, embracing cozy snuggles, and frolicking in playful escapades. Amidst her siblings, who were all beagles, Luna stood out as a unique soul, a mesmerizing blend of beagle and foxhound ancestry.
-                Luna，一只诞生于塔斯马尼亚州霍巴特美城的猎犬，胸怀对生活的简约欢愉，热爱着美食的醉人魅力、恬静的甜蜜梦乡，与温馨的亲昵相依，还有在欢欣的游戏中尽情踊跃。在她的兄弟姐妹中，众犬皆为比格，而Luna独树一帜，融合了比格犬与猎狐犬的绝妙交织，形成其迷人之灵魂。</p>
+            <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna, a foxhound hailing from the beautiful city of Hobart in Tasmania, possessed a deep love for the simple pleasures of life—indulging in delicious meals, surrendering to peaceful slumber, embracing cozy snuggles, and frolicking in playful escapades. Amidst her siblings, who were all beagles, Luna stood out as a unique soul, a mesmerizing blend of beagle and foxhound ancestry.</p>
+            <p class="text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna，一只诞生于塔斯马尼亚州霍巴特美城的猎狐犬，胸怀对生活的简约欢愉，热爱着美食的醉人魅力、恬静的甜蜜梦乡，与温馨的亲昵相依，还有在欢欣的游戏中尽情踊跃。在她的兄弟姐妹中，众犬皆为比格，而Luna独树一帜，融合了比格犬与猎狐犬的绝妙交织，形成其迷人之灵魂。</p>
         </div>
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 class="text-2xl font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Moments 精彩瞬间 </h2>
@@ -188,6 +188,32 @@ export default {
         const posts = [
             {
                 id: 1,
+                title: 'Programming dog and programmer 编程狗和程序猿',
+                description:
+                    'Whether it\'s "Programming dog" or "Programmer," both represent an interest and talent in programming. They express a love for the programming world and possess professional skills in different contexts. 无论是"编程狗"还是"程序员"，都代表着对编程的兴趣和才能，他们在不同的背景下表达了对编程世界的热爱和专业能力。',
+                imageUrl:'/assets/images/hero/b06.jpeg',
+                date: 'May 27, 2023',
+                datetime: '2023-05-27',
+                author: {
+                    name: 'Andy',
+                    imageUrl:'/assets/logo/andyAvator.png',
+                },
+            },
+            {
+                id: 2,
+                title: 'Night all 晚安',
+                description:
+                    'Immersed in the ocean of Programming.沉浸在编程的海洋中！',
+                imageUrl:'/assets/images/hero/b07.jpeg',
+                date: 'May 27, 2023',
+                datetime: '2023-05-27',
+                author: {
+                    name: 'Andy',
+                    imageUrl:'/assets/logo/andyAvator.png',
+                },
+            },
+            {
+                id: 3,
                 title: 'recycling 回收工作',
                 description:
                     'Good girl! Luna chewing up the cardboard into small pieces so it fit in the bin. Good job recycling! 好孩子! Luna把纸板撕成小块，这样就能放进回收垃圾箱里面，干得漂亮!',
@@ -200,8 +226,8 @@ export default {
                 },
             },
             {
-                id: 2,
-                title: 'Luan first run training 第一次跑步训练',
+                id: 4,
+                title: 'Luna first run training 第一次跑步训练',
                 description:
                     'Good job, Luna, completed 2.31km in 17 minutes. 真棒,2.31公里,用时17分钟!',
                 imageUrl:'/assets/images/hero/b03.jpeg',
@@ -213,7 +239,7 @@ export default {
                 },
             },
             {
-                id: 3,
+                id: 5,
                 title: 'Reading together 读书',
                 description:
                     'Luna rested peacefully on her favorite mat while her brother gave her pats and read her book. 安静地躺在她最喜欢的垫子上，哥哥拍拍她，给她读书。',
@@ -226,7 +252,7 @@ export default {
                 },
             },
             {
-                id: 4,
+                id: 6,
                 title: 'Pawfield Park 狗狗公园',
                 description:
                     'Cold,Windy,High chance of showers,still take Luna for a refreshing stroll in the park. Sit！寒冷，有风，大概率有阵雨，我们还是来公园散步,坐!',
@@ -239,7 +265,7 @@ export default {
                 },
             },
             {
-                id: 5,
+                id: 7,
                 title: 'BE Circle Run 东本特利绕圈',
                 description:
                     'I just ran 7.5 kilometers in 47 minutes, with an average pace of 6 minutes and 17 seconds per kilometer. However, an adult American foxhound can easily run at a speed of 60 kilometers per hour, which means it takes them 1 minute per kilometer. That makes their pace six times faster than mine!! 我刚刚用时47分钟完成7.5公里，配速为每公里6分17秒。然而，一只成年的美国猎狐犬可以轻松地以时速60公里奔跑，这意味着它们只需1分钟即可达成目标。比我整整快了六倍！！',
@@ -251,19 +277,6 @@ export default {
                     imageUrl:'/assets/logo/andyAvator.png',
                 },
             },
-            {
-                id: 6,
-                title: 'Mood Zzzzz 睡觉',
-                description:
-                    'Wait when I am back from School. 放学以后再更新',
-                imageUrl:'/assets/images/hero/foxhoundmood.jpg',
-                date: 'May 21, 2023',
-                datetime: '2023-05-21',
-                author: {
-                    name: 'James',
-                    imageUrl:'/assets/logo/jamesAvator.jpeg',
-                },
-            },
 
         ]
         const slides =  [
@@ -271,7 +284,11 @@ export default {
             { path: '/assets/images/hero/hero02.jpeg', alt: '' },
             { path: '/assets/images/hero/hero03.jpeg', alt: '' },
             { path: '/assets/images/hero/hero04.jpeg', alt: '' },
-            { path: '/assets/images/hero/hero05.jpeg', alt: '' }
+            { path: '/assets/images/hero/hero05.jpeg', alt: '' },
+            { path: '/assets/images/hero/hero06.jpeg', alt: '' },
+            { path: '/assets/images/hero/hero07.jpeg', alt: '' },
+            { path: '/assets/images/hero/hero08.jpeg', alt: '' },
+            { path: '/assets/images/hero/hero09.jpeg', alt: '' }
         ]
         const newsList = [
             {

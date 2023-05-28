@@ -15,7 +15,7 @@
                                     </div>
                                     <div class="me-2">
                                         <router-link  :to="{ path: '/hero', query: { scrollToId: 'topStories' }}"><button type="button" class=" rounded bg-indigo-500 px-2 py-1 text-xs font-semibold text-white shadow-sm
-                            hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Back to Home</button></router-link>
+                                        hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Back to Stories</button></router-link>
                                     </div>
                                 </div>
                             </div>
@@ -25,14 +25,20 @@
                                     <img :src="news.imageUrl" alt="" class="mt-6 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]">
                                 </div>
                                 <div class="basis-1/2">
-                                    <ul class="">
-                                        <li class="py-8 relative flex flex-wrap gap-x-3">
-                                            <p class="w-full flex-none text-xl font-semibold tracking-tight text-gray-900 mb-4">{{news.title}}</p>
-                                            <div class="whitespace-pre-line ...">
-                                                {{news.content}}
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="py-8 relative flex flex-wrap gap-x-3">
+                                        <div class="flex items-center mb-4">
+                                            <p class="w-full flex-none text-xl font-semibold tracking-tight text-gray-900">{{news.title}}</p>
+                                            <Switch :switchObj="Switch1" @toggle="toggleContent('Switch1')"></Switch>
+                                        </div>
+
+
+                                        <div v-if="!Switch1.isCnContent" class="whitespace-pre-line ...">
+                                            {{news.content}}
+                                        </div>
+                                        <div v-else class="whitespace-pre-line ...">
+                                            {{news.contentCn}}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -45,14 +51,13 @@
 </template>
 
 <script>
+import Switch from "../../components/switch/index.vue";
 
 export default {
     components: {
-
+        Switch
     },
-    // props:{
-    //     newsList
-    // },
+
 
     name:'NewsDetail',
     data() {
@@ -88,14 +93,33 @@ export default {
                 id:'140523',
                 date:'May 14, 2023',
                 title:'Cutes Pet Kiss',
-                content:'The story is coming soon',
+                content:'One evening, as the sun set, Lily sat on the porch swing while Max joined her. The sky painted in hues of orange and pink, casting a warm glow. Lily smiled at her furry friend and gently stroked his head.\n'+'\n'+
+                    'You know, Max," Lily whispered, "You\'re my everything. I love you. \n'+'\n'+
+                'Max wagged his tail, eyes filled with adoration. Understanding every word, he leaned forward, planting a tender kiss on Lily\'s cheek. Her laughter filled the air, heart brimming with warmth and love.\n'+'\n'+
+                'From that moment on, Max\'s kisses became their daily ritual, offering comfort during sad times. Their unspoken language of love grew stronger. Max was more than a pet; he was Lily\'s confidant, loyal companion, and endless joy.',
+                contentCn:'一个傍晚，夕阳西下，莉莉坐在门廊秋千上，马克斯陪伴在她身旁。天空被橘红和粉红的色彩点缀，洒下温暖的光芒。莉莉微笑着看着她毛茸茸的朋友，轻轻抚摸着他的头。\n'+'\n'+
+                    '你知道吗，马克斯，”莉莉低声说道，“你是我生命的一切。我爱你。马克斯摇着尾巴，眼里充满了崇敬。他理解了每一个字，向前倾身，在莉莉的脸颊上留下一个温柔的吻。她的笑声充盈在空气中，心中充满了温暖和爱。\n'+'\n'+
+                '从那一刻起，马克斯的吻成为了他们每天的仪式，为悲伤时提供安慰。他们之间无需言语的爱意变得更加浓厚。马克斯不仅仅是一只宠物；他是莉莉的知己、忠诚的伴侣和无尽的欢乐。',
+
                 imageUrl:'/assets/images/newsDetail/kiss.jpeg'
             },
         ]
+        const Switch1 = {
+            isCnContent: false,
+            isEnContent: false,
+        }
         return{
-            newsList
+            newsList,
+            Switch1
         }
 
+    },
+    methods:{
+        //将toggleContent方法 emit 成一个自定义事件'toggle'，方便在其他组件中触发该事件
+        toggleContent(switchName) {
+            this[switchName].isCnContent = !this[switchName].isCnContent;
+            this[switchName].isEnContent = !this[switchName].isEnContent;
+        },
     },
     computed:{
         filteredNewsList(){

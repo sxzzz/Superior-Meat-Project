@@ -33,7 +33,7 @@
                    Luna and Bamboo
                 </router-link>
               </h3>
-              <p aria-hidden="true" class="mt-1 text-sm text-white">24/12/2021-5/01/2022</p>
+              <p aria-hidden="true" class="mt-1 text-sm text-white">21/12/2021-02/01/2022</p>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@
                    Luna and Cookie
                 </router-link>
               </h3>
-              <p aria-hidden="true" class="mt-1 text-sm text-white">17/04/2023-23/04/2023</p>
+              <p aria-hidden="true" class="mt-1 text-sm text-white">16/04/2023-21/04/2023</p>
             </div>
           </div>
         </div>
