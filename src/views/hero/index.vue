@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white">
+    <div class="bg-white dark:bg-black">
         <div class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6">
             <h1 class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text ">Embrace the Journey: Unveiling Life's Tapestry <p class="mt-2">拥抱旅程：揭开生命的织锦</p></h1>
             <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna, a foxhound hailing from the beautiful city of Hobart in Tasmania, possessed a deep love for the simple pleasures of life—indulging in delicious meals, surrendering to peaceful slumber, embracing cozy snuggles, and frolicking in playful escapades. Amidst her siblings, who were all beagles, Luna stood out as a unique soul, a mesmerizing blend of beagle and foxhound ancestry.</p>
@@ -9,7 +9,7 @@
             <h2 class="text-2xl font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Moments 精彩瞬间 </h2>
         </div>
 
-        <div class="bg-cyan-500 py-4 text-white">
+        <div class="bg-cyan-500 dark:bg-cyan-900 py-4 text-white">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
                 <div class="mt-8 space-y-8">
@@ -19,7 +19,7 @@
                                 <img :src="post.imageUrl" alt="" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover group-hover:opacity-75" />
                                 <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                             </div>
-                            <div>
+                            <div class="dark:text-gray-400">
                                 <div class="flex items-center gap-x-4 text-xs ">
                                     <time :datetime="post.datetime" class="">{{ post.date }}</time>
                                     <div>
@@ -57,7 +57,7 @@
                     class="mySwiper"
                 >
 
-                    <swiper-slide v-for="(slide, index) in slides" :key="index">
+                    <swiper-slide class="" v-for="(slide, index) in slides" :key="index">
                         <img :src="slide.path" :alt="slide.alt" class="">
                     </swiper-slide>
 
@@ -74,26 +74,26 @@
             </section>
         </div>
 
-        <div class="bg-rose-200 py-12 mt-5">
+        <div class="bg-rose-200 dark:bg-pink-950 py-12 mt-5">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl lg:max-w-none text-white">
                     <div class="text-center">
                         <h2 class="text-3xl font-bold tracking-tight sm:text-4xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text">Luna Characteristic</h2>
                     </div>
-                    <dl class="mt-16 grid grid-cols-1 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-                        <div class="flex flex-col bg-blue-300 p-4 sm:p-8">
+                    <dl class="mt-16 grid grid-cols-1 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4 dark:text-gray-400">
+                        <div class="flex flex-col bg-blue-300 dark:bg-blue-950 p-4 sm:p-8">
                             <dt class="text-sm font-semibold leading-6">Height 身高</dt>
                             <dd class="order-first text-3xl font-semibold tracking-tight">55cm</dd>
                         </div>
-                        <div class="flex flex-col bg-blue-300 p-4 sm:p-8 ">
+                        <div class="flex flex-col bg-blue-300 dark:bg-blue-950 p-4 sm:p-8 ">
                             <dt class="text-sm font-semibold leading-6">Weight 体重</dt>
                             <dd class="order-first text-3xl font-semibold tracking-tight">20KG</dd>
                         </div>
-                        <div class="flex flex-col bg-blue-300 p-4 sm:p-8 ">
+                        <div class="flex flex-col bg-blue-300 dark:bg-blue-950 p-4 sm:p-8 ">
                             <dt class="text-sm font-semibold leading-6">Age 年龄</dt>
                             <dd class="order-first text-3xl font-semibold tracking-tight">21 months</dd>
                         </div>
-                        <div class="flex flex-col bg-blue-300 p-4 sm:p-8 ">
+                        <div class="flex flex-col bg-blue-300 dark:bg-blue-950 p-4 sm:p-8 ">
                             <dt class="text-sm font-semibold leading-6">Exercise 运动 </dt>
                             <dd class="order-first text-3xl font-semibold tracking-tight">All the time</dd>
                         </div>
@@ -108,28 +108,28 @@
                     <div class="basis-3/4">
                         <img class="h-48 lg:h-56 w-full object-cover rounded-l-2xl" src="/assets/images/hero/hero-new01.jpeg" alt="">
                     </div>
-                    <div class="basis-1/4 rounded-r-2xl bg-violet-400 flex flex-col justify-between px-3 text-white">
+                    <div class="basis-1/4 rounded-r-2xl bg-violet-400 dark:bg-violet-900 flex flex-col justify-between px-3 text-white dark:text-gray-400">
                         <div class="mt-5">
                             <h2 class="text-sm font-semibold leading-8">18/01/2023</h2>
                             <p class="mt-2 text-base lg:text-2xl xl:text-3xl font-bold tracking-tight">Bridestowe Lavender 薰衣草庄园</p>
                         </div>
                         <div class="mb-3">
-                            <router-link :to="`/newsdetail/180123`"><button type="button" class="rounded bg-pink-600 px-2 py-1 text-xs font-semibold text-white shadow-sm
+                            <router-link :to="`/newsdetail/180123`"><button type="button" class="rounded bg-pink-600 px-2 py-1 text-xs font-semibold text-white dark:text-gray-300 shadow-sm
                             hover:bg-rose-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">See More</button>
                             </router-link>
                         </div>
 
                     </div>
                 </div>
-                <hr class="border-rose-300">
+                <hr class="border-rose-300 dark:border-orange-500">
                 <div id="missingToy" class="flex flex-row mt-4 mb-4">
-                    <div class="basis-1/4 rounded-l-2xl bg-violet-400 flex flex-col justify-between px-3 text-white">
+                    <div class="basis-1/4 rounded-l-2xl bg-violet-400 dark:bg-violet-900 flex flex-col justify-between px-3 text-white dark:text-gray-400">
                         <div class="mt-5">
                             <h2 class="text-sm font-semibold leading-8">02/05/2023</h2>
                             <p class="mt-2 text-base lg:text-2xl xl:text-3xl font-bold tracking-tight">Missing Toy 丢失的玩具</p>
                         </div>
                         <div class="mb-3">
-                            <router-link :to="`/newsdetail/020523`"><button type="button" class="rounded bg-pink-600 px-2 py-1 text-xs font-semibold text-white shadow-sm
+                            <router-link :to="`/newsdetail/020523`"><button type="button" class="rounded bg-pink-600 px-2 py-1 text-xs font-semibold text-white dark:text-gray-300 shadow-sm
                             hover:bg-rose-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">See More</button></router-link>
                         </div>
                     </div>
@@ -137,23 +137,23 @@
                         <img class="h-48 lg:h-56 w-full object-cover rounded-r-2xl" src="/assets/images/hero/hero-new02.jpeg" alt="">
                     </div>
                 </div>
-                <hr class="border-rose-300">
+                <hr class="border-rose-300 dark:border-orange-500">
                 <div id="kiss" class="flex flex-row mt-4 mb-4">
                     <div class="basis-3/4">
                         <img class="h-48 lg:h-56 w-full object-cover rounded-l-2xl" src="/assets/images/hero/hero-new03.jpeg" alt="">
                     </div>
-                    <div class="basis-1/4 rounded-r-2xl bg-violet-400 flex flex-col justify-between px-3 text-white">
+                    <div class="basis-1/4 rounded-r-2xl bg-violet-400 dark:bg-violet-900 flex flex-col justify-between px-3 text-white dark:text-gray-400">
                         <div class="mt-5">
                             <h2 class="text-sm font-semibold leading-8">14/05/2023</h2>
                             <p class="mt-2 text-base lg:text-2xl xl:text-3xl font-bold tracking-tight">Cutes Pet Kiss 定情一吻</p>
                         </div>
                         <div class="mb-3">
-                            <router-link :to="`/newsdetail/140523`"><button type="button" class="rounded bg-pink-600 px-2 py-1 text-xs font-semibold text-white shadow-sm
+                            <router-link :to="`/newsdetail/140523`"><button type="button" class="rounded bg-pink-600 px-2 py-1 text-xs font-semibold text-white dark:text-gray-300 shadow-sm
                             hover:bg-rose-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">See More</button></router-link>
                         </div>
                     </div>
                 </div>
-
+                <hr class="border-rose-300 dark:border-orange-500">
             </section>
         </div>
 
@@ -187,7 +187,46 @@ export default {
         };
         const posts = [
             {
-                id: 1,
+              id: 10,
+              title: 'Dark Mode is activated',
+              description:
+                  'The dark night bestowed upon me eyes of black, yet I use them to seek out the LIGHT. 黑夜给了我黑色的眼睛，我却用它寻找光明。',
+              imageUrl:'/assets/images/hero/b10.jpeg',
+              date: 'May 31, 2023',
+              datetime: '2023-05-31',
+              author: {
+                name: 'Andy',
+                imageUrl:'/assets/logo/andyAvator.png',
+              },
+            },
+            {
+              id: 9,
+              title: 'A beautiful metaphor! ',
+              description:
+                  'A seed neither fears light nor darkness, but uses both to grow. Resilience and adaptability are key in navigating life\'s ups and downs, just like a seed that can thrive regardless of the conditions it encounters. 一颗种子既不惧怕光明，也不惧怕黑暗，而是利用二者共同成长。坚韧和适应能力是在人生的起起落落中航行的关键，就像一颗种子可以在任何遭遇的条件下茁壮成长一样。',
+              imageUrl:'/assets/images/hero/b09.jpeg',
+              date: 'May 31, 2023',
+              datetime: '2023-05-31',
+              author: {
+                name: 'Andy',
+                imageUrl:'/assets/logo/andyAvator.png',
+              },
+            },
+            {
+                id: 8,
+                title: 'Movie night! 电影之夜',
+                description:
+                    'Luna and her brother are having a blast, watching a movie! Luna和她的哥哥玩得很开心，正在看电影！',
+                imageUrl:'/assets/images/hero/b08.jpeg',
+                date: 'May 28, 2023',
+                datetime: '2023-05-28',
+                author: {
+                    name: 'James',
+                    imageUrl:'/assets/logo/jamesAvator.jpeg',
+                },
+            },
+            {
+                id: 7,
                 title: 'Programming dog and programmer 编程狗和程序猿',
                 description:
                     'Whether it\'s "Programming dog" or "Programmer," both represent an interest and talent in programming. They express a love for the programming world and possess professional skills in different contexts. 无论是"编程狗"还是"程序员"，都代表着对编程的兴趣和才能，他们在不同的背景下表达了对编程世界的热爱和专业能力。',
@@ -200,7 +239,7 @@ export default {
                 },
             },
             {
-                id: 2,
+                id: 6,
                 title: 'Night all 晚安',
                 description:
                     'Immersed in the ocean of Programming.沉浸在编程的海洋中！',
@@ -213,7 +252,7 @@ export default {
                 },
             },
             {
-                id: 3,
+                id: 5,
                 title: 'recycling 回收工作',
                 description:
                     'Good girl! Luna chewing up the cardboard into small pieces so it fit in the bin. Good job recycling! 好孩子! Luna把纸板撕成小块，这样就能放进回收垃圾箱里面，干得漂亮!',
@@ -239,7 +278,7 @@ export default {
                 },
             },
             {
-                id: 5,
+                id: 3,
                 title: 'Reading together 读书',
                 description:
                     'Luna rested peacefully on her favorite mat while her brother gave her pats and read her book. 安静地躺在她最喜欢的垫子上，哥哥拍拍她，给她读书。',
@@ -252,7 +291,7 @@ export default {
                 },
             },
             {
-                id: 6,
+                id: 2,
                 title: 'Pawfield Park 狗狗公园',
                 description:
                     'Cold,Windy,High chance of showers,still take Luna for a refreshing stroll in the park. Sit！寒冷，有风，大概率有阵雨，我们还是来公园散步,坐!',
@@ -265,7 +304,7 @@ export default {
                 },
             },
             {
-                id: 7,
+                id: 1,
                 title: 'BE Circle Run 东本特利绕圈',
                 description:
                     'I just ran 7.5 kilometers in 47 minutes, with an average pace of 6 minutes and 17 seconds per kilometer. However, an adult American foxhound can easily run at a speed of 60 kilometers per hour, which means it takes them 1 minute per kilometer. That makes their pace six times faster than mine!! 我刚刚用时47分钟完成7.5公里，配速为每公里6分17秒。然而，一只成年的美国猎狐犬可以轻松地以时速60公里奔跑，这意味着它们只需1分钟即可达成目标。比我整整快了六倍！！',
@@ -361,10 +400,10 @@ export default {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .swiper-slide img {

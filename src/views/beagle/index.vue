@@ -1,5 +1,5 @@
 <template>
-  <div>beagle</div>
+  <div class="dark:bg-black">beagle</div>
 
 
 

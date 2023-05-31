@@ -1,23 +1,23 @@
 <template>
-  <div class="bg-white">
+  <div class="bg-white dark:bg-black">
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div class="sm:flex sm:items-baseline sm:justify-between">
-        <h2 class="text-2xl font-bold tracking-tight text-gray-900 caption-top">The Story of Adventure </h2>
+        <h2 class="text-2xl font-bold tracking-tight caption-top bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">The Story of Adventure </h2>
       </div>
 
-      <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
+      <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8 ">
         <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
           <img src="/assets/images/adventure/buttonsCottage02.jpeg" alt="" class="object-cover object-center group-hover:opacity-75">
           <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50"></div>
           <div class="flex items-end p-6">
             <div>
-              <h3 class="font-semibold text-white">
+              <h3 class="font-semibold text-white dark:text-gray-300">
                 <router-link to="/story">
                   <span class="absolute inset-0"></span>
                     Buttons Cottage
                 </router-link>
               </h3>
-              <p aria-hidden="true" class="mt-1 text-sm text-white">27/01/2023-28/01/2023</p>
+              <p aria-hidden="true" class="mt-1 text-sm text-white dark:text-gray-300">27/01/2023-28/01/2023</p>
             </div>
           </div>
         </div>
@@ -27,13 +27,13 @@
           <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"></div>
           <div class="flex items-end p-6 sm:absolute sm:inset-0">
             <div>
-              <h3 class="font-semibold text-white">
+              <h3 class="font-semibold text-white dark:text-gray-300">
                 <router-link to="/story">
                   <span class="absolute inset-0"></span>
                    Luna and Bamboo
                 </router-link>
               </h3>
-              <p aria-hidden="true" class="mt-1 text-sm text-white">21/12/2021-02/01/2022</p>
+              <p aria-hidden="true" class="mt-1 text-sm text-white dark:text-gray-300">21/12/2021-02/01/2022</p>
             </div>
           </div>
         </div>
@@ -42,13 +42,13 @@
           <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"></div>
           <div class="flex items-end p-6 sm:absolute sm:inset-0">
             <div>
-              <h3 class="font-semibold text-white">
+              <h3 class="font-semibold text-white dark:text-gray-300">
                 <router-link to="/story">
                   <span class="absolute inset-0"></span>
                    Luna and Cookie
                 </router-link>
               </h3>
-              <p aria-hidden="true" class="mt-1 text-sm text-white">16/04/2023-21/04/2023</p>
+              <p aria-hidden="true" class="mt-1 text-sm text-white dark:text-gray-300">16/04/2023-21/04/2023</p>
             </div>
           </div>
         </div>

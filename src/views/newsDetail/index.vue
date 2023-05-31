@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white">
+    <div class="bg-white dark:bg-black">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
                 <ul>
@@ -14,7 +14,7 @@
                                         </svg>
                                     </div>
                                     <div class="me-2">
-                                        <router-link  :to="{ path: '/hero', query: { scrollToId: 'topStories' }}"><button type="button" class=" rounded bg-indigo-500 px-2 py-1 text-xs font-semibold text-white shadow-sm
+                                        <router-link  :to="{ path: '/hero', query: { scrollToId: 'topStories' }}"><button type="button" class=" rounded bg-indigo-500 px-2 py-1 text-xs font-semibold text-white dark:text-gray-300 shadow-sm
                                         hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Back to Stories</button></router-link>
                                     </div>
                                 </div>
@@ -27,15 +27,15 @@
                                 <div class="basis-1/2">
                                     <div class="py-8 relative flex flex-wrap gap-x-3">
                                         <div class="flex items-center mb-4">
-                                            <p class="w-full flex-none text-xl font-semibold tracking-tight text-gray-900">{{news.title}}</p>
+                                            <p class="w-full flex-none text-xl font-semibold tracking-tight text-gray-900 dark:text-gray-300">{{news.title}}</p>
                                             <Switch :switchObj="Switch1" @toggle="toggleContent('Switch1')"></Switch>
                                         </div>
 
 
-                                        <div v-if="!Switch1.isCnContent" class="whitespace-pre-line ...">
+                                        <div v-if="!Switch1.isCnContent" class="whitespace-pre-line ... dark:text-gray-300">
                                             {{news.content}}
                                         </div>
-                                        <div v-else class="whitespace-pre-line ...">
+                                        <div v-else class="whitespace-pre-line ... dark:text-gray-300">
                                             {{news.contentCn}}
                                         </div>
                                     </div>
