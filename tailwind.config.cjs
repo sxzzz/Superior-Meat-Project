@@ -12,6 +12,16 @@ module.exports = {
       gridTemplateRows: {
         '[auto,auto,1fr]': 'auto auto 1fr',
       },
+      fontFamily: {
+        sans: ["SF Pro", "sans-serif"],
+      },
+      colors: {
+        primary: "var(--color-primary)",
+      },
+      backgroundImage: {
+        texture:
+            "url(/glow-texture.png), radial-gradient(var(--color-primary), transparent 70%)",
+      },
     },
   },
   plugins: [

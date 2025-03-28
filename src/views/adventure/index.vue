@@ -24,7 +24,7 @@
         <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
           <img src="/assets/images/adventure/bamboo02.jpeg" alt=""
                class="object-left group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full">
-          <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"></div>
+          <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0">123</div>
           <div class="flex items-end p-6 sm:absolute sm:inset-0">
             <div>
               <h3 class="font-semibold text-white dark:text-gray-300">

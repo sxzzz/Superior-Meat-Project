@@ -9,12 +9,130 @@
             <h2 class="text-2xl font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Moments 精彩瞬间 </h2>
         </div>
 
+        <div class="bg-teal-300 dark:bg-teal-700 py-24 sm:py-32">
+        <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+          <h2 class="text-center text-3xl font-bold text-indigo-600 dark:text-pink-200">New challenge</h2>
+          <p class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl dark:text-white ">Everything you need to deploy your IOS app</p>
+          <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+            <div class="relative lg:row-span-2">
+              <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]" />
+              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Build and Archive Your App</p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Use Xcode to build and archive your app, preparing it for distribution.</p>
+                </div>
+                <div class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
+                  <div class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                    <img class="size-full object-cover object-top" src="/assets/images/hero/img_4.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]" />
+            </div>
+            <div class="relative max-lg:row-start-1">
+              <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]" />
+              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+                <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Uploading App Store Connect</p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Use Xcode’s Organizer or Transporter (an Apple app) to upload the app to App Store Connect.</p>
+                </div>
+                <div class=" flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2 ">
+                  <img class="w-full max-lg:max-w-xs rounded-2xl" src="/assets/images/hero/img_5.png" alt="" />
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]" />
+            </div>
+
+            <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+              <div class="absolute inset-px rounded-lg bg-white" />
+              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+                <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Testing the App</p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Use TestFlight, Apple’s official beta testing service, to distribute your app to a limited number of users for testing before submitting it to the App Store.</p>
+                </div>
+                <div class="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
+                  <img class="h-[min(152px,40cqw)] object-cover rounded-2xl  " src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-security.png" alt="" />
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5" />
+            </div>
+            <div class="relative lg:row-span-2">
+              <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
+              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+                <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Submit for Review</p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Fill in necessary metadata on App Store Connect and submit your app for Apple's review. Once approved, release it on the App Store.</p>
+                </div>
+                <div class="relative min-h-[30rem] w-full grow">
+                  <div class="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
+                    <div class="flex bg-gray-800/40 ring-1 ring-white/5">
+                      <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
+                        <div class="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">ViewController.swift</div>
+                        <div class="border-r border-gray-600/10 px-4 py-2">ViewController.xib</div>
+                      </div>
+                    </div>
+                    <div class="px-6 pb-14 pt-6 text-white">
+
+<pre class="text-[0.8125rem]/6 text-gray-300" style="tab-size: 2"><code>class <span class="text-[#7dd3fc]">ViewController</span> :<span class="text-[#7dd3fc]">UIViewController</span> {
+
+<span class="text-indigo-400">function dogcoder</span>() {
+  label.frame = <span class="text-red-400">CGRect</span>(x: <span class="text-red-400">50</span>, y: <span class="text-red-400">200 </span>, width: <span class="text-red-400">300 </span>, height: 50)
+  button.frame = <span class="text-red-400">CGRect</span>(x: <span class="text-red-400">50</span>, y: <span class="text-red-400">200 </span>, width: <span class="text-red-400">300 </span>, height: 50)
+
+  // Add label and button to the view
+  view.addSubview(label)
+  view.addSubview(button)
+
+  // Button action
+  button.addTarget(<span class="text-purple-400">self</span>, action: <span class="text-purple-400">#selector </span>(changeLabelText), for: .touchUpInside)
+
+  // Action function to change the label text
+  <span class="text-purple-400">@objc func</span> <span class="text-indigo-400">changeLabelText</span>() {
+  label.text = <span class="text-green-400">"Button Tapped!"</span>
+
+}</code></pre>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="bg-w">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+          <div class="">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Dogcoder</h2>
+            <p class=" dark:text-white mt-4 text-gray-500">In a quiet room, a lonely programmer named Andy lived with his loyal foxhound, Luna. Together, they faced the world—one through lines of code, the other through sharp senses. Their bond was an unspoken promise, forged in solitude and trust.</p>
+
+            <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+              <div v-for="feature in features" :key="feature.name" class=" dark:text-white border-t border-fuchsia-500 pt-4">
+                <dt class="font-medium text-gray-900 dark:text-white">{{ feature.name }}</dt>
+                <dd class="mt-2 text-sm text-gray-500 dark:text-white">{{ feature.description }}</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+            <img src="/assets/images/hero/hero-features01.jpg" alt="" class="rounded-lg bg-gray-100" />
+            <img src="/assets/images/hero/hero-features02.jpg" alt="" class="rounded-lg bg-gray-100" />
+            <img src="/assets/images/hero/hero-features03.jpg" alt="" class="rounded-lg bg-gray-100" />
+            <img src="/assets/images/hero/hero-features04.jpg" alt="" class="rounded-lg bg-gray-100" />
+          </div>
+        </div>
+      </div>
+
         <div class="bg-cyan-500 dark:bg-cyan-900 py-4 text-white">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
                 <div class="mt-8 space-y-8">
+                  <div class="">
+                    <button type="button" class="text-sm font-semibold leading-6 dark:text-gray-300 hover:text-rose-500 dark:hover:text-orange-600 " @click="toggleShowMore" >View all posts <span aria-hidden="true"><i v-if="!showMore" class="ms-1 bi-arrow-right-circle"></i><i v-else class=" ms-1 bi bi-arrow-down-circle"></i></span></button>
+                  </div>
                         <!-- moments -->
-                        <article v-for="post in posts" :key="post.id" class="relative isolate flex flex-col items-center gap-4 lg:flex-row">
+                        <article v-for="post in itemsToShow" :key="post.id" class="relative isolate flex flex-col items-center gap-4 lg:flex-row">
                             <div class="relative h-64 w-[21rem] sm:h-[28rem] sm:w-[40rem] lg:w-64 lg:h-48 shrink-0 group">
                                 <img :src="post.imageUrl" alt="" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover group-hover:opacity-75" />
                                 <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
@@ -40,6 +158,7 @@
 
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <h2 class="text-2xl font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Furry Friends 毛茸茸的家伙们</h2>
+
             <section id="slider" class="mt-5 flex justify-center">
                 <swiper
                     :slidesPerView="1"
@@ -87,11 +206,11 @@
                         </div>
                         <div class="flex flex-col bg-blue-300 dark:bg-blue-950 p-4 sm:p-8 ">
                             <dt class="text-sm font-semibold leading-6">Weight 体重</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight">20KG</dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight">21KG</dd>
                         </div>
                         <div class="flex flex-col bg-blue-300 dark:bg-blue-950 p-4 sm:p-8 ">
                             <dt class="text-sm font-semibold leading-6">Age 年龄</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight">21 months</dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight">3 years</dd>
                         </div>
                         <div class="flex flex-col bg-blue-300 dark:bg-blue-950 p-4 sm:p-8 ">
                             <dt class="text-sm font-semibold leading-6">Exercise 运动 </dt>
@@ -161,7 +280,7 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref,computed} from 'vue';
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
 // Import Swiper styles
@@ -179,13 +298,20 @@ export default {
     setup() {
         const progressCircle = ref(null);
         const progressContent = ref(null);
-
-
+        const showMore = ref(false);
         const onAutoplayTimeLeft = (s, time, progress) => {
             progressCircle.value.style.setProperty('--progress', 1- progress);
             progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
         };
-        const posts = [
+      const features = ref( [
+        { name: 'Curiosity', description: 'Andy spent hours unraveling coding mysteries, while Luna sniffed out every room in the house.',imageUrl:'/assets/images/hero/hero-features01.jpg' },
+        { name: 'Loyalty', description: 'Luna never left Andy’s side, even during late-night debugging sessions by the flickering screen.',imageUrl:'/assets/images/hero/hero-featurhero-features02.jpg' },
+        { name: 'Cleverness', description: 'Luna crafted ingenious algorithms, and Rusty outsmarted every squirrel that dared cross their path."',imageUrl:'/assets/images/hero/hero-features03.jpg' },
+        { name: 'Patience', description: 'Andy waited for his programs to compile, as Luna sat still, ears perked, tracking distant sounds.',imageUrl:'/assets/images/hero/hero-features04.jpg'},
+        { name: 'Resilience', description: 'When bugs crashed Andy’s code, he kept going; when storms hit, Luna braved the rain to guard their home.',imageUrl:'/assets/images/hero/hero-features01.jpg'},
+        { name: 'Companionship', description: 'In the silence of the house, they found comfort in each other—no words or barks needed.',imageUrl:'/assets/images/hero/hero-features01.jpg' },
+      ]);
+        const posts = ref([
             {
               id: 10,
               title: 'Dark Mode is activated',
@@ -317,7 +443,7 @@ export default {
                 },
             },
 
-        ]
+        ]);
         const slides =  [
             { path: '/assets/images/hero/hero01.jpeg', alt: '' },
             { path: '/assets/images/hero/hero02.jpeg', alt: '' },
@@ -359,16 +485,31 @@ export default {
             }
 
         ]
-        return {
+        const itemsToShow = computed(() => {
+          if (showMore.value) {
+            return posts.value; // 显示所有元素
+          } else {
+            return posts.value.slice(0, 4); // 只显示前四个元素
+          }
+        });
+        const toggleShowMore = () => {
+          showMore.value = !showMore.value; // 切换按钮状态
+        };
+
+      return {
             onAutoplayTimeLeft,
             progressCircle,
             progressContent,
             modules: [Autoplay, Pagination, Navigation],
             posts,
             slides,
-            newsList
-        };
-    },
+            newsList,
+            itemsToShow,
+            toggleShowMore,
+            showMore,
+            features
+          }
+        },
     name:'Hero',
 }
 </script>

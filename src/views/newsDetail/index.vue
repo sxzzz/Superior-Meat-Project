@@ -2,9 +2,9 @@
     <div class="bg-white dark:bg-black">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
-                <ul>
+                <ul class="">
                     <li v-for="news in filteredNewsList" :key="news.id" >
-                        <div class="mb-10">
+                        <div class="">
                             <div class="w-full">
                                 <div class="flex items-center justify-between  gap-x-4 text-xl font-bold mb-2 ">
                                     <div class="flex items-center">
@@ -19,7 +19,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr>
+                            <hr class="dark:border-orange-500">
                             <div class="flex flex-col lg:flex-row gap-5">
                                 <div class="basis-1/2">
                                     <img :src="news.imageUrl" alt="" class="mt-6 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]">
@@ -43,7 +43,6 @@
                             </div>
                         </div>
                     </li>
-
                 </ul>
             </div>
         </div>

@@ -1,21 +1,21 @@
 <template>
-
   <div class="bg-white dark:bg-black">
     <div v-for="galleryItem in galleryLists"  class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
       <div class="sm:flex sm:items-baseline sm:justify-between">
         <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">{{ galleryItem.subtitle}}</h2>
       </div>
       <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <a v-for="image in galleryItem.images" href="#" class="group">
-          <div class="aspect-h-1 aspect-w-2 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-            <img :src="image.path" alt="image.alt" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        <a v-for="image in galleryItem.images" href="#" class="group ">
+          <div class="aspect-h-1 aspect-w-2 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 relative">
+            <img :src="image.path" alt="image.alt" class="h-full w-full object-cover object-center">
+            <span class="">
+              <i class="bi bi-chat-heart absolute bottom-4 right-8 text-gray-100 hover:text-pink-400 text-2xl"></i>
+            </span>
           </div>
         </a>
       </div>
     </div>
-
   </div>
-
 </template>
 
 <script>

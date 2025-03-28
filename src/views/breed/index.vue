@@ -19,7 +19,7 @@
             <p class="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">猎狐犬是一种大型狩猎猎犬，其培育目的是为了强烈的狩猎本能、敏锐的嗅觉、哮喘、精力、驱动力和速度。</p>
           </li>
           <li>
-            <router-link to="/breed/beagle"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="/assets/images/breed/Beagle.jpeg" alt=""></router-link>
+            <router-link to="/beagle"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="/assets/images/breed/Beagle.jpeg" alt=""></router-link>
             <h3 class="mt-6 text-lg font-semibold leading-8 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Beagles 比格犬</h3>
             <p class="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">The beagle was developed primarily for hunting hare, known as beagling. Possessing a great sense of smell and superior tracking instincts.</p>
             <p class="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">比格犬主要是为了追踪野兔而培育的，被称为"比格犬狩猎"。比格犬具有敏锐的嗅觉和出色的追踪本能。</p>
