@@ -67,7 +67,6 @@ const router = createRouter({
 })
 router.beforeEach((to, from, next) => {
     if (to.name === 'hero') {
-        console.log(to.meta);
         const scrollToId = to.query.scrollToId;
         if (scrollToId) {
             setTimeout(() => {

@@ -2,9 +2,47 @@
   <div class="bg-white dark:bg-black">
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div class="sm:flex sm:items-baseline sm:justify-between">
-        <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">The Story of Friends </h2>
+        <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Friends (not responsive yet) </h2>
       </div>
-      <ul role="list" class="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none">
+      <!-- 三角墙     -->
+
+      <div class="bg-white" >
+        <div class="px-6 lg:px-8">
+          <div class="mt-4">
+            <p class="text-4xl text-center font-semibold tracking-tight bg-gradient-to-r from-sky-500 via-purple-400 to-pink-500 inline-block text-transparent bg-clip-text">In golden dawn and silver light, Pets roam free, hearts pure and bright.</p>
+            <p class="text-4xl text-center font-semibold tracking-tight bg-gradient-to-r from-sky-500 via-purple-400 to-pink-500 inline-block text-transparent bg-clip-text">Dogs chase winds, and cats stay sly, Birds weave songs into the sky...</p>
+          </div>
+
+          <ul  id="dogs" role="list" class="mt-10 flex flex-row justify-center grid-cols-5 ">
+            <li v-for="(pet,index) in dogs" :key="pet.name" class="mx-3">
+              <img class="size-24 rounded-full" :src="pet.imageUrl" alt="" />
+              <h3 class=" mt-6 text-xl text-center font-semibold tracking-tight text-rose-400 ">{{ pet.name }}</h3>
+              <p class=" text-center text-gray-600">{{ pet.role }}</p>
+            </li>
+          </ul>
+          <ul  id="cats" role="list" class=" mt-4 flex flex-row justify-center ">
+            <li v-for="(pet,index) in cats" :key="pet.name" class="mx-3" >
+              <img class="size-24 rounded-full" :src="pet.imageUrl" alt="" />
+              <h3 class="mt-6 text-xl text-center font-semibold tracking-tight text-rose-400">{{ pet.name }}</h3>
+              <p class="text-center text-gray-600">{{ pet.role }}</p>
+            </li>
+          </ul>
+          <ul   id="pets" role="list" class=" mt-4 flex flex-row justify-center ">
+            <li v-for="(pet,index) in pets" :key="pet.name" class="mx-3">
+              <img class="size-24 rounded-full" :src="pet.imageUrl" alt="" />
+              <h3 class="mt-6 text-xl text-center font-semibold tracking-tight text-rose-400">{{ pet.name }}</h3>
+              <p class="text-center text-gray-600">{{ pet.role }}</p>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <!--  朋友的故事     -->
+
+      <div class="sm:flex sm:items-baseline sm:justify-between mt-4">
+        <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Memories</h2>
+      </div>
+        <ul  role="list" class="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none">
         <li class="flex flex-col gap-6 xl:flex-row px-6 sm:px-0">
           <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="/assets/images/friends/annie02.jpeg" alt="">
           <div class="flex-auto">
@@ -44,18 +82,115 @@
         <!-- More people... -->
       </ul>
     </div>
+
+
   </div>
+
+
 
 
 </template>
 
 <script>
+import { ref,computed} from 'vue';
+import {Autoplay, Navigation, Pagination} from "swiper";
 
 export default {
-  name:'Friends',
-  data() {
+
+  setup(){
+    const dogs = ref([
+      {
+        name: 'Melon',
+        role: 'golden retriever',
+        imageUrl:
+            '/assets/images/friends/Melon.png',
+      },
+      {
+        name: 'Mojo',
+        role: 'Basenji',
+        imageUrl:
+            '/assets/images/friends/Mojo.png',
+      },
+      {
+        name: 'Nami',
+        role: 'Terrier',
+        imageUrl:
+            '/assets/images/friends/Nami.png',
+      },
+      {
+        name: 'Drake',
+        role: 'Cavalier King',
+        imageUrl:
+            '/assets/images/friends/Drake.png',
+      },
+      {
+        name: 'Brody',
+        role: 'Terrier',
+        imageUrl:
+            '/assets/images/friends/Brody.png',
+      }
+
+    ])
+    const cats = ref([
+      {
+        name: 'Tom',
+        role: 'Ragdoll',
+        imageUrl:
+            '/assets/images/friends/Tom.png',
+      },
+      {
+        name: 'Guinness',
+        role: 'Felis catus',
+        imageUrl:
+            '/assets/images/friends/Guinness.png',
+      },
+      {
+        name: 'Barley',
+        role: 'American Shorthair',
+        imageUrl:
+            '/assets/images/friends/Barley.png',
+      },
+      {
+        name: 'Figaro',
+        role: 'Neva Masquerade',
+        imageUrl:
+            '/assets/images/friends/Figaro.png',
+      },
+
+    ])
+    const pets = ref([
+      {
+        name: 'Muse',
+        role: 'hummingbird',
+        imageUrl:
+            '/assets/images/friends/Muse.png',
+      },
+      {
+        name: 'Bard',
+        role: 'tiger',
+        imageUrl:
+            '/assets/images/friends/Bard.png',
+      },
+      {
+        name: 'Velvet',
+        role: 'Reptile',
+        imageUrl:
+            '/assets/images/friends/Velvet.png',
+      },
+
+    ])
+
     return {
+      dogs,cats,pets
     }
-  }
+  },
+  name:'friends',
 }
 </script>
+
+<style>
+#dogs img, #cats img, #pets img {
+  width: 164px;
+  height: 164px;
+}
+</style>

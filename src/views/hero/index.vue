@@ -11,8 +11,11 @@
 
         <div class="bg-teal-300 dark:bg-teal-700 py-24 sm:py-32">
         <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-          <h2 class="text-center text-3xl font-bold text-indigo-600 dark:text-pink-200">New challenge</h2>
-          <p class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl dark:text-white ">Everything you need to deploy your IOS app</p>
+          <div>
+            <h2 class="text-center text-3xl font-bold text-indigo-600 dark:text-pink-200">New challenge</h2>
+            <h2 class="text-center text-3xl font-bold text-indigo-600 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-pink-400 to-90%  text-transparent bg-clip-text dark:text-pink-200">Everything you need to deploy your IOS app</h2>
+          </div>
+
           <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
             <div class="relative lg:row-span-2">
               <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]" />

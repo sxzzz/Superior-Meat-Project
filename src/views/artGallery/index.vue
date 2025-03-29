@@ -44,7 +44,17 @@ export default {
                     { path: '/assets/images/artgallery/arthunt03.jpeg', alt: '' },
                     { path: '/assets/images/artgallery/arthunt04.jpeg', alt: '' },
                 ]
-            }
+            },
+          {
+            id: 1,
+            subtitle:'Trouble',
+            images: [
+              { path: '/assets/images/artgallery/arttrouble01.JPG', alt: '' },
+              { path: '/assets/images/artgallery/arttrouble02.JPG', alt: '' },
+              { path: '/assets/images/artgallery/arttrouble03.JPG', alt: '' },
+              { path: '/assets/images/artgallery/arttrouble01.JPG', alt: '' },
+            ]
+          }
         ]
     }
   }
