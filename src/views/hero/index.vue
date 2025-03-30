@@ -1,16 +1,99 @@
 <template>
     <div class="bg-white dark:bg-black">
-        <div class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6">
-            <h1 class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text ">Embrace the Journey: Unveiling Life's Tapestry <p class="mt-2">拥抱旅程：揭开生命的织锦</p></h1>
+
+        <div v-if="false" class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6">
+            <h1 class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text ">Embrace the Journey: Unveiling Life's Tapestry<p class="mt-2">拥抱旅程：揭开生命的织锦</p></h1>
             <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna, a foxhound hailing from the beautiful city of Hobart in Tasmania, possessed a deep love for the simple pleasures of life—indulging in delicious meals, surrendering to peaceful slumber, embracing cozy snuggles, and frolicking in playful escapades. Amidst her siblings, who were all beagles, Luna stood out as a unique soul, a mesmerizing blend of beagle and foxhound ancestry.</p>
-            <p class="text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna，一只诞生于塔斯马尼亚州霍巴特美城的猎狐犬，胸怀对生活的简约欢愉，热爱着美食的醉人魅力、恬静的甜蜜梦乡，与温馨的亲昵相依，还有在欢欣的游戏中尽情踊跃。在她的兄弟姐妹中，众犬皆为比格，而Luna独树一帜，融合了比格犬与猎狐犬的绝妙交织，形成其迷人之灵魂。</p>
-        </div>
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 class="text-2xl font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Moments 精彩瞬间 </h2>
+            <p class="text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna(罗马神话中的月亮女神)，一只诞生于塔斯马尼亚州霍巴特美城的猎狐犬，胸怀对生活的简约欢愉，热爱着美食的醉人魅力、恬静的甜蜜梦乡，与温馨的亲昵相依，还有在欢欣的游戏中尽情踊跃。在她的兄弟姐妹中，众犬皆为比格，而Luna独树一帜，融合了比格犬与猎狐犬的绝妙交织，形成其迷人之灵魂。</p>
         </div>
 
-        <div class="bg-teal-300 dark:bg-teal-700 py-24 sm:py-32">
+      <div class="overflow-hidden bg-white py-24 sm:py-6 dark:bg-black">
         <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+          <div class="max-w-4xl">
+            <h1 class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text ">Embrace the Journey: Unveiling Life's Tapestry
+              <p class="mt-2">拥抱旅程：揭开生命的织锦</p>
+            </h1>
+          </div>
+
+          <section class="mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
+            <div class="lg:pr-8">
+              <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna, a foxhound hailing from the beautiful city of Hobart in Tasmania, possessed a deep love for the simple pleasures of life—indulging in delicious meals, surrendering to peaceful slumber, embracing cozy snuggles, and frolicking in playful escapades. Amidst her siblings, who were all beagles, Luna stood out as a unique soul, a mesmerizing blend of beagle and foxhound ancestry.</p>
+              <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">路娜 (罗马神话中的月亮女神)，一只诞生于塔斯马尼亚州霍巴特美城的猎狐犬，胸怀对生活的简约欢愉，热爱着美食的醉人魅力、恬静的甜蜜梦乡，与温馨的亲昵相依，还有在欢欣的游戏中尽情踊跃。在她的兄弟姐妹中，众犬皆为比格，而Luna独树一帜，融合了比格犬与猎狐犬的绝妙交织，形成其迷人之灵魂。</p>
+
+            </div>
+            <div class="pt-32 lg:row-span-2 lg:-mr-16 xl:mr-auto">
+              <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg: lg:grid-cols-2 lg:gap-4 xl:gap-8">
+                <div class="aspect-[4/3] w-[13rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
+                  <img alt="" src="/assets/images/hero/hero10.jpg" class="block size-full object-cover" />
+                </div>
+                <div class="aspect-[4/3] w-[13rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
+                  <img alt="" src="/assets/images/hero/hero11.jpg" class="block size-full object-cover" />
+                </div>
+                <div class="aspect-[4/3] w-[13rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
+                  <img alt="" src="/assets/images/hero/hero12.jpg" class="block size-full object-cover" />
+                </div>
+                <div class="aspect-[4/3] w-[13rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10  lg:-mt-40">
+                  <img alt="" src="/assets/images/hero/hero13.jpg" class="block size-full object-cover" />
+                </div>
+              </div>
+            </div>
+            <div v-if="false" class="max-lg:mt-16 lg:col-span-1">
+              <p class="text-base/7 font-semibold text-gray-500">Breed Traits & Characteristics</p>
+              <hr class="mt-6 border-t border-gray-200" />
+              <dl class="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+                <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
+                  <dt class="text-sm/6 text-gray-600">Breed</dt>
+                  <dd class="order-first text-4xl font-semibold tracking-tight"><span>Foxhound</span></dd>
+                </div>
+                <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
+                  <dt class="text-sm/6 text-gray-600">Coat type</dt>
+                  <dd class="order-first text-4xl font-semibold tracking-tight"><span>Smooth</span></dd>
+                </div>
+                <div class="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4">
+                  <dt class="text-sm/6 text-gray-600">Energy level</dt>
+                  <dd class="order-first text-4xl font-semibold tracking-tight"><span>Couch Potato</span></dd>
+                </div>
+                <div class="flex flex-col gap-y-2">
+                  <dt class="text-sm/6 text-gray-600">Good with children</dt>
+                  <dd class="order-first text-4xl font-semibold tracking-tight"><span>Highly</span></dd>
+                </div>
+              </dl>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!--background with image-->
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+          <img src="/assets/images/hero/img_1.png" alt="" class="absolute inset-0 -z-10 size-full object-cover" />
+          <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="absolute -bottom-8 -left-96 -z-10 transform-gpu blur-3xl sm:-bottom-64 sm:-left-40 lg:-bottom-32 lg:left-8 xl:-left-10" aria-hidden="true">
+              <div class="aspect-[1266/975] w-[79.125rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
+            </div>
+            <div v-show="true" class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+              <h2 class="text-base/8 font-semibold text-red-400">Breed Traits & Characteristics</h2>
+              <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-violet-600 sm:text-5xl">Independent / Easy-going Sweet-tempered</p>
+              <p class="mt-10  text-xl text-fuchsia-600">American Foxhounds are good-natured, low-maintenance hounds who get on well with kids, dogs, even cats, but come with special considerations for prospective owners. </p>
+            </div>
+            <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+              <div v-for="stat in stats" :key="stat.id" class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
+                <dt class="bg-gradient-to-r from-purple-500 via-orange-500 to-pink-500 inline-block text-transparent bg-clip-text">{{ stat.name }}</dt>
+                <dd class="order-first text-2xl font-semibold tracking-tight bg-gradient-to-r from-purple-500 via-orange-500 to-pink-500 inline-block text-transparent bg-clip-text">{{ stat.value }}</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div v-if="false" class="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 class="text-2xl font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Moments 精彩瞬间 </h2>
+        </div>
+        <!--app section-->
+        <div class="bg-teal-300 dark:bg-teal-700 py-24 sm:py-32">
+          <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
           <div>
             <h2 class="text-center text-3xl font-bold text-indigo-600 dark:text-pink-200">New challenge</h2>
             <h2 class="text-center text-3xl font-bold text-indigo-600 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-pink-400 to-90%  text-transparent bg-clip-text dark:text-pink-200">Everything you need to deploy your IOS app</h2>
@@ -103,8 +186,8 @@
             </div>
           </div>
         </div>
-      </div>
-
+        </div>
+        <!--dogCoder-->
         <div class="bg-w">
         <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div class="">
@@ -498,6 +581,12 @@ export default {
         const toggleShowMore = () => {
           showMore.value = !showMore.value; // 切换按钮状态
         };
+      const stats = [
+        { id: 1, name: 'Breed', value: 'American Foxhound' },
+        { id: 2, name: 'Coat type', value: 'Smooth' },
+        { id: 3, name: 'Energy level', value: 'Couch Potato' },
+        { id: 4, name: 'Good with children', value: 'Tremendously' },
+      ]
 
       return {
             onAutoplayTimeLeft,
@@ -510,7 +599,8 @@ export default {
             itemsToShow,
             toggleShowMore,
             showMore,
-            features
+            features,
+        stats
           }
         },
     name:'Hero',
