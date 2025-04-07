@@ -192,14 +192,15 @@
         <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div class="">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Dogcoder</h2>
-            <p class=" dark:text-white mt-4 text-gray-500">In a quiet room, a lonely programmer named Andy lived with his loyal foxhound, Luna. Together, they faced the world—one through lines of code, the other through sharp senses. Their bond was an unspoken promise, forged in solitude and trust.</p>
+              <p class=" dark:text-white mt-4 text-gray-500">In a quiet room, a lonely programmer named Andy lived with his loyal foxhound, Luna. Together, they faced the world—one through lines of code, the other through sharp senses. Their bond was an unspoken promise, forged in solitude and trust.
+                <br>在一个安静的房间里，住着一位孤独的程序员安迪，和他忠诚的猎狐犬路娜。一个通过代码行迎接世界，另一个则凭借敏锐的感官。他们之间的纽带是一种无言的承诺，在孤独与信任中铸就。</p>
 
-            <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-              <div v-for="feature in features" :key="feature.name" class=" dark:text-white border-t border-fuchsia-500 pt-4">
-                <dt class="font-medium text-gray-900 dark:text-white">{{ feature.name }}</dt>
-                <dd class="mt-2 text-sm text-gray-500 dark:text-white">{{ feature.description }}</dd>
-              </div>
-            </dl>
+              <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+                <div v-for="feature in features" :key="feature.name" class=" dark:text-white border-t border-fuchsia-500 pt-4">
+                  <dt class="font-medium text-gray-900 dark:text-white">{{ feature.name }}</dt>
+                  <dd class="mt-2 text-sm text-gray-500 dark:text-white">{{ feature.description }} {{ feature.descriptionCN }}</dd>
+                </div>
+              </dl>
           </div>
           <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
             <img src="/assets/images/hero/hero-features01.jpg" alt="" class="rounded-lg bg-gray-100" />
@@ -390,12 +391,12 @@ export default {
             progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
         };
       const features = ref( [
-        { name: 'Curiosity', description: 'Andy spent hours unraveling coding mysteries, while Luna sniffed out every room in the house.',imageUrl:'/assets/images/hero/hero-features01.jpg' },
-        { name: 'Loyalty', description: 'Luna never left Andy’s side, even during late-night debugging sessions by the flickering screen.',imageUrl:'/assets/images/hero/hero-featurhero-features02.jpg' },
-        { name: 'Cleverness', description: 'Luna crafted ingenious algorithms, and Rusty outsmarted every squirrel that dared cross their path."',imageUrl:'/assets/images/hero/hero-features03.jpg' },
-        { name: 'Patience', description: 'Andy waited for his programs to compile, as Luna sat still, ears perked, tracking distant sounds.',imageUrl:'/assets/images/hero/hero-features04.jpg'},
-        { name: 'Resilience', description: 'When bugs crashed Andy’s code, he kept going; when storms hit, Luna braved the rain to guard their home.',imageUrl:'/assets/images/hero/hero-features01.jpg'},
-        { name: 'Companionship', description: 'In the silence of the house, they found comfort in each other—no words or barks needed.',imageUrl:'/assets/images/hero/hero-features01.jpg' },
+        { name: 'Curiosity', description: 'Andy spent hours unraveling coding mysteries, while Luna sniffed out every room in the house.',descriptionCN:'安迪花了好几个小时解开编码之谜，而路娜则在屋里每个房间里嗅来嗅去。',imageUrl:'/assets/images/hero/hero-features01.jpg' },
+        { name: 'Loyalty', description: 'Luna never left Andy’s side, even during late-night debugging sessions by the flickering screen.',descriptionCN:'即使在深夜调试的时刻，屏幕闪烁不定，路娜也从未离开安迪的身边。',imageUrl:'/assets/images/hero/hero-featurhero-features02.jpg' },
+        { name: 'Cleverness', description: 'Andy crafted ingenious algorithms, and Luna outsmarted every squirrel that dared cross their path."',descriptionCN:'安迪设计出巧妙的算法，而路娜则聪明地击败了每一只胆敢挡路的松鼠。',imageUrl:'/assets/images/hero/hero-features03.jpg' },
+        { name: 'Patience', description: 'Andy waited for his programs to compile, as Luna sat still, ears perked, tracking distant sounds.',descriptionCN:'安迪等待程序编译的同时，路娜安静地坐着，竖起耳朵，捕捉着远处的声音。',imageUrl:'/assets/images/hero/hero-features04.jpg'},
+        { name: 'Resilience', description: 'When bugs crashed Andy’s code, he kept going; when storms hit, Luna braved the rain to guard their home.',descriptionCN:'当程序因漏洞崩溃时，安迪依然坚持不懈；当风暴来袭时，路娜冒着雨坚守家园。',imageUrl:'/assets/images/hero/hero-features01.jpg'},
+        { name: 'Companionship', description: 'In the silence of the house, they found comfort in each other—no words or barks needed.',descriptionCN:'在屋内的寂静中，他们彼此依偎，无需言语，也无需吠声，便已心安。',imageUrl:'/assets/images/hero/hero-features01.jpg' },
       ]);
         const posts = ref([
             {
@@ -600,7 +601,7 @@ export default {
             toggleShowMore,
             showMore,
             features,
-        stats
+            stats
           }
         },
     name:'Hero',
