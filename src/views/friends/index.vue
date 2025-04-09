@@ -103,31 +103,31 @@ export default {
         name: 'Melon',
         role: 'golden retriever',
         imageUrl:
-            '/assets/images/friends/Melon.png',
+            '/assets/images/friends/Melon.jpg',
       },
       {
         name: 'Mojo',
         role: 'Basenji',
         imageUrl:
-            '/assets/images/friends/Mojo.png',
+            '/assets/images/friends/Mojo.jpg',
       },
       {
         name: 'Nami',
         role: 'Terrier',
         imageUrl:
-            '/assets/images/friends/Nami.png',
+            '/assets/images/friends/Nami.jpg',
       },
       {
         name: 'Drake',
         role: 'Cavalier King',
         imageUrl:
-            '/assets/images/friends/Drake.png',
+            '/assets/images/friends/Drake.jpg',
       },
       {
         name: 'Brody',
         role: 'Terrier',
         imageUrl:
-            '/assets/images/friends/Brody.png',
+            '/assets/images/friends/Brody.jpg',
       }
 
     ])
@@ -136,25 +136,25 @@ export default {
         name: 'Tom',
         role: 'Ragdoll',
         imageUrl:
-            '/assets/images/friends/Tom.png',
+            '/assets/images/friends/Tom.jpg',
       },
       {
         name: 'Guinness',
         role: 'Felis catus',
         imageUrl:
-            '/assets/images/friends/Guinness.png',
+            '/assets/images/friends/Guinness.jpg',
       },
       {
         name: 'Barley',
         role: 'American Shorthair',
         imageUrl:
-            '/assets/images/friends/Barley.png',
+            '/assets/images/friends/Barley.jpg',
       },
       {
         name: 'Figaro',
         role: 'Neva Masquerade',
         imageUrl:
-            '/assets/images/friends/Figaro.png',
+            '/assets/images/friends/Figaro.jpg',
       },
 
     ])
@@ -163,19 +163,19 @@ export default {
         name: 'Muse',
         role: 'hummingbird',
         imageUrl:
-            '/assets/images/friends/Muse.png',
+            '/assets/images/friends/Muse.jpg',
       },
       {
         name: 'Bard',
         role: 'tiger',
         imageUrl:
-            '/assets/images/friends/Bard.png',
+            '/assets/images/friends/Bard.jpg',
       },
       {
         name: 'Velvet',
         role: 'Reptile',
         imageUrl:
-            '/assets/images/friends/Velvet.png',
+            '/assets/images/friends/Velvet.jpg',
       },
 
     ])
