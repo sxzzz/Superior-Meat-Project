@@ -51,7 +51,7 @@ export default {
             images: [
               { path: '/assets/images/artgallery/arttrouble01.JPG', alt: '' },
               { path: '/assets/images/artgallery/arttrouble02.JPG', alt: '' },
-              { path: '/assets/images/artgallery/arttrouble03.JPG', alt: '' },
+              { path: '/assets/images/artgallery/arttrouble03.jpg', alt: '' },
               { path: '/assets/images/artgallery/arttrouble01.JPG', alt: '' },
             ]
           }
