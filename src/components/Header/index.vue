@@ -8,23 +8,24 @@
             <div class="absolute left-[max(45rem,calc(48%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
                 <div class="aspect-[577/310] w-[46.0625rem] bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 " style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)" />
             </div>
-            <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-                <div class="text-sm leading-6 text-white flex flex-col lg:flex-row dark:text-gray-300">
+            <div class="gap-x-4 gap-y-2">
+                <div class="text-sm leading-6 text-white flex flex-col items-start sm:items-center lg:flex-row dark:text-gray-300">
                     <div>
                         <strong class="font-semibold">Welcome to Luna's BLOG! Let's explore, learn, and enjoy the fascinating world of our furry friends!</strong>
                     </div>
-                    <div>
-                        <span class="lg:ms-20 inline h-0.5 w-0.5 fill-current text-xs" aria-hidden="true">Last updated: 28th March at 2:28pm</span>
+                    <div class="">
+                        <span class="inline-block lg:ms-2 xl:ms-20 inline h-0.5 w-0.5 fill-current text-xs" aria-hidden="true">updated: 28th March </span>
                     </div>
                    <!-- Dark Mode -->
                     <div class="flex items-center ms-0 mt-2 lg:mt-0 lg:ms-3">
-                      <button type="button" @click="toggleButton" :class="{ 'bg-indigo-600': enabled, 'bg-gray-200': !enabled }" class="bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false" aria-labelledby="annual-billing-label">
-                        <span aria-hidden="true" :class="{ 'translate-x-5': enabled, 'translate-x-0': !enabled }" class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+                      <button type="button" @click="toggleButton" :class="{ 'bg-indigo-600': enabled, 'bg-gray-200': !enabled }" class="bg-gray-200 relative inline-flex h-5 w-10 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false" aria-labelledby="annual-billing-label">
+                        <span aria-hidden="true" :class="{ 'translate-x-5': enabled, 'translate-x-0': !enabled }" class="translate-x-0 pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
                       </button>
-
+                      <!--music-->
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ms-2 w-4 h-4">
                         <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
                       </svg>
+                      <i class="bi bi-cassette text-2xl ms-6"  @click="toggleMusic"><i v-if="isPlaying" class="bi bi-play-fill"></i><i v-if="!isPlaying" class="bi bi-stop-fill"></i></i>
 
 
 
@@ -41,7 +42,7 @@
                 </button>
             </div>
         </div>
-      <img id="logo" class="h-48 w-full object-cover lg:h-64" src="/assets/logo/banner.jpg" alt="" />
+        <img id="logo" class="h-48 w-full object-cover lg:h-64" src="/assets/logo/banner.jpg" alt="" />
     </div>
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="-mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
@@ -62,19 +63,42 @@
 <script>
 
 
+import bgMusic from "/assets/music/Love On A Real Train.mp3";
+
 export default {
 
   data() {
     return {
       enabled: false,
+      audio: null,
+      isPlaying: false,
     }
+  },
+  mounted() {
+    this.audio = new Audio(bgMusic)
+    this.audio.loop = true
+    // 可选：尝试自动播放（多数浏览器需要用户交互）
+    this.audio.play().then(() => {
+      this.isPlaying = true
+    }).catch(() => {
+    })
   },
   methods:{
     toggleButton() {
       this.enabled = !this.enabled;
       document.documentElement.classList.toggle('dark');
     },
-  }
+    toggleMusic() {
+      if (this.audio.paused) {
+        this.audio.play()
+        this.isPlaying = true
+
+      } else {
+        this.audio.pause()
+        this.isPlaying = false
+      }
+    }
+  },
 }
 </script>
 

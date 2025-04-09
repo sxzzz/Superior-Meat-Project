@@ -399,6 +399,58 @@ export default {
         { name: 'Companionship', description: 'In the silence of the house, they found comfort in each other—no words or barks needed.',descriptionCN:'在屋内的寂静中，他们彼此依偎，无需言语，也无需吠声，便已心安。',imageUrl:'/assets/images/hero/hero-features01.jpg' },
       ]);
         const posts = ref([
+          {
+            id: 14,
+            title: 'Vue 2',
+            description:
+                '响应式数据绑定 (Reactive Data Binding), 组件化开发 (Component-Based Architecture), 指令系统 (Directive System), 虚拟 DOM (Virtual DOM), 生命周期钩子 (Lifecycle Hooks), 双向数据绑定 (Two-Way Data Binding)...',
+            imageUrl:'/assets/images/hero/b14.jpeg',
+            date: 'Oct 01, 2024',
+            datetime: '2024-10-01',
+            author: {
+              name: 'Andy',
+              imageUrl:'/assets/logo/andyAvator.png',
+            },
+          },
+            {
+            id: 13,
+            title: 'Vue 3.5 "Tengen Toppa Gurren Lagann"',
+            description:
+                'Optimization of the reactivity system,Destructuring of reactive Props.响应式系统优化，响应式 Props 解构。',
+            imageUrl:'/assets/images/hero/b13.jpeg',
+            date: 'Sep 01, 2024',
+            datetime: '2024-09-01',
+            author: {
+              name: 'Andy',
+              imageUrl:'/assets/logo/andyAvator.png',
+            },
+          },
+            {
+            id: 12,
+            title: 'Vue 3.4 "Slam Dunk"',
+            description:
+                'Rewrote the template parser,Refactored the reactivity system,Stabilized the defineModel API and introduced a shorthand for binding props with the same name.重写模板解析器，重构了响应式系统，稳定了 defineModel API，并引入了绑定 props 的同名简写。',
+            imageUrl:'/assets/images/hero/b12.jpeg',
+            date: 'Dec 28, 2023',
+            datetime: '2023-09-28',
+            author: {
+              name: 'Andy',
+              imageUrl:'/assets/logo/andyAvator.png',
+            },
+          },
+            {
+            id: 11,
+            title: 'Vue 3.3 "Rurouni Kenshin"',
+            description:
+                '改进了 <script setup> 与 TypeScript 的集成，增强开发者体验。',
+            imageUrl:'/assets/images/hero/b11.jpeg',
+            date: 'June 11, 2023',
+            datetime: '2023-06-11',
+            author: {
+              name: 'Andy',
+              imageUrl:'/assets/logo/andyAvator.png',
+            },
+          },
             {
               id: 10,
               title: 'Dark Mode is activated',
@@ -576,7 +628,7 @@ export default {
           if (showMore.value) {
             return posts.value; // 显示所有元素
           } else {
-            return posts.value.slice(0, 4); // 只显示前四个元素
+            return posts.value.slice(0, 5); // 只显示前四个元素
           }
         });
         const toggleShowMore = () => {

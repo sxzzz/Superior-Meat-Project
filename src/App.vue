@@ -55,20 +55,16 @@
 import Header from './components/Header/index.vue';
 import Topnav from "./components/Topnav/index.vue";
 export default {
-  components:{
+  components: {
     Header,
     Topnav
   },
-  data(){
+  data() {
     return {
-
     }
   },
-  methods:{
 
-  },
 }
-
 </script>
 
 <style scoped>

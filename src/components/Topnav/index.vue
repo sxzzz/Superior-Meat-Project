@@ -57,6 +57,21 @@
                 </svg>
                 Breed
             </router-link>
+            <router-link to="/post"
+                         :class="['inline-flex items-center border-b-2', $route.path === '/post' ? 'border-indigo-500' : 'border-transparent', 'px-1 pt-1 text-sm font-medium text-gray-500 dark:text-gray-400 hover:border-gray-300 hover:text-gray-700 dark:hover:text-pink-200']">
+              <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor"  class="bi bi-stickies w-5 h-5 me-2" viewBox="0 0 16 16">
+                <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5V13a1 1 0 0 0 1 1V1.5a.5.5 0 0 1 .5-.5H14a1 1 0 0 0-1-1z"/>
+                <path d="M3.5 2A1.5 1.5 0 0 0 2 3.5v11A1.5 1.5 0 0 0 3.5 16h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 16 9.586V3.5A1.5 1.5 0 0 0 14.5 2zM3 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5V9h-4.5A1.5 1.5 0 0 0 9 10.5V15H3.5a.5.5 0 0 1-.5-.5zm7 11.293V10.5a.5.5 0 0 1 .5-.5h4.293z"/>
+              </svg>
+              Post
+            </router-link>
+            <router-link to="/dev"
+                         :class="['inline-flex items-center border-b-2', $route.path === '/dev' ? 'border-indigo-500' : 'border-transparent', 'px-1 pt-1 text-sm font-medium text-gray-500 dark:text-gray-400 hover:border-gray-300 hover:text-gray-700 dark:hover:text-pink-200']">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code w-6 h-6 me-1" viewBox="0 0 16 16">
+                <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8z"/>
+              </svg>
+              Dev
+            </router-link>
           </div>
         </div>
 
@@ -71,6 +86,8 @@
         <router-link to="/adventure" :class="['block border-l-4',$route.path === '/adventure' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Adventure</router-link>
         <router-link to="/friends" :class="['block border-l-4',$route.path === '/friends' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Friends</router-link>
         <router-link to="/breed" :class="['block border-l-4',$route.path === '/breed' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Breed</router-link>
+        <router-link to="/post" :class="['block border-l-4',$route.path === '/post' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Post</router-link>
+        <router-link to="/dev" :class="['block border-l-4',$route.path === '/dev' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Dev</router-link>
       </div>
     </div>
   </nav>

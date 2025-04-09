@@ -8,6 +8,8 @@ import Breed from '/src/views/breed/index.vue'
 import Foxhound from '/src/views/foxhound/index.vue'
 import Beagle from '/src/views/beagle/index.vue'
 import Story from '/src/views/story/index.vue'
+import Post from '/src/views/post/index.vue'
+import Dev from '/src/views/dev/index.vue'
 
 const routes = [
     {
@@ -60,6 +62,16 @@ const routes = [
         name:'Story',
         component:Story,
     },
+    {
+        path:'/post',
+        name:'Post',
+        component:Post,
+    },
+    {
+        path:'/dev',
+        name:'Dev',
+        component:Dev,
+    }
 ]
 const router = createRouter({
     history:createWebHistory(),
