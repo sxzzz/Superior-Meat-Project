@@ -11,7 +11,7 @@
             <img :src="featuredPost.imageUrl" alt="" class="rounded-2xl bg-gray-50 object-fill group-hover:opacity-75">
             <div class="mt-4 flex flex-col justify-between gap-6 sm:mt-8 sm:flex-row-reverse sm:gap-8 lg:mt-4 lg:flex-col">
 
-              <div class="flex lg:border-b lg:border-orange-500 mt-2">
+              <div class="flex border-b border-orange-500 mt-2">
                 <a :href="featuredPost.author.href" class="flex gap-x-2.5 text-sm/6 font-semibold text-gray-900 mb-6 dark:text-white">
                   <img :src="featuredPost.author.imageUrl" alt="" class="size-6 h-8 w-8 flex-none rounded-full bg-gray-50" />
                   {{ featuredPost.author.name }}

@@ -47,7 +47,7 @@
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="-mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
         <div class="flex items-end">
-          <img class="h-24 w-24 rounded-full ring-4 ring-white dark:ring-pink-400 sm:h-40 sm:w-40" src="/assets/logo/lunaLogo1.jpeg" alt="Luna logo" />
+          <img class="h-24 w-24 rounded-full ring-4 ring-fuchsia-300 dark:ring-pink-400 sm:h-40 sm:w-40" src="/assets/logo/lunaLogo1.jpeg" alt="Luna logo" />
           <span class="inline-flex items-center rounded-md bg-pink-400/10 dark:bg-pink-200 px-2 py-1 me-2 font-medium text-pink-400 ring-1 ring-inset ring-pink-400/20">Luna</span>
           <span class="inline-flex items-center rounded-md bg-red-50 dark:bg-red-300 px-2 py-1 me-2 font-medium text-red-700 ring-1 ring-inset ring-red-600/10">3 years</span>
           <span class="inline-flex items-center rounded-md bg-purple-50 dark:bg-purple-300 px-2 py-1 me-2 font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">Madness</span>

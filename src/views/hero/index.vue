@@ -401,241 +401,56 @@ export default {
       ]);
       const postStore = usePostStore()
       const posts = computed(() => postStore.posts)
-        // const posts = ref( [
-        //   {
-        //     id: 14,
-        //     title: 'Vue 2',
-        //     description:
-        //         '响应式数据绑定 (Reactive Data Binding), 组件化开发 (Component-Based Architecture), 指令系统 (Directive System), 虚拟 DOM (Virtual DOM), 生命周期钩子 (Lifecycle Hooks), 双向数据绑定 (Two-Way Data Binding)...',
-        //     imageUrl:'/assets/images/hero/b14.jpeg',
-        //     date: 'Oct 01, 2024',
-        //     datetime: '2024-10-01',
-        //     author: {
-        //       name: 'Andy',
-        //       imageUrl:'/assets/logo/andyAvator.png',
-        //     },
-        //   },
-        //     {
-        //     id: 13,
-        //     title: 'Vue 3.5 "Tengen Toppa Gurren Lagann"',
-        //     description:
-        //         'Optimization of the reactivity system,Destructuring of reactive Props.响应式系统优化，响应式 Props 解构。',
-        //     imageUrl:'/assets/images/hero/b13.jpeg',
-        //     date: 'Sep 01, 2024',
-        //     datetime: '2024-09-01',
-        //     author: {
-        //       name: 'Andy',
-        //       imageUrl:'/assets/logo/andyAvator.png',
-        //     },
-        //   },
-        //     {
-        //     id: 12,
-        //     title: 'Vue 3.4 "Slam Dunk"',
-        //     description:
-        //         'Rewrote the template parser,Refactored the reactivity system,Stabilized the defineModel API and introduced a shorthand for binding props with the same name.重写模板解析器，重构了响应式系统，稳定了 defineModel API，并引入了绑定 props 的同名简写。',
-        //     imageUrl:'/assets/images/hero/b12.jpeg',
-        //     date: 'Dec 28, 2023',
-        //     datetime: '2023-09-28',
-        //     author: {
-        //       name: 'Andy',
-        //       imageUrl:'/assets/logo/andyAvator.png',
-        //     },
-        //   },
-        //     {
-        //     id: 11,
-        //     title: 'Vue 3.3 "Rurouni Kenshin"',
-        //     description:
-        //         '改进了 <script setup> 与 TypeScript 的集成，增强开发者体验。',
-        //     imageUrl:'/assets/images/hero/b11.jpeg',
-        //     date: 'June 11, 2023',
-        //     datetime: '2023-06-11',
-        //     author: {
-        //       name: 'Andy',
-        //       imageUrl:'/assets/logo/andyAvator.png',
-        //     },
-        //   },
-        //     {
-        //       id: 10,
-        //       title: 'Dark Mode is activated',
-        //       description:
-        //           'The dark night bestowed upon me eyes of black, yet I use them to seek out the LIGHT. 黑夜给了我黑色的眼睛，我却用它寻找光明。',
-        //       imageUrl:'/assets/images/hero/b10.jpeg',
-        //       date: 'May 31, 2023',
-        //       datetime: '2023-05-31',
-        //       author: {
-        //         name: 'Andy',
-        //         imageUrl:'/assets/logo/andyAvator.png',
-        //       },
-        //     },
-        //     {
-        //       id: 9,
-        //       title: 'A beautiful metaphor! ',
-        //       description:
-        //           'A seed neither fears light nor darkness, but uses both to grow. Resilience and adaptability are key in navigating life\'s ups and downs, just like a seed that can thrive regardless of the conditions it encounters. 一颗种子既不惧怕光明，也不惧怕黑暗，而是利用二者共同成长。坚韧和适应能力是在人生的起起落落中航行的关键，就像一颗种子可以在任何遭遇的条件下茁壮成长一样。',
-        //       imageUrl:'/assets/images/hero/b09.jpeg',
-        //       date: 'May 31, 2023',
-        //       datetime: '2023-05-31',
-        //       author: {
-        //         name: 'Andy',
-        //         imageUrl:'/assets/logo/andyAvator.png',
-        //       },
-        //     },
-        //     {
-        //         id: 8,
-        //         title: 'Movie night! 电影之夜',
-        //         description:
-        //             'Luna and her brother are having a blast, watching a movie! Luna和她的哥哥玩得很开心，正在看电影！',
-        //         imageUrl:'/assets/images/hero/b08.jpeg',
-        //         date: 'May 28, 2023',
-        //         datetime: '2023-05-28',
-        //         author: {
-        //             name: 'James',
-        //             imageUrl:'/assets/logo/jamesAvator.jpeg',
-        //         },
-        //     },
-        //     {
-        //         id: 7,
-        //         title: 'Programming dog and programmer 编程狗和程序猿',
-        //         description:
-        //             'Whether it\'s "Programming dog" or "Programmer," both represent an interest and talent in programming. They express a love for the programming world and possess professional skills in different contexts. 无论是"编程狗"还是"程序员"，都代表着对编程的兴趣和才能，他们在不同的背景下表达了对编程世界的热爱和专业能力。',
-        //         imageUrl:'/assets/images/hero/b06.jpeg',
-        //         date: 'May 27, 2023',
-        //         datetime: '2023-05-27',
-        //         author: {
-        //             name: 'Andy',
-        //             imageUrl:'/assets/logo/andyAvator.png',
-        //         },
-        //     },
-        //     {
-        //         id: 6,
-        //         title: 'Night all 晚安',
-        //         description:
-        //             'Immersed in the ocean of Programming.沉浸在编程的海洋中！',
-        //         imageUrl:'/assets/images/hero/b07.jpeg',
-        //         date: 'May 27, 2023',
-        //         datetime: '2023-05-27',
-        //         author: {
-        //             name: 'Andy',
-        //             imageUrl:'/assets/logo/andyAvator.png',
-        //         },
-        //     },
-        //     {
-        //         id: 5,
-        //         title: 'recycling 回收工作',
-        //         description:
-        //             'Good girl! Luna chewing up the cardboard into small pieces so it fit in the bin. Good job recycling! 好孩子! Luna把纸板撕成小块，这样就能放进回收垃圾箱里面，干得漂亮!',
-        //         imageUrl:'/assets/images/hero/b05.jpeg',
-        //         date: 'May 24, 2023',
-        //         datetime: '2023-05-24',
-        //         author: {
-        //             name: 'James',
-        //             imageUrl:'/assets/logo/jamesAvator.jpeg',
-        //         },
-        //     },
-        //     {
-        //         id: 4,
-        //         title: 'Luna first run training 第一次跑步训练',
-        //         description:
-        //             'Good job, Luna, completed 2.31km in 17 minutes. 真棒,2.31公里,用时17分钟!',
-        //         imageUrl:'/assets/images/hero/b03.jpeg',
-        //         date: 'May 23, 2023',
-        //         datetime: '2023-05-23',
-        //         author: {
-        //             name: 'Andy',
-        //             imageUrl:'/assets/logo/andyAvator.png',
-        //         },
-        //     },
-        //     {
-        //         id: 3,
-        //         title: 'Reading together 读书',
-        //         description:
-        //             'Luna rested peacefully on her favorite mat while her brother gave her pats and read her book. 安静地躺在她最喜欢的垫子上，哥哥拍拍她，给她读书。',
-        //         imageUrl:'/assets/images/hero/b04.jpeg',
-        //         date: 'May 22, 2023',
-        //         datetime: '2023-05-22',
-        //         author: {
-        //             name: 'James',
-        //             imageUrl:'/assets/logo/jamesAvator.jpeg',
-        //         },
-        //     },
-        //     {
-        //         id: 2,
-        //         title: 'Pawfield Park 狗狗公园',
-        //         description:
-        //             'Cold,Windy,High chance of showers,still take Luna for a refreshing stroll in the park. Sit！寒冷，有风，大概率有阵雨，我们还是来公园散步,坐!',
-        //         imageUrl:'/assets/images/hero/b01.jpeg',
-        //         date: 'May 21, 2023',
-        //         datetime: '2023-05-21',
-        //         author: {
-        //             name: 'James',
-        //             imageUrl:'/assets/logo/jamesAvator.jpeg',
-        //         },
-        //     },
-        //     {
-        //         id: 1,
-        //         title: 'BE Circle Run 东本特利绕圈',
-        //         description:
-        //             'I just ran 7.5 kilometers in 47 minutes, with an average pace of 6 minutes and 17 seconds per kilometer. However, an adult American foxhound can easily run at a speed of 60 kilometers per hour, which means it takes them 1 minute per kilometer. That makes their pace six times faster than mine!! 我刚刚用时47分钟完成7.5公里，配速为每公里6分17秒。然而，一只成年的美国猎狐犬可以轻松地以时速60公里奔跑，这意味着它们只需1分钟即可达成目标。比我整整快了六倍！！',
-        //         imageUrl:'/assets/images/hero/b02.jpeg',
-        //         date: 'May 21, 2023',
-        //         datetime: '2023-05-21',
-        //         author: {
-        //             name: 'Andy',
-        //             imageUrl:'/assets/logo/andyAvator.png',
-        //         },
-        //     },
-        //
-        // ]);
-        const slides =  [
-            { path: '/assets/images/hero/hero01.jpeg', alt: '' },
-            { path: '/assets/images/hero/hero02.jpeg', alt: '' },
-            { path: '/assets/images/hero/hero03.jpeg', alt: '' },
-            { path: '/assets/images/hero/hero04.jpeg', alt: '' },
-            { path: '/assets/images/hero/hero05.jpeg', alt: '' },
-            { path: '/assets/images/hero/hero06.jpeg', alt: '' },
-            { path: '/assets/images/hero/hero07.jpeg', alt: '' },
-            { path: '/assets/images/hero/hero08.jpeg', alt: '' },
-            { path: '/assets/images/hero/hero09.jpeg', alt: '' }
-        ]
-        const newsList = [
-            {
-                id:'001',
-                date:'Jan 18, 2023',
-                title:'Bridestowe Lavender Field in Tasmania',
-                content:' On the 18th of January 2023, Luna embarked on a wondrous journey to a place of enchantment she had never before witnessed. It was the Bridestowe Lavender Field in Tasmania, her birthplace. Despite being born in Tasmania, Luna had yet to explore many destinations. \n' +  '\n'+
-                    'The Bridestowe Lavender Field unveiled itself as a magical realm, brimming with awe-inspiring wonders. Its vast expanse stretched for endless miles, evading the eye\'s reach. Time seemed to cease within its boundless beauty, and Luna reveled in its splendor.\n'+  '\n'+
-                    'She tried to eat all the bees, but the bees were just too quick. She and her family hiked all around the Lavender field and even saw a giant purple lavender teddy bear.  As they hiked towards it, she got super excited and started jumping all around. When she arrived she sniffed the teddy bear all over. Top to bottom. \n' + '\n'+
-                    'The Bridestowe Lavender Luna loved the place and towards the end of the trip she even tasted lavender ice cream while her brother enjoyed one too and her mom and dad both enjoyed a lavender coffee.',
-                imageUrl:'/assets/images/newsDetail/detail01.jpeg'
-            },
-            {
-                id:'002',
-                date:'May 02, 2023',
-                title:'Missing Toy',
-                content:'Once upon a time, there was a playful dog named Luna. She loved her toys, especially her favorite teddy bear. One day, Bella could not find her beloved toy anywhere.\n' +'\n'+
-                    'Luna sniffed around the house, searching under sofas and behind curtains. We tried to help too, but the teddy bear seemed to have vanished. Days turned into weeks, and Luna felt sad without her toy.\n' +'\n' +
-                    'Finally, during a cleaning of the room, the teddy bear was found stuck between the bed and the wall. Luna wagged her tail with joy, and we were relieved.\n'+'\n'+
-                    'Luna learned that sometimes things get lost but can be found again. She cherished her teddy bear even more, knowing how special it was to have it back. From that day on, Luna and her favorite toy were inseparable, bringing happiness to her days once again.',
-                imageUrl:'/assets/images/newsDetail/story01.jpeg'
-            },
-            {
-                id:'03',
-                date:'May 14, 2023',
-                title:'Cutes Pet Kiss',
-                content:'coming soon',
-                imageUrl:'/assets/images/newsDetail/kiss.jpeg'
-            }
-
-        ]
-        const itemsToShow = computed(() => {
-          if (showMore.value) {
-            return posts.value; // 显示所有元素
-          } else {
-            return posts.value.slice(0, 5); // 只显示前四个元素
+      const slides =  [
+          { path: '/assets/images/hero/hero01.jpeg', alt: '' },
+          { path: '/assets/images/hero/hero02.jpeg', alt: '' },
+          { path: '/assets/images/hero/hero03.jpeg', alt: '' },
+          { path: '/assets/images/hero/hero04.jpeg', alt: '' },
+          { path: '/assets/images/hero/hero05.jpeg', alt: '' },
+          { path: '/assets/images/hero/hero06.jpeg', alt: '' },
+          { path: '/assets/images/hero/hero07.jpeg', alt: '' },
+          { path: '/assets/images/hero/hero08.jpeg', alt: '' },
+          { path: '/assets/images/hero/hero09.jpeg', alt: '' }
+      ]
+      const newsList = [
+          {
+              id:'001',
+              date:'Jan 18, 2023',
+              title:'Bridestowe Lavender Field in Tasmania',
+              content:' On the 18th of January 2023, Luna embarked on a wondrous journey to a place of enchantment she had never before witnessed. It was the Bridestowe Lavender Field in Tasmania, her birthplace. Despite being born in Tasmania, Luna had yet to explore many destinations. \n' +  '\n'+
+                  'The Bridestowe Lavender Field unveiled itself as a magical realm, brimming with awe-inspiring wonders. Its vast expanse stretched for endless miles, evading the eye\'s reach. Time seemed to cease within its boundless beauty, and Luna reveled in its splendor.\n'+  '\n'+
+                  'She tried to eat all the bees, but the bees were just too quick. She and her family hiked all around the Lavender field and even saw a giant purple lavender teddy bear.  As they hiked towards it, she got super excited and started jumping all around. When she arrived she sniffed the teddy bear all over. Top to bottom. \n' + '\n'+
+                  'The Bridestowe Lavender Luna loved the place and towards the end of the trip she even tasted lavender ice cream while her brother enjoyed one too and her mom and dad both enjoyed a lavender coffee.',
+              imageUrl:'/assets/images/newsDetail/detail01.jpeg'
+          },
+          {
+              id:'002',
+              date:'May 02, 2023',
+              title:'Missing Toy',
+              content:'Once upon a time, there was a playful dog named Luna. She loved her toys, especially her favorite teddy bear. One day, Bella could not find her beloved toy anywhere.\n' +'\n'+
+                  'Luna sniffed around the house, searching under sofas and behind curtains. We tried to help too, but the teddy bear seemed to have vanished. Days turned into weeks, and Luna felt sad without her toy.\n' +'\n' +
+                  'Finally, during a cleaning of the room, the teddy bear was found stuck between the bed and the wall. Luna wagged her tail with joy, and we were relieved.\n'+'\n'+
+                  'Luna learned that sometimes things get lost but can be found again. She cherished her teddy bear even more, knowing how special it was to have it back. From that day on, Luna and her favorite toy were inseparable, bringing happiness to her days once again.',
+              imageUrl:'/assets/images/newsDetail/story01.jpeg'
+          },
+          {
+              id:'03',
+              date:'May 14, 2023',
+              title:'Cutes Pet Kiss',
+              content:'coming soon',
+              imageUrl:'/assets/images/newsDetail/kiss.jpeg'
           }
-        });
-        const toggleShowMore = () => {
-          showMore.value = !showMore.value; // 切换按钮状态
+
+      ]
+      const itemsToShow = computed(() => {
+        if (showMore.value) {
+          return posts.value; // 显示所有元素
+        } else {
+          return posts.value.slice(0, 5); // 只显示前四个元素
+        }
+      });
+      const toggleShowMore = () => {
+        showMore.value = !showMore.value; // 切换按钮状态
         };
       const stats = [
         { id: 1, name: 'Breed', value: 'American Foxhound' },
@@ -643,7 +458,6 @@ export default {
         { id: 3, name: 'Energy level', value: 'Couch Potato' },
         { id: 4, name: 'Good with children', value: 'Tremendously' },
       ]
-
       return {
             onAutoplayTimeLeft,
             progressCircle,
