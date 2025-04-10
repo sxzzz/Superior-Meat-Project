@@ -13,6 +13,8 @@
     "@heroicons/vue": "^1.0.6",
     "@tailwindcss/typography": "^0.5.9",
     "bootstrap-icons": "^1.10.4",
+    "mitt": "^3.0.1",
+    "pinia": "^3.0.2",
     "swiper": "^9.3.1",
     "vue": "^3.2.37",
     "vue-router": "^4.1.4"

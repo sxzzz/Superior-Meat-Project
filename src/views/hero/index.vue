@@ -7,7 +7,7 @@
             <p class="text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna(罗马神话中的月亮女神)，一只诞生于塔斯马尼亚州霍巴特美城的猎狐犬，胸怀对生活的简约欢愉，热爱着美食的醉人魅力、恬静的甜蜜梦乡，与温馨的亲昵相依，还有在欢欣的游戏中尽情踊跃。在她的兄弟姐妹中，众犬皆为比格，而Luna独树一帜，融合了比格犬与猎狐犬的绝妙交织，形成其迷人之灵魂。</p>
         </div>
 
-      <div class="overflow-hidden bg-white py-24 sm:py-6 dark:bg-black">
+      <div class="overflow-hidden bg-white py-2 md:py-8 sm:py-6 dark:bg-black">
         <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
           <div class="max-w-4xl">
             <h1 class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text ">Embrace the Journey: Unveiling Life's Tapestry
@@ -15,24 +15,24 @@
             </h1>
           </div>
 
-          <section class="mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
+          <section class="mt-2 md:mt-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
             <div class="lg:pr-8">
               <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna, a foxhound hailing from the beautiful city of Hobart in Tasmania, possessed a deep love for the simple pleasures of life—indulging in delicious meals, surrendering to peaceful slumber, embracing cozy snuggles, and frolicking in playful escapades. Amidst her siblings, who were all beagles, Luna stood out as a unique soul, a mesmerizing blend of beagle and foxhound ancestry.</p>
               <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">路娜 (罗马神话中的月亮女神)，一只诞生于塔斯马尼亚州霍巴特美城的猎狐犬，胸怀对生活的简约欢愉，热爱着美食的醉人魅力、恬静的甜蜜梦乡，与温馨的亲昵相依，还有在欢欣的游戏中尽情踊跃。在她的兄弟姐妹中，众犬皆为比格，而Luna独树一帜，融合了比格犬与猎狐犬的绝妙交织，形成其迷人之灵魂。</p>
 
             </div>
-            <div class="pt-32 lg:row-span-2 lg:-mr-16 xl:mr-auto">
-              <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg: lg:grid-cols-2 lg:gap-4 xl:gap-8">
-                <div class="aspect-[4/3] w-[13rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
+            <div class="pt-8 mb-4 lg:row-span-2 lg:-mr-16 xl:mr-auto">
+              <div class="grid grid-cols-2 gap-x-2 gap-y-4 sm:grid-cols-3 lg: lg:grid-cols-2 lg:gap-4 xl:gap-8">
+                <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
                   <img alt="" src="/assets/images/hero/hero10.jpg" class="block size-full object-cover" />
                 </div>
-                <div class="aspect-[4/3] w-[13rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
+                <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
                   <img alt="" src="/assets/images/hero/hero11.jpg" class="block size-full object-cover" />
                 </div>
-                <div class="aspect-[4/3] w-[13rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
+                <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
                   <img alt="" src="/assets/images/hero/hero12.jpg" class="block size-full object-cover" />
                 </div>
-                <div class="aspect-[4/3] w-[13rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10  lg:-mt-40">
+                <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10  lg:-mt-40">
                   <img alt="" src="/assets/images/hero/hero13.jpg" class="block size-full object-cover" />
                 </div>
               </div>
@@ -189,7 +189,7 @@
         </div>
         <!--dogCoder-->
         <div class="bg-w">
-        <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-12 sm:px-6 sm:py-20 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div class="">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Dogcoder</h2>
               <p class=" dark:text-white mt-4 text-gray-500">In a quiet room, a lonely programmer named Andy lived with his loyal foxhound, Luna. Together, they faced the world—one through lines of code, the other through sharp senses. Their bond was an unspoken promise, forged in solitude and trust.
@@ -211,10 +211,10 @@
         </div>
       </div>
 
-        <div class="bg-cyan-500 dark:bg-cyan-900 py-4 text-white">
+        <div class="bg-cyan-500 dark:bg-cyan-900 py-6 text-white">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
-                <div class="mt-8 space-y-8">
+                <div class="mt-2 space-y-8">
                   <div class="">
                     <button type="button" class="text-sm font-semibold leading-6 dark:text-gray-300 hover:text-rose-500 dark:hover:text-orange-600 " @click="toggleShowMore" >View all posts <span aria-hidden="true"><i v-if="!showMore" class="ms-1 bi-arrow-right-circle"></i><i v-else class=" ms-1 bi bi-arrow-down-circle"></i></span></button>
                   </div>
@@ -376,6 +376,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../../index.css';
 import  { Autoplay, Pagination,Navigation } from 'swiper';
+import { usePostStore } from '/src/store/postStore.js'
 
 export default {
     components: {
@@ -398,191 +399,193 @@ export default {
         { name: 'Resilience', description: 'When bugs crashed Andy’s code, he kept going; when storms hit, Luna braved the rain to guard their home.',descriptionCN:'当程序因漏洞崩溃时，安迪依然坚持不懈；当风暴来袭时，路娜冒着雨坚守家园。',imageUrl:'/assets/images/hero/hero-features01.jpg'},
         { name: 'Companionship', description: 'In the silence of the house, they found comfort in each other—no words or barks needed.',descriptionCN:'在屋内的寂静中，他们彼此依偎，无需言语，也无需吠声，便已心安。',imageUrl:'/assets/images/hero/hero-features01.jpg' },
       ]);
-        const posts = ref([
-          {
-            id: 14,
-            title: 'Vue 2',
-            description:
-                '响应式数据绑定 (Reactive Data Binding), 组件化开发 (Component-Based Architecture), 指令系统 (Directive System), 虚拟 DOM (Virtual DOM), 生命周期钩子 (Lifecycle Hooks), 双向数据绑定 (Two-Way Data Binding)...',
-            imageUrl:'/assets/images/hero/b14.jpeg',
-            date: 'Oct 01, 2024',
-            datetime: '2024-10-01',
-            author: {
-              name: 'Andy',
-              imageUrl:'/assets/logo/andyAvator.png',
-            },
-          },
-            {
-            id: 13,
-            title: 'Vue 3.5 "Tengen Toppa Gurren Lagann"',
-            description:
-                'Optimization of the reactivity system,Destructuring of reactive Props.响应式系统优化，响应式 Props 解构。',
-            imageUrl:'/assets/images/hero/b13.jpeg',
-            date: 'Sep 01, 2024',
-            datetime: '2024-09-01',
-            author: {
-              name: 'Andy',
-              imageUrl:'/assets/logo/andyAvator.png',
-            },
-          },
-            {
-            id: 12,
-            title: 'Vue 3.4 "Slam Dunk"',
-            description:
-                'Rewrote the template parser,Refactored the reactivity system,Stabilized the defineModel API and introduced a shorthand for binding props with the same name.重写模板解析器，重构了响应式系统，稳定了 defineModel API，并引入了绑定 props 的同名简写。',
-            imageUrl:'/assets/images/hero/b12.jpeg',
-            date: 'Dec 28, 2023',
-            datetime: '2023-09-28',
-            author: {
-              name: 'Andy',
-              imageUrl:'/assets/logo/andyAvator.png',
-            },
-          },
-            {
-            id: 11,
-            title: 'Vue 3.3 "Rurouni Kenshin"',
-            description:
-                '改进了 <script setup> 与 TypeScript 的集成，增强开发者体验。',
-            imageUrl:'/assets/images/hero/b11.jpeg',
-            date: 'June 11, 2023',
-            datetime: '2023-06-11',
-            author: {
-              name: 'Andy',
-              imageUrl:'/assets/logo/andyAvator.png',
-            },
-          },
-            {
-              id: 10,
-              title: 'Dark Mode is activated',
-              description:
-                  'The dark night bestowed upon me eyes of black, yet I use them to seek out the LIGHT. 黑夜给了我黑色的眼睛，我却用它寻找光明。',
-              imageUrl:'/assets/images/hero/b10.jpeg',
-              date: 'May 31, 2023',
-              datetime: '2023-05-31',
-              author: {
-                name: 'Andy',
-                imageUrl:'/assets/logo/andyAvator.png',
-              },
-            },
-            {
-              id: 9,
-              title: 'A beautiful metaphor! ',
-              description:
-                  'A seed neither fears light nor darkness, but uses both to grow. Resilience and adaptability are key in navigating life\'s ups and downs, just like a seed that can thrive regardless of the conditions it encounters. 一颗种子既不惧怕光明，也不惧怕黑暗，而是利用二者共同成长。坚韧和适应能力是在人生的起起落落中航行的关键，就像一颗种子可以在任何遭遇的条件下茁壮成长一样。',
-              imageUrl:'/assets/images/hero/b09.jpeg',
-              date: 'May 31, 2023',
-              datetime: '2023-05-31',
-              author: {
-                name: 'Andy',
-                imageUrl:'/assets/logo/andyAvator.png',
-              },
-            },
-            {
-                id: 8,
-                title: 'Movie night! 电影之夜',
-                description:
-                    'Luna and her brother are having a blast, watching a movie! Luna和她的哥哥玩得很开心，正在看电影！',
-                imageUrl:'/assets/images/hero/b08.jpeg',
-                date: 'May 28, 2023',
-                datetime: '2023-05-28',
-                author: {
-                    name: 'James',
-                    imageUrl:'/assets/logo/jamesAvator.jpeg',
-                },
-            },
-            {
-                id: 7,
-                title: 'Programming dog and programmer 编程狗和程序猿',
-                description:
-                    'Whether it\'s "Programming dog" or "Programmer," both represent an interest and talent in programming. They express a love for the programming world and possess professional skills in different contexts. 无论是"编程狗"还是"程序员"，都代表着对编程的兴趣和才能，他们在不同的背景下表达了对编程世界的热爱和专业能力。',
-                imageUrl:'/assets/images/hero/b06.jpeg',
-                date: 'May 27, 2023',
-                datetime: '2023-05-27',
-                author: {
-                    name: 'Andy',
-                    imageUrl:'/assets/logo/andyAvator.png',
-                },
-            },
-            {
-                id: 6,
-                title: 'Night all 晚安',
-                description:
-                    'Immersed in the ocean of Programming.沉浸在编程的海洋中！',
-                imageUrl:'/assets/images/hero/b07.jpeg',
-                date: 'May 27, 2023',
-                datetime: '2023-05-27',
-                author: {
-                    name: 'Andy',
-                    imageUrl:'/assets/logo/andyAvator.png',
-                },
-            },
-            {
-                id: 5,
-                title: 'recycling 回收工作',
-                description:
-                    'Good girl! Luna chewing up the cardboard into small pieces so it fit in the bin. Good job recycling! 好孩子! Luna把纸板撕成小块，这样就能放进回收垃圾箱里面，干得漂亮!',
-                imageUrl:'/assets/images/hero/b05.jpeg',
-                date: 'May 24, 2023',
-                datetime: '2023-05-24',
-                author: {
-                    name: 'James',
-                    imageUrl:'/assets/logo/jamesAvator.jpeg',
-                },
-            },
-            {
-                id: 4,
-                title: 'Luna first run training 第一次跑步训练',
-                description:
-                    'Good job, Luna, completed 2.31km in 17 minutes. 真棒,2.31公里,用时17分钟!',
-                imageUrl:'/assets/images/hero/b03.jpeg',
-                date: 'May 23, 2023',
-                datetime: '2023-05-23',
-                author: {
-                    name: 'Andy',
-                    imageUrl:'/assets/logo/andyAvator.png',
-                },
-            },
-            {
-                id: 3,
-                title: 'Reading together 读书',
-                description:
-                    'Luna rested peacefully on her favorite mat while her brother gave her pats and read her book. 安静地躺在她最喜欢的垫子上，哥哥拍拍她，给她读书。',
-                imageUrl:'/assets/images/hero/b04.jpeg',
-                date: 'May 22, 2023',
-                datetime: '2023-05-22',
-                author: {
-                    name: 'James',
-                    imageUrl:'/assets/logo/jamesAvator.jpeg',
-                },
-            },
-            {
-                id: 2,
-                title: 'Pawfield Park 狗狗公园',
-                description:
-                    'Cold,Windy,High chance of showers,still take Luna for a refreshing stroll in the park. Sit！寒冷，有风，大概率有阵雨，我们还是来公园散步,坐!',
-                imageUrl:'/assets/images/hero/b01.jpeg',
-                date: 'May 21, 2023',
-                datetime: '2023-05-21',
-                author: {
-                    name: 'James',
-                    imageUrl:'/assets/logo/jamesAvator.jpeg',
-                },
-            },
-            {
-                id: 1,
-                title: 'BE Circle Run 东本特利绕圈',
-                description:
-                    'I just ran 7.5 kilometers in 47 minutes, with an average pace of 6 minutes and 17 seconds per kilometer. However, an adult American foxhound can easily run at a speed of 60 kilometers per hour, which means it takes them 1 minute per kilometer. That makes their pace six times faster than mine!! 我刚刚用时47分钟完成7.5公里，配速为每公里6分17秒。然而，一只成年的美国猎狐犬可以轻松地以时速60公里奔跑，这意味着它们只需1分钟即可达成目标。比我整整快了六倍！！',
-                imageUrl:'/assets/images/hero/b02.jpeg',
-                date: 'May 21, 2023',
-                datetime: '2023-05-21',
-                author: {
-                    name: 'Andy',
-                    imageUrl:'/assets/logo/andyAvator.png',
-                },
-            },
-
-        ]);
+      const postStore = usePostStore()
+      const posts = computed(() => postStore.posts)
+        // const posts = ref( [
+        //   {
+        //     id: 14,
+        //     title: 'Vue 2',
+        //     description:
+        //         '响应式数据绑定 (Reactive Data Binding), 组件化开发 (Component-Based Architecture), 指令系统 (Directive System), 虚拟 DOM (Virtual DOM), 生命周期钩子 (Lifecycle Hooks), 双向数据绑定 (Two-Way Data Binding)...',
+        //     imageUrl:'/assets/images/hero/b14.jpeg',
+        //     date: 'Oct 01, 2024',
+        //     datetime: '2024-10-01',
+        //     author: {
+        //       name: 'Andy',
+        //       imageUrl:'/assets/logo/andyAvator.png',
+        //     },
+        //   },
+        //     {
+        //     id: 13,
+        //     title: 'Vue 3.5 "Tengen Toppa Gurren Lagann"',
+        //     description:
+        //         'Optimization of the reactivity system,Destructuring of reactive Props.响应式系统优化，响应式 Props 解构。',
+        //     imageUrl:'/assets/images/hero/b13.jpeg',
+        //     date: 'Sep 01, 2024',
+        //     datetime: '2024-09-01',
+        //     author: {
+        //       name: 'Andy',
+        //       imageUrl:'/assets/logo/andyAvator.png',
+        //     },
+        //   },
+        //     {
+        //     id: 12,
+        //     title: 'Vue 3.4 "Slam Dunk"',
+        //     description:
+        //         'Rewrote the template parser,Refactored the reactivity system,Stabilized the defineModel API and introduced a shorthand for binding props with the same name.重写模板解析器，重构了响应式系统，稳定了 defineModel API，并引入了绑定 props 的同名简写。',
+        //     imageUrl:'/assets/images/hero/b12.jpeg',
+        //     date: 'Dec 28, 2023',
+        //     datetime: '2023-09-28',
+        //     author: {
+        //       name: 'Andy',
+        //       imageUrl:'/assets/logo/andyAvator.png',
+        //     },
+        //   },
+        //     {
+        //     id: 11,
+        //     title: 'Vue 3.3 "Rurouni Kenshin"',
+        //     description:
+        //         '改进了 <script setup> 与 TypeScript 的集成，增强开发者体验。',
+        //     imageUrl:'/assets/images/hero/b11.jpeg',
+        //     date: 'June 11, 2023',
+        //     datetime: '2023-06-11',
+        //     author: {
+        //       name: 'Andy',
+        //       imageUrl:'/assets/logo/andyAvator.png',
+        //     },
+        //   },
+        //     {
+        //       id: 10,
+        //       title: 'Dark Mode is activated',
+        //       description:
+        //           'The dark night bestowed upon me eyes of black, yet I use them to seek out the LIGHT. 黑夜给了我黑色的眼睛，我却用它寻找光明。',
+        //       imageUrl:'/assets/images/hero/b10.jpeg',
+        //       date: 'May 31, 2023',
+        //       datetime: '2023-05-31',
+        //       author: {
+        //         name: 'Andy',
+        //         imageUrl:'/assets/logo/andyAvator.png',
+        //       },
+        //     },
+        //     {
+        //       id: 9,
+        //       title: 'A beautiful metaphor! ',
+        //       description:
+        //           'A seed neither fears light nor darkness, but uses both to grow. Resilience and adaptability are key in navigating life\'s ups and downs, just like a seed that can thrive regardless of the conditions it encounters. 一颗种子既不惧怕光明，也不惧怕黑暗，而是利用二者共同成长。坚韧和适应能力是在人生的起起落落中航行的关键，就像一颗种子可以在任何遭遇的条件下茁壮成长一样。',
+        //       imageUrl:'/assets/images/hero/b09.jpeg',
+        //       date: 'May 31, 2023',
+        //       datetime: '2023-05-31',
+        //       author: {
+        //         name: 'Andy',
+        //         imageUrl:'/assets/logo/andyAvator.png',
+        //       },
+        //     },
+        //     {
+        //         id: 8,
+        //         title: 'Movie night! 电影之夜',
+        //         description:
+        //             'Luna and her brother are having a blast, watching a movie! Luna和她的哥哥玩得很开心，正在看电影！',
+        //         imageUrl:'/assets/images/hero/b08.jpeg',
+        //         date: 'May 28, 2023',
+        //         datetime: '2023-05-28',
+        //         author: {
+        //             name: 'James',
+        //             imageUrl:'/assets/logo/jamesAvator.jpeg',
+        //         },
+        //     },
+        //     {
+        //         id: 7,
+        //         title: 'Programming dog and programmer 编程狗和程序猿',
+        //         description:
+        //             'Whether it\'s "Programming dog" or "Programmer," both represent an interest and talent in programming. They express a love for the programming world and possess professional skills in different contexts. 无论是"编程狗"还是"程序员"，都代表着对编程的兴趣和才能，他们在不同的背景下表达了对编程世界的热爱和专业能力。',
+        //         imageUrl:'/assets/images/hero/b06.jpeg',
+        //         date: 'May 27, 2023',
+        //         datetime: '2023-05-27',
+        //         author: {
+        //             name: 'Andy',
+        //             imageUrl:'/assets/logo/andyAvator.png',
+        //         },
+        //     },
+        //     {
+        //         id: 6,
+        //         title: 'Night all 晚安',
+        //         description:
+        //             'Immersed in the ocean of Programming.沉浸在编程的海洋中！',
+        //         imageUrl:'/assets/images/hero/b07.jpeg',
+        //         date: 'May 27, 2023',
+        //         datetime: '2023-05-27',
+        //         author: {
+        //             name: 'Andy',
+        //             imageUrl:'/assets/logo/andyAvator.png',
+        //         },
+        //     },
+        //     {
+        //         id: 5,
+        //         title: 'recycling 回收工作',
+        //         description:
+        //             'Good girl! Luna chewing up the cardboard into small pieces so it fit in the bin. Good job recycling! 好孩子! Luna把纸板撕成小块，这样就能放进回收垃圾箱里面，干得漂亮!',
+        //         imageUrl:'/assets/images/hero/b05.jpeg',
+        //         date: 'May 24, 2023',
+        //         datetime: '2023-05-24',
+        //         author: {
+        //             name: 'James',
+        //             imageUrl:'/assets/logo/jamesAvator.jpeg',
+        //         },
+        //     },
+        //     {
+        //         id: 4,
+        //         title: 'Luna first run training 第一次跑步训练',
+        //         description:
+        //             'Good job, Luna, completed 2.31km in 17 minutes. 真棒,2.31公里,用时17分钟!',
+        //         imageUrl:'/assets/images/hero/b03.jpeg',
+        //         date: 'May 23, 2023',
+        //         datetime: '2023-05-23',
+        //         author: {
+        //             name: 'Andy',
+        //             imageUrl:'/assets/logo/andyAvator.png',
+        //         },
+        //     },
+        //     {
+        //         id: 3,
+        //         title: 'Reading together 读书',
+        //         description:
+        //             'Luna rested peacefully on her favorite mat while her brother gave her pats and read her book. 安静地躺在她最喜欢的垫子上，哥哥拍拍她，给她读书。',
+        //         imageUrl:'/assets/images/hero/b04.jpeg',
+        //         date: 'May 22, 2023',
+        //         datetime: '2023-05-22',
+        //         author: {
+        //             name: 'James',
+        //             imageUrl:'/assets/logo/jamesAvator.jpeg',
+        //         },
+        //     },
+        //     {
+        //         id: 2,
+        //         title: 'Pawfield Park 狗狗公园',
+        //         description:
+        //             'Cold,Windy,High chance of showers,still take Luna for a refreshing stroll in the park. Sit！寒冷，有风，大概率有阵雨，我们还是来公园散步,坐!',
+        //         imageUrl:'/assets/images/hero/b01.jpeg',
+        //         date: 'May 21, 2023',
+        //         datetime: '2023-05-21',
+        //         author: {
+        //             name: 'James',
+        //             imageUrl:'/assets/logo/jamesAvator.jpeg',
+        //         },
+        //     },
+        //     {
+        //         id: 1,
+        //         title: 'BE Circle Run 东本特利绕圈',
+        //         description:
+        //             'I just ran 7.5 kilometers in 47 minutes, with an average pace of 6 minutes and 17 seconds per kilometer. However, an adult American foxhound can easily run at a speed of 60 kilometers per hour, which means it takes them 1 minute per kilometer. That makes their pace six times faster than mine!! 我刚刚用时47分钟完成7.5公里，配速为每公里6分17秒。然而，一只成年的美国猎狐犬可以轻松地以时速60公里奔跑，这意味着它们只需1分钟即可达成目标。比我整整快了六倍！！',
+        //         imageUrl:'/assets/images/hero/b02.jpeg',
+        //         date: 'May 21, 2023',
+        //         datetime: '2023-05-21',
+        //         author: {
+        //             name: 'Andy',
+        //             imageUrl:'/assets/logo/andyAvator.png',
+        //         },
+        //     },
+        //
+        // ]);
         const slides =  [
             { path: '/assets/images/hero/hero01.jpeg', alt: '' },
             { path: '/assets/images/hero/hero02.jpeg', alt: '' },
