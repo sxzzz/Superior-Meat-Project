@@ -63,6 +63,10 @@
         </div>
       </div>
 
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 class="text-sm font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Update: Music player under navigation dev is ready</h2>
+      </div>
+
       <!--background with image-->
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
@@ -88,9 +92,7 @@
 
 
 
-        <div v-if="false" class="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 class="text-2xl font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Moments 精彩瞬间 </h2>
-        </div>
+
         <!--app section-->
         <div class="bg-teal-300 dark:bg-teal-700 py-24 sm:py-32">
           <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
