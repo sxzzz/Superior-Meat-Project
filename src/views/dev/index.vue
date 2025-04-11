@@ -26,6 +26,7 @@
             <div class="space-y-2">
               <div
                   class="relative cursor-pointer"
+                  :class="{ 'opacity-90  ring-1 ring-orange-500': isDragging }"
                   @click="seek"
                   ref="progressBar"
               >
@@ -96,10 +97,10 @@
               </div>
               <!-- Rewind 10 seconds -->
               <div class="relative group">
-                <button type="button" aria-label="Rewind 10 seconds" @click="skipBackward(10)" class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white hidden sm:block">
-                  <svg width="24" height="24" fill="none">
-                    <path d="M6.492 16.95c2.861 2.733 7.5 2.733 10.362 0 2.861-2.734 2.861-7.166 0-9.9-2.862-2.733-7.501-2.733-10.362 0A7.096 7.096 0 0 0 5.5 8.226" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M5 5v3.111c0 .491.398.889.889.889H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <button type="button" aria-label="Rewind 10 seconds" @click="skipBackward(10)" class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-rewind-fill" viewBox="0 0 16 16">
+                    <path d="M8.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
+                    <path d="M.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
                   </svg>
                 </button>
                 <div
@@ -147,10 +148,10 @@
               <div class="flex-auto h-full flex items-center justify-evenly">
               <!--Skip 10 seconds-->
               <div class="relative group">
-                <button type="button" aria-label="Skip 10 seconds" @click="skipForward(10)" class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white hidden sm:block">
-                  <svg width="24" height="24" fill="none">
-                    <path d="M17.509 16.95c-2.862 2.733-7.501 2.733-10.363 0-2.861-2.734-2.861-7.166 0-9.9 2.862-2.733 7.501-2.733 10.363 0 .38.365.711.759.991 1.176" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M19 5v3.111c0 .491-.398.889-.889.889H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <button type="button" aria-label="Skip 10 seconds" @click="skipForward(10)" class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-fast-forward-fill" viewBox="0 0 16 16">
+                    <path d="M7.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C.713 12.69 0 12.345 0 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                    <path d="M15.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C8.713 12.69 8 12.345 8 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
                   </svg>
                 </button>
                 <div
@@ -220,7 +221,7 @@
 
                   <!-- mute -->
                   <button @click="toggleMute" class=" flex items-center justify-center text-slate-700 dark:text-white hover:text-indigo-600
-                   w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 ">
+                   w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 hidden md:block ">
                     <svg v-if="isMuted || volume === 0"  xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l-5 4H2v6h2l5 4V5zM18 9l4 4m0-4l-4 4" />
                     </svg>
@@ -233,7 +234,6 @@
                   </button>
 
 
-
                   <!-- volume -->
                   <input
                       type="range"group
@@ -242,7 +242,7 @@
                       step="0.01"
                       v-model="volume"
                       @input="updateVolume"
-                      class="h-2 w-12 sm:w-16 md:w-20 lg:w-24 "
+                      class="h-2 w-12 sm:w-16 md:w-20 lg:w-24 hidden md:block "
                   />
                 <div
                     class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
@@ -283,6 +283,19 @@
               </svg>
               </span>
               <span class="ml-2 flex min-w-0 flex-col">
+                <span class="text-xl font-medium dark:text-white">Tech tree & game section</span>
+              </span>
+            </div>
+          </li>
+          <li class="relative pb-10">
+            <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+            <div href="#" class="group relative flex items-start">
+              <span>
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hourglass-split mt-2 text-white bg-gray-500 rounded-full dark:bg-amber-600" viewBox="0 0 16 16">
+                <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+              </svg>
+              </span>
+              <span class="ml-2 flex min-w-0 flex-col">
                 <span class="text-xl font-medium dark:text-white">Music</span>
                 <span class="text-gray-500 dark:text-emerald-300">Add a music player</span>
                 <span class="text-gray-500 dark:text-emerald-300">Drag the progress bar to fast-forward or rewind</span>
@@ -296,6 +309,7 @@
               </span>
             </div>
           </li>
+
           <li class="relative pb-10">
             <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
             <div href="#" class="group relative flex items-start">
@@ -446,7 +460,7 @@
 </template>
 
 <script  setup>
-import { ref, onMounted,watch,computed,nextTick} from 'vue'
+import { ref, onMounted,watch,computed,nextTick,onBeforeUnmount} from 'vue'
 
 // music player
 const audio = ref(null)
@@ -454,7 +468,12 @@ const progressBar = ref(null)
 const isPlaying = ref(false)
 const currentTime = ref(0)
 const duration = ref(0)
-const progressPercentage = ref(0)
+//const progressPercentage = ref(0)
+
+const isDragging = ref(false);
+const progressPercentage = computed(() =>
+    duration.value ? (currentTime.value / duration.value) * 100 : 0
+);
 
 onMounted(() => {
   audio.value.src = currentMusic.value.src
@@ -478,7 +497,7 @@ function togglePlay() {
 function updateProgress() {
   currentTime.value = audio.value.currentTime
   duration.value = audio.value.duration || 0
-  progressPercentage.value = (currentTime.value / duration.value) * 100
+  //progressPercentage.value = (currentTime.value / duration.value) * 100
 }
 
 // 元数据加载完成（总时长）
@@ -486,25 +505,62 @@ function onLoadedMetadata() {
   duration.value = audio.value.duration
 }
 
-// 拖动进度条
-function seek(event) {
-  if (!audio.value || !duration.value) return
 
-  const rect = progressBar.value.getBoundingClientRect()
-  const clickX = event.clientX - rect.left
-  const percent = clickX / rect.width
-  const newTime = percent * duration.value
 
-  audio.value.currentTime = newTime
-  currentTime.value = newTime
-  progressPercentage.value = percent * 100
-}
+const seek = (event) => {
+  if (!audio.value || !progressBar.value) return;
+  const rect = progressBar.value.getBoundingClientRect();
+  const clickX = event.clientX - rect.left;
+  const width = rect.width;
+  const ratio = clickX / width;
+  const newTime = ratio * duration.value;
+  audio.value.currentTime = newTime;
+  currentTime.value = newTime;
+};
+
+//拖拽进度条
+const onMouseMove = (event) => {
+  if (!isDragging.value || !audio.value || !progressBar.value) return;
+  const rect = progressBar.value.getBoundingClientRect();
+  const moveX = event.clientX - rect.left;
+  const ratio = Math.max(0, Math.min(1, moveX / rect.width));
+  const newTime = ratio * duration.value;
+  currentTime.value = newTime;
+  audio.value.currentTime = newTime;
+};
+
+const onMouseUp = () => {
+  isDragging.value = false;
+  window.removeEventListener('mousemove', onMouseMove);
+  window.removeEventListener('mouseup', onMouseUp);
+};
+
+const onMouseDown = () => {
+  isDragging.value = true;
+  window.addEventListener('mousemove', onMouseMove);
+  window.addEventListener('mouseup', onMouseUp);
+};
+
+onMounted(() => {
+  if (progressBar.value) {
+    progressBar.value.addEventListener('mousedown', onMouseDown);
+  }
+});
+
+onBeforeUnmount(() => {
+  if (progressBar.value) {
+    progressBar.value.removeEventListener('mousedown', onMouseDown);
+  }
+  window.removeEventListener('mousemove', onMouseMove);
+  window.removeEventListener('mouseup', onMouseUp);
+});
+
 
 // 播放完后重置
 function resetPlayer() {
   isPlaying.value = false
   currentTime.value = 0
-  progressPercentage.value = 0
+  //progressPercentage.value = 0
   audio.value.currentTime = 0
 }
 
@@ -715,12 +771,19 @@ function nextMusic() {
     audio.value.load()
     audio.value.currentTime = 0
     currentTime.value = 0
-    progressPercentage.value = 0
+    //progressPercentage.value = 0
 
     // 如果之前正在播放，自动播放新曲目
-    if (isPlaying.value) {
-      audio.value.play()
-    }
+    // if (isPlaying.value) {
+    //   audio.value.play()
+    // }
+
+    // ✅ 自动播放
+    audio.value.play().then(() => {
+      isPlaying.value = true
+    }).catch(err => {
+      console.warn('播放失败', err)
+    })
 
     if (audioContext && audioContext.state !== 'closed') {
       stopVisualizer()
@@ -741,12 +804,18 @@ function previousMusic() {
     audio.value.load()
     audio.value.currentTime = 0
     currentTime.value = 0
-    progressPercentage.value = 0
+    //progressPercentage.value = 0
 
     // 如果之前正在播放，自动播放上一曲目
-    if (isPlaying.value) {
-      audio.value.play()
-    }
+    // if (isPlaying.value) {
+    //   audio.value.play()
+    // }
+
+    audio.value.play().then(() => {
+      isPlaying.value = true
+    }).catch(err => {
+      console.warn('播放失败', err)
+    })
 
     if (audioContext && audioContext.state !== 'closed') {
       stopVisualizer()

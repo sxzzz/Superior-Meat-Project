@@ -77,11 +77,11 @@ export default {
   mounted() {
     this.audio = new Audio(bgMusic)
     this.audio.loop = true
-    // 可选：尝试自动播放（多数浏览器需要用户交互）
-    this.audio.play().then(() => {
-      this.isPlaying = true
-    }).catch(() => {
-    })
+    // 可选：自动播放可正常工作
+    // this.audio.play().then(() => {
+    //   this.isPlaying = true
+    // }).catch(() => {
+    // })
   },
   methods:{
     toggleButton() {

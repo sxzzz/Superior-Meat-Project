@@ -64,7 +64,7 @@
       </div>
 
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 class="text-sm font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Update: Music player under navigation dev is ready</h2>
+        <h2 class="text font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Update: Music player under navigation dev is ready</h2>
       </div>
 
       <!--background with image-->
