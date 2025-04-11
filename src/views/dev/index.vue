@@ -519,6 +519,28 @@ const seek = (event) => {
 };
 
 //拖拽进度条
+
+const onTouchStart = (event) => {
+  isDragging.value = true;
+  window.addEventListener('touchmove', onTouchMove);
+  window.addEventListener('touchend', onTouchEnd);
+};
+
+const onTouchMove = (event) => {
+  if (!isDragging.value || !audio.value || !progressBar.value) return;
+  const rect = progressBar.value.getBoundingClientRect();
+  const moveX = event.touches[0].clientX - rect.left; // 使用 touch 对象
+  const ratio = Math.max(0, Math.min(1, moveX / rect.width));
+  const newTime = ratio * duration.value;
+  currentTime.value = newTime;
+  audio.value.currentTime = newTime;
+};
+
+const onTouchEnd = () => {
+  isDragging.value = false;
+  window.removeEventListener('touchmove', onTouchMove);
+  window.removeEventListener('touchend', onTouchEnd);
+};
 const onMouseMove = (event) => {
   if (!isDragging.value || !audio.value || !progressBar.value) return;
   const rect = progressBar.value.getBoundingClientRect();
@@ -544,15 +566,19 @@ const onMouseDown = () => {
 onMounted(() => {
   if (progressBar.value) {
     progressBar.value.addEventListener('mousedown', onMouseDown);
+    progressBar.value.addEventListener('touchstart', onTouchStart);
   }
 });
 
 onBeforeUnmount(() => {
   if (progressBar.value) {
     progressBar.value.removeEventListener('mousedown', onMouseDown);
+    progressBar.value.removeEventListener('touchstart', onTouchStart);
   }
   window.removeEventListener('mousemove', onMouseMove);
   window.removeEventListener('mouseup', onMouseUp);
+  window.removeEventListener('touchmove', onTouchMove);
+  window.removeEventListener('touchend', onTouchEnd);
 });
 
 
