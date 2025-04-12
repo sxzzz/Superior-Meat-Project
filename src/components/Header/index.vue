@@ -14,18 +14,21 @@
                         <strong class="font-semibold">Welcome to Luna's BLOG! Let's explore, learn, and enjoy the fascinating world of our furry friends!</strong>
                     </div>
                     <div class="">
-                        <span class="inline-block lg:ms-2 xl:ms-20 inline h-0.5 w-0.5 fill-current text-xs" aria-hidden="true">updated: 28th March </span>
+                        <span class="inline-block lg:ms-2 xl:ms-20 inline h-0.5 w-0.5 fill-current text-xs" aria-hidden="true">updated: 12th April</span>
                     </div>
                    <!-- Dark Mode -->
                     <div class="flex items-center ms-0 mt-2 lg:mt-0 lg:ms-3">
-                      <button type="button" @click="toggleButton" :class="{ 'bg-indigo-600': enabled, 'bg-gray-200': !enabled }" class="bg-gray-200 relative inline-flex h-5 w-10 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false" aria-labelledby="annual-billing-label">
-                        <span aria-hidden="true" :class="{ 'translate-x-5': enabled, 'translate-x-0': !enabled }" class="translate-x-0 pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+                      <button type="button" @click="toggleButton" :class="{ 'bg-indigo-600': themeStore.isDark, 'bg-gray-200': !themeStore.isDark }"
+                              class="bg-gray-200 relative inline-flex h-5 w-10 flex-shrink-0 cursor-pointer rounded-full
+                              border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none
+                              focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" :aria-checked="themeStore.isDark" aria-labelledby="dark-mode-toggle">
+                        <span aria-hidden="true" :class="{ 'translate-x-5': themeStore.isDark, 'translate-x-0': !themeStore.isDark }" class="translate-x-0 pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
                       </button>
                       <!--music-->
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ms-2 w-4 h-4">
                         <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
                       </svg>
-                      <i class="bi bi-cassette text-2xl ms-6"  @click="toggleMusic"><i v-if="isPlaying" class="bi bi-play-fill"></i><i v-if="!isPlaying" class="bi bi-stop-fill"></i></i>
+                      <i v-if="false" class="bi bi-cassette text-2xl ms-6"  @click="toggleMusic"><i v-if="isPlaying" class="bi bi-play-fill"></i><i v-if="!isPlaying" class="bi bi-stop-fill"></i></i>
 
 
 
@@ -62,7 +65,7 @@
 
 <script>
 
-
+import { useThemeStore } from '/src/store/themeStore.js';
 import bgMusic from "/assets/music/Love On A Real Train.mp3";
 
 export default {
@@ -83,10 +86,16 @@ export default {
     // }).catch(() => {
     // })
   },
+  computed: {
+    themeStore() {
+      return useThemeStore()
+    }
+  },
   methods:{
     toggleButton() {
-      this.enabled = !this.enabled;
-      document.documentElement.classList.toggle('dark');
+      // this.enabled = !this.enabled;
+      // document.documentElement.classList.toggle('dark');
+      this.themeStore.toggleDarkMode()
     },
     toggleMusic() {
       if (this.audio.paused) {

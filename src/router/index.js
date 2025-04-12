@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import ArtGallery from '/src/views/artGallery/index.vue'
+import ArtGallery from '/src/views/gallery/index.vue'
 import Hero from '/src/views/hero/index.vue'
 import NewsDetail from '/src/views/newsDetail/index.vue'
 import Adventure from '/src/views/adventure/index.vue'
@@ -28,8 +28,8 @@ const routes = [
         props:true
     },
     {
-        path:'/artGallery',
-        name:'ArtGallery',
+        path:'/gallery',
+        name:'Gallery',
         component:ArtGallery,
     },
     {

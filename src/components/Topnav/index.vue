@@ -29,12 +29,12 @@
                   </svg>
                   Hero
               </router-link>
-            <router-link to="/artGallery"
-                         :class="['inline-flex items-center border-b-2', $route.path === '/artGallery' ? 'border-indigo-500' : 'border-transparent', 'px-1 pt-1 text-sm font-medium text-rose-500 dark:text-gray-400 hover:border-orange-300 hover:text-orange-700 dark:hover:text-pink-200']">
+            <router-link to="/gallery"
+                         :class="['inline-flex items-center border-b-2', $route.path === '/gallery' ? 'border-indigo-500' : 'border-transparent', 'px-1 pt-1 text-sm font-medium text-rose-500 dark:text-gray-400 hover:border-orange-300 hover:text-orange-700 dark:hover:text-pink-200']">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                 </svg>
-                Art Gallery
+                Gallery
             </router-link>
             <router-link to="/adventure"
                          :class="['inline-flex items-center border-b-2', $route.path === '/adventure' ? 'border-indigo-500' : 'border-transparent', 'px-1 pt-1 text-sm font-medium text-rose-500 dark:text-gray-400 hover:border-orange-300 hover:text-orange-700 dark:hover:text-pink-200']">
@@ -82,7 +82,7 @@
     <div v-if="isMobileMenuOpen" class="sm:hidden dark:bg-black" id="mobile-menu">
       <div class="space-y-1 pb-4 pt-2">
         <router-link to="/hero" :class="['block border-l-4',$route.path === '/hero' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Hero</router-link>
-        <router-link to="/artGallery" :class="['block border-l-4',$route.path === '/artGallery' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Art Gallery</router-link>
+        <router-link to="/gallery" :class="['block border-l-4',$route.path === '/gallery' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Gallery</router-link>
         <router-link to="/adventure" :class="['block border-l-4',$route.path === '/adventure' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Adventure</router-link>
         <router-link to="/friends" :class="['block border-l-4',$route.path === '/friends' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Friends</router-link>
         <router-link to="/breed" :class="['block border-l-4',$route.path === '/breed' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Breed</router-link>

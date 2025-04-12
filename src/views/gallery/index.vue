@@ -29,30 +29,30 @@ export default {
                 id: 2,
                 subtitle:'Sleeping',
                 images: [
-                    { path: '/assets/images/artgallery/artsleep01.jpeg', alt: '' },
-                    { path: '/assets/images/artgallery/artsleep02.jpeg', alt: '' },
-                    { path: '/assets/images/artgallery/artsleep03.jpeg', alt: '' },
-                    { path: '/assets/images/artgallery/artsleep04.jpeg', alt: '' }
+                    { path: '/assets/images/gallery/artsleep01.jpeg', alt: '' },
+                    { path: '/assets/images/gallery/artsleep02.jpeg', alt: '' },
+                    { path: '/assets/images/gallery/artsleep03.jpeg', alt: '' },
+                    { path: '/assets/images/gallery/artsleep04.jpeg', alt: '' }
                 ]
             },
             {
                 id: 1,
                 subtitle:'Hunting',
                 images: [
-                    { path: '/assets/images/artgallery/arthunt01.jpeg', alt: '' },
-                    { path: '/assets/images/artgallery/arthunt02.jpeg', alt: '' },
-                    { path: '/assets/images/artgallery/arthunt03.jpeg', alt: '' },
-                    { path: '/assets/images/artgallery/arthunt04.jpeg', alt: '' },
+                    { path: '/assets/images/gallery/arthunt01.jpeg', alt: '' },
+                    { path: '/assets/images/gallery/arthunt02.jpeg', alt: '' },
+                    { path: '/assets/images/gallery/arthunt03.jpeg', alt: '' },
+                    { path: '/assets/images/gallery/arthunt04.jpeg', alt: '' },
                 ]
             },
           {
             id: 1,
             subtitle:'Trouble',
             images: [
-              { path: '/assets/images/artgallery/arttrouble01.JPG', alt: '' },
-              { path: '/assets/images/artgallery/arttrouble02.JPG', alt: '' },
-              { path: '/assets/images/artgallery/arttrouble03.jpg', alt: '' },
-              { path: '/assets/images/artgallery/arttrouble01.JPG', alt: '' },
+              { path: '/assets/images/gallery/arttrouble01.JPG', alt: '' },
+              { path: '/assets/images/gallery/arttrouble02.JPG', alt: '' },
+              { path: '/assets/images/gallery/arttrouble03.jpg', alt: '' },
+              { path: '/assets/images/gallery/arttrouble01.JPG', alt: '' },
             ]
           }
         ]

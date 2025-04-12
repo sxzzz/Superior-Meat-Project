@@ -54,6 +54,7 @@
 
 import Header from './components/Header/index.vue';
 import Topnav from "./components/Topnav/index.vue";
+import { useThemeStore } from '/src/store/themeStore.js'
 export default {
   components: {
     Header,
@@ -63,6 +64,30 @@ export default {
     return {
     }
   },
+  mounted() {
+    // const updateThemeByTime = () => {
+    //   const hour = new Date().getHours()
+    //   if (hour >= 18 || hour < 6) {
+    //     document.documentElement.classList.add('dark')
+    //   } else {
+    //     document.documentElement.classList.remove('dark')
+    //   }
+    // }
+    //
+    // updateThemeByTime()
+    // setInterval(updateThemeByTime, 60 * 60 * 1000) // 每小时检查一次
+    const themeStore = useThemeStore()
+
+    themeStore.autoUpdateByTime()
+
+    this.intervalId = setInterval(() => {
+      themeStore.autoUpdateByTime()
+    }, 60 * 60 * 1000)
+  },
+  beforeDestroy() {
+    clearInterval(this.intervalId)
+  }
+
 
 }
 </script>
