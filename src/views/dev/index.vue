@@ -4,8 +4,8 @@
       <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-4">Tasklist & Demo Template</h2>
               <!-- music player-->
       <div>
-        <div class="bg-white border-slate-100 dark:bg-slate-800 dark:border-slate-500 border-b rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
-              <!--  Album info        -->
+        <div class="bg-white border-slate-100 dark:bg-slate-800 dark:border-slate-500  rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
+              <!--  Album info and  visualizer      -->
           <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-2 w-full">
             <div class="flex items-center space-x-4 col-span-1">
               <img :src="currentMusic.cover" alt="" width="88" height="88"
@@ -26,7 +26,6 @@
             <!-- 音柱视觉区域 -->
             <canvas ref="visualizerCanvas" class="w-full h-12 sm:h-16 md:h-24 lg:h-40  col-span-2 "></canvas>
           </div>
-
 
               <!--进度条和按钮-->
           <div class="space-y-4">
@@ -77,7 +76,10 @@
                 'bg-gradient-to-r from-red-600 to-purple-500 text-white': visualizerType === 'bar',
                 'bg-cyan-500 text-white': visualizerType === 'wave',
                 'bg-gradient-to-r from-pink-500 to-yellow-500 text-white': visualizerType === 'mirrorWave',
-                'bg-gradient-to-r from-orange-500  to-blue-500': visualizerType === 'centeredBars'
+                'bg-gradient-to-r from-orange-500  to-blue-500': visualizerType === 'centeredBars',
+                'bg-gradient-to-r from-cyan-500  to-purple-300': visualizerType === 'dualStream',
+                'bg-gradient-to-r from-red-500  to-purple-600': visualizerType === 'NeonLines',
+                'bg-green-600': visualizerType === 'MatrixDrop',
                 }"
 
 
@@ -291,34 +293,46 @@
             </div>
           </div>
           </div>
+          
+            <!-- 隐藏音频标签 -->
+          <audio
+          ref="audio"
+          @timeupdate="updateProgress"
+          @loadedmetadata="onLoadedMetadata"
+          @ended="resetPlayer"
+          />
+        </div>
+      </div>
 
 
-
-            <!--  tasklist-->
-          <nav aria-label="Progress" class="mt-10">
-            <ol role="list" class="overflow-hidden">
-                <li class="relative pb-10">
-                  <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-                  <div href="#" class="group relative flex items-start">
+    </div>
+    <!--  tasklist-->
+    <div class="bg-teal-300 dark:bg-teal-700">
+      <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+        <nav aria-label="Progress" class="mt-10">
+          <ol role="list" class="overflow-hidden">
+            <li class="relative pb-10">
+              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+              <div href="#" class="group relative flex items-start">
                     <span>
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hourglass-split mt-2 text-white bg-gray-500 rounded-full dark:bg-amber-600" viewBox="0 0 16 16">
                       <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
                     </svg>
                     </span>
-                    <span class="ml-2 flex min-w-0 flex-col">
+                <span class="ml-2 flex min-w-0 flex-col">
                       <span class="text-xl font-medium dark:text-white">Tech tree & game section</span>
                     </span>
-                  </div>
-                </li>
-                <li class="relative pb-10">
-                  <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-                  <div href="#" class="group relative flex items-start">
+              </div>
+            </li>
+            <li class="relative pb-10">
+              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+              <div href="#" class="group relative flex items-start">
                     <span>
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hourglass-split mt-2 text-white bg-gray-500 rounded-full dark:bg-amber-600" viewBox="0 0 16 16">
                       <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
                     </svg>
                     </span>
-                    <span class="ml-2 flex min-w-0 flex-col">
+                <span class="ml-2 flex min-w-0 flex-col">
                       <span class="text-xl font-medium dark:text-white">Music</span>
                       <span class="text-gray-500 dark:text-emerald-300">Add a music player</span>
                       <span class="text-gray-500 dark:text-emerald-300">Drag the progress bar to fast-forward or rewind</span>
@@ -331,153 +345,146 @@
                       <span class="text-gray-500 dark:text-emerald-300">Global mini player</span>
                       <span class="text-gray-500 dark:text-emerald-300">4 theme of Visualizer </span>
                     </span>
-                  </div>
-                </li>
-                <li class="relative pb-10">
-                  <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-                  <div href="#" class="group relative flex items-start">
+              </div>
+            </li>
+            <li class="relative pb-10">
+              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+              <div href="#" class="group relative flex items-start">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-circle mt-2 text-white bg-red-400 rounded-full dark:bg-pink-600" viewBox="0 0 16 16">
                       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                       <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
                     </svg>
                     </span>
-                    <span class="ml-2 flex min-w-0 flex-col">
+                <span class="ml-2 flex min-w-0 flex-col">
                       <span class="text-xl font-medium dark:text-white">Message board</span>
                     </span>
-                  </div>
-                </li>
-                <li class="relative pb-10">
-                  <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-                  <div href="#" class="group relative flex items-start">
+              </div>
+            </li>
+            <li class="relative pb-10">
+              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+              <div href="#" class="group relative flex items-start">
                     <span>
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-circle mt-2 text-white bg-red-400 rounded-full dark:bg-pink-600" viewBox="0 0 16 16">
                       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                       <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
                     </svg>
                     </span>
-                    <span class="ml-2 flex min-w-0 flex-col">
+                <span class="ml-2 flex min-w-0 flex-col">
                       <span class="text-xl font-medium dark:text-white">Art Gallery</span>
                       <span class="text-gray-500 dark:text-emerald-300">Add more sections on Gallery</span>
                     </span>
-                  </div>
-                </li>
-                <li class="relative pb-10">
-                  <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-                  <div href="#" class="group relative flex items-start">
+              </div>
+            </li>
+            <li class="relative pb-10">
+              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+              <div href="#" class="group relative flex items-start">
                     <span>
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-circle mt-2 text-white bg-red-400 rounded-full dark:bg-pink-600" viewBox="0 0 16 16">
                       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                       <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
                     </svg>
                     </span>
-                    <span class="ml-2 flex min-w-0 flex-col">
+                <span class="ml-2 flex min-w-0 flex-col">
                       <span class="text-xl font-medium dark:text-white">Post</span>
                       <span class="text-gray-500 dark:text-emerald-300">Planing to redesign the post with highlight features </span>
                     </span>
-                  </div>
-                </li>
-                <li class="relative pb-10">
-                  <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-                  <div href="#" class="group relative flex items-start">
+              </div>
+            </li>
+            <li class="relative pb-10">
+              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+              <div href="#" class="group relative flex items-start">
                     <span>
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hourglass-split mt-2 text-white bg-gray-500 rounded-full dark:bg-amber-600" viewBox="0 0 16 16">
                       <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
                     </svg>
                     </span>
-                    <span class="ml-2 flex min-w-0 flex-col">
+                <span class="ml-2 flex min-w-0 flex-col">
                       <span class="text-xl font-medium dark:text-white">Friends</span>
                       <span class="text-gray-500 dark:text-emerald-300">Triangular wall - not responsive design yet, may need to refactor HTML part  </span>
                     </span>
-                  </div>
-                 </li>
-                <li class="relative pb-10">
-                  <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-                  <div href="#" class="group relative flex items-start">
+              </div>
+            </li>
+            <li class="relative pb-10">
+              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+              <div href="#" class="group relative flex items-start">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                         <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
                       </svg>
                     </span>
-                    <span class="ml-2 flex min-w-0 flex-col">
+                <span class="ml-2 flex min-w-0 flex-col">
                       <span class="text-xl font-medium dark:text-white">Header</span>
                       <span class="text-gray-500 dark:text-emerald-300">Add background music</span>
                     </span>
-                  </div>
-                </li>
-                <li class="relative pb-10">
-                  <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-                  <div href="#" class="group relative flex items-start">
+              </div>
+            </li>
+            <li class="relative pb-10">
+              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+              <div href="#" class="group relative flex items-start">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                         <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
                       </svg>
                     </span>
-                    <span class="ml-2 flex min-w-0 flex-col">
+                <span class="ml-2 flex min-w-0 flex-col">
                       <span class="text-xl font-medium dark:text-white">Hero</span>
                       <span class="text-gray-500 dark:text-emerald-300">Redesigned hero section </span>
                     </span>
-                  </div>
-                </li>
-                <li class="relative pb-10">
-                  <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-                  <div href="#" class="group relative flex items-start">
+              </div>
+            </li>
+            <li class="relative pb-10">
+              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+              <div href="#" class="group relative flex items-start">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                         <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
                       </svg>
                     </span>
-                    <span class="ml-2 flex min-w-0 flex-col">
+                <span class="ml-2 flex min-w-0 flex-col">
                       <span class="text-xl font-medium dark:text-white">Hero</span>
                       <span class="text-gray-500 dark:text-emerald-300">Added new challenge</span>
                     </span>
-                  </div>
-                </li>
-                <li class="relative pb-10">
-                  <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-                  <div href="#" class="group relative flex items-start">
+              </div>
+            </li>
+            <li class="relative pb-10">
+              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+              <div href="#" class="group relative flex items-start">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                         <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
                       </svg>
                     </span>
-                    <span class="ml-2 flex min-w-0 flex-col">
+                <span class="ml-2 flex min-w-0 flex-col">
                       <span class="text-xl font-medium dark:text-white">Hero</span>
                       <span class="text-gray-500 dark:text-emerald-300">Added Dogcoder</span>
                     </span>
-                  </div>
-                </li>
-                <li class="relative pb-10">
-                  <div href="#" class="group relative flex items-start">
+              </div>
+            </li>
+            <li class="relative pb-10">
+              <div href="#" class="group relative flex items-start">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                         <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
                       </svg>
                     </span>
-                    <span class="ml-2 flex min-w-0 flex-col">
+                <span class="ml-2 flex min-w-0 flex-col">
                       <span class="text-xl font-medium dark:text-white">Dark</span>
                       <span class="text-gray-500 dark:text-emerald-300">Dark Mode is activated </span>
                     </span>
-                  </div>
-                </li>
-            </ol>
-          </nav>
-
-            <!-- 隐藏音频标签 -->
-          <audio
-          ref="audio"
-          @timeupdate="updateProgress"
-          @loadedmetadata="onLoadedMetadata"
-          @ended="resetPlayer"
-          />
-        </div>
+              </div>
+            </li>
+          </ol>
+        </nav>
       </div>
     </div>
+
+
   </div>
 </template>
 
@@ -658,9 +665,30 @@ let source = null
 let animationFrameId = null
 //const isDarkMode = document.documentElement.classList.contains('dark')
 
-const visualizerTypes = ['bar', 'wave', 'mirrorWave', 'centeredBars']
-const visualizerType = ref('bar') // 可切换的模式：bar / wave /
+const visualizerTypes = ['bar', 'wave', 'mirrorWave', 'centeredBars','dualStream','NeonLines','MatrixDrop']
+const visualizerType = ref('bar') //
 
+function drawVisualizer(ctx, analyser, canvas) {
+  if (!ctx || !analyser || !canvas) return;
+  // 取消当前的动画帧
+  cancelAnimationFrame(animationFrameId);
+  // 根据当前选择的 visualizerType 绘制对应的效果
+  if (visualizerType.value === 'bar') {
+    drawBarsLoop(ctx, analyser, canvas);
+  } else if (visualizerType.value === 'wave') {
+    drawWaveLoop(ctx, analyser, canvas);
+  } else if (visualizerType.value === 'mirrorWave') {
+    drawMirrorWave(ctx, analyser, canvas);
+  } else if (visualizerType.value === 'centeredBars') {
+    drawCenteredBars(ctx, analyser, canvas);
+  } else if (visualizerType.value === 'dualStream') {
+    drawDualStream(ctx, analyser, canvas);
+  } else if (visualizerType.value === 'NeonLines') {
+    drawNeonLines(ctx, analyser, canvas);
+  } else if (visualizerType.value === 'MatrixDrop') {
+    drawMatrixDrop(ctx, analyser, canvas);
+  }
+}
 
 function toggleVisualizer() {
   const currentIndex = visualizerTypes.indexOf(visualizerType.value)
@@ -672,17 +700,8 @@ function toggleVisualizer() {
     const canvas = visualizerCanvas.value
     const ctx = canvas.getContext('2d')
     cancelAnimationFrame(animationFrameId)
-    if (ctx && analyser && canvas) {
-      if (visualizerType.value === 'bar') {
-        drawBarsLoop(ctx, analyser, canvas)
-      } else if (visualizerType.value === 'wave') {
-        drawWaveLoop(ctx, analyser, canvas)
-      } else if (visualizerType.value === 'mirrorWave') {
-        drawMirrorWave(ctx, analyser, canvas)
-      } else if (visualizerType.value === 'centeredBars') {
-        drawCenteredBars(ctx, analyser, canvas)
-      }
-    }
+    // 调用统一的绘制方法，重绘新的 visualizer
+    drawVisualizer(ctx, analyser, canvas);
   }
 }
 
@@ -707,21 +726,34 @@ function setupVisualizer() {
   canvas.width = canvas.clientWidth
   canvas.height = 150
 
-  //drawWaveLoop(ctx, analyser,canvas)
-
-  if (visualizerType.value === 'bar') {
-    drawBarsLoop(ctx, analyser, canvas)
-  } else if (visualizerType.value === 'wave') {
-    drawWaveLoop(ctx, analyser, canvas)
-  }
-  else if (visualizerType.value === 'mirrorWave') {
-    drawMirrorWave(ctx, analyser, canvas)
-  }
-  else if (visualizerType.value === 'centeredBars') {
-    drawCenteredBars(ctx, analyser, canvas)
+// 调用统一的绘制方法
+  drawVisualizer(ctx, analyser, canvas);
+}
+function stopVisualizer() {
+  cancelAnimationFrame(animationFrameId)
+  if (audioContext && audioContext.state === 'running') {
+    audioContext.suspend()
   }
 }
 
+watch(isPlaying, async (playing) => {
+  if (playing) {
+    // 等待 DOM 更新后再设置 visualizer
+    await nextTick()
+    const canvas = visualizerCanvas.value
+    const ctx = canvas.getContext('2d')
+
+    if (!audioContext || audioContext.state === 'closed') {
+      setupVisualizer()
+    } else if (audioContext.state === 'suspended') {
+      await audioContext.resume()
+      // 👇 resume 后重启绘图
+      drawVisualizer(ctx, analyser, canvas);
+    }
+  } else {
+    stopVisualizer()
+  }
+})
 
 function drawBarsLoop(ctx, analyser, canvas) {
   const bufferLength = analyser.frequencyBinCount
@@ -759,7 +791,7 @@ function drawWaveLoop(ctx, analyser, canvas) {
   const dataArray = new Uint8Array(bufferLength)
 
   function draw() {
-    requestAnimationFrame(draw)
+    animationFrameId = requestAnimationFrame(draw)
     analyser.getByteTimeDomainData(dataArray)
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -789,7 +821,7 @@ function drawMirrorWave(ctx, analyser, canvas) {
   const dataArray = new Uint8Array(bufferLength)
 
   function draw() {
-    requestAnimationFrame(draw)
+    animationFrameId = requestAnimationFrame(draw)
     analyser.getByteTimeDomainData(dataArray)
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -844,13 +876,12 @@ function drawMirrorWave(ctx, analyser, canvas) {
   draw()
 }
 
-
 function drawCenteredBars(ctx, analyser, canvas) {
   const bufferLength = analyser.frequencyBinCount
   const dataArray = new Uint8Array(bufferLength)
 
   function draw() {
-    requestAnimationFrame(draw)
+    animationFrameId = requestAnimationFrame(draw)
     analyser.getByteFrequencyData(dataArray)
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -882,48 +913,120 @@ function drawCenteredBars(ctx, analyser, canvas) {
   draw()
 }
 
+function drawDualStream(ctx, analyser, canvas) {
+  const bufferLength = analyser.frequencyBinCount
+  const dataArray = new Uint8Array(bufferLength)
 
-function stopVisualizer() {
-  cancelAnimationFrame(animationFrameId)
-  if (audioContext && audioContext.state === 'running') {
-    audioContext.suspend()
+  function draw() {
+    animationFrameId = requestAnimationFrame(draw)
+    analyser.getByteFrequencyData(dataArray)
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+    const barWidth = canvas.width / bufferLength * 1.2
+    const gap = 1
+    let x = 0
+
+    for (let i = 0; i < bufferLength; i++) {
+      const value = dataArray[i]
+      const barHeight = (value / 255) * (canvas.height / 2)
+
+      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height)
+      gradient.addColorStop(0, '#06b6d4') // cyan-500
+      gradient.addColorStop(0.5, '#3b82f6') // blue-500
+      gradient.addColorStop(1, '#9333ea') // purple-600
+
+      ctx.fillStyle = gradient
+
+      // 上半柱子（从顶部往下）
+      ctx.fillRect(x, 0, barWidth - gap, barHeight)
+
+      // 下半柱子（从底部往上）
+      ctx.fillRect(x, canvas.height - barHeight, barWidth - gap, barHeight)
+
+      x += barWidth
+    }
   }
+
+  draw()
 }
 
+function drawNeonLines(ctx, analyser, canvas) {
+  const bufferLength = analyser.fftSize
+  const dataArray = new Uint8Array(bufferLength)
 
+  function draw() {
+    animationFrameId = requestAnimationFrame(draw)
+    analyser.getByteTimeDomainData(dataArray)
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-watch(isPlaying, async (playing) => {
-  if (playing) {
-    // 等待 DOM 更新后再设置 visualizer
-    await nextTick()
-    const canvas = visualizerCanvas.value
-    const ctx = canvas.getContext('2d')
+    const lineHeight = canvas.height / 8
+    const sliceWidth = canvas.width / bufferLength
 
-    if (!audioContext || audioContext.state === 'closed') {
-      setupVisualizer()
-    } else if (audioContext.state === 'suspended') {
-      await audioContext.resume()
-      // 👇 resume 后重启绘图
-      if (ctx && analyser && canvas) {
-        // 👉 根据当前类型绘制
-        if (visualizerType.value === 'bar') {
-          drawBarsLoop(ctx, analyser, canvas)
-        } else if (visualizerType.value === 'wave') {
-          drawWaveLoop(ctx, analyser, canvas)
-        }
-        else if (visualizerType.value === 'mirrorWave') {
-          drawMirrorWave(ctx, analyser, canvas)
-        }
-        else if (visualizerType.value === 'centeredBars') {
-          drawCenteredBars(ctx, analyser, canvas)
-        }
+    for (let row = 0; row < 8; row++) {
+      ctx.beginPath()
+      let x = 0
+      for (let i = 0; i < bufferLength; i++) {
+        const v = dataArray[i] / 128.0
+        const y = row * lineHeight + (v * lineHeight) / 2
+
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y)
+        x += sliceWidth
+      }
+
+      ctx.strokeStyle = `hsl(${row * 40}, 100%, 60%)`
+      ctx.lineWidth = 1.5
+      ctx.shadowBlur = 6
+      ctx.shadowColor = ctx.strokeStyle
+      ctx.stroke()
+    }
+
+    ctx.shadowBlur = 0
+  }
+
+  draw()
+}
+
+function drawMatrixDrop(ctx, analyser, canvas) {
+  const bufferLength = analyser.frequencyBinCount
+  const dataArray = new Uint8Array(bufferLength)
+
+  const columns = Math.floor(canvas.width / 16)
+  const drops = new Array(columns).fill(0)
+
+  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*'
+
+  function draw() {
+    animationFrameId = requestAnimationFrame(draw)
+    analyser.getByteFrequencyData(dataArray)
+
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+    ctx.font = '16px monospace'
+
+    for (let i = 0; i < columns; i++) {
+      const value = dataArray[i % bufferLength]
+      const char = charset[Math.floor(Math.random() * charset.length)]
+      const x = i * 16
+      const y = Math.floor(drops[i]) * 16
+      ctx.fillStyle = `hsl(120, 100%, ${30 + Math.random() * 20}%)`
+      //ctx.fillStyle = `hsl(${value}, 100%, ${50 + value / 5}%)`
+      //ctx.fillStyle = `hsl(${Math.floor(Math.random() * 360)}, 100%, ${50 + Math.random() * 30}%)`
+      ctx.fillText(char, x, y)
+
+      // 即使频率数据为 0，也加一点微小随机速度，避免冻结 /10等于速度慢10倍
+      const speed = (value / 200 + Math.random() * 0.25 + 0.2)/10
+      drops[i] += speed
+
+      if (y > canvas.height || Math.random() > 0.975) {
+        drops[i] = 0
       }
     }
-  } else {
-    stopVisualizer()
   }
-})
 
+  draw()
+}
 
 //playback speed
 const playbackRates = [0.75,1, 1.25, 1.5]
@@ -1037,6 +1140,7 @@ function previousMusic() {
     }
   })
 }
+
 
 
 

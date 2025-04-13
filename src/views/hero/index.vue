@@ -15,7 +15,7 @@
             </h1>
           </div>
 
-          <section class="mt-2 md:mt-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
+          <section class="mt-2 md:mt-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16 ">
             <div class="lg:pr-8">
               <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna, a foxhound hailing from the beautiful city of Hobart in Tasmania, possessed a deep love for the simple pleasures of life—indulging in delicious meals, surrendering to peaceful slumber, embracing cozy snuggles, and frolicking in playful escapades. Amidst her siblings, who were all beagles, Luna stood out as a unique soul, a mesmerizing blend of beagle and foxhound ancestry.</p>
               <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">路娜 (罗马神话中的月亮女神)，一只诞生于塔斯马尼亚州霍巴特美城的猎狐犬，胸怀对生活的简约欢愉，热爱着美食的醉人魅力、恬静的甜蜜梦乡，与温馨的亲昵相依，还有在欢欣的游戏中尽情踊跃。在她的兄弟姐妹中，众犬皆为比格，而Luna独树一帜，融合了比格犬与猎狐犬的绝妙交织，形成其迷人之灵魂。</p>
@@ -63,14 +63,14 @@
         </div>
       </div>
 
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div v-if="false" class="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 class="text font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Update: Music player under navigation dev is ready</h2>
       </div>
 
       <!--background with image-->
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-          <img src="/assets/images/hero/img_1.jpg" alt="" class="absolute inset-0 -z-10 size-full object-cover" />
+          <img src="/assets/images/hero/img_1.jpg" alt="" class="absolute inset-0 -z-10 size-full object-cover " />
           <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div class="absolute -bottom-8 -left-96 -z-10 transform-gpu blur-3xl sm:-bottom-64 sm:-left-40 lg:-bottom-32 lg:left-8 xl:-left-10" aria-hidden="true">
               <div class="aspect-[1266/975] w-[79.125rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />

@@ -11,10 +11,10 @@
             <div class="gap-x-4 gap-y-2">
                 <div class="text-sm leading-6 text-white flex flex-col items-start sm:items-center lg:flex-row dark:text-gray-300">
                     <div>
-                        <strong class="font-semibold">Welcome to Luna's BLOG! Let's explore, learn, and enjoy the fascinating world of our furry friends!</strong>
+                        <strong class="font-semibold">Welcome to Luna & Andy's web.Explore and Enjoy!</strong>
                     </div>
                     <div class="">
-                        <span class="inline-block lg:ms-2 xl:ms-20 inline h-0.5 w-0.5 fill-current text-xs" aria-hidden="true">updated: 12th April</span>
+                        <span class="inline-block lg:ms-2 xl:ms-20 inline h-0.5 w-0.5 fill-current text-xs font-semibold" aria-hidden="true">Update: Music player under dev</span>
                     </div>
                    <!-- Dark Mode -->
                     <div class="flex items-center ms-0 mt-2 lg:mt-0 lg:ms-3">
