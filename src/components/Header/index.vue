@@ -11,7 +11,7 @@
             <div class="gap-x-4 gap-y-2">
                 <div class="text-sm leading-6 text-white flex flex-col items-start sm:items-center lg:flex-row dark:text-gray-300">
                     <div>
-                        <strong class="font-semibold">Welcome to Luna & Andy's web.Explore and Enjoy!</strong>
+                        <strong class="font-semibold">Vuejs, Tailwind, Pinia and Router</strong>
                     </div>
                     <div class="">
                         <span class="inline-block lg:ms-2 xl:ms-20 inline h-0.5 w-0.5 fill-current text-xs font-semibold" aria-hidden="true">Update: Music player under dev</span>

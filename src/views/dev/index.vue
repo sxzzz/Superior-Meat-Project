@@ -1,503 +1,528 @@
 <template>
-  <div class="bg-white dark:bg-black">
-    <div class=" mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-4">Tasklist & Demo Template</h2>
-              <!-- music player-->
-      <div>
-        <div class="bg-white border-slate-100 dark:bg-slate-800 dark:border-slate-500  rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
-              <!--  Album info and  visualizer      -->
-          <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-2 w-full">
-            <div class="flex items-center space-x-4 col-span-1">
-              <img :src="currentMusic.cover" alt="" width="88" height="88"
-                   class="flex-none w-24 h-24 sm:w-28 sm:h-28 md:w-24 md:h-24 lg:w-40 lg:h-40
-                   rounded-lg bg-slate-100 object-contain" loading="lazy" />
-              <div class="min-w-0 flex-auto space-y-1 font-semibold">
-                <p class="text-cyan-500 dark:text-cyan-400 text-sm md:text-xs lg:text-base leading-6">
-                  <abbr title="Artist">{{ currentMusic.artist }}</abbr>
-                </p>
-                <h2 class="text-slate-500 dark:text-slate-400 text-sm md:text-xs lg:text-base leading-6 truncate">
-                  {{ currentMusic.title }}
-                </h2>
-                <p class="text-slate-900 dark:text-slate-50 text-sm md:text-xs lg:text-lg">
-                  {{ currentMusic.song }}
-                </p>
+  <div class="relative">
+      <!-- Feedback 按钮（从下往上垂直排列）-->
+      <div class="fixed right-0 bottom-1/4 z-40 hidden md:block">
+        <button
+            @click="togglePanel"
+            class="bg-purple-700 text-white text-sm font-semibold px-4 py-2 rounded-t-xl shadow-md hover:bg-purple-800 transition origin-bottom-right tracking-wider"
+            style="transform: rotate(-90deg); transform-origin: bottom right;"
+        >
+          Feedback
+        </button>
+      </div>
+      <!-- 右侧滑出 Panel -->
+      <Popup :visible="showPanel" @close="showPanel = false" />
+
+      <div :class="{ 'blur-sm': showPanel }" class="transition duration-600">
+        <div class="bg-white dark:bg-black">
+          <div class=" mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-4">Music player</h2>
+            <!-- music player-->
+            <div>
+              <div class="bg-white border-slate-100 dark:bg-slate-800 dark:border-slate-500  rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
+                <!--  Album info and  visualizer      -->
+                <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-2 w-full">
+                  <div class="flex items-center space-x-4 col-span-1">
+                    <img :src="currentMusic.cover" alt="" width="88" height="88"
+                         class="flex-none w-24 h-24 sm:w-28 sm:h-28 md:w-24 md:h-24 lg:w-40 lg:h-40
+                     rounded-lg bg-slate-100 object-contain" loading="lazy" />
+                    <div class="min-w-0 flex-auto space-y-1 font-semibold">
+                      <p class="text-cyan-500 dark:text-cyan-400 text-sm md:text-xs lg:text-base leading-6">
+                        <abbr title="Artist">{{ currentMusic.artist }}</abbr>
+                      </p>
+                      <h2 class="text-slate-500 dark:text-slate-400 text-sm md:text-xs lg:text-base leading-6 truncate">
+                        {{ currentMusic.title }}
+                      </h2>
+                      <p class="text-slate-900 dark:text-slate-50 text-sm md:text-xs lg:text-lg">
+                        {{ currentMusic.song }}
+                      </p>
+                    </div>
+                  </div>
+                  <!-- 音柱视觉区域 -->
+                  <canvas ref="visualizerCanvas" class="w-full h-12 sm:h-16 md:h-24 lg:h-40  col-span-2 "></canvas>
+                </div>
+
+                <!--进度条和按钮-->
+                <div class="space-y-4">
+                  <!-- 进度条 -->
+                  <div class="space-y-2">
+                    <div
+                        class="relative cursor-pointer"
+                        :class="{ 'opacity-90  ring-1 ring-orange-500': isDragging }"
+                        @click="seek"
+                        ref="progressBar"
+                    >
+                      <div class="bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div
+                            class="bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 dark:bg-cyan-400 h-2"
+                            :style="{ width: `${progressPercentage}%` }"
+                            role="progressbar"
+                            aria-label="music progress"
+                            :aria-valuenow="currentTime"
+                            :aria-valuemin="0"
+                            :aria-valuemax="duration"
+                        ></div>
+                      </div>
+                      <div
+                          class="ring-cyan-500 dark:ring-cyan-400 ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow"
+                          :style="{ left: `${progressPercentage}%` }"
+                      >
+                        <div class="w-1.5 h-1.5 bg-cyan-500 dark:bg-cyan-400 rounded-full ring-1 ring-inset ring-slate-900/5"></div>
+                      </div>
+                    </div>
+                    <div class="flex justify-between text-sm leading-6 font-medium tabular-nums">
+                      <div class="text-cyan-500 dark:text-slate-100">{{ formatTime(currentTime) }}</div>
+                      <div class="text-slate-500 dark:text-slate-400">{{ formatTime(duration) }}</div>
+                    </div>
+                  </div>
+
+                  <!--  按钮 -->
+                  <div class=" h-20  bg-slate-50 text-slate-500 dark:bg-slate-600 dark:text-slate-200 rounded-b-xl flex items-center">
+                    <!--  左三按钮 -->
+                    <div class="flex-auto h-full flex items-center justify-evenly">
+                      <!-- Add to favorites -->
+                      <div class="relative group">
+
+
+                        <button @click="toggleVisualizer"
+                                class="px-3 py-1 rounded"
+
+                                :class="{
+                  'bg-gradient-to-r from-red-600 to-purple-500 text-white': visualizerType === 'bar',
+                  'bg-cyan-500 text-white': visualizerType === 'wave',
+                  'bg-gradient-to-r from-pink-500 to-yellow-500 text-white': visualizerType === 'mirrorWave',
+                  'bg-gradient-to-r from-orange-500  to-blue-500': visualizerType === 'centeredBars',
+                  'bg-gradient-to-r from-cyan-500  to-purple-300': visualizerType === 'dualStream',
+                  'bg-gradient-to-r from-red-500  to-purple-600': visualizerType === 'NeonLines',
+                  'bg-green-600': visualizerType === 'MatrixDrop',
+                  }"
+
+
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-soundwave" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5m-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5m-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5m12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5"/>
+                          </svg>
+                        </button>
+
+                        <div
+                            class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
+                  bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
+                  dark:bg-violet-700 dark:text-white dark:border-violet-300
+                  opacity-0 scale-95 translate-y-1
+                  group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                  transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
+                        >
+                          Visualizer
+                        </div>
+                      </div>
+                      <!-- Previous -->
+                      <div class="relative group ">
+                        <button type="button" class=" w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white sm:block xl:block" aria-label="Previous" @click="previousMusic">
+                          <svg width="24" height="24" fill="none">
+                            <path d="m10 12 8-6v12l-8-6Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <div
+                            class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
+                  bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
+                  dark:bg-violet-700 dark:text-white dark:border-violet-300
+                  opacity-0 scale-95 translate-y-1
+                  group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                  transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
+                        >
+                          Previous
+                        </div>
+                      </div>
+                      <!-- Rewind 10 seconds -->
+                      <div class="relative group">
+                        <button type="button" aria-label="Rewind 10 seconds" @click="skipBackward(10)" class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-rewind-fill" viewBox="0 0 16 16">
+                            <path d="M8.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
+                            <path d="M.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
+                          </svg>
+                        </button>
+                        <div
+                            class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
+                             bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
+                             dark:bg-violet-700 dark:text-white dark:border-violet-300
+                             opacity-0 scale-95 translate-y-1
+                             group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                             transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
+                        >
+                          Rewind 10 seconds
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--  play button  -->
+                    <div class="relative group">
+                      <button
+                          type="button"
+                          class="bg-white text-slate-900 dark:bg-slate-100 dark:text-slate-700 w-8 h-8 sm:w-12 sm:h-12 lg:w-20 lg:h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center mx-auto"
+                          @click="togglePlay"
+                      >
+                        <svg v-if="!isPlaying" viewBox="0 0 32 32" class="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8"  fill="currentColor">
+                          <polygon points="6,4 26,16 6,28" />
+                        </svg>
+                        <svg v-else viewBox="0 0 32 32" class="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8" fill="currentColor">
+                          <rect x="6" y="4" width="4" height="24" rx="2" />
+                          <rect x="20" y="4" width="4" height="24" rx="2" />
+                        </svg>
+                      </button>
+
+                      <div
+                          class="tooltip absolute hidden md:block bottom-full left-1/2 -translate-x-1/2 mb-[29px] px-3 py-1 rounded-lg text-base font-medium
+                             bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
+                             dark:bg-violet-700 dark:text-white dark:border-violet-300
+                             opacity-0 scale-95 translate-y-1
+                             group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                             transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
+                      >
+                        Play
+                      </div>
+                    </div>
+
+                    <!--  右四按钮 -->
+                    <div class="flex-auto h-full flex items-center justify-evenly">
+                      <!--Skip 10 seconds-->
+                      <div class="relative group">
+                        <button type="button" aria-label="Skip 10 seconds" @click="skipForward(10)" class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-fast-forward-fill" viewBox="0 0 16 16">
+                            <path d="M7.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C.713 12.69 0 12.345 0 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                            <path d="M15.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C8.713 12.69 8 12.345 8 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                          </svg>
+                        </button>
+                        <div
+                            class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
+                             bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
+                             dark:bg-violet-700 dark:text-white dark:border-violet-300
+                             opacity-0 scale-95 translate-y-1
+                             group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                             transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
+                        >
+                          Skip 10 seconds
+                        </div>
+                      </div>
+
+
+                      <!--next-->
+                      <div class="relative group">
+                        <button type="button" class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white  sm:block xl:block" aria-label="Next" @click="nextMusic">
+                          <svg width="24" height="24" fill="none">
+                            <path d="M14 12 6 6v12l8-6Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <div
+                            class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
+                             bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
+                             dark:bg-violet-700 dark:text-white dark:border-violet-300
+                             opacity-0 scale-95 translate-y-1
+                             group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                             transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
+                        >
+                          Next
+                        </div>
+                      </div>
+
+
+                      <!--playback speed-->
+                      <div class="relative group">
+                        <button
+                            type="button"
+                            @click="togglePlaybackRate"
+                            class="flex items-center justify-center rounded-lg font-semibold ring-2 ring-inset ring-slate-500 dark:ring-0 dark:bg-slate-500 dark:text-white
+                             text-xs sm:text-sm md:text-base
+                             h-8 sm:h-10 md:h-10
+                             px-2 sm:px-3 md:px-3
+                             min-w-[1rem]
+                             text-slate-700 transition-all duration-500 hidden sm:block"
+                        >
+                          {{ playbackRates[currentRateIndex] }}x
+                        </button>
+                        <div
+                            class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-[32px] px-3 py-1 rounded-lg text-base font-medium
+                             bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
+                             dark:bg-violet-700 dark:text-white dark:border-violet-300
+                             opacity-0 scale-95 translate-y-1
+                             group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                             transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
+                        >
+                          Playback speed
+                        </div>
+                      </div>
+
+
+
+                      <!-- volume -->
+                      <div class=" group relative flex items-center justify-start gap-0 ">
+
+                        <!-- mute -->
+                        <button @click="toggleMute" class=" flex items-center justify-center text-slate-700 dark:text-white hover:text-indigo-600
+                     w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 hidden md:block">
+                          <svg v-if="isMuted || volume === 0"  xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l-5 4H2v6h2l5 4V5zM18 9l4 4m0-4l-4 4" />
+                          </svg>
+                          <svg v-else-if="volume < 0.5" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5L6 9H2v6h4l5 4V5z" />
+                          </svg>
+                          <svg v-else xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5L6 9H2v6h4l5 4V5z M15.54 8.46a5 5 0 010 7.07M19.07 4.93a9 9 0 010 12.73" />
+                          </svg>
+
+                        </button>
+
+
+                        <!-- volume -->
+                        <input
+                            type="range"group
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            v-model="volume"
+                            @input="updateVolume"
+                            class="h-2 w-12 sm:w-16 md:w-20 lg:w-24 hidden md:block p-0 m-0"
+                        />
+                        <div
+                            class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
+                             bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
+                             dark:bg-violet-700 dark:text-white dark:border-violet-300
+                             opacity-0 scale-95 translate-y-1
+                             group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                             transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
+                        >
+                          Volume
+                        </div>
+
+
+
+                      </div>
+
+                      <!-- CSS 节奏动感条 -->
+                      <div class="sm:flex items-end justify-center space-x-1 h-6 hidden" v-show="isPlaying">
+                        <div class="w-1 bg-indigo-500 animate-bar" v-for="n in 4" :key="n" :style="{ animationDelay: `${n * 0.1}s` }"></div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 隐藏音频标签 -->
+                <audio
+                    ref="audio"
+                    @timeupdate="updateProgress"
+                    @loadedmetadata="onLoadedMetadata"
+                    @ended="resetPlayer"
+                />
               </div>
             </div>
-            <!-- 音柱视觉区域 -->
-            <canvas ref="visualizerCanvas" class="w-full h-12 sm:h-16 md:h-24 lg:h-40  col-span-2 "></canvas>
+
+
+          </div>
+          <!--  tasklist-->
+          <div class="bg-teal-300 dark:bg-teal-700">
+            <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+              <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text mb-4">Dev plan</h2>
+              <nav aria-label="Progress" class="mt-10">
+                <ol role="list" class="overflow-hidden">
+                  <li class="relative pb-10">
+                    <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+                    <div href="#" class="group relative flex items-start">
+                      <span>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hourglass-split mt-2 text-white bg-gray-500 rounded-full dark:bg-amber-600" viewBox="0 0 16 16">
+                        <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+                      </svg>
+                      </span>
+                      <span class="ml-2 flex min-w-0 flex-col">
+                        <span class="text-xl font-medium dark:text-white">Tech tree & game section</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li class="relative pb-10">
+                    <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+                    <div href="#" class="group relative flex items-start">
+                      <span>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hourglass-split mt-2 text-white bg-gray-500 rounded-full dark:bg-amber-600" viewBox="0 0 16 16">
+                        <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+                      </svg>
+                      </span>
+                      <span class="ml-2 flex min-w-0 flex-col">
+                        <span class="text-xl font-medium dark:text-white">Music</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Add a music player</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Drag the progress bar to fast-forward or rewind</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Automatically reset button status and progress after playing</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Volume control</span>
+                        <span class="text-gray-500 dark:text-emerald-300">AudioVisualizer</span>
+                        <span class="text-gray-500 dark:text-emerald-300">All buttons are functional</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Button tooltip</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Progress bar tooltip</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Global mini player</span>
+                        <span class="text-gray-500 dark:text-emerald-300">4 theme of Visualizer </span>
+                      </span>
+                    </div>
+                  </li>
+                  <li class="relative pb-10">
+                    <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+                    <div href="#" class="group relative flex items-start">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-circle mt-2 text-white bg-red-400 rounded-full dark:bg-pink-600" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                      </svg>
+                      </span>
+                      <span class="ml-2 flex min-w-0 flex-col">
+                        <span class="text-xl font-medium dark:text-white">Message board</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li class="relative pb-10">
+                    <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+                    <div href="#" class="group relative flex items-start">
+                      <span>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-circle mt-2 text-white bg-red-400 rounded-full dark:bg-pink-600" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                      </svg>
+                      </span>
+                      <span class="ml-2 flex min-w-0 flex-col">
+                        <span class="text-xl font-medium dark:text-white">Art Gallery</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Add more sections on Gallery</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li class="relative pb-10">
+                    <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+                    <div href="#" class="group relative flex items-start">
+                      <span>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-circle mt-2 text-white bg-red-400 rounded-full dark:bg-pink-600" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                      </svg>
+                      </span>
+                      <span class="ml-2 flex min-w-0 flex-col">
+                        <span class="text-xl font-medium dark:text-white">Post</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Planing to redesign the post with highlight features </span>
+                      </span>
+                    </div>
+                  </li>
+                  <li class="relative pb-10">
+                    <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+                    <div href="#" class="group relative flex items-start">
+                      <span>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hourglass-split mt-2 text-white bg-gray-500 rounded-full dark:bg-amber-600" viewBox="0 0 16 16">
+                        <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+                      </svg>
+                      </span>
+                      <span class="ml-2 flex min-w-0 flex-col">
+                        <span class="text-xl font-medium dark:text-white">Friends</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Triangular wall - not responsive design yet, may need to refactor HTML part  </span>
+                      </span>
+                    </div>
+                  </li>
+                  <li class="relative pb-10">
+                    <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+                    <div href="#" class="group relative flex items-start">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                          <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                        </svg>
+                      </span>
+                      <span class="ml-2 flex min-w-0 flex-col">
+                        <span class="text-xl font-medium dark:text-white">Header</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Add background music</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li class="relative pb-10">
+                    <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+                    <div href="#" class="group relative flex items-start">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                          <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                        </svg>
+                      </span>
+                      <span class="ml-2 flex min-w-0 flex-col">
+                        <span class="text-xl font-medium dark:text-white">Hero</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Redesigned hero section </span>
+                      </span>
+                    </div>
+                  </li>
+                  <li class="relative pb-10">
+                    <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+                    <div href="#" class="group relative flex items-start">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                          <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                        </svg>
+                      </span>
+                      <span class="ml-2 flex min-w-0 flex-col">
+                        <span class="text-xl font-medium dark:text-white">Hero</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Added new challenge</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li class="relative pb-10">
+                    <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
+                    <div href="#" class="group relative flex items-start">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                          <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                        </svg>
+                      </span>
+                      <span class="ml-2 flex min-w-0 flex-col">
+                        <span class="text-xl font-medium dark:text-white">Hero</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Added Dogcoder</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li class="relative pb-10">
+                    <div href="#" class="group relative flex items-start">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                          <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                        </svg>
+                      </span>
+                      <span class="ml-2 flex min-w-0 flex-col">
+                        <span class="text-xl font-medium dark:text-white">Dark</span>
+                        <span class="text-gray-500 dark:text-emerald-300">Dark Mode is activated </span>
+                      </span>
+                    </div>
+                  </li>
+                </ol>
+              </nav>
+            </div>
           </div>
 
-              <!--进度条和按钮-->
-          <div class="space-y-4">
-              <!-- 进度条 -->
-            <div class="space-y-2">
-              <div
-                  class="relative cursor-pointer"
-                  :class="{ 'opacity-90  ring-1 ring-orange-500': isDragging }"
-                  @click="seek"
-                  ref="progressBar"
-              >
-                <div class="bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
-                  <div
-                      class="bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 dark:bg-cyan-400 h-2"
-                      :style="{ width: `${progressPercentage}%` }"
-                      role="progressbar"
-                      aria-label="music progress"
-                      :aria-valuenow="currentTime"
-                      :aria-valuemin="0"
-                      :aria-valuemax="duration"
-                  ></div>
-                </div>
-                <div
-                    class="ring-cyan-500 dark:ring-cyan-400 ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow"
-                    :style="{ left: `${progressPercentage}%` }"
-                >
-                  <div class="w-1.5 h-1.5 bg-cyan-500 dark:bg-cyan-400 rounded-full ring-1 ring-inset ring-slate-900/5"></div>
-                </div>
-              </div>
-              <div class="flex justify-between text-sm leading-6 font-medium tabular-nums">
-                <div class="text-cyan-500 dark:text-slate-100">{{ formatTime(currentTime) }}</div>
-                <div class="text-slate-500 dark:text-slate-400">{{ formatTime(duration) }}</div>
-              </div>
-            </div>
-
-              <!--  按钮 -->
-            <div class=" h-20  bg-slate-50 text-slate-500 dark:bg-slate-600 dark:text-slate-200 rounded-b-xl flex items-center">
-              <!--  左三按钮 -->
-              <div class="flex-auto h-full flex items-center justify-evenly">
-              <!-- Add to favorites -->
-              <div class="relative group">
-
-
-                <button @click="toggleVisualizer"
-                        class="px-3 py-1 rounded"
-
-                :class="{
-                'bg-gradient-to-r from-red-600 to-purple-500 text-white': visualizerType === 'bar',
-                'bg-cyan-500 text-white': visualizerType === 'wave',
-                'bg-gradient-to-r from-pink-500 to-yellow-500 text-white': visualizerType === 'mirrorWave',
-                'bg-gradient-to-r from-orange-500  to-blue-500': visualizerType === 'centeredBars',
-                'bg-gradient-to-r from-cyan-500  to-purple-300': visualizerType === 'dualStream',
-                'bg-gradient-to-r from-red-500  to-purple-600': visualizerType === 'NeonLines',
-                'bg-green-600': visualizerType === 'MatrixDrop',
-                }"
-
-
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-soundwave" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5m-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5m-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5m12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5"/>
-                  </svg>
-                </button>
-
-                <div
-                    class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
-                bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
-                dark:bg-violet-700 dark:text-white dark:border-violet-300
-                opacity-0 scale-95 translate-y-1
-                group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
-                transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
-                >
-                  Visualizer
-                </div>
-              </div>
-              <!-- Previous -->
-              <div class="relative group ">
-                <button type="button" class=" w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white sm:block xl:block" aria-label="Previous" @click="previousMusic">
-                  <svg width="24" height="24" fill="none">
-                    <path d="m10 12 8-6v12l-8-6Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M6 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </button>
-                <div
-                class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
-                bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
-                dark:bg-violet-700 dark:text-white dark:border-violet-300
-                opacity-0 scale-95 translate-y-1
-                group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
-                transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
-                >
-                Previous
-                </div>
-              </div>
-              <!-- Rewind 10 seconds -->
-              <div class="relative group">
-                <button type="button" aria-label="Rewind 10 seconds" @click="skipBackward(10)" class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-rewind-fill" viewBox="0 0 16 16">
-                    <path d="M8.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
-                    <path d="M.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
-                  </svg>
-                </button>
-                <div
-                    class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
-                           bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
-                           dark:bg-violet-700 dark:text-white dark:border-violet-300
-                           opacity-0 scale-95 translate-y-1
-                           group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
-                           transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
-                >
-                  Rewind 10 seconds
-                </div>
-              </div>
-            </div>
-
-              <!--  play button  -->
-              <div class="relative group">
-                <button
-                    type="button"
-                    class="bg-white text-slate-900 dark:bg-slate-100 dark:text-slate-700 w-8 h-8 sm:w-12 sm:h-12 lg:w-20 lg:h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center mx-auto"
-                    @click="togglePlay"
-                >
-                  <svg v-if="!isPlaying" viewBox="0 0 32 32" class="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8"  fill="currentColor">
-                    <polygon points="6,4 26,16 6,28" />
-                  </svg>
-                  <svg v-else viewBox="0 0 32 32" class="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8" fill="currentColor">
-                    <rect x="6" y="4" width="4" height="24" rx="2" />
-                    <rect x="20" y="4" width="4" height="24" rx="2" />
-                  </svg>
-                </button>
-
-                <div
-                    class="tooltip absolute hidden md:block bottom-full left-1/2 -translate-x-1/2 mb-[29px] px-3 py-1 rounded-lg text-base font-medium
-                           bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
-                           dark:bg-violet-700 dark:text-white dark:border-violet-300
-                           opacity-0 scale-95 translate-y-1
-                           group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
-                           transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
-                >
-                  Play
-                </div>
-            </div>
-
-              <!--  右四按钮 -->
-              <div class="flex-auto h-full flex items-center justify-evenly">
-              <!--Skip 10 seconds-->
-              <div class="relative group">
-                <button type="button" aria-label="Skip 10 seconds" @click="skipForward(10)" class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-fast-forward-fill" viewBox="0 0 16 16">
-                    <path d="M7.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C.713 12.69 0 12.345 0 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
-                    <path d="M15.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C8.713 12.69 8 12.345 8 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
-                  </svg>
-                </button>
-                <div
-                    class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
-                           bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
-                           dark:bg-violet-700 dark:text-white dark:border-violet-300
-                           opacity-0 scale-95 translate-y-1
-                           group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
-                           transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
-                >
-                  Skip 10 seconds
-                </div>
-              </div>
-
-
-            <!--next-->
-              <div class="relative group">
-                <button type="button" class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-white  sm:block xl:block" aria-label="Next" @click="nextMusic">
-                  <svg width="24" height="24" fill="none">
-                    <path d="M14 12 6 6v12l8-6Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M18 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </button>
-                <div
-                    class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
-                           bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
-                           dark:bg-violet-700 dark:text-white dark:border-violet-300
-                           opacity-0 scale-95 translate-y-1
-                           group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
-                           transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
-                >
-                  Next
-                </div>
-              </div>
-
-
-              <!--playback speed-->
-              <div class="relative group">
-                <button
-                    type="button"
-                    @click="togglePlaybackRate"
-                    class="flex items-center justify-center rounded-lg font-semibold ring-2 ring-inset ring-slate-500 dark:ring-0 dark:bg-slate-500 dark:text-white
-                           text-xs sm:text-sm md:text-base
-                           h-8 sm:h-10 md:h-10
-                           px-2 sm:px-3 md:px-3
-                           min-w-[1rem]
-                           text-slate-700 transition-all duration-500 hidden sm:block"
-                >
-                  {{ playbackRates[currentRateIndex] }}x
-                </button>
-                <div
-                    class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-[32px] px-3 py-1 rounded-lg text-base font-medium
-                           bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
-                           dark:bg-violet-700 dark:text-white dark:border-violet-300
-                           opacity-0 scale-95 translate-y-1
-                           group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
-                           transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
-                >
-                  Playback speed
-                </div>
-              </div>
-
-
-
-              <!-- volume -->
-              <div class=" group relative flex items-center justify-start gap-0 ">
-
-                  <!-- mute -->
-                  <button @click="toggleMute" class=" flex items-center justify-center text-slate-700 dark:text-white hover:text-indigo-600
-                   w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 hidden md:block">
-                    <svg v-if="isMuted || volume === 0"  xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l-5 4H2v6h2l5 4V5zM18 9l4 4m0-4l-4 4" />
-                    </svg>
-                    <svg v-else-if="volume < 0.5" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5L6 9H2v6h4l5 4V5z" />
-                    </svg>
-                    <svg v-else xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5L6 9H2v6h4l5 4V5z M15.54 8.46a5 5 0 010 7.07M19.07 4.93a9 9 0 010 12.73" />
-                    </svg>
-
-                  </button>
-
-
-                  <!-- volume -->
-                  <input
-                      type="range"group
-                      min="0"
-                      max="1"
-                      step="0.01"
-                      v-model="volume"
-                      @input="updateVolume"
-                      class="h-2 w-12 sm:w-16 md:w-20 lg:w-24 hidden md:block p-0 m-0"
-                  />
-                <div
-                    class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
-                           bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
-                           dark:bg-violet-700 dark:text-white dark:border-violet-300
-                           opacity-0 scale-95 translate-y-1
-                           group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
-                           transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
-                >
-                  Volume
-                </div>
-
-
-
-              </div>
-
-              <!-- CSS 节奏动感条 -->
-              <div class="sm:flex items-end justify-center space-x-1 h-6 hidden" v-show="isPlaying">
-                <div class="w-1 bg-indigo-500 animate-bar" v-for="n in 4" :key="n" :style="{ animationDelay: `${n * 0.1}s` }"></div>
-              </div>
-
-
-            </div>
-          </div>
-          </div>
-          
-            <!-- 隐藏音频标签 -->
-          <audio
-          ref="audio"
-          @timeupdate="updateProgress"
-          @loadedmetadata="onLoadedMetadata"
-          @ended="resetPlayer"
-          />
         </div>
       </div>
-
-
-    </div>
-    <!--  tasklist-->
-    <div class="bg-teal-300 dark:bg-teal-700">
-      <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-        <nav aria-label="Progress" class="mt-10">
-          <ol role="list" class="overflow-hidden">
-            <li class="relative pb-10">
-              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-              <div href="#" class="group relative flex items-start">
-                    <span>
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hourglass-split mt-2 text-white bg-gray-500 rounded-full dark:bg-amber-600" viewBox="0 0 16 16">
-                      <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
-                    </svg>
-                    </span>
-                <span class="ml-2 flex min-w-0 flex-col">
-                      <span class="text-xl font-medium dark:text-white">Tech tree & game section</span>
-                    </span>
-              </div>
-            </li>
-            <li class="relative pb-10">
-              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-              <div href="#" class="group relative flex items-start">
-                    <span>
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hourglass-split mt-2 text-white bg-gray-500 rounded-full dark:bg-amber-600" viewBox="0 0 16 16">
-                      <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
-                    </svg>
-                    </span>
-                <span class="ml-2 flex min-w-0 flex-col">
-                      <span class="text-xl font-medium dark:text-white">Music</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Add a music player</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Drag the progress bar to fast-forward or rewind</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Automatically reset button status and progress after playing</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Volume control</span>
-                      <span class="text-gray-500 dark:text-emerald-300">AudioVisualizer</span>
-                      <span class="text-gray-500 dark:text-emerald-300">All buttons are functional</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Button tooltip</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Progress bar tooltip</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Global mini player</span>
-                      <span class="text-gray-500 dark:text-emerald-300">4 theme of Visualizer </span>
-                    </span>
-              </div>
-            </li>
-            <li class="relative pb-10">
-              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-              <div href="#" class="group relative flex items-start">
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-circle mt-2 text-white bg-red-400 rounded-full dark:bg-pink-600" viewBox="0 0 16 16">
-                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
-                    </svg>
-                    </span>
-                <span class="ml-2 flex min-w-0 flex-col">
-                      <span class="text-xl font-medium dark:text-white">Message board</span>
-                    </span>
-              </div>
-            </li>
-            <li class="relative pb-10">
-              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-              <div href="#" class="group relative flex items-start">
-                    <span>
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-circle mt-2 text-white bg-red-400 rounded-full dark:bg-pink-600" viewBox="0 0 16 16">
-                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
-                    </svg>
-                    </span>
-                <span class="ml-2 flex min-w-0 flex-col">
-                      <span class="text-xl font-medium dark:text-white">Art Gallery</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Add more sections on Gallery</span>
-                    </span>
-              </div>
-            </li>
-            <li class="relative pb-10">
-              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-              <div href="#" class="group relative flex items-start">
-                    <span>
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-circle mt-2 text-white bg-red-400 rounded-full dark:bg-pink-600" viewBox="0 0 16 16">
-                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
-                    </svg>
-                    </span>
-                <span class="ml-2 flex min-w-0 flex-col">
-                      <span class="text-xl font-medium dark:text-white">Post</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Planing to redesign the post with highlight features </span>
-                    </span>
-              </div>
-            </li>
-            <li class="relative pb-10">
-              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-              <div href="#" class="group relative flex items-start">
-                    <span>
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-hourglass-split mt-2 text-white bg-gray-500 rounded-full dark:bg-amber-600" viewBox="0 0 16 16">
-                      <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
-                    </svg>
-                    </span>
-                <span class="ml-2 flex min-w-0 flex-col">
-                      <span class="text-xl font-medium dark:text-white">Friends</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Triangular wall - not responsive design yet, may need to refactor HTML part  </span>
-                    </span>
-              </div>
-            </li>
-            <li class="relative pb-10">
-              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-              <div href="#" class="group relative flex items-start">
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                        <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-                      </svg>
-                    </span>
-                <span class="ml-2 flex min-w-0 flex-col">
-                      <span class="text-xl font-medium dark:text-white">Header</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Add background music</span>
-                    </span>
-              </div>
-            </li>
-            <li class="relative pb-10">
-              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-              <div href="#" class="group relative flex items-start">
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                        <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-                      </svg>
-                    </span>
-                <span class="ml-2 flex min-w-0 flex-col">
-                      <span class="text-xl font-medium dark:text-white">Hero</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Redesigned hero section </span>
-                    </span>
-              </div>
-            </li>
-            <li class="relative pb-10">
-              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-              <div href="#" class="group relative flex items-start">
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                        <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-                      </svg>
-                    </span>
-                <span class="ml-2 flex min-w-0 flex-col">
-                      <span class="text-xl font-medium dark:text-white">Hero</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Added new challenge</span>
-                    </span>
-              </div>
-            </li>
-            <li class="relative pb-10">
-              <div class="absolute left-3 top-6 -ml-px mt-0.5 h-full w-0.5 bg-red-600" aria-hidden="true"></div>
-              <div href="#" class="group relative flex items-start">
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                        <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-                      </svg>
-                    </span>
-                <span class="ml-2 flex min-w-0 flex-col">
-                      <span class="text-xl font-medium dark:text-white">Hero</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Added Dogcoder</span>
-                    </span>
-              </div>
-            </li>
-            <li class="relative pb-10">
-              <div href="#" class="group relative flex items-start">
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle mt-2 text-white bg-green-400 rounded-full dark:bg-blue-500" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                        <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-                      </svg>
-                    </span>
-                <span class="ml-2 flex min-w-0 flex-col">
-                      <span class="text-xl font-medium dark:text-white">Dark</span>
-                      <span class="text-gray-500 dark:text-emerald-300">Dark Mode is activated </span>
-                    </span>
-              </div>
-            </li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-
-
   </div>
+
 </template>
 
 <script  setup>
 import { ref, onMounted,watch,computed,nextTick,onBeforeUnmount} from 'vue'
 
+import Popup from '/src/components/Popup/index.vue';
+const showPanel = ref(false);
+
+const togglePanel = () => {
+  showPanel.value = !showPanel.value
+}
+
 // music player
-const audio = ref(null)
-const progressBar = ref(null)
-const isPlaying = ref(false)
-const currentTime = ref(0)
-const duration = ref(0)
-//const progressPercentage = ref(0)
+const audio = ref(null);
+const progressBar = ref(null);
+const isPlaying = ref(false);
+const currentTime = ref(0);
+const duration = ref(0);
+
 
 const isDragging = ref(false);
 const progressPercentage = computed(() =>
@@ -505,27 +530,27 @@ const progressPercentage = computed(() =>
 );
 
 onMounted(() => {
-  audio.value.src = currentMusic.value.src
+  audio.value.src = currentMusic.value.src;
 
-  audio.value.volume = volume.value // 初始化音量
+  audio.value.volume = volume.value; // 初始化音量
 })
 
 // 播放/暂停
 function togglePlay() {
   if (!audio.value) return
   if (isPlaying.value) {
-    audio.value.pause()
+    audio.value.pause();
   } else {
-    audio.value.play()
+    audio.value.play();
   }
-  isPlaying.value = !isPlaying.value
+  isPlaying.value = !isPlaying.value;
 }
 
 
 // 更新时间和进度百分比
 function updateProgress() {
-  currentTime.value = audio.value.currentTime
-  duration.value = audio.value.duration || 0
+  currentTime.value = audio.value.currentTime;
+  duration.value = audio.value.duration || 0;
   //progressPercentage.value = (currentTime.value / duration.value) * 100
 }
 

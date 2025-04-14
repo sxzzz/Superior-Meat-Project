@@ -65,17 +65,7 @@ export default {
     }
   },
   mounted() {
-    // const updateThemeByTime = () => {
-    //   const hour = new Date().getHours()
-    //   if (hour >= 18 || hour < 6) {
-    //     document.documentElement.classList.add('dark')
-    //   } else {
-    //     document.documentElement.classList.remove('dark')
-    //   }
-    // }
-    //
-    // updateThemeByTime()
-    // setInterval(updateThemeByTime, 60 * 60 * 1000) // 每小时检查一次
+
     const themeStore = useThemeStore()
 
     themeStore.autoUpdateByTime()
