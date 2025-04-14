@@ -104,7 +104,7 @@ const galleryTilt = ref([
       { path: '/assets/images/gallery/arttrouble01.JPG', alt: '' },
       { path: '/assets/images/gallery/arttrouble02.JPG', alt: '' },
       { path: '/assets/images/gallery/arttrouble03.jpg', alt: '' },
-      { path: '/assets/images/gallery/arttrouble04.JPG', alt: '' }
+      { path: '/assets/images/gallery/arttrouble04.jpg', alt: '' }
     ]
   },
 ])
