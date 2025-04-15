@@ -81,7 +81,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref,onMounted } from 'vue';
+import axios from 'axios'
 
 const galleryZoomIn = ref([
   {
@@ -95,6 +96,33 @@ const galleryZoomIn = ref([
     ]
   },
 ])
+
+//免费获取图片https://picsum.photos/150/220
+// const galleryZoomIn = ref([
+//   {
+//     id: 2,
+//     subtitle: 'Sleeping - Zoom in',
+//     images: []
+//   }
+// ])
+// function fetchImages() {
+//   const images = []
+//
+//   for (let i = 0; i < 4; i++) {
+//     const url = `https://picsum.photos/150/220?random=${i}`
+//
+//     images.push({
+//       path: url,
+//       alt: `Random Image ${i + 1}`
+//     })
+//   }
+//
+//   galleryZoomIn.value[0].images = images
+// }
+
+onMounted(() => {
+  //fetchImages()
+})
 const galleryTilt = ref([
 
   {

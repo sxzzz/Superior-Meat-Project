@@ -9,9 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.13",
+    "@headlessui/vue": "^1.7.23",
     "@heroicons/vue": "^1.0.6",
     "@tailwindcss/typography": "^0.5.9",
+    "axios": "^1.8.4",
     "bootstrap-icons": "^1.10.4",
     "mitt": "^3.0.1",
     "pinia": "^3.0.2",

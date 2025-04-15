@@ -10,6 +10,9 @@ import Beagle from '/src/views/beagle/index.vue'
 import Story from '/src/views/story/index.vue'
 import Post from '/src/views/post/index.vue'
 import Dev from '/src/views/dev/index.vue'
+import Music from '/src/views/music/index.vue'
+import Plan from '/src/views/devplan/index.vue'
+import Layout from '/src/views/layout/index.vue'
 
 const routes = [
     {
@@ -71,6 +74,29 @@ const routes = [
         path:'/dev',
         name:'Dev',
         component:Dev,
+        children: [
+            {
+                path: '', // 访问 /dev 时匹配
+                name: 'DevRedirect',
+                redirect: '/dev/music' // 重定向到 /dev/music
+            },
+            {
+                path: 'music',
+                name: 'Music',
+                component: Music
+            },
+            {
+                path: 'plan',
+                name: 'Plan',
+                component: Plan
+            },
+            {
+                path: 'layout',
+                name: 'Layout',
+                component: Layout
+            },
+
+        ]
     }
 ]
 const router = createRouter({

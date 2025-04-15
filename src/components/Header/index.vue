@@ -11,26 +11,70 @@
             <div class="gap-x-4 gap-y-2">
                 <div class="text-sm leading-6 text-white flex flex-col items-start sm:items-center lg:flex-row dark:text-gray-300">
                     <div>
-                        <strong class="font-semibold">Vuejs, Tailwind, Pinia and Router</strong>
+                        <strong class="font-semibold">Vuejs, Tailwind, Pinia, Router, Andy and Luna</strong>
                     </div>
                     <div class="">
                         <span class="inline-block lg:ms-2 xl:ms-20 inline h-0.5 w-0.5 fill-current text-xs font-semibold" aria-hidden="true">Update: Music player under dev</span>
                     </div>
-                   <!-- Dark Mode -->
+                      <!-- Dark Mode -->
                     <div class="flex items-center ms-0 mt-2 lg:mt-0 lg:ms-3">
-                      <button type="button" @click="toggleButton" :class="{ 'bg-indigo-600': themeStore.isDark, 'bg-gray-200': !themeStore.isDark }"
-                              class="bg-gray-200 relative inline-flex h-5 w-10 flex-shrink-0 cursor-pointer rounded-full
-                              border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none
-                              focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" :aria-checked="themeStore.isDark" aria-labelledby="dark-mode-toggle">
-                        <span aria-hidden="true" :class="{ 'translate-x-5': themeStore.isDark, 'translate-x-0': !themeStore.isDark }" class="translate-x-0 pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+
+                      <button
+                          type="button"
+                          @click="toggleButton"
+                          :class="{
+                                    'bg-indigo-700': themeStore.isDark,
+                                    'bg-gray-200': !themeStore.isDark
+                                  }"
+                          class="relative flex items-center justify-between h-8 w-[68px] px-2 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+                          role="switch"
+                          :aria-checked="themeStore.isDark"
+                          aria-labelledby="dark-mode-toggle"
+                      >
+                        <!-- Toggle Circle -->
+                        <span
+                            aria-hidden="true"
+                            :class="{
+                                      'translate-x-8': themeStore.isDark,
+                                      'translate-x-0': !themeStore.isDark
+                                    }"
+                            class="absolute top-0.5 left-0.5 h-6 w-[28px] transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out z-10"
+                        ></span>
+
+                        <!-- Icons Layer -->
+                        <div class="relative z-20 flex w-full justify-between items-center">
+                          <!-- Sun Icon -->
+                         <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                class="w-4 h-4 flex-shrink-0 transition duration-200 ease-in-out"
+                                :class="themeStore.isDark ? 'text-gray-400' : 'text-indigo-900'"
+                                viewBox="0 0 16 16"
+                          >
+                            <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+                            />
+
+                          </svg>
+
+                          <!-- Moon Icon -->
+                          <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="currentColor"
+                              class="w-4 h-4 flex-shrink-0 transition duration-200 ease-in-out"
+                              :class="themeStore.isDark ? 'text-indigo-900' : 'text-gray-400'"
+                              viewBox="0 0 24 24"
+                          >
+                            <path
+                                fill-rule="evenodd"
+                                d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                                clip-rule="evenodd"
+                            />
+                          </svg>
+                        </div>
                       </button>
+
                       <!--music-->
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ms-2 w-4 h-4">
-                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
-                      </svg>
                       <i v-if="false" class="bi bi-cassette text-2xl ms-6"  @click="toggleMusic"><i v-if="isPlaying" class="bi bi-play-fill"></i><i v-if="!isPlaying" class="bi bi-stop-fill"></i></i>
-
-
 
                     </div>
 
