@@ -13,13 +13,13 @@
 
         <ul role="list" class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2">
           <li>
-            <router-link to="/foxhound"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="/assets/images/breed/Foxhound02.jpg" alt=""></router-link>
+            <router-link to="/foxhound"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/breed/Foxhound02.jpg" alt=""></router-link>
             <h3 class="mt-6 text-lg font-semibold leading-8 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Foxhounds 猎狐犬</h3>
             <p class="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">A foxhound is a type of large hunting hound bred for strong hunting instincts, a keen sense of smell, and their bark, energy, drive, and speed.</p>
             <p class="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">猎狐犬是一种大型狩猎猎犬，其培育目的是为了强烈的狩猎本能、敏锐的嗅觉、哮喘、精力、驱动力和速度。</p>
           </li>
           <li>
-            <router-link to="/beagle"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="/assets/images/breed/Beagle.jpeg" alt=""></router-link>
+            <router-link to="/beagle"><img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/breed/Beagle.jpeg" alt=""></router-link>
             <h3 class="mt-6 text-lg font-semibold leading-8 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Beagles 比格犬</h3>
             <p class="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">The beagle was developed primarily for hunting hare, known as beagling. Possessing a great sense of smell and superior tracking instincts.</p>
             <p class="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">比格犬主要是为了追踪野兔而培育的，被称为"比格犬狩猎"。比格犬具有敏锐的嗅觉和出色的追踪本能。</p>
@@ -32,7 +32,7 @@
       <div class="relative isolate">
         <div class="mx-auto max-w-7xl px-4">
           <div class="mx-auto flex max-w-2xl flex-col gap-8 bg-cyan-600 dark:bg-cyan-900 px-6 py-6 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-10">
-            <img class="h-96 flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-80 lg:max-w-sm" src="/assets/images/breed/Foxbeagle.png" alt="">
+            <img class="h-96 flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-80 lg:max-w-sm" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/breed/Foxbeagle.png" alt="">
             <div class="w-full flex-auto py-6">
               <ul role="list" class="grid grid-cols-1 gap-x-6 gap-y-3 text-base leading-7 text-gray-100 dark:text-gray-300 sm:grid-cols-2">
                 <li class="flex gap-x-3">

@@ -89,10 +89,10 @@ const galleryZoomIn = ref([
     id: 2,
     subtitle: 'Sleeping - Zoom in',
     images: [
-      { path: '/assets/images/gallery/artsleep01.jpeg', alt: '' },
-      { path: '/assets/images/gallery/artsleep02.jpeg', alt: '' },
-      { path: '/assets/images/gallery/artsleep03.jpeg', alt: '' },
-      { path: '/assets/images/gallery/artsleep04.jpeg', alt: '' }
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/artsleep01.jpeg', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/artsleep02.jpeg', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/artsleep03.jpeg', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/artsleep04.jpeg', alt: '' }
     ]
   },
 ])
@@ -129,10 +129,10 @@ const galleryTilt = ref([
     id: 3,
     subtitle: 'Trouble - Tilt',
     images: [
-      { path: '/assets/images/gallery/arttrouble01.JPG', alt: '' },
-      { path: '/assets/images/gallery/arttrouble02.JPG', alt: '' },
-      { path: '/assets/images/gallery/arttrouble03.jpg', alt: '' },
-      { path: '/assets/images/gallery/arttrouble04.jpg', alt: '' }
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arttrouble01.JPG', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arttrouble02.JPG', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arttrouble03.jpg', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arttrouble04.jpg', alt: '' }
     ]
   },
 ])
@@ -142,10 +142,10 @@ const galleryGrayscale = ref([
     id: 1,
     subtitle: 'Hunting - Grayscale',
     images: [
-      { path: '/assets/images/gallery/arthunt01.jpeg', alt: '' },
-      { path: '/assets/images/gallery/arthunt02.jpeg', alt: '' },
-      { path: '/assets/images/gallery/arthunt03.jpeg', alt: '' },
-      { path: '/assets/images/gallery/arthunt04.jpeg', alt: '' }
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arthunt01.jpeg', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arthunt02.jpeg', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arthunt03.jpeg', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arthunt04.jpeg', alt: '' }
     ]
   },
 ])
@@ -155,10 +155,10 @@ const galleryBlurText = ref([
     id: 4,
     subtitle: 'Fashion - Blur Text',
     images: [
-      { path: '/assets/images/gallery/fashion01.jpg', alt: '' },
-      { path: '/assets/images/gallery/fashion02.jpg', alt: '' },
-      { path: '/assets/images/gallery/fashion03.jpg', alt: '' },
-      { path: '/assets/images/gallery/fashion04.jpg', alt: '' }
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/fashion01.jpg', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/fashion02.jpg', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/fashion03.jpg', alt: '' },
+      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/fashion04.jpg', alt: '' }
     ]
   }
 ])

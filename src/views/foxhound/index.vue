@@ -19,26 +19,26 @@
                 </div>
                 <div class="lg:basis-1/2 mt-4">
                     <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-                        <img src="/assets/images/foxhound/f01.jpeg" alt="" class="aspect-[7/5] w-[28rem] sm:w-[33rem] md:w-[40rem] max-w-none rounded-2xl bg-gray-50 object-cover">
+                        <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/foxhound/f01.jpeg" alt="" class="aspect-[7/5] w-[28rem] sm:w-[33rem] md:w-[40rem] max-w-none rounded-2xl bg-gray-50 object-cover">
                     </div>
                 </div>
             </div>
         </div>
         <div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl rotate-2">
-                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/assets/images/foxhound/f08.jpeg">
+                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/foxhound/f08.jpeg">
             </div>
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl -rotate-2">
-                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/assets/images/foxhound/f04.jpeg">
+                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/foxhound/f04.jpeg">
             </div>
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl rotate-2">
-                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/assets/images/foxhound/f05.jpeg">
+                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/foxhound/f05.jpeg">
             </div>
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl -rotate-2">
-                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/assets/images/foxhound/f06.jpeg">
+                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/foxhound/f06.jpeg">
             </div>
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl rotate-2">
-                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="/assets/images/foxhound/f07.jpeg">
+                <img alt="" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/foxhound/f07.jpeg">
             </div>
 
         </div>

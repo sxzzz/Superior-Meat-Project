@@ -1,19 +1,20 @@
 <template>
 
-  <div>
-    <div class="bg-white border-slate-100 dark:bg-slate-800 dark:border-slate-500  rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
+  <div class="">
+    <div class="bg-white border border-cyan-400 dark:bg-slate-800 dark:border-slate-500 rounded-xl p-4 pb-6
+    sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
       <!--  Album info and  visualizer      -->
       <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-2 w-full">
         <div class="flex items-center space-x-4 col-span-1">
           <img :src="currentMusic.cover" alt="" width="88" height="88"
                class="flex-none w-24 h-24 sm:w-28 sm:h-28 md:w-24 md:h-24 lg:w-40 lg:h-40
-             rounded-lg bg-slate-100 object-contain" loading="lazy" />
+             rounded-lg bg-slate-100 object-cover" loading="lazy" />
           <div class="min-w-0 flex-auto space-y-1 font-semibold">
             <p class="text-cyan-500 dark:text-cyan-400 text-sm md:text-xs lg:text-base leading-6">
-              <abbr title="Artist">{{ currentMusic.artist }}</abbr>
+              <abbr title="Artist">{{ currentMusic.band }}</abbr>
             </p>
             <h2 class="text-slate-500 dark:text-slate-400 text-sm md:text-xs lg:text-base leading-6 truncate">
-              {{ currentMusic.title }}
+              {{ currentMusic.album }}
             </h2>
             <p class="text-slate-900 dark:text-slate-50 text-sm md:text-xs lg:text-lg">
               {{ currentMusic.song }}
@@ -23,10 +24,9 @@
         <!-- 音柱视觉区域 -->
         <canvas ref="visualizerCanvas" class="w-full h-12 sm:h-16 md:h-24 lg:h-40  col-span-2 "></canvas>
       </div>
-
-      <!--进度条和按钮-->
+      <!--progress bar and control buttons-->
       <div class="space-y-4">
-        <!-- 进度条 -->
+        <!-- progress bar -->
         <div class="space-y-2">
           <div
               class="relative cursor-pointer"
@@ -34,7 +34,7 @@
               @click="seek"
               ref="progressBar"
           >
-            <div class="bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+            <div class="bg-slate-300 dark:bg-white rounded-full overflow-hidden">
               <div
                   class="bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 dark:bg-cyan-400 h-2"
                   :style="{ width: `${progressPercentage}%` }"
@@ -58,41 +58,36 @@
           </div>
         </div>
 
-        <!--  按钮 -->
-        <div class=" h-20  bg-slate-50 text-slate-500 dark:bg-slate-600 dark:text-slate-200 rounded-b-xl flex items-center">
+        <!--  control buttons -->
+        <div class=" h-20  bg-slate-300 text-slate-500 dark:bg-slate-600 dark:text-slate-200 rounded-b-xl flex items-center">
           <!--  左三按钮 -->
           <div class="flex-auto h-full flex items-center justify-evenly">
-            <!-- Add to favorites -->
+            <!-- toggleVisualizer -->
             <div class="relative group">
-
 
               <button @click="toggleVisualizer"
                       class="px-3 py-1 rounded"
-
                       :class="{
-          'bg-gradient-to-r from-red-600 to-purple-500 text-white': visualizerType === 'bar',
-          'bg-cyan-500 text-white': visualizerType === 'wave',
-          'bg-gradient-to-r from-pink-500 to-yellow-500 text-white': visualizerType === 'mirrorWave',
-          'bg-gradient-to-r from-orange-500  to-blue-500': visualizerType === 'centeredBars',
-          'bg-gradient-to-r from-cyan-500  to-purple-300': visualizerType === 'dualStream',
-          'bg-gradient-to-r from-red-500  to-purple-600': visualizerType === 'NeonLines',
-          'bg-green-600': visualizerType === 'MatrixDrop',
-          }"
-
-
+                              'bg-gradient-to-r from-purple-600 to-pink-500 text-white': visualizerType === 'bar',
+                              'bg-cyan-500 text-white': visualizerType === 'wave',
+                              'bg-gradient-to-r from-pink-500 to-yellow-500 text-white': visualizerType === 'mirrorWave',
+                              'bg-gradient-to-r from-orange-500  to-blue-500': visualizerType === 'centeredBars',
+                              'bg-gradient-to-r from-cyan-500  to-purple-300': visualizerType === 'dualStream',
+                              'bg-gradient-to-r from-red-500  to-purple-600': visualizerType === 'NeonLines',
+                              'bg-green-600': visualizerType === 'MatrixDrop',
+                              }"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-soundwave" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5m-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5m-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5m12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5"/>
                 </svg>
               </button>
-
               <div
                   class="tooltip hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-8 px-3 py-1 rounded-lg text-base font-medium
-          bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
-          dark:bg-violet-700 dark:text-white dark:border-violet-300
-          opacity-0 scale-95 translate-y-1
-          group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
-          transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
+                         bg-cyan-300 text-cyan-800 border border-violet-400 shadow-md
+                         dark:bg-violet-700 dark:text-white dark:border-violet-300
+                         opacity-0 scale-95 translate-y-1
+                         group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                         transition duration-300 ease-out transform pointer-events-none whitespace-nowrap"
               >
                 Visualizer
               </div>
@@ -141,7 +136,7 @@
           <div class="relative group">
             <button
                 type="button"
-                class="bg-white text-slate-900 dark:bg-slate-100 dark:text-slate-700 w-8 h-8 sm:w-12 sm:h-12 lg:w-20 lg:h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center mx-auto"
+                class="bg-white border-cyan-400 border text-slate-900 dark:bg-slate-100 dark:text-slate-700 w-8 h-8 sm:w-12 sm:h-12 lg:w-20 lg:h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center mx-auto"
                 @click="togglePlay"
             >
               <svg v-if="!isPlaying" viewBox="0 0 32 32" class="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8"  fill="currentColor">
@@ -291,20 +286,51 @@
         </div>
       </div>
 
-      <!-- 隐藏音频标签 -->
+      <!-- audio -->
       <audio
           ref="audio"
           @timeupdate="updateProgress"
           @loadedmetadata="onLoadedMetadata"
           @ended="resetPlayer"
+          crossorigin="anonymous"
       />
+    </div>
+
+    <divider class="mt-6"></divider>
+
+    <div class="bg-white dark:bg-black">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto mt-4 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-6 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <article @click="selectAndPlayMusic(index)" v-for="(song, index) in musicList" :key="song.id"
+                   class="relative  isolate flex flex-col justify-end overflow-hidden rounded-2xl
+                          bg-gray-900 px-8 pb-2 min-h-[15rem] sm:min-h-[25rem] lg:min-h-[20rem] cursor-pointer
+                           transition duration-300 transform hover:scale-110 hover:rotate-2">
+            <img  :src="song.cover" alt="" class="absolute inset-0 -z-10  object-cover w-full h-full  transition duration-300 ease-out brightness-100 hover:brightness-110 " />
+
+            <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+            <div class=" transform translate-y-2 flex items-center gap-y-1 overflow-hidden text-sm/6 text-gray-300">
+              <span class="mr-8 text-base text-white">{{ song.band }}</span>
+              <span class="text-white">{{ song.album }}</span>
+            </div>
+            <h3 class="mt-3 text-lg/6 font-semibold text-white">
+                <span class="absolute inset-0" />
+                {{ song.song }}
+            </h3>
+          </article>
+        </div>
+      </div>
     </div>
   </div>
 
 </template>
 
 <script  setup>
-import { ref, onMounted,watch,computed,nextTick,onBeforeUnmount} from 'vue'
+import divider from "/src/components/divider/index.vue";
+import { ref, onMounted,watch,computed,nextTick,onBeforeUnmount} from 'vue';
+import { useMusicStore } from '/src/store/musicStore.js';
+import { storeToRefs } from 'pinia';
+const musicStore = useMusicStore();
+const { musicList, currentIndex, currentMusic} = storeToRefs(musicStore);
 
 // music player
 const audio = ref(null);
@@ -325,7 +351,7 @@ onMounted(() => {
   audio.value.volume = volume.value; // 初始化音量
 })
 
-// 播放/暂停
+// play/stop
 function togglePlay() {
   if (!audio.value) return
   if (isPlaying.value) {
@@ -337,8 +363,9 @@ function togglePlay() {
 }
 
 
-// 更新时间和进度百分比
+// update time and progress bar %
 function updateProgress() {
+  if (!audio.value) return; // 避免空引用错误
   currentTime.value = audio.value.currentTime;
   duration.value = audio.value.duration || 0;
   //progressPercentage.value = (currentTime.value / duration.value) * 100
@@ -362,8 +389,7 @@ const seek = (event) => {
   currentTime.value = newTime;
 };
 
-//拖拽进度条
-
+//drag and drop progress bar
 const onTouchStart = (event) => {
   isDragging.value = true;
   window.addEventListener('touchmove', onTouchMove);
@@ -426,7 +452,7 @@ onBeforeUnmount(() => {
 });
 
 
-// 播放完后重置
+// reset
 function resetPlayer() {
   isPlaying.value = false
   currentTime.value = 0
@@ -434,7 +460,7 @@ function resetPlayer() {
   audio.value.currentTime = 0
 }
 
-// 时间格式化
+// time format
 function formatTime(seconds) {
   const min = Math.floor(seconds / 60)
   const sec = Math.floor(seconds % 60).toString().padStart(2, '0')
@@ -442,7 +468,7 @@ function formatTime(seconds) {
 }
 
 const volume = ref(0.8)
-const previousVolume = ref(0.8) // 用于恢复取消静音前的音量
+const previousVolume = ref(0.8)
 const isMuted = ref(false)
 
 function updateVolume() {
@@ -460,11 +486,11 @@ function toggleMute() {
   if (!audio.value) return
 
   if (isMuted.value || volume.value === 0) {
-    // 取消静音
+    // cancel mute
     volume.value = previousVolume.value || 0.8
     isMuted.value = false
   } else {
-    // 静音
+    // mute
     previousVolume.value = volume.value
     volume.value = 0
     isMuted.value = true
@@ -587,9 +613,13 @@ function drawBarsLoop(ctx, analyser, canvas) {
     for (let i = 0; i < bufferLength; i++) {
       const barHeight = (dataArray[i] / 255) * canvas.height
 
-      const r = 100 + dataArray[i]
-      const g = 50
-      const b = 255 - dataArray[i]
+      // const r = 100 + dataArray[i]
+      // const g = 50
+      // const b = 255 - dataArray[i]
+      const r = 200 + Math.sin(i / 5) * 55;  // 粉红波动
+      const g = 50 + (dataArray[i] / 4);     // 紫中带青
+      const b = 200 + Math.cos(i / 5) * 55;  // 蓝中带紫
+
 
       ctx.fillStyle = `rgb(${r},${g},${b})`
       ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight)
@@ -867,81 +897,82 @@ function skipBackward(seconds) {
   }
 }
 
-//playlist
-
-const musicList = ref([
-  {
-    cover: '/assets/images/music/runaway.jpg',
-    artist: 'Dream Shore & CJ Burnett',
-    title: 'Dream Shore',
-    song: 'Runaway',
-    src: '/assets/music/Runaway.mp3',
-  },
-  {
-    cover: '/assets/images/music/love%20on%20a%20real%20train.jpg',
-    artist: 'Tangerine Dream',
-    title: 'Dream Sequence',
-    song: 'Love On A Real Train',
-    src: '/assets/music/Love On A Real Train.mp3',
-  },
-  {
-    cover: '/assets/images/music/mirror.jpg',
-    artist: 'Whitelines',
-    title: 'MIRAJ',
-    song: 'Mirror',
-    src: '/assets/music/mirror.mp3',
-  }
-])
-
-// 当前播放音乐的索引
-const currentIndex = ref(0)
-
-// 计算当前播放的音乐
-const currentMusic = computed(() => musicList.value[currentIndex.value])
-
-
+// function nextMusic() {
+//   // 切换索引
+//   currentIndex.value = (currentIndex.value + 1) % musicList.value.length
+//   audio.value.pause()
+//   isPlaying.value = false // 重置播放状态
+//
+//   nextTick(() => {
+//     // 设置新音频源并加载
+//     audio.value.src = currentMusic.value.src
+//     audio.value.load()
+//     audio.value.currentTime = 0
+//     currentTime.value = 0
+//     //progressPercentage.value = 0
+//
+//     // ✅ 自动播放
+//     audio.value.play().then(() => {
+//       isPlaying.value = true
+//     }).catch(err => {
+//       console.warn('播放失败', err)
+//     })
+//
+//     if (audioContext && audioContext.state !== 'closed') {
+//       stopVisualizer()
+//       setupVisualizer()
+//     }
+//   })
+// }
+//
+// function previousMusic() {
+//   // 向后移动索引，支持循环
+//   currentIndex.value = (currentIndex.value - 1 + musicList.value.length) % musicList.value.length
+//   audio.value.pause()
+//   isPlaying.value = false // 重置播放状态
+//
+//   nextTick(() => {
+//     // 设置新音频源并加载
+//     audio.value.src = currentMusic.value.src
+//     audio.value.load()
+//     audio.value.currentTime = 0
+//     currentTime.value = 0
+//     //progressPercentage.value = 0
+//
+//     audio.value.play().then(() => {
+//       isPlaying.value = true
+//     }).catch(err => {
+//       console.warn('播放失败', err)
+//     })
+//
+//     if (audioContext && audioContext.state !== 'closed') {
+//       stopVisualizer()
+//       setupVisualizer()
+//     }
+//   })
+// }
 
 function nextMusic() {
-  // 切换索引
   currentIndex.value = (currentIndex.value + 1) % musicList.value.length
-  audio.value.pause()
-  isPlaying.value = false // 重置播放状态
-
-  nextTick(() => {
-    // 设置新音频源并加载
-    audio.value.src = currentMusic.value.src
-    audio.value.load()
-    audio.value.currentTime = 0
-    currentTime.value = 0
-    //progressPercentage.value = 0
-
-    // ✅ 自动播放
-    audio.value.play().then(() => {
-      isPlaying.value = true
-    }).catch(err => {
-      console.warn('播放失败', err)
-    })
-
-    if (audioContext && audioContext.state !== 'closed') {
-      stopVisualizer()
-      setupVisualizer()
-    }
-  })
+  playCurrentMusic()
 }
 
 function previousMusic() {
-  // 向后移动索引，支持循环
   currentIndex.value = (currentIndex.value - 1 + musicList.value.length) % musicList.value.length
+  playCurrentMusic()
+}
+
+// 🔥 核心：封装一个切换并播放当前 currentIndex 指向的音乐的方法
+function playCurrentMusic() {
+  if (!audio.value) return
   audio.value.pause()
-  isPlaying.value = false // 重置播放状态
+  isPlaying.value = false
 
   nextTick(() => {
-    // 设置新音频源并加载
     audio.value.src = currentMusic.value.src
     audio.value.load()
     audio.value.currentTime = 0
     currentTime.value = 0
-    //progressPercentage.value = 0
 
     audio.value.play().then(() => {
       isPlaying.value = true
@@ -949,6 +980,7 @@ function previousMusic() {
       console.warn('播放失败', err)
     })
 
+    // 这里根据需要重启可视化 visualizer
     if (audioContext && audioContext.state !== 'closed') {
       stopVisualizer()
       setupVisualizer()
@@ -956,7 +988,12 @@ function previousMusic() {
   })
 }
 
-
+// ✨ 点击任意歌曲播放
+function selectAndPlayMusic(index) {
+  console.log('123')
+  currentIndex.value = index
+  playCurrentMusic()
+}
 
 
 </script>

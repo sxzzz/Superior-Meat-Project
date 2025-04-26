@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <!-- Feedback 按钮（从下往上垂直排列）-->
-    <div class="fixed right-0 bottom-1/4 z-40 hidden sm:block">
+    <div v-if="showPopup" class="fixed right-0 bottom-1/4 z-40 hidden sm:block">
       <button
           class="bg-purple-700 text-white text-sm font-semibold px-4 py-2 rounded-t-xl shadow-md hover:bg-purple-800 transition origin-bottom-right tracking-wider"
           style="transform: rotate(-90deg); transform-origin: bottom right;"
@@ -11,11 +11,11 @@
       </button>
     </div>
     <!-- 右侧滑出 Panel -->
-    <Popup :visible="showPanel" @close="showPanel = false"/>
+    <Popup v-if="showPopup" :visible="showPanel" @close="showPanel = false"/>
 
     <div :class="{ 'blur-sm': showPanel }" class="transition duration-600">
       <div class="bg-white dark:bg-black">
-        <div class=" mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
           <Devnav></Devnav>
           <!-- 二级子路由 -->
           <router-view></router-view>
@@ -27,7 +27,9 @@
 </template>
 
 <script setup>
-import {ref, onMounted, watch, computed, nextTick, onBeforeUnmount} from 'vue'
+import {ref, onMounted, watch, computed, nextTick, onBeforeUnmount} from 'vue';
+import { useRoute } from 'vue-router';
+
 
 import Popup from '/src/components/Popup/index.vue';
 import Devnav from '/src/components/Devnav/index.vue';
@@ -38,6 +40,12 @@ const showPanel = ref(false);
 const togglePanel = () => {
   showPanel.value = !showPanel.value
 }
+const route = useRoute()
+
+// 判断当前是否是 /dev/plan 或 /dev/layout
+const showPopup = computed(() => {
+  return ['/dev/plan', '/dev/layout'].includes(route.path)
+})
 
 const cards = [
   {

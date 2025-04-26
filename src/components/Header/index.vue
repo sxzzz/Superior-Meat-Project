@@ -74,7 +74,7 @@
                       </button>
 
                       <!--music-->
-                      <i v-if="false" class="bi bi-cassette text-2xl ms-6"  @click="toggleMusic"><i v-if="isPlaying" class="bi bi-play-fill"></i><i v-if="!isPlaying" class="bi bi-stop-fill"></i></i>
+<!--                      <i v-if="false" class="bi bi-cassette text-2xl ms-6"  @click="toggleMusic"><i v-if="isPlaying" class="bi bi-play-fill"></i><i v-if="!isPlaying" class="bi bi-stop-fill"></i></i>-->
 
                     </div>
 
@@ -89,12 +89,12 @@
                 </button>
             </div>
         </div>
-        <img id="logo" class="h-48 w-full object-cover lg:h-64" src="/assets/logo/banner.jpg" alt="" />
+        <img id="logo" class="h-48 w-full object-cover lg:h-64" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/logo/banner.jpg" alt="" />
     </div>
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="-mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
         <div class="flex items-end">
-          <img class="h-24 w-24 rounded-full ring-4 ring-fuchsia-300 dark:ring-pink-400 sm:h-40 sm:w-40" src="/assets/logo/lunaLogo1.jpeg" alt="Luna logo" />
+          <img class="h-24 w-24 rounded-full ring-4 ring-fuchsia-300 dark:ring-pink-400 sm:h-40 sm:w-40" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/logo/lunaLogo1.jpeg" alt="Luna logo" />
           <span class="inline-flex items-center rounded-md bg-pink-400/10 dark:bg-pink-200 px-2 py-1 me-2 font-medium text-pink-400 ring-1 ring-inset ring-pink-400/20">Luna</span>
           <span class="inline-flex items-center rounded-md bg-red-50 dark:bg-red-300 px-2 py-1 me-2 font-medium text-red-700 ring-1 ring-inset ring-red-600/10">3 years</span>
           <span class="inline-flex items-center rounded-md bg-purple-50 dark:bg-purple-300 px-2 py-1 me-2 font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">Madness</span>
@@ -110,7 +110,6 @@
 <script>
 
 import { useThemeStore } from '/src/store/themeStore.js';
-import bgMusic from "/assets/music/Love On A Real Train.mp3";
 
 export default {
 
@@ -122,13 +121,6 @@ export default {
     }
   },
   mounted() {
-    this.audio = new Audio(bgMusic)
-    this.audio.loop = true
-    // 可选：自动播放可正常工作
-    // this.audio.play().then(() => {
-    //   this.isPlaying = true
-    // }).catch(() => {
-    // })
   },
   computed: {
     themeStore() {
@@ -141,16 +133,6 @@ export default {
       // document.documentElement.classList.toggle('dark');
       this.themeStore.toggleDarkMode()
     },
-    toggleMusic() {
-      if (this.audio.paused) {
-        this.audio.play()
-        this.isPlaying = true
-
-      } else {
-        this.audio.pause()
-        this.isPlaying = false
-      }
-    }
   },
 }
 </script>

@@ -11,13 +11,13 @@
             <div class="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
               <div>
                 <div class="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-lg">
-                  <img src="/assets/images/beagle/b01.jpeg" class="h-full w-full object-cover object-center">
+                  <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/beagle/b01.jpeg" class="h-full w-full object-cover object-center">
                 </div>
                 <p class="mt-8 text-base text-gray-500 dark:text-gray-300">Over the years, Beagles have evolved as skilled hunters, specializing in chasing rabbits and hares. With their captivating dark brown or hazel eyes, sporting a soft and pleading expression, it's hard to resist their charm. They exude happiness, friendliness, and affection, always ready to bring joy to their human companions. Beagles are known for their gentle demeanor, sweetness, and innate sense of humor.</p>
               </div>
               <div>
                 <div class="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-lg">
-                  <img src="/assets/images/beagle/b02.jpeg" class="h-full w-full object-cover object-center">
+                  <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/beagle/b02.jpeg" class="h-full w-full object-cover object-center">
                 </div>
                 <p class="mt-8 text-base text-gray-500 dark:text-gray-300">They have a knack for making us laugh, although their occasional mischievous behavior can also bring us to tears. Owners of Beagles often find themselves engaged in a battle of wits with their furry friends, resorting to food rewards to achieve fleeting moments of obedience. Additionally, their keen sense of smell, aided by their sharp snouts, proves to be advantageous for hunting prey or locating food.</p>
               </div>

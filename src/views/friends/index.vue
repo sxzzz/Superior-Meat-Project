@@ -44,7 +44,7 @@
       </div>
         <ul  role="list" class="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none">
         <li class="flex flex-col gap-6 xl:flex-row px-6 sm:px-0">
-          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="/assets/images/friends/annie02.jpeg" alt="">
+          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/annie02.jpeg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-300">Annie 安妮</h3>
             <p class="mt-3 text-base leading-7 text-gray-600 dark:text-gray-300">Remembering Annie, a lovely Bichon Frise who was born 2008. She stayed with us for 14 years, always being affectionate and close to human. Last year, she journeyed to the doggy heaven. Thinking back to her presence, our hearts are filled with gratitude and longing. </p>
@@ -52,7 +52,7 @@
           </div>
         </li>
         <li class="flex flex-col gap-6 xl:flex-row  px-6 sm:px-0">
-          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="/assets/images/friends/pudding01.jpeg" alt="">
+          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/pudding01.jpeg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-300">Pudding 布丁</h3>
             <p class="mt-3 text-base leading-7 text-gray-600 dark:text-gray-300">Pudding, was full of curiosity and had a strong bond with humans. With an inquisitive nature, She always explored her surroundings.
@@ -61,7 +61,7 @@
           </div>
         </li>
         <li class="flex flex-col gap-6 xl:flex-row  px-6 sm:px-0">
-          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="/assets/images/friends/tuan01.jpg" alt="">
+          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/tuan01.jpg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-300">Tuan Tuan 团团</h3>
             <p class="mt-3 text-base leading-7 text-gray-600 dark:text-gray-300">TuanTuan, was a true gentleman and incredibly responsible. He was always well-behaved and carried himself with grace.
@@ -70,7 +70,7 @@
           </div>
         </li>
         <li class="flex flex-col gap-6 xl:flex-row px-6 sm:px-0">
-          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="/assets/images/friends/white01.jpeg" alt="">
+          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/white01.jpeg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-300">Miss White 小白</h3>
             <p class="mt-3 text-base leading-7 text-gray-600 dark:text-gray-300">Miss White, had one lifelong obsession: food. Her world revolved around the next meal.
@@ -103,31 +103,31 @@ export default {
         name: 'Melon',
         role: 'golden retriever',
         imageUrl:
-            '/assets/images/friends/Melon.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Melon.jpg',
       },
       {
         name: 'Mojo',
         role: 'Basenji',
         imageUrl:
-            '/assets/images/friends/Mojo.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Mojo.jpg',
       },
       {
         name: 'Nami',
         role: 'Terrier',
         imageUrl:
-            '/assets/images/friends/Nami.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Nami.jpg',
       },
       {
         name: 'Drake',
         role: 'Cavalier King',
         imageUrl:
-            '/assets/images/friends/Drake.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Drake.jpg',
       },
       {
         name: 'Brody',
         role: 'Terrier',
         imageUrl:
-            '/assets/images/friends/Brody.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Brody.jpg',
       }
 
     ])
@@ -136,25 +136,25 @@ export default {
         name: 'Tom',
         role: 'Ragdoll',
         imageUrl:
-            '/assets/images/friends/Tom.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Tom.jpg',
       },
       {
         name: 'Guinness',
         role: 'Felis catus',
         imageUrl:
-            '/assets/images/friends/Guinness.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Guinness.jpg',
       },
       {
         name: 'Barley',
         role: 'American Shorthair',
         imageUrl:
-            '/assets/images/friends/Barley.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Barley.jpg',
       },
       {
         name: 'Figaro',
         role: 'Neva Masquerade',
         imageUrl:
-            '/assets/images/friends/Figaro.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Figaro.jpg',
       },
 
     ])
@@ -163,19 +163,19 @@ export default {
         name: 'Muse',
         role: 'hummingbird',
         imageUrl:
-            '/assets/images/friends/Muse.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Muse.jpg',
       },
       {
         name: 'Bard',
         role: 'tiger',
         imageUrl:
-            '/assets/images/friends/Bard.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Bard.jpg',
       },
       {
         name: 'Velvet',
         role: 'Reptile',
         imageUrl:
-            '/assets/images/friends/Velvet.jpg',
+            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Velvet.jpg',
       },
 
     ])
