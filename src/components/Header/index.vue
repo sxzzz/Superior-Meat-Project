@@ -95,11 +95,16 @@
       <div class="-mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
         <div class="flex items-end">
           <img class="h-24 w-24 rounded-full ring-4 ring-fuchsia-300 dark:ring-pink-400 sm:h-40 sm:w-40" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/logo/lunaLogo1.jpeg" alt="Luna logo" />
-          <span class="inline-flex items-center rounded-md bg-pink-400/10 dark:bg-pink-200 px-2 py-1 me-2 font-medium text-pink-400 ring-1 ring-inset ring-pink-400/20">Luna</span>
-          <span class="inline-flex items-center rounded-md bg-red-50 dark:bg-red-300 px-2 py-1 me-2 font-medium text-red-700 ring-1 ring-inset ring-red-600/10">3 years</span>
-          <span class="inline-flex items-center rounded-md bg-purple-50 dark:bg-purple-300 px-2 py-1 me-2 font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">Madness</span>
-          <span class="hidden md:block inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-300 px-2 py-1 me-2 font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Prey-Driven</span>
-          <span class="hidden md:block inline-flex items-center rounded-md bg-yellow-50 dark:bg-yellow-500 px-2 py-1 me-2 font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Independent</span>
+<!--          <span class="inline-flex items-center rounded-md bg-pink-50 dark:bg-pink-200 px-2 py-1 me-2 font-medium text-pink-400 ring-1 ring-inset ring-pink-400/20">Luna</span>-->
+<!--          <span class="inline-flex items-center rounded-md bg-red-50 dark:bg-red-300 px-2 py-1 me-2 font-medium text-red-700 ring-1 ring-inset ring-red-600/10">3 years</span>-->
+<!--          <span class="inline-flex items-center rounded-md bg-purple-50 dark:bg-purple-300 px-2 py-1 me-2 font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">Madness</span>-->
+<!--          <span class="hidden md:block inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-300 px-2 py-1 me-2 font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Prey-Driven</span>-->
+<!--          <span class="hidden md:block inline-flex items-center rounded-md bg-yellow-50 dark:bg-yellow-500 px-2 py-1 me-2 font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Independent</span>-->
+          <span class="inline-flex items-center rounded-md bg-pink-200 dark:bg-pink-300 px-2 py-1 me-2 font-medium text-pink-800 ring-1 ring-inset ring-pink-400/20">Luna</span>
+          <span class="inline-flex items-center rounded-md bg-red-200 dark:bg-red-300 px-2 py-1 me-2 font-medium text-red-800 ring-1 ring-inset ring-red-600/10">3 years</span>
+          <span class="inline-flex items-center rounded-md bg-purple-200 dark:bg-purple-300 px-2 py-1 me-2 font-medium text-purple-800 ring-1 ring-inset ring-purple-700/10">Madness</span>
+          <span class="hidden md:inline-flex items-center rounded-md bg-blue-200 dark:bg-blue-300 px-2 py-1 me-2 font-medium text-blue-800 ring-1 ring-inset ring-blue-700/10">Prey-Driven</span>
+          <span class="hidden md:inline-flex items-center rounded-md bg-yellow-200 dark:bg-yellow-400 px-2 py-1 me-2 font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Independent</span>
         </div>
 
       </div>
