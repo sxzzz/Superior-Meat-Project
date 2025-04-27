@@ -81,39 +81,37 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div v-if="isMobileMenuOpen" class="sm:hidden dark:bg-black" id="mobile-menu">
       <div class="space-y-1 pb-4 pt-2">
-        <router-link to="/hero" :class="['block border-l-4',$route.path === '/hero' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Hero</router-link>
-        <router-link to="/gallery" :class="['block border-l-4',$route.path === '/gallery' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Gallery</router-link>
-        <router-link to="/adventure" :class="['block border-l-4',$route.path === '/adventure' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Adventure</router-link>
-        <router-link to="/friends" :class="['block border-l-4',$route.path === '/friends' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Friends</router-link>
-        <router-link to="/breed" :class="['block border-l-4',$route.path === '/breed' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Breed</router-link>
-        <router-link to="/post" :class="['block border-l-4',$route.path === '/post' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Post</router-link>
-        <router-link to="/dev" :class="['block border-l-4',$route.path === '/dev' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Dev</router-link>
+        <router-link @click="closeMobileMenu"  to="/hero" :class="['block border-l-4',$route.path === '/hero' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Hero</router-link>
+        <router-link @click="closeMobileMenu" to="/gallery" :class="['block border-l-4',$route.path === '/gallery' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Gallery</router-link>
+        <router-link @click="closeMobileMenu" to="/adventure" :class="['block border-l-4',$route.path === '/adventure' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Adventure</router-link>
+        <router-link @click="closeMobileMenu" to="/friends" :class="['block border-l-4',$route.path === '/friends' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Friends</router-link>
+        <router-link @click="closeMobileMenu" to="/breed" :class="['block border-l-4',$route.path === '/breed' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Breed</router-link>
+        <router-link @click="closeMobileMenu" to="/post" :class="['block border-l-4',$route.path === '/post' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Post</router-link>
+        <router-link @click="closeMobileMenu" to="/dev" :class="['block border-l-4',$route.path === '/dev' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Dev</router-link>
       </div>
     </div>
   </nav>
 </template>
 
-<script>
+<script setup>
 
-export default {
-  data() {
-    return {
-      isMobileMenuOpen: false,
-      isMenuOpen: false,
-    }
-  },
-    methods:{
-        toggleMobileMenu:function(){
-            this.isMobileMenuOpen = !this.isMobileMenuOpen;
-            this.isMenuOpen = !this.isMenuOpen;
-        }
-    }
-}
+import { ref } from 'vue';
+
+const isMobileMenuOpen = ref(false);
+const isMenuOpen = ref(false);
+
+const toggleMobileMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+  isMenuOpen.value = !isMenuOpen.value;
+};
+
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false;
+  isMenuOpen.value = false;
+};
 </script>
 
 <style scoped>
-.close-icon {
-    /* Add your styles for the close icon here */
-}
+
 </style>
 

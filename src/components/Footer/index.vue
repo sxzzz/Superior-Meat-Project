@@ -36,9 +36,40 @@
       <div class="mt-8 md:order-1 md:mt-0">
         <p class="text-center text-xs leading-5 text-gray-500 ">&copy; 2025 Luna the Foxhound. All rights reserved.</p>
       </div>
+      <!-- 访问量小卡片 -->
+      <div class="mt-4 flex justify-center">
+        <div class="p-3 text-gray-500 rounded-xl shadow-sm">
+          <div class="text-xs">
+            Site Visits : <span id="busuanzi_value_site_pv">-</span> Page Views : <span id="busuanzi_value_page_pv">-</span>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
 
 <script setup>
+import { onMounted, nextTick } from 'vue';
+import { useRouter } from 'vue-router';
+
+// 确保 Busuanzi 脚本加载
+onMounted(() => {
+  if (!window.Busuanzi) {
+    const script = document.createElement('script');
+    script.src = 'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }
+});
+
+// 使用 Vue Router 来监听路由变化
+const router = useRouter();
+router.afterEach(() => {
+  // 等待 DOM 更新完成后再触发 Busuanzi 统计更新
+  nextTick(() => {
+    if (window.Busuanzi) {
+      window.Busuanzi.fetch();  // 触发 Busuanzi 数据刷新
+    }
+  });
+});
 </script>

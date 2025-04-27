@@ -9,14 +9,14 @@
         </h2>
       </div>
       <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <a v-for="(image, index) in galleryItem.images" :key="index" href="#" class="group">
+        <div v-for="(image, index) in galleryItem.images" :key="index" class="group">
           <div class="aspect-h-1 aspect-w-2 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 relative transition-transform duration-300 transform group-hover:scale-110">
             <img :src="image.path" :alt="image.alt" class="h-full w-full object-cover object-center">
             <span>
               <i class="bi bi-chat-heart absolute bottom-4 right-8 text-gray-100 hover:text-pink-400 text-2xl"></i>
             </span>
           </div>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -27,14 +27,14 @@
         </h2>
       </div>
       <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <a v-for="(image, index) in galleryItem.images" :key="index" href="#" class="group">
+        <div v-for="(image, index) in galleryItem.images" :key="index" class="group">
           <div class="aspect-h-1 aspect-w-2 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 relative transition duration-300 transform group-hover:scale-110 group-hover:rotate-2">
             <img :src="image.path" :alt="image.alt" class="h-full w-full object-cover object-center ">
             <span>
               <i class="bi bi-chat-heart absolute bottom-4 right-8 text-gray-100 hover:text-pink-400 text-2xl"></i>
             </span>
           </div>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -45,14 +45,14 @@
         </h2>
       </div>
       <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <a v-for="(image, index) in galleryItem.images" :key="index" href="#" class="group">
+        <div v-for="(image, index) in galleryItem.images" :key="index" class="group">
           <div class="aspect-h-1 aspect-w-2 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 relative ">
             <img :src="image.path" :alt="image.alt" class="h-full w-full object-cover object-center transition duration-300 filter grayscale group-hover:grayscale-0">
             <span>
               <i class="bi bi-chat-heart absolute bottom-4 right-8 text-gray-100 hover:text-pink-400 text-2xl"></i>
             </span>
           </div>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -63,7 +63,7 @@
         </h2>
       </div>
       <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <a v-for="(image, index) in galleryItem.images" :key="index" href="#" class="group">
+        <div v-for="(image, index) in galleryItem.images" :key="index" class="group">
           <div class="aspect-h-1 aspect-w-2 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 relative group ">
             <img :src="image.path" :alt="image.alt" class="h-full w-full object-cover object-center transition duration-300 group-hover:blur-sm ">
             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-50 text-white font-semibold text-lg">
@@ -73,7 +73,7 @@
               <i class="bi bi-chat-heart absolute bottom-4 right-8 text-gray-100 hover:text-pink-400 text-2xl"></i>
             </span>
           </div>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -89,10 +89,10 @@ const galleryZoomIn = ref([
     id: 2,
     subtitle: 'Sleeping - Zoom in',
     images: [
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/artsleep01.jpeg', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/artsleep02.jpeg', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/artsleep03.jpeg', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/artsleep04.jpeg', alt: '' }
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/artsleep01.jpeg', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/artsleep02.jpeg', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/artsleep03.jpeg', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/artsleep04.jpeg', alt: '' }
     ]
   },
 ])
@@ -129,10 +129,10 @@ const galleryTilt = ref([
     id: 3,
     subtitle: 'Trouble - Tilt',
     images: [
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arttrouble01.JPG', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arttrouble02.JPG', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arttrouble03.jpg', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arttrouble04.jpg', alt: '' }
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/arttrouble01.JPG', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/arttrouble02.JPG', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/arttrouble03.jpg', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/arttrouble04.jpg', alt: '' }
     ]
   },
 ])
@@ -142,10 +142,10 @@ const galleryGrayscale = ref([
     id: 1,
     subtitle: 'Hunting - Grayscale',
     images: [
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arthunt01.jpeg', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arthunt02.jpeg', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arthunt03.jpeg', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/arthunt04.jpeg', alt: '' }
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/arthunt01.jpeg', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/arthunt02.jpeg', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/arthunt03.jpeg', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/arthunt04.jpeg', alt: '' }
     ]
   },
 ])
@@ -155,10 +155,10 @@ const galleryBlurText = ref([
     id: 4,
     subtitle: 'Fashion - Blur Text',
     images: [
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/fashion01.jpg', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/fashion02.jpg', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/fashion03.jpg', alt: '' },
-      { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/gallery/fashion04.jpg', alt: '' }
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/fashion01.jpg', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/fashion02.jpg', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/fashion03.jpg', alt: '' },
+      { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/gallery/fashion04.jpg', alt: '' }
     ]
   }
 ])

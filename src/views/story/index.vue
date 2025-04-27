@@ -7,18 +7,18 @@
             </div>
             <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
                 <div class="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
-                    <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/story/s10.jpeg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                    <img src="https://d1nuow4z6t9ani.cloudfront.net/images/story/s10.jpeg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
                 </div>
                 <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
                     <div class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                        <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/story/s09.jpeg" alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
+                        <img src="https://d1nuow4z6t9ani.cloudfront.net/images/story/s09.jpeg" alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
                     </div>
                     <div class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                        <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/story/s01.jpeg" alt="Model wearing plain gray basic tee." class="h-full w-full object-cover object-center">
+                        <img src="https://d1nuow4z6t9ani.cloudfront.net/images/story/s01.jpeg" alt="Model wearing plain gray basic tee." class="h-full w-full object-cover object-center">
                     </div>
                 </div>
                 <div class="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
-                    <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/story/s02.jpeg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center">
+                    <img src="https://d1nuow4z6t9ani.cloudfront.net/images/story/s02.jpeg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center">
                 </div>
             </div>
 
@@ -70,7 +70,7 @@
                             </div>
                             <div class="flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8 lg:col-start-6 xl:col-start-5">
                                 <div class="aspect-h-2 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
-                                    <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/story/s11.jpeg" alt="" class="object-cover object-center">
+                                    <img src="https://d1nuow4z6t9ani.cloudfront.net/images/story/s11.jpeg" alt="" class="object-cover object-center">
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                             </div>
                             <div class="flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8 lg:col-start-1">
                                 <div class="aspect-h-2 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
-                                    <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/story/s12.jpeg" alt="" class="object-cover object-center">
+                                    <img src="https://d1nuow4z6t9ani.cloudfront.net/images/story/s12.jpeg" alt="" class="object-cover object-center">
                                 </div>
                             </div>
                         </div>
@@ -128,27 +128,27 @@
                                     <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                                         <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                                             <div class="relative">
-                                                <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/story/s04.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                                                <img src="https://d1nuow4z6t9ani.cloudfront.net/images/story/s04.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                                                 <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                             </div>
                                         </div>
                                         <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                                             <div class="relative">
-                                                <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/story/s07.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                                                <img src="https://d1nuow4z6t9ani.cloudfront.net/images/story/s07.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                                                 <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                             </div>
                                             <div class="relative">
-                                                <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/story/s05.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                                                <img src="https://d1nuow4z6t9ani.cloudfront.net/images/story/s05.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                                                 <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                             </div>
                                         </div>
                                         <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                                             <div class="relative">
-                                                <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/story/s06.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                                                <img src="https://d1nuow4z6t9ani.cloudfront.net/images/story/s06.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                                                 <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                             </div>
                                             <div class="relative">
-                                                <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/story/s08.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                                                <img src="https://d1nuow4z6t9ani.cloudfront.net/images/story/s08.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                                                 <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                             </div>
                                         </div>

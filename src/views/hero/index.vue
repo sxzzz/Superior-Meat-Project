@@ -24,16 +24,16 @@
             <div class="pt-8 mb-4 lg:row-span-2 lg:-mr-16 xl:mr-auto">
               <div class="grid grid-cols-2 gap-x-2 gap-y-4 sm:grid-cols-3 lg: lg:grid-cols-2 lg:gap-4 xl:gap-8">
                 <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
-                  <img alt="" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero10.jpg" class="block size-full object-cover" />
+                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero10.jpg" class="block size-full object-cover" />
                 </div>
                 <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
-                  <img alt="" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero11.jpg" class="block size-full object-cover" />
+                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero11.jpg" class="block size-full object-cover" />
                 </div>
                 <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
-                  <img alt="" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero12.jpg" class="block size-full object-cover" />
+                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero12.jpg" class="block size-full object-cover" />
                 </div>
                 <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10  lg:-mt-40">
-                  <img alt="" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero13.jpg" class="block size-full object-cover" />
+                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero13.jpg" class="block size-full object-cover" />
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@
       <!--background with image-->
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-          <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/img_1.jpg" alt="" class="absolute inset-0 -z-10 size-full object-cover " />
+          <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/img_1.jpg" alt="" class="absolute inset-0 -z-10 size-full object-cover " />
           <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div class="absolute -bottom-8 -left-96 -z-10 transform-gpu blur-3xl sm:-bottom-64 sm:-left-40 lg:-bottom-32 lg:left-8 xl:-left-10" aria-hidden="true">
               <div class="aspect-[1266/975] w-[79.125rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
@@ -110,7 +110,7 @@
                 </div>
                 <div class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
                   <div class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                    <img class="size-full object-cover object-top" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/img_4.jpg" alt="" />
+                    <img class="size-full object-cover object-top" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/img_4.jpg" alt="" />
                   </div>
                 </div>
               </div>
@@ -124,7 +124,7 @@
                   <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Use Xcode’s Organizer or Transporter (an Apple app) to upload the app to App Store Connect.</p>
                 </div>
                 <div class=" flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2 ">
-                  <img class="w-full max-lg:max-w-xs rounded-2xl" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/img_5.jpg" alt="" />
+                  <img class="w-full max-lg:max-w-xs rounded-2xl" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/img_5.jpg" alt="" />
                 </div>
               </div>
               <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]" />
@@ -138,7 +138,7 @@
                   <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Use TestFlight to distribute your app to a limited number of users for testing.</p>
                 </div>
                 <div class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
-                  <img class="w-full max-lg:max-w-xs rounded-2xl" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/img_5.jpg" alt="" />
+                  <img class="w-full max-lg:max-w-xs rounded-2xl" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/img_5.jpg" alt="" />
                 </div>
               </div>
               <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5" />
@@ -204,10 +204,10 @@
               </dl>
           </div>
           <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-            <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-features02.jpg" alt="" class="rounded-lg bg-gray-100" />
-            <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-features02.jpg" alt="" class="rounded-lg bg-gray-100" />
-            <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-features04.jpg" alt="" class="rounded-lg bg-gray-100" />
-            <img src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-features04.jpg" alt="" class="rounded-lg bg-gray-100" />
+            <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features02.jpg" alt="" class="rounded-lg bg-gray-100" />
+            <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features02.jpg" alt="" class="rounded-lg bg-gray-100" />
+            <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features04.jpg" alt="" class="rounded-lg bg-gray-100" />
+            <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features04.jpg" alt="" class="rounded-lg bg-gray-100" />
           </div>
         </div>
       </div>
@@ -313,7 +313,7 @@
             <section id="topStories">
                 <div id="bridestowe" class="flex flex-row mb-4">
                     <div class="basis-3/4">
-                        <img class="h-48 lg:h-56 w-full object-cover rounded-l-2xl" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-new01.jpeg" alt="">
+                        <img class="h-48 lg:h-56 w-full object-cover rounded-l-2xl" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-new01.jpeg" alt="">
                     </div>
                     <div class="basis-1/4 rounded-r-2xl bg-violet-400 dark:bg-violet-900 flex flex-col justify-between px-3 text-white dark:text-gray-400">
                         <div class="mt-5">
@@ -341,13 +341,13 @@
                         </div>
                     </div>
                     <div class="basis-3/4">
-                        <img class="h-48 lg:h-56 w-full object-cover rounded-r-2xl" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-new02.jpeg" alt="">
+                        <img class="h-48 lg:h-56 w-full object-cover rounded-r-2xl" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-new02.jpeg" alt="">
                     </div>
                 </div>
                 <hr class="border-rose-300 dark:border-orange-500">
                 <div id="kiss" class="flex flex-row mt-4 mb-4">
                     <div class="basis-3/4">
-                        <img class="h-48 lg:h-56 w-full object-cover rounded-l-2xl" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-new03.jpeg" alt="">
+                        <img class="h-48 lg:h-56 w-full object-cover rounded-l-2xl" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-new03.jpeg" alt="">
                     </div>
                     <div class="basis-1/4 rounded-r-2xl bg-violet-400 dark:bg-violet-900 flex flex-col justify-between px-3 text-white dark:text-gray-400">
                         <div class="mt-5">
@@ -393,25 +393,25 @@ export default {
             progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
         };
       const features = ref( [
-        { name: 'Curiosity', description: 'Andy spent hours unraveling coding mysteries, while Luna sniffed out every room in the house.',descriptionCN:'安迪花了好几个小时解开编码之谜，而路娜则在屋里每个房间里嗅来嗅去。',imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-features01.jpg' },
-        { name: 'Loyalty', description: 'Luna never left Andy’s side, even during late-night debugging sessions by the flickering screen.',descriptionCN:'即使在深夜调试的时刻，屏幕闪烁不定，路娜也从未离开安迪的身边。',imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-featurhero-features02.jpg' },
-        { name: 'Cleverness', description: 'Andy crafted ingenious algorithms, and Luna outsmarted every squirrel that dared cross their path."',descriptionCN:'安迪设计出巧妙的算法，而路娜则聪明地击败了每一只胆敢挡路的松鼠。',imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-features03.jpg' },
-        { name: 'Patience', description: 'Andy waited for his programs to compile, as Luna sat still, ears perked, tracking distant sounds.',descriptionCN:'安迪等待程序编译的同时，路娜安静地坐着，竖起耳朵，捕捉着远处的声音。',imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-features04.jpg'},
-        { name: 'Resilience', description: 'When bugs crashed Andy’s code, he kept going; when storms hit, Luna braved the rain to guard their home.',descriptionCN:'当程序因漏洞崩溃时，安迪依然坚持不懈；当风暴来袭时，路娜冒着雨坚守家园。',imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-features01.jpg'},
-        { name: 'Companionship', description: 'In the silence of the house, they found comfort in each other—no words or barks needed.',descriptionCN:'在屋内的寂静中，他们彼此依偎，无需言语，也无需吠声，便已心安。',imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero-features01.jpg' },
+        { name: 'Curiosity', description: 'Andy spent hours unraveling coding mysteries, while Luna sniffed out every room in the house.',descriptionCN:'安迪花了好几个小时解开编码之谜，而路娜则在屋里每个房间里嗅来嗅去。',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features01.jpg' },
+        { name: 'Loyalty', description: 'Luna never left Andy’s side, even during late-night debugging sessions by the flickering screen.',descriptionCN:'即使在深夜调试的时刻，屏幕闪烁不定，路娜也从未离开安迪的身边。',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-featurhero-features02.jpg' },
+        { name: 'Cleverness', description: 'Andy crafted ingenious algorithms, and Luna outsmarted every squirrel that dared cross their path."',descriptionCN:'安迪设计出巧妙的算法，而路娜则聪明地击败了每一只胆敢挡路的松鼠。',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features03.jpg' },
+        { name: 'Patience', description: 'Andy waited for his programs to compile, as Luna sat still, ears perked, tracking distant sounds.',descriptionCN:'安迪等待程序编译的同时，路娜安静地坐着，竖起耳朵，捕捉着远处的声音。',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features04.jpg'},
+        { name: 'Resilience', description: 'When bugs crashed Andy’s code, he kept going; when storms hit, Luna braved the rain to guard their home.',descriptionCN:'当程序因漏洞崩溃时，安迪依然坚持不懈；当风暴来袭时，路娜冒着雨坚守家园。',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features01.jpg'},
+        { name: 'Companionship', description: 'In the silence of the house, they found comfort in each other—no words or barks needed.',descriptionCN:'在屋内的寂静中，他们彼此依偎，无需言语，也无需吠声，便已心安。',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features01.jpg' },
       ]);
       const postStore = usePostStore()
       const posts = computed(() => postStore.posts)
       const slides =  [
-          { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero01.jpeg', alt: '' },
-          { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero02.jpeg', alt: '' },
-          { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero03.jpeg', alt: '' },
-          { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero04.jpeg', alt: '' },
-          { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero05.jpeg', alt: '' },
-          { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero06.jpeg', alt: '' },
-          { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero07.jpeg', alt: '' },
-          { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero08.jpeg', alt: '' },
-          { path: 'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/hero09.jpeg', alt: '' }
+          { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero01.jpeg', alt: '' },
+          { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero02.jpeg', alt: '' },
+          { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero03.jpeg', alt: '' },
+          { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero04.jpeg', alt: '' },
+          { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero05.jpeg', alt: '' },
+          { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero06.jpeg', alt: '' },
+          { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero07.jpeg', alt: '' },
+          { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero08.jpeg', alt: '' },
+          { path: 'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero09.jpeg', alt: '' }
       ]
       const newsList = [
           {
@@ -422,7 +422,7 @@ export default {
                   'The Bridestowe Lavender Field unveiled itself as a magical realm, brimming with awe-inspiring wonders. Its vast expanse stretched for endless miles, evading the eye\'s reach. Time seemed to cease within its boundless beauty, and Luna reveled in its splendor.\n'+  '\n'+
                   'She tried to eat all the bees, but the bees were just too quick. She and her family hiked all around the Lavender field and even saw a giant purple lavender teddy bear.  As they hiked towards it, she got super excited and started jumping all around. When she arrived she sniffed the teddy bear all over. Top to bottom. \n' + '\n'+
                   'The Bridestowe Lavender Luna loved the place and towards the end of the trip she even tasted lavender ice cream while her brother enjoyed one too and her mom and dad both enjoyed a lavender coffee.',
-              imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/newsDetail/detail01.jpeg'
+              imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/newsDetail/detail01.jpeg'
           },
           {
               id:'002',
@@ -432,14 +432,14 @@ export default {
                   'Luna sniffed around the house, searching under sofas and behind curtains. We tried to help too, but the teddy bear seemed to have vanished. Days turned into weeks, and Luna felt sad without her toy.\n' +'\n' +
                   'Finally, during a cleaning of the room, the teddy bear was found stuck between the bed and the wall. Luna wagged her tail with joy, and we were relieved.\n'+'\n'+
                   'Luna learned that sometimes things get lost but can be found again. She cherished her teddy bear even more, knowing how special it was to have it back. From that day on, Luna and her favorite toy were inseparable, bringing happiness to her days once again.',
-              imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/newsDetail/story01.jpeg'
+              imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/newsDetail/story01.jpeg'
           },
           {
               id:'03',
               date:'May 14, 2023',
               title:'Cutes Pet Kiss',
               content:'coming soon',
-              imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/newsDetail/kiss.jpeg'
+              imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/newsDetail/kiss.jpeg'
           }
 
       ]

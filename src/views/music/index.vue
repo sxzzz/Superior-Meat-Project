@@ -962,7 +962,7 @@ function previousMusic() {
   playCurrentMusic()
 }
 
-// 🔥 核心：封装一个切换并播放当前 currentIndex 指向的音乐的方法
+// 核心：封装一个切换并播放当前 currentIndex 指向的音乐的方法
 function playCurrentMusic() {
   if (!audio.value) return
   audio.value.pause()
@@ -990,7 +990,6 @@ function playCurrentMusic() {
 
 // ✨ 点击任意歌曲播放
 function selectAndPlayMusic(index) {
-  console.log('123')
   currentIndex.value = index
   playCurrentMusic()
 }

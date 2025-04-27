@@ -72,7 +72,7 @@ const featuredPost =
       '虚拟 DOM (Virtual DOM)\n' +
       '生命周期钩子 (Lifecycle Hooks)\n' +
       '双向数据绑定 (Two-Way Data Binding)...\n',
-  imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/hero/b14.jpeg',
+  imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/b14.jpeg',
 
   date: 'Oct 01, 2024',
   datetime: '2024-10-01',
@@ -80,7 +80,7 @@ const featuredPost =
     name: 'Andy',
     href: '#',
     imageUrl:
-        'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/logo/andyAvator.png',
+        'https://d1nuow4z6t9ani.cloudfront.net/logo/andyAvator.png',
     }
   }
 

@@ -2,36 +2,41 @@
   <div class="bg-white dark:bg-black">
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div class="sm:flex sm:items-baseline sm:justify-between">
-        <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Friends (not responsive yet) </h2>
+        <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Friends</h2>
       </div>
       <!-- 三角墙     -->
 
-      <div class="bg-white" >
+      <div class="bg-white dark:bg-black" >
         <div class="px-6 lg:px-8">
           <div class="mt-4">
-            <p class="text-4xl text-center font-semibold tracking-tight bg-gradient-to-r from-sky-500 via-purple-400 to-pink-500 inline-block text-transparent bg-clip-text">In golden dawn and silver light, Pets roam free, hearts pure and bright.</p>
-            <p class="text-4xl text-center font-semibold tracking-tight bg-gradient-to-r from-sky-500 via-purple-400 to-pink-500 inline-block text-transparent bg-clip-text">Dogs chase winds, and cats stay sly, Birds weave songs into the sky...</p>
+            <p class="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center font-semibold tracking-tight bg-gradient-to-r from-sky-500 via-purple-400 to-pink-500 inline-block text-transparent bg-clip-text">
+              In golden dawn and silver light, Pets roam free, hearts pure and bright.
+            </p>
+            <p class="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center font-semibold tracking-tight bg-gradient-to-r from-sky-500 via-purple-400 to-pink-500 inline-block text-transparent bg-clip-text">
+              Dogs chase winds, and cats stay sly, Birds weave songs into the sky...
+            </p>
           </div>
 
-          <ul  id="dogs" role="list" class="mt-10 flex flex-row justify-center grid-cols-5 ">
-            <li v-for="(pet,index) in dogs" :key="pet.name" class="mx-3">
-              <img class="size-24 rounded-full" :src="pet.imageUrl" alt="" />
-              <h3 class=" mt-6 text-xl text-center font-semibold tracking-tight text-rose-400 ">{{ pet.name }}</h3>
-              <p class=" text-center text-gray-600">{{ pet.role }}</p>
+          <ul id="dogs" role="list" class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center gap-6">
+            <li v-for="(dog, index) in dogs" :key="dog.name" class="mx-3 text-center">
+              <img class="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full mx-auto object-cover" :src="dog.imageUrl" alt="" />
+              <h3 class="mt-6 text-xl font-semibold tracking-tight text-rose-400">{{ dog.name }}</h3>
+              <p class="text-gray-600 dark:text-white">{{ dog.role }}</p>
             </li>
           </ul>
-          <ul  id="cats" role="list" class=" mt-4 flex flex-row justify-center ">
-            <li v-for="(pet,index) in cats" :key="pet.name" class="mx-3" >
-              <img class="size-24 rounded-full" :src="pet.imageUrl" alt="" />
-              <h3 class="mt-6 text-xl text-center font-semibold tracking-tight text-rose-400">{{ pet.name }}</h3>
-              <p class="text-center text-gray-600">{{ pet.role }}</p>
+
+          <ul id="cats" role="list" class=" mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center ">
+            <li v-for="(cat,index) in cats" :key="cat.name" class="" >
+              <img class="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full mx-auto object-cover" :src="cat.imageUrl" alt="" />
+              <h3 class="mt-6 text-xl text-center font-semibold tracking-tight text-rose-400">{{ cat.name }}</h3>
+              <p class="text-center text-gray-600 dark:text-white">{{ cat.role }}</p>
             </li>
           </ul>
-          <ul   id="pets" role="list" class=" mt-4 flex flex-row justify-center ">
-            <li v-for="(pet,index) in pets" :key="pet.name" class="mx-3">
-              <img class="size-24 rounded-full" :src="pet.imageUrl" alt="" />
+          <ul id="pets" role="list" class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center gap-6">
+            <li v-for="(pet,index) in pets" :key="pet.name" class="">
+              <img class=" w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full mx-auto object-cover" :src="pet.imageUrl" alt="" />
               <h3 class="mt-6 text-xl text-center font-semibold tracking-tight text-rose-400">{{ pet.name }}</h3>
-              <p class="text-center text-gray-600">{{ pet.role }}</p>
+              <p class="text-center text-gray-600 dark:text-white">{{ pet.role }}</p>
             </li>
           </ul>
 
@@ -44,7 +49,7 @@
       </div>
         <ul  role="list" class="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none">
         <li class="flex flex-col gap-6 xl:flex-row px-6 sm:px-0">
-          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/annie02.jpeg" alt="">
+          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://d1nuow4z6t9ani.cloudfront.net/images/friends/annie02.jpeg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-300">Annie 安妮</h3>
             <p class="mt-3 text-base leading-7 text-gray-600 dark:text-gray-300">Remembering Annie, a lovely Bichon Frise who was born 2008. She stayed with us for 14 years, always being affectionate and close to human. Last year, she journeyed to the doggy heaven. Thinking back to her presence, our hearts are filled with gratitude and longing. </p>
@@ -52,7 +57,7 @@
           </div>
         </li>
         <li class="flex flex-col gap-6 xl:flex-row  px-6 sm:px-0">
-          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/pudding01.jpeg" alt="">
+          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://d1nuow4z6t9ani.cloudfront.net/images/friends/pudding01.jpeg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-300">Pudding 布丁</h3>
             <p class="mt-3 text-base leading-7 text-gray-600 dark:text-gray-300">Pudding, was full of curiosity and had a strong bond with humans. With an inquisitive nature, She always explored her surroundings.
@@ -61,7 +66,7 @@
           </div>
         </li>
         <li class="flex flex-col gap-6 xl:flex-row  px-6 sm:px-0">
-          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/tuan01.jpg" alt="">
+          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://d1nuow4z6t9ani.cloudfront.net/images/friends/tuan01.jpg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-300">Tuan Tuan 团团</h3>
             <p class="mt-3 text-base leading-7 text-gray-600 dark:text-gray-300">TuanTuan, was a true gentleman and incredibly responsible. He was always well-behaved and carried himself with grace.
@@ -70,7 +75,7 @@
           </div>
         </li>
         <li class="flex flex-col gap-6 xl:flex-row px-6 sm:px-0">
-          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/white01.jpeg" alt="">
+          <img class="aspect-[4/5] w-60 flex-none rounded-2xl object-cover" src="https://d1nuow4z6t9ani.cloudfront.net/images/friends/white01.jpeg" alt="">
           <div class="flex-auto">
             <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-300">Miss White 小白</h3>
             <p class="mt-3 text-base leading-7 text-gray-600 dark:text-gray-300">Miss White, had one lifelong obsession: food. Her world revolved around the next meal.
@@ -103,31 +108,31 @@ export default {
         name: 'Melon',
         role: 'golden retriever',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Melon.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Melon.jpg',
       },
       {
         name: 'Mojo',
         role: 'Basenji',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Mojo.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Mojo.jpg',
       },
       {
         name: 'Nami',
         role: 'Terrier',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Nami.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Nami.jpg',
       },
       {
         name: 'Drake',
         role: 'Cavalier King',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Drake.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Drake.jpg',
       },
       {
         name: 'Brody',
         role: 'Terrier',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Brody.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Brody.jpg',
       }
 
     ])
@@ -136,25 +141,25 @@ export default {
         name: 'Tom',
         role: 'Ragdoll',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Tom.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Tom.jpg',
       },
       {
         name: 'Guinness',
         role: 'Felis catus',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Guinness.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Guinness.jpg',
       },
       {
         name: 'Barley',
         role: 'American Shorthair',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Barley.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Barley.jpg',
       },
       {
         name: 'Figaro',
         role: 'Neva Masquerade',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Figaro.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Figaro.jpg',
       },
 
     ])
@@ -163,19 +168,31 @@ export default {
         name: 'Muse',
         role: 'hummingbird',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Muse.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Muse.jpg',
       },
       {
         name: 'Bard',
         role: 'tiger',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Bard.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Bard.jpg',
       },
       {
         name: 'Velvet',
         role: 'Reptile',
         imageUrl:
-            'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/friends/Velvet.jpg',
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Velvet.jpg',
+      },
+      {
+        name: 'Bambi',
+        role: 'Deer',
+        imageUrl:
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/deer.jpg',
+      },
+      {
+        name: 'Polly',
+        role: 'Parrot',
+        imageUrl:
+            'https://d1nuow4z6t9ani.cloudfront.net/images/friends/Parrot.jpeg',
       },
 
     ])
@@ -189,8 +206,5 @@ export default {
 </script>
 
 <style>
-#dogs img, #cats img, #pets img {
-  width: 164px;
-  height: 164px;
-}
+
 </style>

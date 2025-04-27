@@ -73,7 +73,7 @@ export default {
                     'Bridestowe薰衣草田呈现幻境般领域，奇观连连，令人咋舌。薰衣草的海洋延展数百千米，无边尽头不见踪。光阴仿佛在此无边美景中骤停，Luna沉醉其中。\n' +'\n' +
                     '她兴致高昂地追逐蜜蜂，渴望品味其蜜糖之甘。然而它们机敏躲闪，避开了她的触及。Luna与家人漫游于薰衣草掩映的风景线，偶然间，一幕壮丽景象映入眼帘——一个巨大的紫色薰衣草泰迪熊。Luna欢腾跳跃，充溢着她的热情，空气中翩然起舞。抵达薰衣草熊处，她沉醉于芳香之中，细细触摸每个角落。\n'+'\n'+
                     'Bridestowe薰衣草田以其诱人的魅力将Luna俘获，随着旅行接近尾声，她品味着一份精致的享受——美味的薰衣草冰淇淋。她的哥哥与她一同品味，而父母则陶醉于薰衣草香气中的咖啡。',
-                imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/newsDetail/detail01.jpeg'
+                imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/newsDetail/detail01.jpeg'
             },
             {
                 id:'020523',
@@ -86,7 +86,7 @@ export default {
                 contentCn:'昔日，有一只灵巧的狗名为Luna，她怀抱着钟爱的玩物，特别是那心灵所依的泰迪熊。某天，Bella心爱的玩具竟无影无踪。Luna在宅舍里细嗅徜徉，搜遍沙发下和窗帘后。我们亦共同搜索，但泰迪熊似乎消逝，令Luna心伤萦绕。光阴匆匆流逝，周而复始，Luna在无玩物之日感到悲戚。\n' +'\n'+
                     '终于，在整理房间时，泰迪熊被发现，困顿在床与墙间。Luna摇尾欢舞，我们也松了一口气。Luna明了时光中物事或会迷失，终将重获其所。她更加珍视心爱的泰迪熊，洞悉其独特之处。自那天起，Luna与心爱玩物再难割舍，为她日日带来无尽欢愉。',
 
-                imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/newsDetail/story01.jpeg'
+                imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/newsDetail/story01.jpeg'
             },
             {
                 id:'140523',
@@ -100,7 +100,7 @@ export default {
                     '你知道吗，马克斯，”莉莉低声说道，“你是我生命的一切。我爱你。马克斯摇着尾巴，眼里充满了崇敬。他理解了每一个字，向前倾身，在莉莉的脸颊上留下一个温柔的吻。她的笑声充盈在空气中，心中充满了温暖和爱。\n'+'\n'+
                 '从那一刻起，马克斯的吻成为了他们每天的仪式，为悲伤时提供安慰。他们之间无需言语的爱意变得更加浓厚。马克斯不仅仅是一只宠物；他是莉莉的知己、忠诚的伴侣和无尽的欢乐。',
 
-                imageUrl:'https://lunadogcoderstore.s3.ap-southeast-2.amazonaws.com/images/newsDetail/kiss.jpeg'
+                imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/newsDetail/kiss.jpeg'
             },
         ]
         const Switch1 = {
