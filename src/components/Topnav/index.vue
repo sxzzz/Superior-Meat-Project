@@ -29,6 +29,16 @@
                   </svg>
                   Hero
               </router-link>
+            <router-link to="/music"
+                         :class="['inline-flex items-center border-b-2', $route.path === '/music' ? 'border-indigo-500' : 'border-transparent', 'px-1 pt-1 text-sm font-medium text-rose-500 dark:text-gray-400 hover:border-orange-300 hover:text-orange-700 dark:hover:text-pink-200']">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-disc w-6 h-6 me-2" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0M8 4a4 4 0 0 0-4 4 .5.5 0 0 1-1 0 5 5 0 0 1 5-5 .5.5 0 0 1 0 1m4.5 3.5a.5.5 0 0 1 .5.5 5 5 0 0 1-5 5 .5.5 0 0 1 0-1 4 4 0 0 0 4-4 .5.5 0 0 1 .5-.5"/>
+              </svg>
+
+
+              Music
+            </router-link>
             <router-link to="/gallery"
                          :class="['inline-flex items-center border-b-2', $route.path === '/gallery' ? 'border-indigo-500' : 'border-transparent', 'px-1 pt-1 text-sm font-medium text-rose-500 dark:text-gray-400 hover:border-orange-300 hover:text-orange-700 dark:hover:text-pink-200']">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
@@ -82,6 +92,7 @@
     <div v-if="isMobileMenuOpen" class="sm:hidden dark:bg-black" id="mobile-menu">
       <div class="space-y-1 pb-4 pt-2">
         <router-link @click="closeMobileMenu"  to="/hero" :class="['block border-l-4',$route.path === '/hero' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Hero</router-link>
+        <router-link @click="closeMobileMenu" to="/music" :class="['block border-l-4',$route.path === '/music' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Music</router-link>
         <router-link @click="closeMobileMenu" to="/gallery" :class="['block border-l-4',$route.path === '/gallery' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Gallery</router-link>
         <router-link @click="closeMobileMenu" to="/adventure" :class="['block border-l-4',$route.path === '/adventure' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Adventure</router-link>
         <router-link @click="closeMobileMenu" to="/friends" :class="['block border-l-4',$route.path === '/friends' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">Friends</router-link>

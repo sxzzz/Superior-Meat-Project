@@ -74,8 +74,8 @@ const featuredPost =
       '双向数据绑定 (Two-Way Data Binding)...\n',
   imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/b14.jpeg',
 
-  date: 'Oct 01, 2024',
-  datetime: '2024-10-01',
+  date: 'Apr 01, 2025',
+  datetime: '2025-04-01',
   author: {
     name: 'Andy',
     href: '#',

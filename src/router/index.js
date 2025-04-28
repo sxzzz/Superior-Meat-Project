@@ -25,6 +25,11 @@ const routes = [
         component:Hero,
     },
     {
+        path:'/music',
+        name:'Music',
+        component:Music,
+    },
+    {
         path:'/newsDetail/:id',
         name:'NewsDetail',
         component:NewsDetail,
@@ -78,12 +83,7 @@ const routes = [
             {
                 path: '', // 访问 /dev 时匹配
                 name: 'DevRedirect',
-                redirect: '/dev/music' // 重定向到 /dev/music
-            },
-            {
-                path: 'music',
-                name: 'Music',
-                component: Music
+                redirect: '/dev/plan' // 重定向到 /dev/music
             },
             {
                 path: 'plan',

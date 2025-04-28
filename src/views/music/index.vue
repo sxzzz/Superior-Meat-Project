@@ -1,6 +1,6 @@
 <template>
 
-  <div class="">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 py-6">
     <div class="bg-white border border-cyan-400 dark:bg-slate-800 dark:border-slate-500 rounded-xl p-4 pb-6
     sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
       <!--  Album info and  visualizer      -->
@@ -293,6 +293,7 @@
           @loadedmetadata="onLoadedMetadata"
           @ended="resetPlayer"
           crossorigin="anonymous"
+          preload="metadata"
       />
     </div>
 

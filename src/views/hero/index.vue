@@ -23,17 +23,21 @@
             </div>
             <div class="pt-8 mb-4 lg:row-span-2 lg:-mr-16 xl:mr-auto">
               <div class="grid grid-cols-2 gap-x-2 gap-y-4 sm:grid-cols-3 lg: lg:grid-cols-2 lg:gap-4 xl:gap-8">
-                <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
-                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero10.jpg" class="block size-full object-cover" />
+                <div class=" relative group aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
+                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero10.jpg" class="block size-full" />
+                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero11d.jpg" class="block size-full object-cover absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100 " />
                 </div>
-                <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
+                <div class="relative group aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
                   <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero11.jpg" class="block size-full object-cover" />
+                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero12d.jpg" class="block size-full object-cover absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100 " />
                 </div>
-                <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
+                <div class="relative group aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
                   <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero12.jpg" class="block size-full object-cover" />
+                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero13d.jpg" class="block size-full object-cover absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100 " />
                 </div>
-                <div class="aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10  lg:-mt-40">
-                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero13.jpg" class="block size-full object-cover" />
+                <div class="relative group aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10  lg:-mt-40">
+                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero13.jpg" class="block size-full object-cover  " />
+                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/logo/lunaLogo1.jpeg" class="block size-full object-cover absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100 " />
                 </div>
               </div>
             </div>
@@ -68,8 +72,9 @@
       </div>
 
       <!--background with image-->
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+      <div class="bg-teal-300 dark:bg-teal-700 py-6 text-white   ">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 ">
+        <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 rounded-2xl">
           <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/img_1.jpg" alt="" class="absolute inset-0 -z-10 size-full object-cover " />
           <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div class="absolute -bottom-8 -left-96 -z-10 transform-gpu blur-3xl sm:-bottom-64 sm:-left-40 lg:-bottom-32 lg:left-8 xl:-left-10" aria-hidden="true">
@@ -89,107 +94,9 @@
           </div>
         </div>
       </div>
-
-
-
-
-        <!--app section-->
-        <div class="bg-teal-300 dark:bg-teal-700 py-24 sm:py-32">
-          <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-          <div>
-            <h2 class="text-center text-3xl font-bold text-indigo-600 dark:text-pink-200">New challenge</h2>
-          </div>
-
-          <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-            <div class="relative lg:row-span-2">
-              <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]" />
-              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-                <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Build and Archive Your App</p>
-                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Use Xcode to build and archive your app, preparing it for distribution.</p>
-                </div>
-                <div class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
-                  <div class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                    <img class="size-full object-cover object-top" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/img_4.jpg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]" />
-            </div>
-            <div class="relative max-lg:row-start-1">
-              <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]" />
-              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
-                <div class="px-8 pt-6 sm:px-10 sm:pt-10">
-                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Uploading App Store Connect</p>
-                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Use Xcode’s Organizer or Transporter (an Apple app) to upload the app to App Store Connect.</p>
-                </div>
-                <div class=" flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2 ">
-                  <img class="w-full max-lg:max-w-xs rounded-2xl" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/img_5.jpg" alt="" />
-                </div>
-              </div>
-              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]" />
-            </div>
-
-            <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-              <div class="absolute inset-px rounded-lg bg-white" />
-              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-                <div class="px-8 pt-6 sm:px-10 sm:pt-10">
-                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Testing the App</p>
-                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Use TestFlight to distribute your app to a limited number of users for testing.</p>
-                </div>
-                <div class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
-                  <img class="w-full max-lg:max-w-xs rounded-2xl" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/img_5.jpg" alt="" />
-                </div>
-              </div>
-              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5" />
-            </div>
-            <div class="relative lg:row-span-2">
-              <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
-              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-                <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Submit for Review</p>
-                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Fill in necessary metadata on App Store Connect and submit your app for Apple's review. Once approved, release it on the App Store.</p>
-                </div>
-                <div class="relative min-h-[30rem] w-full grow">
-                  <div class="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
-                    <div class="flex bg-gray-800/40 ring-1 ring-white/5">
-                      <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
-                        <div class="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">ViewController.swift</div>
-                        <div class="border-r border-gray-600/10 px-4 py-2">ViewController.xib</div>
-                      </div>
-                    </div>
-                    <div class="px-6 pb-14 pt-6 text-white">
-
-<pre class="text-[0.8125rem]/6 text-gray-300" style="tab-size: 2"><code>class <span class="text-[#7dd3fc]">ViewController</span> :<span class="text-[#7dd3fc]">UIViewController</span> {
-
-<span class="text-indigo-400">function dogcoder</span>() {
-  label.frame = <span class="text-red-400">CGRect</span>(x: <span class="text-red-400">50</span>, y: <span class="text-red-400">200 </span>, width: <span class="text-red-400">300 </span>, height: 50)
-  button.frame = <span class="text-red-400">CGRect</span>(x: <span class="text-red-400">50</span>, y: <span class="text-red-400">200 </span>, width: <span class="text-red-400">300 </span>, height: 50)
-
-  // Add label and button to the view
-  view.addSubview(label)
-  view.addSubview(button)
-
-  // Button action
-  button.addTarget(<span class="text-purple-400">self</span>, action: <span class="text-purple-400">#selector </span>(changeLabelText), for: .touchUpInside)
-
-  // Action function to change the label text
-  <span class="text-purple-400">@objc func</span> <span class="text-indigo-400">changeLabelText</span>() {
-  label.text = <span class="text-green-400">"Button Tapped!"</span>
-
-}</code></pre>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
-            </div>
-          </div>
-        </div>
-        </div>
+      </div>
         <!--dogCoder-->
-        <div class="bg-w">
+        <div class="">
         <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-12 sm:px-6 sm:py-20 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div class="">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Dogcoder</h2>
@@ -203,17 +110,31 @@
                 </div>
               </dl>
           </div>
-          <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-            <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features02.jpg" alt="" class="rounded-lg bg-gray-100" />
-            <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features02.jpg" alt="" class="rounded-lg bg-gray-100" />
-            <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features04.jpg" alt="" class="rounded-lg bg-gray-100" />
-            <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features04.jpg" alt="" class="rounded-lg bg-gray-100" />
+          <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8 ">
+            <div class="relative group">
+              <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features02.jpg" alt="" class="rounded-lg bg-gray-100" />
+              <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/b06.jpeg" alt=""
+                   class="rounded-lg bg-gray-100 absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+            </div>
+            <div  class="relative group">
+              <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features02.jpg" alt="" class="rounded-lg bg-gray-100" />
+              <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/d01.jpeg" alt="" class="rounded-lg bg-gray-100 absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+            </div>
+            <div  class="relative group">
+              <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features04.jpg" alt="" class="rounded-lg bg-gray-100" />
+              <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/d02.jpeg" alt="" class="rounded-lg bg-gray-100 absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+            </div>
+            <div  class="relative group">
+              <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features04.jpg" alt="" class="rounded-lg bg-gray-100" />
+              <img src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/d03.jpeg" alt="" class="rounded-lg bg-gray-100 absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+            </div>
+
           </div>
         </div>
       </div>
 
         <div class="bg-cyan-500 dark:bg-cyan-900 py-6 text-white">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8 ">
 
                 <div class="mt-2 space-y-8">
                   <div class="">
@@ -368,7 +289,7 @@
 </template>
 
 <script>
-import { ref,computed} from 'vue';
+import { ref,computed,onMounted} from 'vue';
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
 // Import Swiper styles

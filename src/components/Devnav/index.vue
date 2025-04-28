@@ -20,9 +20,8 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 const navigation = [
-  { name: 'Music Player', href: '/dev/music'},
   { name: 'Plan', href: '/dev/plan'},
-  { name: 'Layout', href: '/dev/layout'},
+  { name: 'layout', href: '/dev/layout'},
 ]
 const isActive = (href) => route.path === href
 
