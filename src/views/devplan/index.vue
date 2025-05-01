@@ -154,256 +154,175 @@
     </div>
   </div>
 
-<!--  <div class="game-container">-->
-<!--    <canvas id="gameCanvas" width="1000" height="800"></canvas>-->
-<!--  </div>-->
+  <div class="w-full h-full flex flex-col justify-center items-center">
+    <canvas ref="gameCanvas" :width="500" :height="500" class="border mb-4"></canvas>
 
-<!--  <div class="snake-game">-->
-<!--    <h1 class="text-center text-2xl font-semibold mb-4">贪吃蛇游戏</h1>-->
-<!--    <div class="game-container">-->
-<!--      <canvas id="snakeCanvas" width="400" height="400"></canvas>-->
-<!--    </div>-->
-<!--    <div class="text-center mt-4">-->
-<!--      <button @click="startNewGame" class="bg-blue-500 text-white p-2 rounded-lg">开始新游戏</button>-->
-<!--      <p class="mt-2">分数: {{ score }}</p>-->
-<!--    </div>-->
-<!--  </div>-->
+    <div class="space-x-4">
+      <button @click="startGame" class="px-4 py-2 bg-green-500 text-white rounded">开始</button>
+      <button @click="resetGame" class="px-4 py-2 bg-red-500 text-white rounded">重置</button>
+      <p class="text-white">A 球数量: {{ aBallCount }}</p>
+
+    </div>
+  </div>
 
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
 
-import { ref,onMounted } from 'vue';
+const gameCanvas = ref(null)
+let ctx, canvas, center, radius
+let balls = []
+let speedMultiplier = 2.0
+let running = false
+let aBallCount = ref(1) // 初始有 1 个 A 球
 
-// onMounted(() => {
-//   const canvas = document.getElementById('gameCanvas');
-//   const ctx = canvas.getContext('2d');
-//
-//   // 游戏参数
-//   const dog = { x: 60, y: 60, width: 60, height: 60, speed: 5 };
-//   const bone = { x: Math.random() * 550, y: Math.random() * 350, width: 30, height: 30 };
-//   let score = 0;
-//
-//   // 监听键盘事件
-//   let keys = {};
-//   window.addEventListener('keydown', (e) => {
-//     keys[e.key] = true;
-//   });
-//   window.addEventListener('keyup', (e) => {
-//     keys[e.key] = false;
-//   });
-//
-//   // 加载宠物狗和骨头的图像
-//   const dogImage = new Image();
-//   dogImage.src = 'https://d1nuow4z6t9ani.cloudfront.net/logo/lunaLogo1.jpeg'; // 这里可以替换成宠物狗的图片地址
-//
-//   const boneImage = new Image();
-//   boneImage.src = 'https://d1nuow4z6t9ani.cloudfront.net/logo/lunaLogo1.jpeg'; // 这里可以替换成骨头的图片地址
-//
-//   // 游戏主循环
-//   function gameLoop() {
-//     ctx.clearRect(0, 0, canvas.width, canvas.height); // 清空画布
-//
-//     // 移动宠物狗
-//     if (keys['ArrowUp'] && dog.y > 0) dog.y -= dog.speed;
-//     if (keys['ArrowDown'] && dog.y < canvas.height - dog.height) dog.y += dog.speed;
-//     if (keys['ArrowLeft'] && dog.x > 0) dog.x -= dog.speed;
-//     if (keys['ArrowRight'] && dog.x < canvas.width - dog.width) dog.x += dog.speed;
-//
-//     // 检测碰撞
-//     if (checkCollision(dog, bone)) {
-//       score++;
-//       // 重置骨头的位置
-//       bone.x = Math.random() * 550;
-//       bone.y = Math.random() * 350;
-//       playSound();
-//     }
-//
-//     // 绘制宠物狗和骨头
-//     ctx.drawImage(dogImage, dog.x, dog.y, dog.width, dog.height);
-//     ctx.drawImage(boneImage, bone.x, bone.y, bone.width, bone.height);
-//
-//     // 显示分数
-//     ctx.font = '20px Arial';
-//     ctx.fillStyle = 'black';
-//     ctx.fillText('Score: ' + score, 10, 30);
-//
-//     requestAnimationFrame(gameLoop); // 循环调用游戏主循环
-//   }
-//
-//   // 碰撞检测函数
-//   function checkCollision(dog, bone) {
-//     return (
-//         dog.x < bone.x + bone.width &&
-//         dog.x + dog.width > bone.x &&
-//         dog.y < bone.y + bone.height &&
-//         dog.y + dog.height > bone.y
-//     );
-//   }
-//
-//   // 播放音效
-//   function playSound() {
-//     const sound = new Audio('https://www.soundjay.com/button/beep-07.wav'); // 你可以换成更适合的音效
-//     sound.play();
-//   }
-//
-//   // 启动游戏
-//   dogImage.onload = () => {
-//     boneImage.onload = () => {
-//       gameLoop();
-//     };
-//   };
-// });
-//
-//
-// const score = ref(0);  // 记录分数
-// const canvas = ref(null);
-// let ctx = null;  // 获取 canvas 上下文
-// let snake = [];  // 贪吃蛇的身体
-// let food = {};  // 食物的位置
-// let direction = 'RIGHT';  // 蛇的初始方向
-// let gameInterval = null;  // 游戏主循环定时器
-//
-// const snakeSize = 20;  // 贪吃蛇的单个块的尺寸
-// const canvasSize = 400;  // canvas 的尺寸
-//
-// onMounted(() => {
-//   canvas.value = document.getElementById('snakeCanvas');
-//   ctx = canvas.value.getContext('2d');
-//   document.addEventListener('keydown', changeDirection);
-//   startNewGame();
-// });
-//
-// function startNewGame() {
-//   score.value = 0;
-//   snake = [
-//     { x: 100, y: 100 },
-//     { x: 80, y: 100 },
-//     { x: 60, y: 100 },
-//   ];  // 初始化蛇的身体
-//   direction = 'RIGHT';  // 初始化蛇的方向
-//   spawnFood();  // 生成食物
-//   if (gameInterval) clearInterval(gameInterval);  // 清除旧的定时器
-//   gameInterval = setInterval(gameLoop, 100);  // 设置游戏主循环定时器
-// }
-//
-// function gameLoop() {
-//   moveSnake();  // 移动蛇
-//   if (checkCollision()) {  // 检查游戏结束条件
-//     alert('游戏结束！');
-//     startNewGame();  // 重新开始游戏
-//     return;
-//   }
-//   if (eatFood()) {  // 检查蛇是否吃到食物
-//     score.value += 1;  // 增加分数
-//     spawnFood();  // 重新生成食物
-//   }
-//   drawGame();  // 绘制游戏界面
-// }
-//
-// function moveSnake() {
-//   let head = { ...snake[0] };
-//   if (direction === 'UP') head.y -= snakeSize;
-//   if (direction === 'DOWN') head.y += snakeSize;
-//   if (direction === 'LEFT') head.x -= snakeSize;
-//   if (direction === 'RIGHT') head.x += snakeSize;
-//
-//   snake.unshift(head);  // 在蛇头前插入新的位置
-//
-//   if (!eatFood()) {
-//     snake.pop();  // 如果没有吃到食物，删除蛇尾
-//   }
-// }
-//
-// function eatFood() {
-//   const head = snake[0];
-//   return head.x === food.x && head.y === food.y;
-// }
-//
-// function checkCollision() {
-//   const head = snake[0];
-//   // 撞到墙壁
-//   if (head.x < 0 || head.x >= canvasSize || head.y < 0 || head.y >= canvasSize) {
-//     return true;
-//   }
-//   // 撞到自己
-//   for (let i = 1; i < snake.length; i++) {
-//     if (snake[i].x === head.x && snake[i].y === head.y) {
-//       return true;
-//     }
-//   }
-//   return false;
-// }
-//
-// function spawnFood() {
-//   const x = Math.floor(Math.random() * (canvasSize / snakeSize)) * snakeSize;
-//   const y = Math.floor(Math.random() * (canvasSize / snakeSize)) * snakeSize;
-//   food = { x, y };
-// }
-//
-// function drawGame() {
-//   ctx.clearRect(0, 0, canvasSize, canvasSize);  // 清空画布
-//
-//   // 绘制蛇
-//   snake.forEach(segment => {
-//     ctx.fillStyle = 'green';
-//     ctx.fillRect(segment.x, segment.y, snakeSize, snakeSize);
-//   });
-//
-//   // 绘制食物
-//   ctx.fillStyle = 'red';
-//   ctx.fillRect(food.x, food.y, snakeSize, snakeSize);
-//
-//   // 绘制分数
-//   ctx.font = '20px Arial';
-//   ctx.fillStyle = 'black';
-//   ctx.fillText('分数: ' + score.value, 10, 20);
-// }
-//
-// function changeDirection(event) {
-//   if (event.key === 'ArrowUp' && direction !== 'DOWN') direction = 'UP';
-//   if (event.key === 'ArrowDown' && direction !== 'UP') direction = 'DOWN';
-//   if (event.key === 'ArrowLeft' && direction !== 'RIGHT') direction = 'LEFT';
-//   if (event.key === 'ArrowRight' && direction !== 'LEFT') direction = 'RIGHT';
-// }
+class Ball {
+  constructor(x, y, vx, vy, size, color, isB = false) {
+    this.x = x
+    this.y = y
+    this.vx = vx
+    this.vy = vy
+    this.size = size
+    this.color = color
+    this.isB = isB
+  }
+
+  move() {
+    this.x += this.vx * speedMultiplier
+    this.y += this.vy * speedMultiplier
+
+    const distFromCenter = Math.hypot(this.x - center.x, this.y - center.y)
+    if (distFromCenter + this.size >= radius) {
+      const nx = (this.x - center.x) / distFromCenter
+      const ny = (this.y - center.y) / distFromCenter
+      const dot = this.vx * nx + this.vy * ny
+      this.vx -= 2 * dot * nx + (Math.random() * 0.4 - 0.2) // 加扰动
+      this.vy -= 2 * dot * ny + (Math.random() * 0.4 - 0.2)
+    }
+  }
+
+  draw(ctx) {
+    ctx.beginPath()
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
+    ctx.fillStyle = this.color
+    ctx.fill()
+  }
+}
+
+function spawnTwoNewBalls() {
+  for (let i = 0; i < 2; i++) {
+    balls.push(new Ball(
+        center.x + Math.random() * 100 - 50,
+        center.y + Math.random() * 100 - 50,
+        Math.random() * 4 - 2,
+        Math.random() * 4 - 2,
+        8,
+        'blue'
+    ))
+  }
+}
+
+function checkCollisions() {
+  const bBall = balls.find(b => b.isB)
+  const remainingBalls = []
+  let newBalls = []
+
+  for (const ball of balls) {
+    if (ball.isB) {
+      remainingBalls.push(ball)
+      continue
+    }
+
+    const dist = Math.hypot(ball.x - bBall.x, ball.y - bBall.y)
+    if (dist <= ball.size + bBall.size) {
+      // 碰到了：为每个被消除的 A 生成 2 个新 A
+      for (let i = 0; i < 2; i++) {
+        newBalls.push(new Ball(
+            center.x + Math.random() * 100 - 50,
+            center.y + Math.random() * 100 - 50,
+            Math.random() * 4 - 2,
+            Math.random() * 4 - 2,
+            4,
+            'blue'
+        ))
+      }
+    } else {
+      remainingBalls.push(ball)
+    }
+  }
+
+  balls = remainingBalls.concat(newBalls)
+  aBallCount.value += newBalls.length // 增加 A 球数量
+}
+
+function drawCircle() {
+  ctx.beginPath()
+  ctx.arc(center.x, center.y, radius, 0, Math.PI * 2)
+  ctx.strokeStyle = 'black'
+  ctx.lineWidth = 2
+  ctx.stroke()
+}
+
+function animate() {
+  if (!running) return
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  drawCircle()
+
+  balls.forEach(ball => {
+    ball.move()
+    ball.draw(ctx)
+  })
+
+  checkCollisions()
+  requestAnimationFrame(animate)
+}
+
+function startGame() {
+  if (!running) {
+    running = true
+    animate()
+  }
+}
+
+function resetGame() {
+
+  running = false
+  balls = []
+
+  // 初始化 B 球
+  balls.push(new Ball(center.x, center.y, Math.random() * 4 - 2, Math.random() * 4 - 2, 6, 'red', true))
+  // 初始化 A 球
+  balls.push(new Ball(center.x + 50, center.y, Math.random() * 4 - 2, Math.random() * 4 - 2, 4, 'blue'))
+
+  // 画初始画面
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  drawCircle()
+  balls.forEach(ball => ball.draw(ctx))
+}
+
+onMounted(() => {
+  canvas = gameCanvas.value
+  ctx = canvas.getContext('2d')
+  center = { x: canvas.width / 2, y: canvas.height / 2 }
+  radius = canvas.width / 2 - 10
+
+  resetGame()
+})
 
 </script>
 <style scoped>
-.game-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-canvas {
-  border: 2px solid #000;
-}
 
-.snake-game {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.game-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
 
 canvas {
-  border: 2px solid black;
+  background-color: #f9f9f9;
 }
-
 button {
-  cursor: pointer;
+  transition: background-color 0.2s;
 }
-
 button:hover {
-  background-color: #2b6cb0;
+  filter: brightness(1.1);
 }
-
-
 
 </style>

@@ -3,7 +3,9 @@
   <div>
     <Header></Header>
     <div id="wrapper" class="dark:bg-black">
-        <Topnav class=""></Topnav>
+
+        <WeatherWidget></WeatherWidget>
+        <Topnav></Topnav>
         <div>
           <router-view></router-view>
         </div>
@@ -17,12 +19,16 @@
 import Header from './components/Header/index.vue';
 import Topnav from "./components/Topnav/index.vue";
 import Footer from "./components/Footer/index.vue";
-import { useThemeStore } from '/src/store/themeStore.js'
+import CloudBackground from '@/components/cloudBackground/index.vue';
+import WeatherWidget from '@/components/weather/index.vue';
+import { useThemeStore } from '@/store/themeStore.js';
 export default {
   components: {
     Header,
     Topnav,
-    Footer
+    Footer,
+    WeatherWidget,
+    CloudBackground
   },
   data() {
     return {

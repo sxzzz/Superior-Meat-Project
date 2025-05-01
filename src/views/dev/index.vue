@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import {ref, onMounted, watch, computed, nextTick, onBeforeUnmount} from 'vue';
+import {ref, computed} from 'vue';
 import { useRoute } from 'vue-router';
 
 

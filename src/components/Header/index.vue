@@ -13,7 +13,7 @@
                     <div>
                         <strong class="font-semibold">Vuejs, Tailwind, Pinia, Router, Andy and Luna</strong>
                     </div>
-                    <div class="">
+                    <div v-if="false" class="">
                         <span class="inline-block lg:ms-2 xl:ms-20 inline h-0.5 w-0.5 fill-current text-xs font-semibold" aria-hidden="true">Update: Music player under dev</span>
                     </div>
                       <!-- Dark Mode -->
@@ -73,9 +73,6 @@
                         </div>
                       </button>
 
-                      <!--music-->
-<!--                      <i v-if="false" class="bi bi-cassette text-2xl ms-6"  @click="toggleMusic"><i v-if="isPlaying" class="bi bi-play-fill"></i><i v-if="!isPlaying" class="bi bi-stop-fill"></i></i>-->
-
                     </div>
 
                 </div>
@@ -83,9 +80,6 @@
             <div class="flex flex-1 justify-end">
                 <button type="button" class="-m-3 p-3 focus-visible:outline-offset-[-4px]">
                     <span class="sr-only">Dismiss</span>
-<!--                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">-->
-<!--                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />-->
-<!--                    </svg>-->
                 </button>
             </div>
         </div>
@@ -95,14 +89,9 @@
       <div class="-mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
         <div class="flex items-end">
           <img class="h-24 w-24 rounded-full ring-4 ring-fuchsia-300 dark:ring-pink-400 sm:h-40 sm:w-40" src="https://d1nuow4z6t9ani.cloudfront.net/logo/lunaLogo1.jpeg" alt="Luna logo" />
-<!--          <span class="inline-flex items-center rounded-md bg-pink-50 dark:bg-pink-200 px-2 py-1 me-2 font-medium text-pink-400 ring-1 ring-inset ring-pink-400/20">Luna</span>-->
-<!--          <span class="inline-flex items-center rounded-md bg-red-50 dark:bg-red-300 px-2 py-1 me-2 font-medium text-red-700 ring-1 ring-inset ring-red-600/10">3 years</span>-->
-<!--          <span class="inline-flex items-center rounded-md bg-purple-50 dark:bg-purple-300 px-2 py-1 me-2 font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">Madness</span>-->
-<!--          <span class="hidden md:block inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-300 px-2 py-1 me-2 font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Prey-Driven</span>-->
-<!--          <span class="hidden md:block inline-flex items-center rounded-md bg-yellow-50 dark:bg-yellow-500 px-2 py-1 me-2 font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Independent</span>-->
           <span class="inline-flex items-center rounded-md bg-pink-200 dark:bg-pink-300 px-2 py-1 me-2 font-medium text-pink-800 ring-1 ring-inset ring-pink-400/20">Luna</span>
           <span class="inline-flex items-center rounded-md bg-red-200 dark:bg-red-300 px-2 py-1 me-2 font-medium text-red-800 ring-1 ring-inset ring-red-600/10">3 years</span>
-          <span class="inline-flex items-center rounded-md bg-purple-200 dark:bg-purple-300 px-2 py-1 me-2 font-medium text-purple-800 ring-1 ring-inset ring-purple-700/10">Madness</span>
+          <span class="inline-flex items-center rounded-md bg-purple-200 dark:bg-purple-300 px-2 py-1 me-2 font-medium text-purple-800 ring-1 ring-inset ring-purple-700/10">Zippy</span>
           <span class="hidden md:inline-flex items-center rounded-md bg-blue-200 dark:bg-blue-300 px-2 py-1 me-2 font-medium text-blue-800 ring-1 ring-inset ring-blue-700/10">Prey-Driven</span>
           <span class="hidden md:inline-flex items-center rounded-md bg-yellow-200 dark:bg-yellow-400 px-2 py-1 me-2 font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Independent</span>
         </div>
@@ -114,7 +103,7 @@
 
 <script>
 
-import { useThemeStore } from '/src/store/themeStore.js';
+import { useThemeStore } from '@/store/themeStore.js';
 
 export default {
 
@@ -134,8 +123,6 @@ export default {
   },
   methods:{
     toggleButton() {
-      // this.enabled = !this.enabled;
-      // document.documentElement.classList.toggle('dark');
       this.themeStore.toggleDarkMode()
     },
   },

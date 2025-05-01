@@ -1,5 +1,7 @@
 <template>
-    <div class="bg-white dark:bg-black">
+    <div class="bg-white dark:bg-black relative">
+        <!--  weather-->
+<!--        <WeatherWidget class="fixed right-0 top-[15rem] z-40 hidden lg:block bg-gradient-to-r from-blue-500 to-blue-600 inline-block" ></WeatherWidget>-->
 
         <div v-if="false" class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6">
             <h1 class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text ">Embrace the Journey: Unveiling Life's Tapestry<p class="mt-2">拥抱旅程：揭开生命的织锦</p></h1>
@@ -41,35 +43,10 @@
                 </div>
               </div>
             </div>
-            <div v-if="false" class="max-lg:mt-16 lg:col-span-1">
-              <p class="text-base/7 font-semibold text-gray-500">Breed Traits & Characteristics</p>
-              <hr class="mt-6 border-t border-gray-200" />
-              <dl class="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
-                <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-                  <dt class="text-sm/6 text-gray-600">Breed</dt>
-                  <dd class="order-first text-4xl font-semibold tracking-tight"><span>Foxhound</span></dd>
-                </div>
-                <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-                  <dt class="text-sm/6 text-gray-600">Coat type</dt>
-                  <dd class="order-first text-4xl font-semibold tracking-tight"><span>Smooth</span></dd>
-                </div>
-                <div class="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4">
-                  <dt class="text-sm/6 text-gray-600">Energy level</dt>
-                  <dd class="order-first text-4xl font-semibold tracking-tight"><span>Couch Potato</span></dd>
-                </div>
-                <div class="flex flex-col gap-y-2">
-                  <dt class="text-sm/6 text-gray-600">Good with children</dt>
-                  <dd class="order-first text-4xl font-semibold tracking-tight"><span>Highly</span></dd>
-                </div>
-              </dl>
-            </div>
           </section>
         </div>
       </div>
 
-      <div v-if="false" class="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 class="text font-bold tracking-tight my-6 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Update: Music player under navigation dev is ready</h2>
-      </div>
 
       <!--background with image-->
       <div class="bg-teal-300 dark:bg-teal-700 py-6 text-white   ">
@@ -80,7 +57,7 @@
             <div class="absolute -bottom-8 -left-96 -z-10 transform-gpu blur-3xl sm:-bottom-64 sm:-left-40 lg:-bottom-32 lg:left-8 xl:-left-10" aria-hidden="true">
               <div class="aspect-[1266/975] w-[79.125rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
             </div>
-            <div v-show="true" class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
               <h2 class="text-base/8 font-semibold text-red-400">Breed Traits & Characteristics</h2>
               <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-violet-600 sm:text-5xl">Independent / Easy-going Sweet-tempered</p>
               <p class="mt-10  text-xl text-fuchsia-600">American Foxhounds are good-natured, low-maintenance hounds who get on well with kids, dogs, even cats, but come with special considerations for prospective owners. </p>
@@ -97,7 +74,7 @@
       </div>
         <!--dogCoder-->
         <div class="">
-        <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-12 sm:px-6 sm:py-20 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-12 sm:px-6 sm:py-20 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div class="">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Dogcoder</h2>
               <p class=" dark:text-white mt-4 text-gray-500">In a quiet room, a lonely programmer named Andy lived with his loyal foxhound, Luna. Together, they faced the world—one through lines of code, the other through sharp senses. Their bond was an unspoken promise, forged in solitude and trust.
@@ -131,7 +108,7 @@
 
           </div>
         </div>
-      </div>
+        </div>
 
         <div class="bg-cyan-500 dark:bg-cyan-900 py-6 text-white">
             <div class="mx-auto max-w-7xl px-6 lg:px-8 ">
@@ -298,12 +275,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../../index.css';
 import  { Autoplay, Pagination,Navigation } from 'swiper';
-import { usePostStore } from '/src/store/postStore.js'
-
+import {useWeatherStore}  from '@/store/weather.js'
+import {usePostStore}  from '@/store/postStore.js'
+import WeatherWidget from '@/components/weather/index.vue';
 export default {
     components: {
         Swiper,
         SwiperSlide,
+        WeatherWidget
     },
     setup() {
         const progressCircle = ref(null);
@@ -392,7 +371,7 @@ export default {
             toggleShowMore,
             showMore,
             features,
-            stats
+            stats,
           }
         },
     name:'Hero',

@@ -1,18 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import ArtGallery from '/src/views/gallery/index.vue'
-import Hero from '/src/views/hero/index.vue'
-import NewsDetail from '/src/views/newsDetail/index.vue'
-import Adventure from '/src/views/adventure/index.vue'
-import Friends from '/src/views/friends/index.vue'
-import Breed from '/src/views/breed/index.vue'
-import Foxhound from '/src/views/foxhound/index.vue'
-import Beagle from '/src/views/beagle/index.vue'
-import Story from '/src/views/story/index.vue'
-import Post from '/src/views/post/index.vue'
-import Dev from '/src/views/dev/index.vue'
-import Music from '/src/views/music/index.vue'
-import Plan from '/src/views/devplan/index.vue'
-import Layout from '/src/views/layout/index.vue'
+import ArtGallery from '@/views/gallery/index.vue'
+import Hero from '@/views/hero/index.vue'
+import NewsDetail from '@/views/newsDetail/index.vue'
+import Adventure from '@/views/adventure/index.vue'
+import Pawprint from '@/views/pawprint/index.vue'
+import Breed from '@/views/breed/index.vue'
+import Foxhound from '@/views/foxhound/index.vue'
+import Beagle from '@/views/beagle/index.vue'
+import Story from '@/views/story/index.vue'
+import Post from '@/views/post/index.vue'
+import Dev from '@/views/dev/index.vue'
+import Music from '@/views/music/index.vue'
+import Plan from '@/views/devplan/index.vue'
+import Layout from '@/views/layout/index.vue'
+import Dogparks from '@/views/dogParks/index.vue'
 
 const routes = [
     {
@@ -46,9 +47,9 @@ const routes = [
         component:Adventure,
     },
     {
-        path:'/friends',
-        name:'Friends',
-        component:Friends,
+        path:'/pawprint',
+        name:'Pawprint',
+        component:Pawprint,
     },
     {
         path:'/breed',
