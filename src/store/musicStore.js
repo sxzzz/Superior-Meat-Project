@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
-export const useMusicStore = defineStore('music', () => {
+export const useMusicStore = defineStore('brand', () => {
     const musicList = ref([
         {
             id:'1',

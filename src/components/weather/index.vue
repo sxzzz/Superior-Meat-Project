@@ -26,6 +26,7 @@
         <div v-else-if="currentCondition">
           <div class="flex items-center justify-between mb-2 md:mb-4">
             <div>
+              <p class="text-2xl text-red-500">可以是Promotions的内容</p>
               <div class="text-lg font-bold">{{locationName}}</div>
               <div class=" md:mt-2 flex items-center">
                 <span>{{ currentCondition.weatherDesc[0].value }}</span>
@@ -63,7 +64,7 @@
             </p>
           </div>
 
-          <div class="mt-2 md:mt-6 p-2 md:p-6  bg-blue-50/20 dark:bg-blue-700/20 rounded-xl text-white">
+          <div v-if="false" class="mt-2 md:mt-6 p-2 md:p-6  bg-blue-50/20 dark:bg-blue-700/20 rounded-xl text-white">
             <div class="font-semibold mb-2 flex items-center">
               {{ isChineseCity(locationName) ? '遛狗tips' : 'Dog walk advice' }}
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ms-2 h-6 w-6">
@@ -263,7 +264,7 @@ const walkAdvice = computed(() => {
   // 天气良好时建议
   return isChinese
       ? '吃了吗您？今儿天儿不错，早晚都适合带着狗狗散步！'
-      : 'Good weather, both morning and evening are great for walking with your furry pawprint!'
+      : 'Good weather, both morning and evening are great for walking with your furry location!'
 })
 
 const show = ref();

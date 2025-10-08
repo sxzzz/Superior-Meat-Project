@@ -62,17 +62,11 @@ const descriptionLines = computed(() => featuredPost.description.trim().split('\
 const featuredPost =
     {
   id: 1,
-  title: 'Vue.js The Progressive\n' +
-      'JavaScript Framework',
+  title: 'Luna',
   href: '#',
   description:
-      '响应式数据绑定 (Reactive Data Binding)\n' +
-      '组件化开发 (Component-Based Architecture)\n' +
-      '指令系统 (Directive System)\n' +
-      '虚拟 DOM (Virtual DOM)\n' +
-      '生命周期钩子 (Lifecycle Hooks)\n' +
-      '双向数据绑定 (Two-Way Data Binding)...\n',
-  imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/b14.jpeg',
+      '',
+  imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/b15.jpg',
 
   date: 'Apr 01, 2025',
   datetime: '2025-04-01',
@@ -86,7 +80,7 @@ const featuredPost =
 
 
 const postStore = usePostStore()
-const posts = computed(() => postStore.posts.slice(1))
+const posts = computed(() => postStore.posts)
 </script>
 
 <style>

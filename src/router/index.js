@@ -1,34 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import ArtGallery from '@/views/gallery/index.vue'
-import Hero from '@/views/hero/index.vue'
+import Products from '@/views/products/index.vue'
+import Home from '@/views/home/index.vue'
 import NewsDetail from '@/views/newsDetail/index.vue'
-import Adventure from '@/views/adventure/index.vue'
-import Pawprint from '@/views/pawprint/index.vue'
-import Breed from '@/views/breed/index.vue'
-import Foxhound from '@/views/foxhound/index.vue'
-import Beagle from '@/views/beagle/index.vue'
+import About from '@/views/about/index.vue'
+import Store from '@/views/location/index.vue'
+import Contact from '@/views/contact/index.vue'
 import Story from '@/views/story/index.vue'
 import Post from '@/views/post/index.vue'
-import Dev from '@/views/dev/index.vue'
-import Music from '@/views/music/index.vue'
-import Plan from '@/views/devplan/index.vue'
+import Brand from '@/views/brand/index.vue'
 import Layout from '@/views/layout/index.vue'
-import Dogparks from '@/views/dogParks/index.vue'
 
 const routes = [
     {
         path: '/',
-        redirect: '/hero'
+        redirect: '/home'
     },
     {
-        path:'/hero',
-        name:'hero',
-        component:Hero,
+        path:'/home',
+        name:'home',
+        component:Home,
     },
     {
-        path:'/music',
-        name:'Music',
-        component:Music,
+        path:'/brand',
+        name:'Brand',
+        component:Brand,
     },
     {
         path:'/newsDetail/:id',
@@ -37,34 +32,24 @@ const routes = [
         props:true
     },
     {
-        path:'/gallery',
-        name:'Gallery',
-        component:ArtGallery,
+        path:'/products',
+        name:'Products',
+        component:Products,
     },
     {
-        path:'/adventure',
-        name:'Adventure',
-        component:Adventure,
+        path:'/about',
+        name:'About',
+        component:About,
     },
     {
-        path:'/pawprint',
-        name:'Pawprint',
-        component:Pawprint,
+        path:'/store',
+        name:'Store',
+        component:Store,
     },
     {
-        path:'/breed',
-        name:'Breed',
-        component:Breed,
-    },
-    {
-        path:'/foxhound',
-        name:'Foxhound',
-        component:Foxhound,
-    },
-    {
-        path:'/beagle',
-        name:'Beagle',
-        component:Beagle,
+        path:'/contact',
+        name:'Contact',
+        component:Contact,
     },
     {
         path:'/story',
@@ -76,29 +61,6 @@ const routes = [
         name:'Post',
         component:Post,
     },
-    {
-        path:'/dev',
-        name:'Dev',
-        component:Dev,
-        children: [
-            {
-                path: '', // 访问 /dev 时匹配
-                name: 'DevRedirect',
-                redirect: '/dev/plan' // 重定向到 /dev/music
-            },
-            {
-                path: 'plan',
-                name: 'Plan',
-                component: Plan
-            },
-            {
-                path: 'layout',
-                name: 'Layout',
-                component: Layout
-            },
-
-        ]
-    }
 ]
 const router = createRouter({
     history:createWebHistory(),

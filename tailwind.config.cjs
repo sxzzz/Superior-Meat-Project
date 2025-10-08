@@ -14,6 +14,12 @@ module.exports = {
       },
       fontFamily: {
         sans: ["SF Pro", "sans-serif"],
+        playfair: ['"Playfair Display"', 'serif'],
+        cormorant: ['"Cormorant Garamond"', 'serif'],
+        merriweather: ['Merriweather', 'serif'],
+        lora: ['Lora', 'serif'],
+        cinzel: ['Cinzel', 'serif'],
+        anton: ['anton', 'sans-serif'],
       },
       colors: {
         primary: "var(--color-primary)",

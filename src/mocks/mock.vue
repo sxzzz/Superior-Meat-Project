@@ -140,7 +140,7 @@
 <script  setup>
 import { ref, onMounted,watch,computed,nextTick,onBeforeUnmount} from 'vue'
 
-// music player
+// brand player
 const audio = ref(null);
 const progressBar = ref(null);
 const isPlaying = ref(false);
@@ -705,25 +705,25 @@ function skipBackward(seconds) {
 
 const musicList = ref([
   {
-    cover: '/assets/images/music/runaway.jpg',
+    cover: '/assets/images/brand/runaway.jpg',
     artist: 'Dream Shore & CJ Burnett',
     title: 'Dream Shore',
     song: 'Runaway',
-    src: '/assets/music/Runaway.mp3',
+    src: '/assets/brand/Runaway.mp3',
   },
   {
-    cover: '/assets/images/music/love%20on%20a%20real%20train.jpg',
+    cover: '/assets/images/brand/love%20on%20a%20real%20train.jpg',
     artist: 'Tangerine Dream',
     title: 'Dream Sequence',
     song: 'Love On A Real Train',
-    src: '/assets/music/Love On A Real Train.mp3',
+    src: '/assets/brand/Love On A Real Train.mp3',
   },
   {
-    cover: '/assets/images/music/mirror.jpg',
+    cover: '/assets/images/brand/mirror.jpg',
     artist: 'Whitelines',
     title: 'MIRAJ',
     song: 'Mirror',
-    src: '/assets/music/mirror.mp3',
+    src: '/assets/brand/mirror.mp3',
   }
 ])
 

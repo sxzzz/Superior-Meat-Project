@@ -5,19 +5,6 @@ export const usePostStore = defineStore('postStore', {
     state: () => ({
         posts: [
             {
-                id: 14,
-                title: 'Vue',
-                description:
-                    'Vue.js (commonly referred to as Vue; pronounced "view") is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You and is maintained by him and the rest of the active core team members.',
-                imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/b14.jpeg',
-                date: 'Apr 01, 2025',
-                datetime: '2025-04-01',
-                author: {
-                    name: 'Andy',
-                    imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/logo/andyAvator.png',
-                },
-            },
-            {
                 id: 10,
                 title: 'Dark Mode',
                 description:

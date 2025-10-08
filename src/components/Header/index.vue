@@ -1,7 +1,8 @@
 <template>
   <div class="dark:bg-black">
     <div>
-        <div class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 dark:bg-black px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+        <!-- 条幅banner -->
+        <div v-if="false" class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 dark:bg-black px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
             <div class="absolute left-[max(-7rem,calc(52%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
                 <div class="aspect-[577/310] w-[56rem] bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 " style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)" />
             </div>
@@ -11,7 +12,7 @@
             <div class="gap-x-4 gap-y-2">
                 <div class="text-sm leading-6 text-white flex flex-col items-start sm:items-center lg:flex-row dark:text-gray-300">
                     <div>
-                        <strong class="font-semibold">Vuejs, Tailwind, Pinia, Router, Andy and Luna</strong>
+                        <strong class=" font-lora font-semibold ">Superior Meat — Crafted for True Wagyu Lovers.</strong>
                     </div>
                     <div v-if="false" class="">
                         <span class="inline-block lg:ms-2 xl:ms-20 inline h-0.5 w-0.5 fill-current text-xs font-semibold" aria-hidden="true">Update: Music player under dev</span>
@@ -83,17 +84,17 @@
                 </button>
             </div>
         </div>
-        <img id="logo" class="h-48 w-full object-cover lg:h-64" src="https://d1nuow4z6t9ani.cloudfront.net/logo/banner.jpg" alt="" />
+        <!-- banner 图 -->
+        <img id="logo" class="h-52 w-full object-cover object-[center_top_20%] lg:h-[500px]" src="/assets/images/banner/banner01.png" alt="" />
     </div>
-    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div v-if="true" class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="-mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
-        <div class="flex items-end">
-          <img class="h-24 w-24 rounded-full ring-4 ring-fuchsia-300 dark:ring-pink-400 sm:h-40 sm:w-40" src="https://d1nuow4z6t9ani.cloudfront.net/logo/lunaLogo1.jpeg" alt="Luna logo" />
-          <span class="inline-flex items-center rounded-md bg-pink-200 dark:bg-pink-300 px-2 py-1 me-2 font-medium text-pink-800 ring-1 ring-inset ring-pink-400/20">Luna</span>
-          <span class="inline-flex items-center rounded-md bg-red-200 dark:bg-red-300 px-2 py-1 me-2 font-medium text-red-800 ring-1 ring-inset ring-red-600/10">3 years</span>
-          <span class="inline-flex items-center rounded-md bg-purple-200 dark:bg-purple-300 px-2 py-1 me-2 font-medium text-purple-800 ring-1 ring-inset ring-purple-700/10">Zippy</span>
-          <span class="hidden md:inline-flex items-center rounded-md bg-blue-200 dark:bg-blue-300 px-2 py-1 me-2 font-medium text-blue-800 ring-1 ring-inset ring-blue-700/10">Prey-Driven</span>
-          <span class="hidden md:inline-flex items-center rounded-md bg-yellow-200 dark:bg-yellow-400 px-2 py-1 me-2 font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Independent</span>
+        <div class="flex items-center space-x-4 relative
+            -translate-x-4  sm:-translate-x-8 md:-translate-x-16 lg:-translate-x-32">
+          <img class=" h-24 w-24 lg:h-52 lg:w-52 sm rounded-full  sm:h-24 sm:w-24 -mt-12 sm:-mt-16 lg:-mt-18 left-12 lg:-translate-x-6  " src="/assets/images/logo/Logo.jpg" alt="SM logo" />
+          <Topnav v-if="true" class="mt-16"></Topnav>
+          <span v-if="false" class="inline-flex items-center rounded-md bg-pink-200 dark:bg-pink-300 px-2 py-1 me-2 font-medium text-pink-800 ring-1 ring-inset ring-pink-400/20">Solgan1</span>
+          <span v-if="false" class="inline-flex items-center rounded-md bg-red-200 dark:bg-red-300 px-2 py-1 me-2 font-medium text-red-800 ring-1 ring-inset ring-red-600/10">Solgan2</span>
         </div>
 
       </div>
@@ -104,8 +105,11 @@
 <script>
 
 import { useThemeStore } from '@/store/themeStore.js';
-
+import Topnav from "../Topnav/index.vue";
 export default {
+  components: {
+    Topnav,
+  },
 
   data() {
     return {

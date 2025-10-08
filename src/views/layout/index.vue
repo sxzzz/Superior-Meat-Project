@@ -116,6 +116,8 @@
         </div>
       </div>
     </section>
+
+
     <divider></divider>
     <!--app section-->
     <section class="bg-teal-300 dark:bg-teal-700 py-12 mt-8 ">
