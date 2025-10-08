@@ -3,54 +3,11 @@
 
         <div v-if="true" class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6">
             <h4 class="font-lora text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-gray-800 inline-block text-transparent bg-clip-text ">Superior Meat is Melbourne’s trusted partner for premium Australian and Japanese Wagyu, bridging the gap between world-class producers and discerning culinary professionals.</h4>
-            <p v-if="false" class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Specialising in ethically sourced, marbling-rich Wagyu, we serve diverse clients—from multi-hats restaurants to home gourmets—through tailored supply solutions.</p>
-            <p v-if="false" class="text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Regulated by PrimeSafe and HACCP certified by DQS, we ensure traceability, consistency, and unmatched quality. We specialise in premium Wagyu solutions for:
-            </p>
         </div>
-
-      <div v-if="false" class="overflow-hidden bg-white py-2 md:py-8 sm:py-6 dark:bg-black">
-        <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-          <div class="max-w-4xl">
-            <h1 class="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text ">Embrace the Journey: Unveiling Life's Tapestry
-              <p class="mt-2">拥抱旅程：揭开生命的织锦</p>
-            </h1>
-          </div>
-
-          <section class="mt-2 md:mt-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16 ">
-            <div class="lg:pr-8">
-              <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">Luna, a foxhound hailing from the beautiful city of Hobart in Tasmania, possessed a deep love for the simple pleasures of life—indulging in delicious meals, surrendering to peaceful slumber, embracing cozy snuggles, and frolicking in playful escapades. Amidst her siblings, who were all beagles, Luna stood out as a unique soul, a mesmerizing blend of beagle and foxhound ancestry.</p>
-              <p class="mt-6 text-lg leading-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% inline-block text-transparent bg-clip-text ">路娜 (罗马神话中的月亮女神)，一只诞生于塔斯马尼亚州霍巴特美城的猎狐犬，胸怀对生活的简约欢愉，热爱着美食的醉人魅力、恬静的甜蜜梦乡，与温馨的亲昵相依，还有在欢欣的游戏中尽情踊跃。在她的兄弟姐妹中，众犬皆为比格，而Luna独树一帜，融合了比格犬与猎狐犬的绝妙交织，形成其迷人之灵魂。</p>
-
-            </div>
-            <div class="pt-8 mb-4 lg:row-span-2 lg:-mr-16 xl:mr-auto">
-              <div class="grid grid-cols-2 gap-x-2 gap-y-4 sm:grid-cols-3 lg: lg:grid-cols-2 lg:gap-4 xl:gap-8">
-                <div class=" relative group aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
-                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero10.jpg" class="block size-full" />
-                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero11d.jpg" class="block size-full object-cover absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100 " />
-                </div>
-                <div class="relative group aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
-                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero11.jpg" class="block size-full object-cover" />
-                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero12d.jpg" class="block size-full object-cover absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100 " />
-                </div>
-                <div class="relative group aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
-                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero12.jpg" class="block size-full object-cover" />
-                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero13d.jpg" class="block size-full object-cover absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100 " />
-                </div>
-                <div class="relative group aspect-[4/3] w-[9rem] sm:w-[12rem] lg:w-[14rem] overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10  lg:-mt-40">
-                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero13.jpg" class="block size-full object-cover  " />
-                  <img alt="" src="https://d1nuow4z6t9ani.cloudfront.net/logo/lunaLogo1.jpeg" class="block size-full object-cover absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100 " />
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
 
       <!-- Hero -->
       <div v-if="true" class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6">
         <div class="flex flex-col border-b border-gray-200 lg:border-0">
-
-
           <div class="relative">
             <div aria-hidden="true" class="absolute hidden h-full w-1/2 bg-black lg:block" />
             <div class="relative bg-gray-100 lg:bg-transparent">
@@ -66,7 +23,6 @@
                 </div>
               </div>
             </div>
-
            <!--双图片切换-->
             <div id="baContainer" class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 relative overflow-hidden">
               <!-- After 图 (底层) -->
@@ -106,9 +62,6 @@
           </div>
         </div>
       </div>
-
-
-
 
       <!--html布局的拖拽暂时不用-->
       <div v-if="false" id="baContainer1" class="relative w-[1220px] mx-auto h-[600px] overflow-hidden mt-6 border-cyan-500 border rounded-2xl">
@@ -177,11 +130,7 @@
         </div>
       </div>
 
-
-
-
-
-<!--      封装的组件可用-->
+      <!--封装的组件可用-->
       <div v-if="false" class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6 ">
         <HtmlCompareSlider :width="1220" :height="600">
           <!-- before 部分（左边） -->
@@ -238,12 +187,7 @@
         </HtmlCompareSlider>
       </div>
 
-
-
-
-
-
-      <!--dogCoder-->
+      <!--合作伙伴-->
       <div v-if="true" class="bg-cyan-500 mt-8">
         <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-12 sm:px-6 sm:py-20 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div class="">
@@ -279,30 +223,6 @@
           </div>
 
         </div>
-      </div>
-      <!--background with image 暂时不用-->
-      <div v-if="false" class="bg-cyan-400 dark:bg-teal-700 py-6 text-white   ">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 ">
-        <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 rounded-2xl">
-          <img src="/assets/images/Wagyu Yakiniku - varity pack.jpeg" alt="" class=" inset-0 -z-10 size-full object-fill " />
-          <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="absolute -bottom-8 -left-96 -z-10 transform-gpu blur-3xl sm:-bottom-64 sm:-left-40 lg:-bottom-32 lg:left-8 xl:-left-10" aria-hidden="true">
-              <div class="aspect-[1266/975] w-[79.125rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
-            </div>
-            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-
-              <p class="mt-6 text-pretty text-4xl font-semibold tracking-tight text-violet-600 sm:text-5xl">产品包装设计</p>
-              <p class="mt-10  text-xl text-fuchsia-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-              <div v-for="stat in stats" :key="stat.id" class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
-                <dt class="bg-gradient-to-r from-purple-500 via-orange-500 to-pink-500 inline-block text-transparent bg-clip-text">{{ stat.name }}</dt>
-                <dd class="order-first text-2xl font-semibold tracking-tight bg-gradient-to-r from-purple-500 via-orange-500 to-pink-500 inline-block text-transparent bg-clip-text">{{ stat.value }}</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </div>
       </div>
 
       <!--帖子 暂时不用-->
@@ -412,62 +332,6 @@
 
             </div>
         </div>
-      <!--news暂时不用-->
-      <div v-if="false" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="font-anton text-4xl font-normal tracking-normal my-6">Company News</h2>
-            <section id="smnews">
-                <div id="nikuglen" class="flex flex-row mb-4">
-                    <div class="basis-3/4">
-                        <img class="h-48 lg:h-56 w-full object-cover rounded-l-2xl" src="/assets/images/01.jpg" alt="">
-                    </div>
-                    <div class="basis-1/4 rounded-r-2xl bg-violet-400 dark:bg-violet-900 flex flex-col justify-between px-3 text-white dark:text-gray-400">
-                        <div class="mt-5">
-                            <h2 class="text-sm font-semibold leading-8">01/10/2025</h2>
-                            <p class="mt-2 text-base lg:text-2xl xl:text-3xl font-bold tracking-tight">NIKUSHIKI GLEN</p>
-                        </div>
-                        <div class="mb-3">
-                            <router-link :to="`/newsdetail/180123`"><button type="button" class="rounded bg-pink-600 px-2 py-1 text-xs font-semibold text-white dark:text-gray-300 shadow-sm
-                            hover:bg-rose-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">See More</button>
-                            </router-link>
-                        </div>
-
-                    </div>
-                </div>
-                <hr class="border-rose-300 dark:border-orange-500">
-                <div id="nikucbd" class="flex flex-row mt-4 mb-4">
-                    <div class="basis-1/4 rounded-l-2xl bg-violet-400 dark:bg-violet-900 flex flex-col justify-between px-3 text-white dark:text-gray-400">
-                        <div class="mt-5">
-                            <h2 class="text-sm font-semibold leading-8">02/05/2023</h2>
-                            <p class="mt-2 text-base lg:text-2xl xl:text-3xl font-bold tracking-tight">NIKUSHIKI GLEN</p>
-                        </div>
-                        <div class="mb-3">
-                            <router-link :to="`/newsdetail/020523`"><button type="button" class="rounded bg-pink-600 px-2 py-1 text-xs font-semibold text-white dark:text-gray-300 shadow-sm
-                            hover:bg-rose-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">See More</button></router-link>
-                        </div>
-                    </div>
-                    <div class="basis-3/4">
-                        <img class="h-48 lg:h-56 w-full object-cover rounded-r-2xl" src="/assets/images/nikucbd.png" alt="">
-                    </div>
-                </div>
-                <hr class="border-rose-300 dark:border-orange-500">
-                <div id="shertrip" class="flex flex-row mt-4 mb-4">
-                    <div class="basis-3/4">
-                        <img class="h-48 lg:h-56 w-full object-cover rounded-l-2xl" src="/assets/images/02.jpg" alt="">
-                    </div>
-                    <div class="basis-1/4 rounded-r-2xl bg-violet-400 dark:bg-violet-900 flex flex-col justify-between px-3 text-white dark:text-gray-400">
-                        <div class="mt-5">
-                            <h2 class="text-sm font-semibold leading-8">14/05/2023</h2>
-                            <p class="mt-2 text-base lg:text-2xl xl:text-3xl font-bold tracking-tight">PARDOO TRIP</p>
-                        </div>
-                        <div class="mb-3">
-                            <router-link :to="`/newsdetail/140523`"><button type="button" class="rounded bg-pink-600 px-2 py-1 text-xs font-semibold text-white dark:text-gray-300 shadow-sm
-                            hover:bg-rose-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">See More</button></router-link>
-                        </div>
-                    </div>
-                </div>
-                <hr class="border-rose-300 dark:border-orange-500">
-            </section>
-        </div>
       <!--company news-->
       <div v-if="true" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 class="font-anton text-4xl font-normal tracking-normal my-6">Company News</h2>
@@ -532,7 +396,7 @@
           </template>
         </section>
       </div>
-
+      <!--why -->
       <section class="flex flex-col md:my-14 w-full mx-auto max-w-7xl px-5">
         <p
             class="font-bold text-2xl md:text-4xl text-center"><span>Why</span> <span
@@ -584,6 +448,7 @@
             <p class="font-medium text-lg mt-4 text-center dark:text-white">xxxxxx</p></div>
         </div>
       </section>
+      <!--  review    -->
       <section class=" w-full mx-auto max-w-7xl px-5my-20 z-10">
         <div class="flex flex-col items-center ">
           <p class="text-2xl md:text-4xl text-[#171717] text-center mb-5 font-bold dark:text-white">Our
@@ -648,7 +513,6 @@
           </div>
         </div>
       </section>
-
     </div>
 </template>
 

@@ -7,7 +7,7 @@
 
       <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8 ">
         <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
-          <img src="/assets/images/9.png" alt="" class="object-cover object-center group-hover:opacity-75">
+          <img src="/assets/images/01.jpg" alt="" class="object-cover object-center group-hover:opacity-75">
           <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50"></div>
           <div class="flex items-end p-6">
             <div>

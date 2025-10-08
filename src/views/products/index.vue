@@ -473,13 +473,36 @@
             <!-- before -->
             <template #before>
               <div class="w-full h-full flex flex-col items-center justify-center px-8 py-12 space-y-6 bg-white text-gray-900">
-                <h1 class="text-4xl font-extrabold text-pink-600">{{ selectedYakinikuImage?.title }} - Before</h1>
-                <p class="text-lg max-w-xl text-center">{{ selectedYakinikuImage?.description }}</p>
-                <div class="bg-gray-100 border border-gray-300 rounded-xl shadow p-6 space-y-2 w-full max-w-2xl">
-                  <h2 class="text-xl font-bold text-gray-700">Details</h2>
-                  <ul class="list-disc list-inside text-sm text-gray-700">
-                    <li v-for="(detail, i) in selectedYakinikuImage?.details" :key="i">{{ detail.subtitle }}: {{ detail.text }}</li>
+<!--                <h1 class="text-4xl font-extrabold text-pink-600">{{ selectedYakinikuImage?.title }} - Before</h1>-->
+<!--                <p class="text-lg max-w-xl text-center">{{ selectedYakinikuImage?.description }}</p>-->
+<!--                <div class="bg-gray-100 border border-gray-300 rounded-xl shadow p-6 space-y-2 w-full max-w-2xl">-->
+<!--                  <h2 class="text-xl font-bold text-gray-700">Details</h2>-->
+<!--                  <ul class="list-disc list-inside text-sm text-gray-700">-->
+<!--                    <li v-for="(detail, i) in selectedYakinikuImage?.details" :key="i">{{ detail.subtitle }}: {{ detail.text }}</li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+
+                <h1 class="text-5xl font-extrabold text-pink-600">
+                  ☀️ {{ selectedYakinikuImage?.titleBefore }}  Gold Cut
+                </h1>
+                <p class="text-lg max-w-xl leading-relaxed text-center">
+                  {{ selectedYakinikuImage?.descriptionBefore }}
+                </p>
+
+                <div class="bg-gray-100 border border-gray-300 rounded-xl shadow p-6 space-y-3 max-w-2xl ">
+                  <h2 class="text-xl font-bold text-gray-700">🥩 Product Details</h2>
+                  <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                    <li
+                        v-for="(detail, i) in selectedYakinikuImage?.detailsBefore"
+                        :key="'before-'+i"
+                    >
+                      {{ detail.subtitle }}: {{ detail.text }}
+                    </li>
                   </ul>
+                </div>
+
+                <div class="mt-4 text-2xl font-bold text-red-600">
+                  💰 Price: {{ selectedYakinikuImage?.priceBefore || '$189 / kg' }}
                 </div>
               </div>
             </template>
@@ -487,13 +510,34 @@
             <!-- after -->
             <template #after>
               <div class="w-full h-full flex flex-col items-center justify-center px-8 py-12 space-y-6 bg-gray-900 text-gray-200">
-                <h1 class="text-4xl font-extrabold text-red-400">{{ selectedYakinikuImage?.title }} - After</h1>
-                <p class="text-lg max-w-xl text-center">{{ selectedYakinikuImage?.description }}</p>
-                <div class="bg-gray-800 rounded-xl shadow-lg p-6 space-y-2 w-full max-w-2xl">
-                  <h2 class="text-xl font-bold text-yellow-400">Highlights</h2>
-                  <ul class="list-disc list-inside text-sm text-gray-300">
-                    <li v-for="(detail, i) in selectedYakinikuImage?.details" :key="i">{{ detail.subtitle }}: {{ detail.text }}</li>
+<!--                <h1 class="text-4xl font-extrabold text-red-400">{{ selectedYakinikuImage?.title }} - After</h1>-->
+<!--                <p class="text-lg max-w-xl text-center">{{ selectedYakinikuImage?.description }}</p>-->
+<!--                <div class="bg-gray-800 rounded-xl shadow-lg p-6 space-y-2 w-full max-w-2xl">-->
+<!--                  <h2 class="text-xl font-bold text-yellow-400">Highlights</h2>-->
+<!--                  <ul class="list-disc list-inside text-sm text-gray-300">-->
+<!--                    <li v-for="(detail, i) in selectedYakinikuImage?.details" :key="i">{{ detail.subtitle }}: {{ detail.text }}</li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+                <h1 class="text-5xl font-extrabold text-red-400">
+                  🌙 {{ selectedYakinikuImage?.titleAfter }}  Platinum Cut
+                </h1>
+                <p class="text-lg max-w-xl leading-relaxed text-center">
+                  {{ selectedYakinikuImage?.descriptionAfter }}
+                </p>
+                <div class="bg-gray-800 rounded-xl shadow-lg p-6 space-y-3 max-w-2xl ">
+                  <h2 class="text-xl font-bold text-yellow-400">✨ Key Highlights</h2>
+                  <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
+                    <li
+                        v-for="(detail, i) in selectedYakinikuImage?.detailsAfter"
+                        :key="'after-'+i"
+                    >
+                      {{ detail.subtitle }}: {{ detail.text }}
+                    </li>
                   </ul>
+                </div>
+
+                <div class="mt-4 text-2xl font-bold text-green-400">
+                  💰 Price: {{ selectedYakinikuImage?.priceAfter || '$329 / kg' }}
                 </div>
               </div>
             </template>
@@ -596,58 +640,156 @@ const platters = ref([
   }
 ])
 
+// const yakiniku = ref([
+//   {
+//     id: 4,
+//     subtitle: 'Yakiniki',
+//     images: [
+//       {
+//         path: '/assets/images/products/yakiCrs.jpg',
+//         alt: '',
+//         title: 'Chuck R',
+//         description: 'Chuck R',
+//         preview: '/assets/images/products/yakiCrs.jpg',
+//         details: [
+//           { subtitle: 'cooking', text: 'xxxxx1' },
+//           { subtitle: 'service', text: 'xxxx2' },
+//         ]
+//       },
+//       {
+//         path: '/assets/images/products/yaReS.jpg',
+//         alt: '',
+//         title: 'Re',
+//         description: 'Premium Wagyu slices for a luxurious hotpot experience.',
+//         preview: '/assets/images/products/plaShabuPlatinumS.jpg',
+//         details: [
+//           { subtitle: 'Marbling Score', text: 'MB9+' },
+//           { subtitle: 'Texture', text: 'Melt-in-mouth tenderness' },
+//         ]
+//       },
+//       {
+//         path: '/assets/images/products/yaTtS.jpg',
+//         alt: '',
+//         title: 'Tri Tip',
+//         description: 'Ideal for grilling, rich in umami with a clean aftertaste.',
+//         preview: '/assets/images/products/plaYakiGoldS.jpeg',
+//         details: [
+//           { subtitle: 'Cooking', text: 'Yakiniku-style' },
+//           { subtitle: 'Serving', text: 'Fresh cut and chilled' },
+//         ]
+//       },
+//       {
+//         path: '/assets/images/products/yaSrs.jpg',
+//         alt: '',
+//         title: 'Sr',
+//         description: 'Top-grade wagyu with a buttery flavor and balanced fat ratio.',
+//         preview: '/assets/images/products/plaYakiPlatinumS.jpg',
+//         details: [
+//           { subtitle: 'Flavor', text: 'Buttery & delicate sweetness' },
+//           { subtitle: 'Recommended', text: 'Grill medium rare' },
+//         ]
+//       },
+//     ]
+//   }
+// ])
+
+
 const yakiniku = ref([
   {
     id: 4,
-    subtitle: 'Yakiniki',
+    subtitle: 'Yakiniku',
     images: [
       {
         path: '/assets/images/products/yakiCrs.jpg',
-        alt: '',
-        title: 'Chuck R',
-        description: 'Chuck R',
-        preview: '/assets/images/products/yakiCrs.jpg',
-        details: [
-          { subtitle: 'cooking', text: 'xxxxx1' },
-          { subtitle: 'service', text: 'xxxx2' },
-        ]
-      },
-      {
-        path: '/assets/images/products/yaReS.jpg',
-        alt: '',
-        title: 'Re',
-        description: 'Premium Wagyu slices for a luxurious hotpot experience.',
-        preview: '/assets/images/products/plaShabuPlatinumS.jpg',
-        details: [
+        titleBefore: 'Chuck Roll MB9+',
+        descriptionBefore: 'Australian Wagyu MB9+ is admired for its balance of flavor, tenderness, and marbling Perfect for grilling, yakiniku, or even hotpot, it’s a versatile choice for premium dining.',
+        detailsBefore: [
           { subtitle: 'Marbling Score', text: 'MB9+' },
-          { subtitle: 'Texture', text: 'Melt-in-mouth tenderness' },
-        ]
+          { subtitle: 'Texture', text: 'Silky, melt-in-mouth' },
+          { subtitle: 'Flavor', text: 'Umami-rich, delicate sweetness' },
+          { subtitle: 'Processing', text: 'Hand-cut, chilled transport' },
+        ],
+        titleAfter: 'Chuck Roll A5',
+        descriptionAfter: 'Known as the caviar of beef Wagyu A5 features an exquisite marbling that melts like butter. Raised in Japan under strict conditions, each cut offers a luxurious dining experience.',
+        detailsAfter: [
+          { subtitle: 'Marbling Score', text: 'A5+' },
+          { subtitle: 'Texture', text: 'Tender yet firm' },
+          { subtitle: 'Flavor', text: 'Rich, buttery finish' },
+          { subtitle: 'Processing', text: 'Fresh cut, vacuum packed' },
+        ],
+        priceBefore: '$189 / kg',
+        priceAfter: '$329 / kg',
       },
       {
-        path: '/assets/images/products/yaTtS.jpg',
-        alt: '',
-        title: 'Tri Tip',
-        description: 'Ideal for grilling, rich in umami with a clean aftertaste.',
-        preview: '/assets/images/products/plaYakiGoldS.jpeg',
-        details: [
-          { subtitle: 'Cooking', text: 'Yakiniku-style' },
-          { subtitle: 'Serving', text: 'Fresh cut and chilled' },
-        ]
+        path: '/assets/images/products/yakiCrs.jpg',
+        titleBefore: '1111111 MB9+',
+        descriptionBefore: 'Australian Wagyu MB9+ is admired for its balance of flavor, tenderness, and marbling Perfect for grilling, yakiniku, or even hotpot, it’s a versatile choice for premium dining.',
+        detailsBefore: [
+          { subtitle: 'Marbling Score', text: 'MB9+' },
+          { subtitle: 'Texture', text: 'Silky, melt-in-mouth' },
+          { subtitle: 'Flavor', text: 'Umami-rich, delicate sweetness' },
+          { subtitle: 'Processing', text: 'Hand-cut, chilled transport' },
+        ],
+        titleAfter: '222222 A5',
+        descriptionAfter: 'Known as the caviar of beef Wagyu A5 features an exquisite marbling that melts like butter. Raised in Japan under strict conditions, each cut offers a luxurious dining experience.',
+        detailsAfter: [
+          { subtitle: 'Marbling Score', text: 'A5+' },
+          { subtitle: 'Texture', text: 'Tender yet firm' },
+          { subtitle: 'Flavor', text: 'Rich, buttery finish' },
+          { subtitle: 'Processing', text: 'Fresh cut, vacuum packed' },
+        ],
+        priceBefore: '$111 / kg',
+        priceAfter: '$222 / kg',
       },
       {
-        path: '/assets/images/products/yaSrs.jpg',
-        alt: '',
-        title: 'Sr',
-        description: 'Top-grade wagyu with a buttery flavor and balanced fat ratio.',
-        preview: '/assets/images/products/plaYakiPlatinumS.jpg',
-        details: [
-          { subtitle: 'Flavor', text: 'Buttery & delicate sweetness' },
-          { subtitle: 'Recommended', text: 'Grill medium rare' },
-        ]
+        path: '/assets/images/products/yakiCrs.jpg',
+        titleBefore: '333333 MB9+',
+        descriptionBefore: 'Australian Wagyu MB9+ is admired for its balance of flavor, tenderness, and marbling Perfect for grilling, yakiniku, or even hotpot, it’s a versatile choice for premium dining.',
+        detailsBefore: [
+          { subtitle: 'Marbling Score', text: 'MB9+' },
+          { subtitle: 'Texture', text: 'Silky, melt-in-mouth' },
+          { subtitle: 'Flavor', text: 'Umami-rich, delicate sweetness' },
+          { subtitle: 'Processing', text: 'Hand-cut, chilled transport' },
+        ],
+        titleAfter: '44444 A5',
+        descriptionAfter: 'Known as the caviar of beef Wagyu A5 features an exquisite marbling that melts like butter. Raised in Japan under strict conditions, each cut offers a luxurious dining experience.',
+        detailsAfter: [
+          { subtitle: 'Marbling Score', text: 'A5+' },
+          { subtitle: 'Texture', text: 'Tender yet firm' },
+          { subtitle: 'Flavor', text: 'Rich, buttery finish' },
+          { subtitle: 'Processing', text: 'Fresh cut, vacuum packed' },
+        ],
+        priceBefore: '$333 / kg',
+        priceAfter: '$444/ kg',
       },
-    ]
-  }
+      {
+        path: '/assets/images/products/yakiCrs.jpg',
+        titleBefore: '55555Chuck Roll MB9+',
+        descriptionBefore: 'Australian Wagyu MB9+ is admired for its balance of flavor, tenderness, and marbling Perfect for grilling, yakiniku, or even hotpot, it’s a versatile choice for premium dining.',
+        detailsBefore: [
+          { subtitle: 'Marbling Score', text: 'MB9+' },
+          { subtitle: 'Texture', text: 'Silky, melt-in-mouth' },
+          { subtitle: 'Flavor', text: 'Umami-rich, delicate sweetness' },
+          { subtitle: 'Processing', text: 'Hand-cut, chilled transport' },
+        ],
+        titleAfter: '66666Chuck Roll A5',
+        descriptionAfter: 'Known as the caviar of beef Wagyu A5 features an exquisite marbling that melts like butter. Raised in Japan under strict conditions, each cut offers a luxurious dining experience.',
+        detailsAfter: [
+          { subtitle: 'Marbling Score', text: 'A5+' },
+          { subtitle: 'Texture', text: 'Tender yet firm' },
+          { subtitle: 'Flavor', text: 'Rich, buttery finish' },
+          { subtitle: 'Processing', text: 'Fresh cut, vacuum packed' },
+        ],
+        priceBefore: '$555/ kg',
+        priceAfter: '$666 / kg',
+      },
+      // ...更多图片
+    ],
+  },
 ])
+
+
+
 
 const shabu = ref([
   {
