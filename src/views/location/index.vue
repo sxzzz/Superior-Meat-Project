@@ -159,7 +159,7 @@
   markerMap.set(shop.name, marker)
 })
 
-  // 计算所有公园的坐标范围，并自动缩放地图 
+  // 计算所有公园的坐标范围，并自动缩放地图
   const allCoords = shops.value.map(p => p.coords)
   const bounds = L.latLngBounds(allCoords)
   map.fitBounds(bounds) // 🟡 自动适配视图范围
