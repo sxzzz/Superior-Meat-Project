@@ -11,9 +11,9 @@
             <img :src="featuredPost.imageUrl" alt="" class="rounded-2xl bg-gray-50 object-fill group-hover:opacity-75">
             <div class="mt-4 flex flex-col justify-between gap-6 sm:mt-8 sm:flex-row-reverse sm:gap-8 lg:mt-4 lg:flex-col">
 
-              <div class="flex border-b border-orange-500 mt-2">
-                <a :href="featuredPost.author.href" class="flex gap-x-2.5 text-sm/6 font-semibold text-gray-900 mb-6 dark:text-white">
-                  <img :src="featuredPost.author.imageUrl" alt="" class="size-6 h-8 w-8 flex-none rounded-full bg-gray-50" />
+              <div class="flex  border-b border-orange-500 mt-2">
+                <a :href="featuredPost.author.href" class="flex items-center gap-x-2.5 text-sm/6 font-semibold text-gray-900 mb-6 dark:text-white">
+                  <img :src="featuredPost.author.imageUrl" alt="" class="size-6 h-12 w-12 flex-none rounded-full bg-gray-50" />
                   {{ featuredPost.author.name }}
                 </a>
               </div>
@@ -57,27 +57,27 @@
 import { ref,computed,onMounted, onUnmounted} from 'vue';
 import { usePostStore } from '/src/store/postStore.js'
 
-// 将 description 拆分成数组
-const descriptionLines = computed(() => featuredPost.description.trim().split('\n'));
 const featuredPost =
     {
   id: 1,
-  title: 'Luna',
+  title: 'Superior Meat',
   href: '#',
   description:
       '',
-  imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/b15.jpg',
+  imageUrl:'/assets/images/logo/Logo.jpg',
 
   date: 'Apr 01, 2025',
   datetime: '2025-04-01',
   author: {
-    name: 'Andy',
+    name: 'Superior',
     href: '#',
     imageUrl:
-        'https://d1nuow4z6t9ani.cloudfront.net/logo/andyAvator.png',
+        '/assets/images/logo/Logo.jpg',
     }
   }
 
+// 将 description 拆分成数组
+const descriptionLines = computed(() => featuredPost.description.trim().split('\n'));
 
 const postStore = usePostStore()
 const posts = computed(() => postStore.posts)

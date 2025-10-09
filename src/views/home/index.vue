@@ -1,6 +1,19 @@
 <template>
     <div class="bg-white dark:bg-black relative">
 
+      <!-- Feedback 按钮（从下往上垂直排列）-->
+      <div v-if="showPopup" class="fixed right-0 bottom-1/4 z-40 hidden sm:block">
+        <button
+            class="bg-purple-700 text-white text-sm font-semibold px-4 py-2 rounded-t-xl shadow-md hover:bg-purple-800 transition origin-bottom-right tracking-wider"
+            style="transform: rotate(-90deg); transform-origin: bottom right;"
+            @click="togglePanel"
+        >
+          SPECIAL
+        </button>
+      </div>
+      <!-- 右侧滑出 Panel -->
+      <Popup v-if="showPopup" :visible="showPanel" @close="showPanel = false"/>
+
         <div v-if="true" class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6">
             <h4 class="font-lora text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-gray-800 inline-block text-transparent bg-clip-text ">Superior Meat is Melbourne’s trusted partner for premium Australian and Japanese Wagyu, bridging the gap between world-class producers and discerning culinary professionals.</h4>
         </div>
@@ -9,29 +22,34 @@
       <div v-if="true" class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6">
         <div class="flex flex-col border-b border-gray-200 lg:border-0">
           <div class="relative">
-            <div aria-hidden="true" class="absolute hidden h-full w-1/2 bg-black lg:block" />
-            <div class="relative bg-gray-100 lg:bg-transparent">
-              <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
-                <div class="mx-auto max-w-2xl py-24">
+            <div aria-hidden="true" class="absolute hidden h-full w-1/2 bg-gray-900 lg:block" />
+            <div class="relative bg-gray-100 lg:bg-transparent py-5">
+              <!-- 左侧文字 -->
+              <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:grid lg:grid-cols-3 lg:px-8">
+                <div class="mx-auto max-w-2xl py-24 lg:col-span-1">
                   <div class="lg:pr-16">
-                    <h1 class=" font-lora text-4xl font-bold tracking-tight sm:text-6xl text-white">Elevate Culinary Craft Delight Every Bite</h1>
-                    <p class=" font-lora mt-4 text-lg leading-8 text-white">We are A Premium Meat Wholesaler in Australia</p>
-                    <div class="mt-6">
-                      <a href="#" class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 font-medium text-white hover:bg-indigo-700">See More</a>
-                    </div>
+                    <h1 class="font-anton text-3xl sm:text-4xl lg:text-3xl font-normal tracking-wide text-white uppercase">
+                      Elevate Culinary Craft
+                    </h1>
+                    <h2 class="font-anton text-2xl sm:text-3xl lg:text-3xl font-normal tracking-wide text-white mt-2 uppercase">
+                      Delight Every Bite
+                    </h2>
+                    <p class=" font-anton tracking-wide mt-4 text-xl leading-6 text-white">
+                      We are a premium meat wholesaler in Australia
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
            <!--双图片切换-->
-            <div id="baContainer" class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 relative overflow-hidden">
+            <div id="baContainer" class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-2/3 relative overflow-hidden">
               <!-- After 图 (底层) -->
               <img id="afterImg" src="/assets/images/banner/banner06.png" alt="after"
                    class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none" />
 
               <!-- AFTER 标签：固定在底层右下 -->
               <div id="afterLabel"
-                   class="absolute flex items-center justify-center bottom-4 right-4 z-10 pointer-events-none select-none bg-white text-black px-3 py-1 rounded-md text-sm h-10 w-24 font-semibold">
+                   class="absolute flex items-center justify-center bottom-4 right-4 z-10 pointer-events-none select-none bg-white text-black px-3 py-1 rounded-md text-sm h-10 w-24 uppercase font-medium tracking-wider">
                 After
               </div>
 
@@ -42,7 +60,7 @@
 
               <!-- BEFORE 标签：固定在上层左上 -->
               <div id="beforeLabel"
-                   class="absolute flex items-center justify-center top-4 left-4 z-20 pointer-events-none select-none bg-white  text-black px-3 py-1 rounded-xl text-sm h-10 w-24 font-semibold">
+                   class="absolute flex items-center justify-center top-4 left-4 z-20 pointer-events-none select-none bg-white  text-black px-3 py-1 rounded-xl text-sm h-10 w-24 uppercase font-medium tracking-wider">
                 Before
               </div>
 
@@ -191,8 +209,8 @@
       <div v-if="true" class="bg-cyan-500 mt-8">
         <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-12 sm:px-6 sm:py-20 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div class="">
-            <h2 class=" font-anton text-white text-3xl font-bold tracking-tight  sm:text-4xl dark:text-white">Partner with PARDOO WAGYU </h2>
-            <p class="font-lora dark:text-white mt-4 text-xl text-gray-200">Superior Meat proudly partners with Okan Purebred Wagyu and Sher Wagyu Black Label — two of Australia’s most iconic wagyu brands.
+            <h2 class=" font-anton text-white text-3xl font-bold tracking-wide  sm:text-4xl dark:text-white uppercase">Partner with PARDOO WAGYU </h2>
+            <p class="font-lora tracking-wide dark:text-white mt-4 text-xl text-gray-200">Superior Meat proudly partners with Okan Purebred Wagyu and Sher Wagyu Black Label — two of Australia’s most iconic wagyu brands.
               Through exclusive supply authorization from these legendary producers, Superior Meat extends their legacy with our unique precision processing techniques. We are committed to preserving the exceptional quality and heritage of these brands while delivering their finest wagyu products directly to our customers.</p>
 
             <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
@@ -259,7 +277,7 @@
         </div>
       <!--series slider-->
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h2 class="font-anton text-4xl font-normal tracking-normal my-6">Our Premium Series</h2>
+            <h2 class="font-anton text-4xl font-normal tracking-wide my-6 uppercase">Our Premium Series</h2>
 
             <section id="slider" class="mt-5 flex justify-center">
                 <swiper
@@ -299,7 +317,7 @@
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div  class="mx-auto max-w-2xl lg:max-w-none text-white">
                     <div class="text-center">
-                        <h2 class=" font-anton text-4xl font-normal tracking-normal my-6 ">Our Brand</h2>
+                        <h2 class=" font-anton text-4xl font-normal tracking-wide my-6 uppercase">Our Brand</h2>
                     </div>
                   <dl class="m-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 text-center gap-8">
                     <div
@@ -334,7 +352,7 @@
         </div>
       <!--company news-->
       <div v-if="true" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 class="font-anton text-4xl font-normal tracking-normal my-6">Company News</h2>
+        <h2 class="font-anton text-4xl font-normal tracking-wide my-6 uppercase">Company News</h2>
         <section id="smnews">
           <template v-for="(item, index) in newsList" :key="index">
             <div
@@ -412,7 +430,7 @@
               </svg>
 
             </div>
-            <p class="font-medium text-lg mt-4 text-center dark:text-white">xxxxx</p></div>
+            <p class="font-medium text-lg mt-4 text-center dark:text-white">Money</p></div>
           <div class="flex flex-col justify-center items-center">
             <div class="h-24 w-24 text-orange-500">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -420,7 +438,7 @@
               </svg>
 
             </div>
-            <p class="font-medium text-lg mt-4 text-center dark:text-white">xxxxx</p></div>
+            <p class="font-medium text-lg mt-4 text-center dark:text-white">Premium quality</p></div>
           <div class="flex flex-col justify-center items-center">
             <div class="h-24 w-24 text-orange-500">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -429,7 +447,7 @@
 
 
             </div>
-            <p class="font-medium text-lg mt-4 text-center dark:text-white">xxxxxx</p></div>
+            <p class="font-medium text-lg mt-4 text-center dark:text-white">Service</p></div>
           <div class="flex flex-col justify-center items-center">
             <div class="h-24 w-24 text-orange-500">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -437,15 +455,8 @@
               </svg>
 
             </div>
-            <p class="font-medium text-lg mt-4 text-center dark:text-white">xxxxxx</p></div>
-          <div class="flex flex-col justify-center items-center">
-            <div class="h-24 w-24 text-orange-500">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" />
-              </svg>
+            <p class="font-medium text-lg mt-4 text-center dark:text-white">Wagyu ID</p></div>
 
-            </div>
-            <p class="font-medium text-lg mt-4 text-center dark:text-white">xxxxxx</p></div>
         </div>
       </section>
       <!--  review    -->
@@ -518,6 +529,7 @@
 
 <script>
 import { ref,computed,onMounted} from 'vue';
+import { useRoute } from 'vue-router';
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
 // Import Swiper styles
@@ -531,13 +543,15 @@ import {usePostStore}  from '@/store/postStore.js'
 import WeatherWidget from '@/components/weather/index.vue';
 import divider from "/src/components/divider/index.vue";
 import HtmlCompareSlider from "/src/components/HtmlCompareSlider/index.vue";
+import Popup from '/src/components/Popup/index.vue';
 export default {
     components: {
         Swiper,
         SwiperSlide,
         WeatherWidget,
-      divider,
-      HtmlCompareSlider
+        divider,
+        HtmlCompareSlider,
+        Popup
     },
     setup() {
       onMounted(() => {
@@ -769,6 +783,17 @@ export default {
           gradient: 'bg-gradient-to-br from-[rgba(180,240,255,0.45)] via-[rgba(160,200,255,0.3)] to-[rgba(255,255,255,0.15)]'
         },
       ]
+
+      const showPanel = ref(false);
+
+      const togglePanel = () => {
+        showPanel.value = !showPanel.value
+      }
+      const route = useRoute()
+      // 判断当前是否是 /home
+      const showPopup = computed(() => {
+        return ['/home'].includes(route.path)
+      })
       return {
             onAutoplayTimeLeft,
             progressCircle,
@@ -783,7 +808,10 @@ export default {
             features,
             stats,
             brands,
-        cards
+            togglePanel,
+            showPopup,
+            cards,
+            showPanel
           }
         },
     name:'Hero',

@@ -2,11 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Products from '@/views/products/index.vue'
 import Home from '@/views/home/index.vue'
 import NewsDetail from '@/views/newsDetail/index.vue'
-import About from '@/views/about/index.vue'
+import Special from '@/views/special/index.vue'
 import Store from '@/views/location/index.vue'
 import Contact from '@/views/contact/index.vue'
 import Story from '@/views/story/index.vue'
-import Post from '@/views/post/index.vue'
+import Blog from '@/views/blog/index.vue'
 import Brand from '@/views/brand/index.vue'
 import Layout from '@/views/layout/index.vue'
 
@@ -37,9 +37,9 @@ const routes = [
         component:Products,
     },
     {
-        path:'/about',
-        name:'About',
-        component:About,
+        path:'/special',
+        name:'Special',
+        component:Special,
     },
     {
         path:'/store',
@@ -57,9 +57,9 @@ const routes = [
         component:Story,
     },
     {
-        path:'/post',
-        name:'Post',
-        component:Post,
+        path:'/blog',
+        name:'Blog',
+        component:Blog,
     },
 ]
 const router = createRouter({

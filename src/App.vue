@@ -4,7 +4,7 @@
     <Header></Header>
     <div id="wrapper" class="dark:bg-black">
 
-        <WeatherWidget></WeatherWidget>
+        <WeatherWidget v-if="false"></WeatherWidget>
         <Topnav v-if="false"></Topnav>
         <div>
           <router-view></router-view>
