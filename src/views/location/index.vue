@@ -11,17 +11,17 @@
               class="md:w-1/2 overflow-y-auto p-2 space-y-4 bg-white h-full"
           >
             <div
-                v-for="park in parks"
-                :key="park.name"
+                v-for="shop in shops"
+                :key="shop.name"
                 class="border rounded-lg p-2 shadow cursor-pointer hover:bg-gray-50 border border-gray-300"
-                @click="focusOnMap(park)"
-                @mouseenter="startBounce(park)"
-                @mouseleave="stopBounce(park)"
+                @click="focusOnMap(shop)"
+                @mouseenter="startBounce(shop)"
+                @mouseleave="stopBounce(shop)"
             >
-              <img :src="park.image" alt="park photo" class="w-full h-48 object-cover rounded" />
-              <h2 class="text-xl font-bold mt-2">{{ park.name }}</h2>
-              <p class="text-sm text-gray-600">{{ park.suburb }} · {{ park.address }}</p>
-              <p class="mt-2 text-gray-700">{{ park.notes }}</p>
+              <img :src="shop.image" alt="park photo" class="w-full h-48 object-cover rounded" />
+              <h2 class="text-xl font-bold mt-2">{{ shop.name }}</h2>
+              <p class="text-sm text-gray-600">{{ shop.suburb }} · {{ shop.address }}</p>
+              <p class="mt-2 text-gray-700">{{ shop.notes }}</p>
             </div>
           </div>
 
@@ -64,7 +64,7 @@
 
 <script setup>
   import {onMounted, ref,onBeforeUnmount,nextTick} from 'vue';
-  const parks = ref([
+  const shops = ref([
   {
     "name": "Niku Shiki",
     "suburb": "Glen",
@@ -86,7 +86,7 @@
       "suburb": "Oakleigh",
       "address": "Glen",
       "coords": [-37.90771994396364, 145.10095262043797],
-      "image": "/assets/images/cbdStore.png",
+      "image": "/assets/images/34ham.jpg",
       "notes": "Niku Shiki embodies the essence of Japanese culture and tradition, with an unwavering commitment to showcasing premium Wagyu Beef through our contemporary Japanese menu and innovative take-home products. Our butcher section for Japanese BBQ and hot pot offers a comprehensive selection of restaurant-quality Wagyu Beef, condiments, and sauces, providing everything you need for an authentic Yakiniku or Shabu Shabu dining experience in the comfort of your home."
     },
 
@@ -114,26 +114,26 @@
   popupAnchor: [0, -32],
 })
 
-  function focusOnMap(park) {
-  if (map && park.coords) {
-  map.setView(park.coords, 15)
-  const marker = markerMap.get(park.name)
+  function focusOnMap(shop) {
+  if (map && shop.coords) {
+  map.setView(shop.coords, 15)
+  const marker = markerMap.get(shop.name)
   if (marker) {
   marker.openPopup()
 }
 }
 }
 
-  function startBounce(park) {
-  const marker = markerMap.get(park.name)
+  function startBounce(shop) {
+  const marker = markerMap.get(shop.name)
   if (marker && marker._icon) {
   marker._icon.querySelector('.paw-marker')?.classList.add('bounce')
     console.log(marker._icon.querySelector('.paw-marker'))
 }
 }
 
-  function stopBounce(park) {
-  const marker = markerMap.get(park.name)
+  function stopBounce(shop) {
+  const marker = markerMap.get(shop.name)
   if (marker && marker._icon) {
   marker._icon.querySelector('.paw-marker')?.classList.remove('bounce')
 }
@@ -150,17 +150,17 @@
   attribution: '© OpenStreetMap contributors'
 }).addTo(map)
 
-  parks.value.forEach((park) => {
-  const marker = L.marker(park.coords,{icon: customIcon}).addTo(map)
-  marker.bindPopup(`<div style="max-width: 200px;">
-      <img src="${park.image}" alt="${park.name}" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 6px;" />
-      <strong>${park.name}</strong>
+  shops.value.forEach((shop) => {
+  const marker = L.marker(shop.coords,{icon: customIcon}).addTo(map)
+  marker.bindPopup(`<div style="max-width: 400px;">
+      <img src="${shop.image}" alt="${shop.name}" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: 6px;" />
+      <strong>${shop.name}</strong>
     </div>`)
-  markerMap.set(park.name, marker)
+  markerMap.set(shop.name, marker)
 })
 
   // 计算所有公园的坐标范围，并自动缩放地图
-  const allCoords = parks.value.map(p => p.coords)
+  const allCoords = shops.value.map(p => p.coords)
   const bounds = L.latLngBounds(allCoords)
   map.fitBounds(bounds) // 🟡 自动适配视图范围
 })
@@ -217,5 +217,31 @@
   }
 }
 
+/* ✅ Leaflet 弹窗宽度强制放开 */
+.leaflet-popup,
+.leaflet-popup-content-wrapper,
+.leaflet-popup-content {
+  max-width: none !important;
+  width: auto !important;
+}
 
+/* ✅ 设置你想要的内容宽度 */
+.leaflet-popup-content {
+  width: 420px !important; /* 你可以改成 500 / 600 看效果 */
+}
+
+/* ✅ 图片适配 */
+.leaflet-popup-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+/* ✅ 弹窗美化（可选） */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+}
 </style>

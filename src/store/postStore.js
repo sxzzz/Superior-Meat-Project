@@ -9,7 +9,7 @@ export const usePostStore = defineStore('postStore', {
                 title: 'Store1 open',
                 description:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'/assets/images/cbdStore.png/',
+                imageUrl:'/assets/images/cbdStore.png',
                 date: 'Feb 08 2025',
                 datetime: '2025-02-08',
                 author: {
