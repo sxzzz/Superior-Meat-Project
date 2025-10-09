@@ -2,26 +2,8 @@
 
 <template>
   <div class="bg-white dark:bg-black">
-<!--    Yakiniki 暂时不用-->
-    <div v-if="false" v-for="galleryItem in yakiniku" :key="galleryItem.subtitle" class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-      <div class="sm:flex sm:items-baseline sm:justify-between">
-        <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">
-          {{ galleryItem.subtitle }}
-        </h2>
-      </div>
-      <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <div v-for="(image, index) in galleryItem.images" :key="index" class="group">
-          <div class="w-full overflow-hidden rounded-lg bg-gray-200 relative transition-transform duration-300 transform group-hover:scale-110 aspect-[4/3]">
-            <img :src="image.path" :alt="image.alt" class="h-full w-full object-cover object-center">
-            <span>
-      <i class="bi bi-chat-heart absolute bottom-4 right-8 text-gray-100 hover:text-pink-400 text-2xl"></i>
-    </span>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!--    Yakiniki 目前用-->
+    <!-- Yakiniki -->
     <div
         v-for="galleryItem in yakiniku"
         :key="galleryItem.subtitle"
@@ -79,37 +61,17 @@
             >
               {{ image.title }}
             </h3>
-            <!--            <p-->
-            <!--                class="text-sm text-gray-500 opacity-90 transition duration-500 group-hover:text-gray-700"-->
-            <!--            >-->
-            <!--              {{ image.description }}-->
-            <!--            </p>-->
+                        <p
+                            class="text-sm text-gray-500 opacity-90 transition duration-500 group-hover:text-gray-700"
+                        >
+                          {{ image.description }}
+                        </p>
           </div>
         </div>
       </div>
     </div>
 
-
-    <!-- Shabu 目前不用-->
-    <div v-if="false" v-for="galleryItem in galleryTilt" :key="galleryItem.subtitle" class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-      <div class="sm:flex sm:items-baseline sm:justify-between">
-        <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">
-          {{ galleryItem.subtitle }}
-        </h2>
-      </div>
-      <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <div v-for="(image, index) in galleryItem.images" :key="index" class="group">
-          <div class="w-full overflow-hidden rounded-lg bg-gray-200 relative transition-transform duration-300 transform group-hover:scale-110 group-hover:rotate-2 aspect-[4/3]">
-            <img :src="image.path" :alt="image.alt" class="h-full w-full object-cover object-center">
-            <span>
-          <i class="bi bi-chat-heart absolute bottom-4 right-8 text-gray-100 hover:text-pink-400 text-2xl"></i>
-        </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--    Shabu目前用-->
+    <!-- Shabu -->
     <div
         v-for="galleryItem in shabu"
         :key="galleryItem.subtitle"
@@ -177,30 +139,7 @@
       </div>
     </div>
 
-    <!-- steak 目前不用-->
-    <div v-if="false" v-for="galleryItem in galleryGrayscale" :key="galleryItem.subtitle" class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-      <div class="sm:flex sm:items-baseline sm:justify-between">
-        <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">
-          {{ galleryItem.subtitle }}
-        </h2>
-      </div>
-      <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <div v-for="(image, index) in galleryItem.images" :key="index" class="group">
-          <div class="w-full overflow-hidden rounded-lg bg-gray-200 relative transition-transform duration-300 transform aspect-[4/3]">
-            <img
-                :src="image.path"
-                :alt="image.alt"
-                class="h-full w-full object-cover object-center transition duration-300 filter grayscale group-hover:grayscale-0"
-            >
-            <span>
-          <i class="bi bi-chat-heart absolute bottom-4 right-8 text-gray-100 hover:text-pink-400 text-2xl"></i>
-        </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- steak 目前用-->
+    <!-- steak -->
     <div
         v-for="galleryItem in steak"
         :key="galleryItem.subtitle"
@@ -268,82 +207,7 @@
       </div>
     </div>
 
-
-
-    <!-- Platter 暂时不用无弹出窗口-->
-    <div v-if="false" v-for="galleryItem in galleryBlurText" :key="galleryItem.subtitle" class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-      <div class="sm:flex sm:items-baseline sm:justify-between">
-        <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">
-          {{ galleryItem.subtitle }}
-        </h2>
-      </div>
-      <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <div v-for="(image, index) in galleryItem.images" :key="index" class="group">
-          <div class="w-full overflow-hidden rounded-lg bg-gray-200 relative aspect-[4/3] group transition duration-300">
-            <!-- 图片 -->
-            <img
-                :src="image.path"
-                :alt="image.alt"
-                class="h-full w-full object-cover object-center transition duration-300 group-hover:blur-sm"
-            >
-            <!-- 遮罩文字 -->
-            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-50 text-white font-semibold text-lg">
-              View More
-            </div>
-            <!-- 点赞图标 -->
-            <span>
-          <i class="bi bi-chat-heart absolute bottom-4 right-8 text-gray-100 hover:text-pink-400 text-2xl"></i>
-        </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Platter 展示不用 -->
-    <div v-if="false" v-for="galleryItem in platters" :key="galleryItem.subtitle" class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-      <div class="sm:flex sm:items-baseline sm:justify-between">
-        <h2
-            class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">
-          {{ galleryItem.subtitle }}
-        </h2>
-      </div>
-
-      <!-- 图片区域 -->
-      <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <div v-for="(image, index) in galleryItem.images" :key="index" class="group relative">
-          <div class="w-full overflow-hidden rounded-lg bg-gray-200 relative aspect-[4/3] group transition duration-300">
-            <img
-                :src="image.path"
-                :alt="image.alt"
-                class="h-full w-full object-cover object-center transition duration-300 group-hover:blur-sm"
-            >
-
-            <!-- 遮罩 + 按钮 -->
-            <div
-                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-50 text-white font-semibold text-lg">
-              <button
-                  @click="openModal(image)"
-                  class="px-4 py-2 bg-pink-600 rounded-lg hover:bg-pink-700 transition">
-                View More
-              </button>
-            </div>
-
-            <!-- 点赞图标 -->
-            <i class="bi bi-chat-heart absolute bottom-4 right-8 text-gray-100 hover:text-pink-400 text-2xl"></i>
-          </div>
-          <!-- ✅ 图片标题 -->
-          <h3
-              class="mt-3 text-lg font-semibold text-gray-800 text-center transform transition-all duration-500 ease-out
-             opacity-80 translate-y-2 group-hover:opacity-100 group-hover:-translate-y-1 group-hover:text-pink-600">
-            {{ image.title }}
-          </h3>
-
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Platter 目前使用 -->
+    <!-- Platter -->
     <div
         v-for="galleryItem in platters"
         :key="galleryItem.subtitle"
@@ -410,8 +274,6 @@
         </div>
       </div>
     </div>
-
-
 
     <!-- platter弹出窗口 -->
     <transition name="fade">
@@ -547,8 +409,6 @@
       </div>
     </transition>
 
-
-
   </div>
 </template>
 
@@ -559,32 +419,6 @@ import HtmlCompareSlider from '/src/components/HtmlCompareSlider/index.vue'
 onMounted(() => {
   //fetchImages()
 })
-const galleryTilt = ref([
-
-  {
-    id: 3,
-    subtitle: 'Shabu Shabu',
-    images: [
-      { path: '/assets/images/products/shaCerS.jpg', alt: '' },
-      { path: '/assets/images/products/shaCtfS.jpeg', alt: '' },
-      { path: '/assets/images/products/shaKarubisS.jpg', alt: '' },
-      { path: '/assets/images/products/shaSirloinIS.jpeg', alt: '' }
-    ]
-  },
-])
-const galleryGrayscale = ref([
-
-  {
-    id: 1,
-    subtitle: 'Steak',
-    images: [
-      { path: '/assets/images/products/stCerS.jpg', alt: '' },
-      { path: '/assets/images/products/stCrS.jpg', alt: '' },
-      { path: '/assets/images/products/stObS.jpg', alt: '' },
-      { path: '/assets/images/products/stReS.jpg', alt: '' },
-    ]
-  },
-])
 
 // 图片与详情数据
 const platters = ref([
@@ -640,67 +474,14 @@ const platters = ref([
   }
 ])
 
-// const yakiniku = ref([
-//   {
-//     id: 4,
-//     subtitle: 'Yakiniki',
-//     images: [
-//       {
-//         path: '/assets/images/products/yakiCrs.jpg',
-//         alt: '',
-//         title: 'Chuck R',
-//         description: 'Chuck R',
-//         preview: '/assets/images/products/yakiCrs.jpg',
-//         details: [
-//           { subtitle: 'cooking', text: 'xxxxx1' },
-//           { subtitle: 'service', text: 'xxxx2' },
-//         ]
-//       },
-//       {
-//         path: '/assets/images/products/yaReS.jpg',
-//         alt: '',
-//         title: 'Re',
-//         description: 'Premium Wagyu slices for a luxurious hotpot experience.',
-//         preview: '/assets/images/products/plaShabuPlatinumS.jpg',
-//         details: [
-//           { subtitle: 'Marbling Score', text: 'MB9+' },
-//           { subtitle: 'Texture', text: 'Melt-in-mouth tenderness' },
-//         ]
-//       },
-//       {
-//         path: '/assets/images/products/yaTtS.jpg',
-//         alt: '',
-//         title: 'Tri Tip',
-//         description: 'Ideal for grilling, rich in umami with a clean aftertaste.',
-//         preview: '/assets/images/products/plaYakiGoldS.jpeg',
-//         details: [
-//           { subtitle: 'Cooking', text: 'Yakiniku-style' },
-//           { subtitle: 'Serving', text: 'Fresh cut and chilled' },
-//         ]
-//       },
-//       {
-//         path: '/assets/images/products/yaSrs.jpg',
-//         alt: '',
-//         title: 'Sr',
-//         description: 'Top-grade wagyu with a buttery flavor and balanced fat ratio.',
-//         preview: '/assets/images/products/plaYakiPlatinumS.jpg',
-//         details: [
-//           { subtitle: 'Flavor', text: 'Buttery & delicate sweetness' },
-//           { subtitle: 'Recommended', text: 'Grill medium rare' },
-//         ]
-//       },
-//     ]
-//   }
-// ])
-
-
 const yakiniku = ref([
   {
     id: 4,
     subtitle: 'Yakiniku',
     images: [
       {
-        path: '/assets/images/products/yakiCrs.jpg',
+        path: '/assets/images/products/yakiCrS.jpg',
+        title:'test1',
         titleBefore: 'Chuck Roll MB9+',
         descriptionBefore: 'Australian Wagyu MB9+ is admired for its balance of flavor, tenderness, and marbling Perfect for grilling, yakiniku, or even hotpot, it’s a versatile choice for premium dining.',
         detailsBefore: [
@@ -721,7 +502,8 @@ const yakiniku = ref([
         priceAfter: '$329 / kg',
       },
       {
-        path: '/assets/images/products/yakiCrs.jpg',
+        path: '/assets/images/products/yaReS.jpg',
+        title:'test2',
         titleBefore: '1111111 MB9+',
         descriptionBefore: 'Australian Wagyu MB9+ is admired for its balance of flavor, tenderness, and marbling Perfect for grilling, yakiniku, or even hotpot, it’s a versatile choice for premium dining.',
         detailsBefore: [
@@ -742,7 +524,8 @@ const yakiniku = ref([
         priceAfter: '$222 / kg',
       },
       {
-        path: '/assets/images/products/yakiCrs.jpg',
+        path: '/assets/images/products/yaSrS.jpg',
+        title:'test3',
         titleBefore: '333333 MB9+',
         descriptionBefore: 'Australian Wagyu MB9+ is admired for its balance of flavor, tenderness, and marbling Perfect for grilling, yakiniku, or even hotpot, it’s a versatile choice for premium dining.',
         detailsBefore: [
@@ -763,7 +546,8 @@ const yakiniku = ref([
         priceAfter: '$444/ kg',
       },
       {
-        path: '/assets/images/products/yakiCrs.jpg',
+        path: '/assets/images/products/yaTtS.jpg',
+        title:'test4',
         titleBefore: '55555Chuck Roll MB9+',
         descriptionBefore: 'Australian Wagyu MB9+ is admired for its balance of flavor, tenderness, and marbling Perfect for grilling, yakiniku, or even hotpot, it’s a versatile choice for premium dining.',
         detailsBefore: [
@@ -787,9 +571,6 @@ const yakiniku = ref([
     ],
   },
 ])
-
-
-
 
 const shabu = ref([
   {
@@ -850,7 +631,7 @@ const steak = ref([
     subtitle: 'Steak',
     images: [
       {
-        path: '/assets/images/products/yakiCrs.jpg',
+        path: '/assets/images/products/stCerS.jpg',
         alt: '',
         title: 'Chuck R',
         description: 'Chuck R',
@@ -861,7 +642,7 @@ const steak = ref([
         ]
       },
       {
-        path: '/assets/images/products/yaReS.jpg',
+        path: '/assets/images/products/stCrS.jpg',
         alt: '',
         title: 'Re',
         description: 'Premium Wagyu slices for a luxurious hotpot experience.',
@@ -872,7 +653,7 @@ const steak = ref([
         ]
       },
       {
-        path: '/assets/images/products/yaTtS.jpg',
+        path: '/assets/images/products/stObS.jpg',
         alt: '',
         title: 'Tri Tip',
         description: 'Ideal for grilling, rich in umami with a clean aftertaste.',
@@ -883,7 +664,7 @@ const steak = ref([
         ]
       },
       {
-        path: '/assets/images/products/yaSrs.jpg',
+        path: '/assets/images/products/stReS.jpg',
         alt: '',
         title: 'Sr',
         description: 'Top-grade wagyu with a buttery flavor and balanced fat ratio.',
@@ -896,7 +677,6 @@ const steak = ref([
     ]
   }
 ])
-
 
 
 // Yakiniku 系列
@@ -914,8 +694,6 @@ const selectedSteakImage = ref(null)
 // Platter 系列
 const isPlatterModalOpen = ref(false)
 const selectedPlatterImage = ref(null)
-
-
 
 // 打开弹窗
 const openPlatterModal = (image) => {
