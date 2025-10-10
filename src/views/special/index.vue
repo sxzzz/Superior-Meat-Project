@@ -58,46 +58,25 @@
     </div>
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div class="sm:flex sm:items-baseline sm:justify-between">
-        <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">xxxxx</h2>
+        <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">牛肉奖牌或合作品牌</h2>
       </div>
       <!-- 三角墙     -->
 
-      <div class="bg-white dark:bg-black" >
-        <div class="px-6 lg:px-8">
-          <div class="mt-4">
-            <p class="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center font-semibold tracking-tight bg-gradient-to-r from-sky-500 via-purple-400 to-pink-500 inline-block text-transparent bg-clip-text">
-              这里可以放牛肉的荣誉奖章
-            </p>
-            <p class="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center font-semibold tracking-tight bg-gradient-to-r from-sky-500 via-purple-400 to-pink-500 inline-block text-transparent bg-clip-text">
-              也可以是合作伙伴的品牌logo
-            </p>
-          </div>
-
-          <ul id="dogs" role="list" class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center gap-6">
-            <li v-for="(dog, index) in dogs" :key="dog.name" class="mx-3 text-center">
-              <img class="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full mx-auto object-cover" :src="dog.imageUrl" alt="" />
-              <h3 class="mt-6 text-xl font-semibold tracking-tight text-rose-400">{{ dog.name }}</h3>
-              <p class="text-gray-600 dark:text-white">{{ dog.role }}</p>
-            </li>
-          </ul>
-
-          <ul id="cats" role="list" class=" mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center ">
-            <li v-for="(cat,index) in cats" :key="cat.name" class="" >
-              <img class="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full mx-auto object-cover" :src="cat.imageUrl" alt="" />
-              <h3 class="mt-6 text-xl text-center font-semibold tracking-tight text-rose-400">{{ cat.name }}</h3>
-              <p class="text-center text-gray-600 dark:text-white">{{ cat.role }}</p>
-            </li>
-          </ul>
-          <ul id="pets" role="list" class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center gap-6">
-            <li v-for="(pet,index) in pets" :key="pet.name" class="">
-              <img class=" w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full mx-auto object-cover" :src="pet.imageUrl" alt="" />
-              <h3 class="mt-6 text-xl text-center font-semibold tracking-tight text-rose-400">{{ pet.name }}</h3>
-              <p class="text-center text-gray-600 dark:text-white">{{ pet.role }}</p>
-            </li>
-          </ul>
-
+      <div class="bg-white py-6">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+          <p class="mt-2 text-lg/8 text-gray-600"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum do</p>
         </div>
+        <ul role="list" class="mx-auto mt-6 grid max-w-2xl grid-cols-2 gap-4 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6">
+          <li v-for="person in people" :key="person.name">
+            <img class="mx-auto w-32 h-32 rounded-full outline outline-1 -outline-offset-1 outline-black/5" :src="person.imageUrl" alt="" />
+            <h3 class="mt-6 text-base/7 font-semibold tracking-tight text-gray-900">{{ person.name }}</h3>
+            <p class="text-sm/6 text-gray-600">{{ person.role }}</p>
+          </li>
+        </ul>
       </div>
+    </div>
+
       <!--  朋友的故事     -->
 
       <div class="sm:flex sm:items-baseline sm:justify-between mt-4">
@@ -152,6 +131,83 @@
 
 <script setup>
 import { ref} from 'vue';
+
+const people = [
+  {
+    name: 'Michael Foster',
+    role: 'Co-Founder / CTO',
+    imageUrl:
+        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+  {
+    name: 'Dries Vincent',
+    role: 'Business Relations',
+    imageUrl:
+        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+  {
+    name: 'Lindsay Walton',
+    role: 'Front-end Developer',
+    imageUrl:
+        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+  {
+    name: 'Courtney Henry',
+    role: 'Designer',
+    imageUrl:
+        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+  {
+    name: 'Tom Cook',
+    role: 'Director of Product',
+    imageUrl:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+  {
+    name: 'Whitney Francis',
+    role: 'Copywriter',
+    imageUrl:
+        'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+  {
+    name: 'Leonard Krasner',
+    role: 'Senior Designer',
+    imageUrl:
+        'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+  {
+    name: 'Floyd Miles',
+    role: 'Principal Designer',
+    imageUrl:
+        'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+  {
+    name: 'Emily Selman',
+    role: 'VP, User Experience',
+    imageUrl:
+        'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+  {
+    name: 'Kristin Watson',
+    role: 'VP, Human Resources',
+    imageUrl:
+        'https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+  {
+    name: 'Emma Dorsey',
+    role: 'Senior Developer',
+    imageUrl:
+        'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+  {
+    name: 'Alicia Bell',
+    role: 'Junior Copywriter',
+    imageUrl:
+        'https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+  },
+
+
+]
 
 const dogs = ref([
   {

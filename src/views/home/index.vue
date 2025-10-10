@@ -66,7 +66,7 @@
 
               <!-- 滑块（把竖线做得更明显：竖线 + 小圆点） -->
               <div id="sliderHandle"
-                   class="absolute top-0 bottom-0 left-1/2 w-[2px] bg-white     cursor-ew-resize z-40 flex items-center justify-center"
+                   class="absolute top-0 bottom-0 left-1/2 w-[2px] bg-white     cursor-ew-resize z-30 flex items-center justify-center"
                    style="transform: translateX(-2px);">
               <!-- 圆点 -->
                 <div class="w-6 h-6 bg-white rounded-full shadow flex items-center justify-center " style="transform: translateY(-50%); position: absolute; top: 50%;">

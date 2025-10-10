@@ -25,13 +25,13 @@
           <div class="bg-white rounded-md shadow-lg w-full max-w-md">
               <!-- Header -->
               <div class="bg-purple-700 text-white text-2xl font-semibold px-6 py-4 flex justify-between items-center rounded-t-md">
-                <span>FEEDBACK</span>
+                <span>SPECIAL OFFER</span>
                 <button class="text-white text-2xl hover:opacity-80" @click="closeModal">×</button>
               </div>
               <div class="p-6">
-                <div class="text-center">
-                <p class="text-xl font-medium mb-2">What do you think of this site?</p>
-                <div class="flex justify-center space-x-4 text-3xl">
+                <div class="text-center items-center justify-center">
+                  <img src="/assets/images/logo/Logo.jpg" class="h-40 w-60" alt="">
+                <div class="flex justify-center space-x-4 text-lg">
                   <span
                       v-for="(emoji, index) in emojis"
                       :key="index"
@@ -52,46 +52,7 @@
                 >
                   <div class="space-y-4 text-sm text-gray-800 w-full">
                     <div>
-                      <label class="block mb-1 font-medium">What would you like to share with us?</label>
-                      <textarea
-                          v-model="feedback"
-                          class="w-full border-2 border-purple-500 rounded-md p-2 resize-none h-24 focus:outline-none focus:border-purple-500 focus:ring-0"
-                          @focus="feedbackError = false"
-                      ></textarea>
-
-                      <!-- Tooltip 提示 -->
-                      <div
-                          v-if="feedbackError"
-                          class="absolute top-full left-0 mt-1 bg-purple-500 text-white text-xs px-2 py-1 rounded shadow-lg z-50 transition-opacity duration-300 opacity-100 group-hover:opacity-100"
-                      >
-                        The textarea cannot be empty.
-                      </div>
-
-                    </div>
-
-                    <div>
-                      <label class="block mt-2 mb-1">Name (optional)</label>
-                      <input
-                          v-model="name"
-                          type="text"
-                          class="w-full border-2 border-purple-500 rounded-md p-2 focus:outline-none  focus:border-purple-500 focus:ring-0"
-                      />
-                      <label class="block mt-3 mb-1">Email (optional)</label>
-                      <input
-                          v-model="email"
-                          type="email"
-                          class="w-full border-2 border-purple-500 rounded-md p-2 focus:outline-none focus:border-purple-500 focus:ring-0"
-                      />
-                    </div>
-
-                    <div class="flex justify-between items-center pt-2">
-                      <a href="#" class="text-xs text-purple-600 underline">Privacy & Cookies</a>
-                      <button
-                          class="bg-purple-600 text-white px-4 py-1 rounded hover:bg-purple-700 transition"
-                          @click="submitFeedback"
-                      >
-                        Submit
-                      </button>
+                      <p>Chuck EYE ROLL Details</p>
                     </div>
                   </div>
                 </div>
@@ -99,6 +60,7 @@
             </div>
           </div>
         </div>
+
     </div>
 
 </template>
@@ -110,11 +72,7 @@ const props = defineProps({
 })
 const emit = defineEmits(['close'])
 const emojis = [
-  { icon: '😠', label: 'Angry' },
-  { icon: '😟', label: 'Sad' },
-  { icon: '😐', label: 'Neutral' },
-  { icon: '😊', label: 'Happy' },
-  { icon: '😍', label: 'Love' }
+  { icon: 'CLICK ME', label: 'Wagyu' },
 ]
 
 const selectedEmoji = ref(null)

@@ -66,32 +66,46 @@
   import {onMounted, ref,onBeforeUnmount,nextTick} from 'vue';
   const shops = ref([
   {
-    "name": "Niku Shiki",
+    "name": "Niku Shiki Glen Waverley",
     "suburb": "Glen",
-    "address": "Glen",
+    "address": "L009 The Glen Shopping Centre, 235 Springvale Rd, Glen Waverley VIC 3150",
+    "website": "https://nikushiki.com.au/",
+    "tel": "(03) 9803 7878",
+
     "coords": [-37.87607832071967, 145.16478081740595],
     "image": "/assets/images/glenStore.png",
     "notes": "Niku Shiki embodies the essence of Japanese culture and tradition, with an unwavering commitment to showcasing premium Wagyu Beef through our contemporary Japanese menu and innovative take-home products. Our butcher section for Japanese BBQ and hot pot offers a comprehensive selection of restaurant-quality Wagyu Beef, condiments, and sauces, providing everything you need for an authentic Yakiniku or Shabu Shabu dining experience in the comfort of your home."
   },
-    {
-      "name": "Niku Shiki",
-      "suburb": "CBD",
-      "address": "CBD",
-      "coords": [-37.88767729932614, 145.0826043387997],
-      "image": "/assets/images/cbdStore.png",
-      "notes": "Niku Shiki embodies the essence of Japanese culture and tradition, with an unwavering commitment to showcasing premium Wagyu Beef through our contemporary Japanese menu and innovative take-home products. Our butcher section for Japanese BBQ and hot pot offers a comprehensive selection of restaurant-quality Wagyu Beef, condiments, and sauces, providing everything you need for an authentic Yakiniku or Shabu Shabu dining experience in the comfort of your home."
-    },
-    {
-      "name": "Superior Meat",
-      "suburb": "Oakleigh",
-      "address": "Glen",
-      "coords": [-37.90771994396364, 145.10095262043797],
-      "image": "/assets/images/34ham.jpg",
-      "notes": "Niku Shiki embodies the essence of Japanese culture and tradition, with an unwavering commitment to showcasing premium Wagyu Beef through our contemporary Japanese menu and innovative take-home products. Our butcher section for Japanese BBQ and hot pot offers a comprehensive selection of restaurant-quality Wagyu Beef, condiments, and sauces, providing everything you need for an authentic Yakiniku or Shabu Shabu dining experience in the comfort of your home."
-    },
-
-
-
+  {
+    "name": "Niku Shiki Melbourne Central",
+    "suburb": "CBD",
+    "address": "Melbourne Central, Shop GD070/360 Elizabeth St, Melbourne VIC 3000",
+    "website": "https://nikushiki.com.au/",
+    "tel": "(03) 9367 9823",
+    "coords": [-37.81039280942638, 144.96201810683976],
+    "image": "/assets/images/cbdStore.png",
+    "notes": "Niku Shiki embodies the essence of Japanese culture and tradition, with an unwavering commitment to showcasing premium Wagyu Beef through our contemporary Japanese menu and innovative take-home products. Our butcher section for Japanese BBQ and hot pot offers a comprehensive selection of restaurant-quality Wagyu Beef, condiments, and sauces, providing everything you need for an authentic Yakiniku or Shabu Shabu dining experience in the comfort of your home."
+  },
+  {
+    "name": "Superior Meat",
+    "suburb": "Oakleigh",
+    "address": "34 Hamilton St, Oakleigh VIC 3166",
+    "website": "https://superiormeat.shop",
+    "tel": "(03) 9367 9823",
+    "coords": [-37.90771994396364, 145.10095262043797],
+    "image": "/assets/images/34ham.jpg",
+    "notes": "Niku Shiki embodies the essence of Japanese culture and tradition, with an unwavering commitment to showcasing premium Wagyu Beef through our contemporary Japanese menu and innovative take-home products. Our butcher section for Japanese BBQ and hot pot offers a comprehensive selection of restaurant-quality Wagyu Beef, condiments, and sauces, providing everything you need for an authentic Yakiniku or Shabu Shabu dining experience in the comfort of your home."
+  },
+  {
+    "name": "USHIMATSU Store",
+    "suburb": "Chadstone",
+    "address": "1341 Dandenong Rd, Chadstone VIC 3148",
+    "website": "https://ushimatsu.shop",
+    "tel": "(03) 9367 1111",
+    "coords": [-37.88638990281749, 145.08239020885716],
+    "image": "/assets/images/ushiStore.png",
+    "notes": "Niku Shiki embodies the essence of Japanese culture and tradition, with an unwavering commitment to showcasing premium Wagyu Beef through our contemporary Japanese menu and innovative take-home products. Our butcher section for Japanese BBQ and hot pot offers a comprehensive selection of restaurant-quality Wagyu Beef, condiments, and sauces, providing everything you need for an authentic Yakiniku or Shabu Shabu dining experience in the comfort of your home."
+  }
 
 
   ])
@@ -100,10 +114,11 @@
   const markerMap = new Map();
 
   const customIconHtml = `
-  <div class="paw-marker">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
-    </svg>
+  <div class="shop-marker">
+<!--    <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">-->
+<!--        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />-->
+<!--    </svg>-->
+    <img src="/assets/images/shopSVG.svg" class="w-6 h-6" alt="">
   </div>`
 
   const customIcon = L.divIcon({
@@ -127,15 +142,15 @@
   function startBounce(shop) {
   const marker = markerMap.get(shop.name)
   if (marker && marker._icon) {
-  marker._icon.querySelector('.paw-marker')?.classList.add('bounce')
-    console.log(marker._icon.querySelector('.paw-marker'))
+  marker._icon.querySelector('.shop-marker')?.classList.add('bounce')
+    console.log(marker._icon.querySelector('.shop-marker'))
 }
 }
 
   function stopBounce(shop) {
   const marker = markerMap.get(shop.name)
   if (marker && marker._icon) {
-  marker._icon.querySelector('.paw-marker')?.classList.remove('bounce')
+  marker._icon.querySelector('.shop-marker')?.classList.remove('bounce')
 }
 }
 
@@ -152,14 +167,112 @@
 
   shops.value.forEach((shop) => {
   const marker = L.marker(shop.coords,{icon: customIcon}).addTo(map)
-  marker.bindPopup(`<div style="max-width: 400px;">
-      <img src="${shop.image}" alt="${shop.name}" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: 6px;" />
-      <strong>${shop.name}</strong>
-    </div>`)
-  markerMap.set(shop.name, marker)
+  //地图中商店的页面布局
+  // marker.bindPopup(`<div style="max-width: 400px;">
+  //     <img src="${shop.image}" alt="${shop.name}" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: 6px;" />
+  //     <strong>${shop.name}</strong><br>
+  //     <strong>${shop.address}</strong><br>
+  //     <strong>${shop.website}</strong><br>
+  //     <strong>${shop.tel}</strong>
+  //   </div>`)
+
+    marker.bindPopup(`
+  <div style="
+    max-width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    position: relative;
+  ">
+
+    <!-- 关闭按钮 -->
+    <button
+      onclick="document.querySelector('.leaflet-popup-close-button')?.click()"
+      style="
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: rgba(255,255,255,0.85);
+        border: none;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        cursor: pointer;
+        color: #333;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+        z-index: 2;
+      "
+      onmouseover="this.style.background='rgba(255,255,255,1)'"
+      onmouseout="this.style.background='rgba(255,255,255,0.85)'"
+    >
+x
+    </button>
+
+    <!-- 图片 -->
+    <img
+      src="${shop.image}"
+      alt="${shop.name}"
+      style="
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+      "
+    />
+
+    <!-- 文字区域 -->
+    <div style="
+      background: rgba(250, 250, 250, 0.95);
+      padding: 12px 16px 14px;
+      backdrop-filter: blur(2px);
+    ">
+      <div style="border-top: 1px solid #e5e7eb; margin-bottom: 10px;"></div>
+
+      <div style="
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #111;
+        margin-bottom: 6px;
+      ">
+        ${shop.name}
+      </div>
+
+      <div style="color: #555; line-height: 1.4; margin-bottom: 6px;">
+        ${shop.address}
+      </div>
+
+      <div style="margin-bottom: 6px;">
+        <a
+          href="${shop.website.startsWith('http') ? shop.website : 'https://' + shop.website}"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="color: #2563eb; text-decoration: none;"
+          onmouseover="this.style.textDecoration='underline';"
+          onmouseout="this.style.textDecoration='none';"
+        >
+          ${shop.website}
+        </a>
+      </div>
+
+      <div style="color: #333;">
+        ${shop.tel}
+      </div>
+    </div>
+  </div>
+`);
+
+
+
+    markerMap.set(shop.name, marker)
 })
 
-  // 计算所有公园的坐标范围，并自动缩放地图
+  // 计算所有商店的坐标范围，并自动缩放地图
   const allCoords = shops.value.map(p => p.coords)
   const bounds = L.latLngBounds(allCoords)
   map.fitBounds(bounds) // 🟡 自动适配视图范围
@@ -223,13 +336,20 @@
 .leaflet-popup-content {
   max-width: none !important;
   width: auto !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 
 /* ✅ 设置你想要的内容宽度 */
 .leaflet-popup-content {
   width: 420px !important; /* 你可以改成 500 / 600 看效果 */
 }
-
+/* 去掉箭头小三角 */
+.leaflet-popup-tip {
+  background: transparent !important;
+}
 /* ✅ 图片适配 */
 .leaflet-popup-content img {
   width: 100%;
@@ -243,5 +363,16 @@
 .leaflet-popup-content-wrapper {
   border-radius: 12px !important;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+.leaflet-popup-close-button {
+  background: transparent !important; /* 去掉默认白色背景 */
+  color: rgba(255, 255, 255, 0.8) !important; /* 文字颜色可调，设置透明度 */
+  font-size: 18px; /* 可调整大小 */
+  font-weight: bold;
+  top: 8px; /* 调整位置 */
+  right: 8px;
+  opacity: 0.6; /* 整体透明度 */
+  text-shadow: none; /* 去掉默认阴影 */
 }
 </style>
