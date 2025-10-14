@@ -31,9 +31,7 @@
             <router-link to="/products" :class="['inline-flex items-center border-b-2', $route.path === '/products' ? 'border-indigo-500' : 'border-transparent', 'px-1 pt-1 text-xl font-medium tracking-wider  text-gray-800 dark:text-gray-400 hover:border-orange-300 hover:text-yellow-500 dark:hover:text-pink-200']">
               PRODUCTS
             </router-link>
-            <router-link to="/special" :class="['inline-flex items-center border-b-2', $route.path === '/special' ? 'border-indigo-500' : 'border-transparent', 'px-1 pt-1 text-xl font-medium tracking-wider text-gray-800 dark:text-gray-400 hover:border-orange-300 hover:text-yellow-500 dark:hover:text-pink-200']">
-              SPECIAL
-            </router-link>
+
             <router-link to="/store" :class="['inline-flex items-center border-b-2', $route.path === '/store' ? 'border-indigo-500' : 'border-transparent', 'px-1 pt-1 text-xl font-medium tracking-wider text-gray-800 dark:text-gray-400 hover:border-orange-300 hover:text-yellow-500 dark:hover:text-pink-200']">
               STORES
             </router-link>
@@ -56,7 +54,6 @@
         <router-link @click="closeMobileMenu"  to="/home" :class="['block border-l-4',$route.path === '/home' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">HOME</router-link>
         <router-link @click="closeMobileMenu" to="/brand" :class="['block border-l-4',$route.path === '/brand' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">BRAND</router-link>
         <router-link @click="closeMobileMenu" to="/products" :class="['block border-l-4',$route.path === '/products' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">PRODUCTS</router-link>
-        <router-link @click="closeMobileMenu" to="/special" :class="['block border-l-4',$route.path === '/special' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">SPECIAL</router-link>
         <router-link @click="closeMobileMenu" to="/store" :class="['block border-l-4',$route.path === '/store' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">STORES</router-link>
         <router-link @click="closeMobileMenu" to="/blog" :class="['block border-l-4',$route.path === '/blog' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">BLOGS</router-link>
         <router-link @click="closeMobileMenu" to="/contact" :class="['block border-l-4',$route.path === '/contact' ? 'border-indigo-500 bg-indigo-50 dark:bg-gray-400':'border-transparent','py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-400 hover:text-gray-700']">CONTACT</router-link>

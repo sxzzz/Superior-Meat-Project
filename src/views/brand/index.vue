@@ -16,7 +16,7 @@
         <!-- 图片动效加强版 -->
         <div class="overflow-hidden rounded-2xl">
           <img
-              src="/assets/images/hero04.jpg"
+              src="/assets/images/brands/sm01.jpg"
               alt="Superior Meat"
               class="aspect-[3/2] w-full rounded-2xl bg-gray-100 object-cover transform transition-all duration-700 ease-in-out hover:scale-110 hover:-translate-y-3 hover:brightness-110 hover:shadow-2xl hover:shadow-black/40"
           />
@@ -133,12 +133,12 @@
     <!--四季和牛-->
     <div class="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
       <div class="mx-auto max-w-3xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">NIKUSHIKI</h2>
-        <p class="mt-4 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">NIKU SHIKI</h2>
+        <p class="mt-4 text-gray-500">Niku Shiki celebrates Japanese tradition with premium Wagyu Beef through our contemporary menu and take-home products. Our butcher section offers restaurant-quality Wagyu, condiments, and sauces for an authentic Yakiniku or Shabu Shabu experience at home.</p>
       </div>
 
       <div class="mt-16 space-y-16">
-        <div v-for="(feature, featureIdx) in primeMeatOrigin" :key="feature.name" class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
+        <div v-for="(feature, featureIdx) in nikushiki" :key="feature.name" class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
           <div :class="[featureIdx % 2 === 0 ? 'lg:col-start-1' : 'lg:col-start-8 xl:col-start-9', 'mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4']">
             <h3 class="text-lg font-medium text-gray-900">{{ feature.name }}</h3>
             <p class="mt-2 text-sm text-gray-500">{{ feature.description }}</p>
@@ -153,20 +153,10 @@
     <divider class="mt-6"></divider>
     <!--USHIMATSU-->
     <div class="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
-      <div class="relative bg-gray-800 px-6 py-32 sm:px-12 sm:py-40 lg:px-16">
-        <div class="absolute inset-0 overflow-hidden">
-          <img src="/assets/images/banner/banner05.png" alt="" class="size-full object-cover" />
-        </div>
-        <div aria-hidden="true" class="absolute inset-0 bg-gray-900/50" />
-        <div class="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">USHIMATSU</h2>
-          <p class="mt-3 text-xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet</p>
-          <a href="#" class="mt-8 block w-full rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto">Read our story</a>
-        </div>
-      </div>
+      <img src="/assets/images/logo/UshiLandscape.jpg" alt="" class="object-cover max-w-6xl mx-auto" />
     </div>
 
-    <divider class="mt-6"></divider>
+    <divider class=""></divider>
 
   </div>
 
@@ -212,18 +202,18 @@ const zunpin = [
 
 
 
-const primeMeatOrigin = [
+const nikushiki = [
   {
-    name: 'nikushiki glen',
+    name: ' NIKUSHIKI GLEN',
     description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    imageSrc: '/assets/images/glenStore.png',
+        'Located in The Glen Shopping Centre, our restaurant and butcher store invite you to enjoy expertly prepared Wagyu Beef and the finest Japanese hospitality in Melbourne.',
+    imageSrc: '/assets/images/brands/niku01.jpg',
     imageAlt: '123',
   },
   {
-    name: 'nikushiki cbd',
+    name: 'NIKUSHIKI CBD',
     description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'Discover Melbourne Central’s destination for Wagyu excellence, where our restaurant and butcher boutique deliver meticulously prepared beef and refined Japanese service.',
     imageSrc: '/assets/images/cbdStore.png',
     imageAlt: '456',
   },

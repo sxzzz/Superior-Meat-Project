@@ -1,6 +1,7 @@
 <template>
   <footer class="bg-cyan-400 dark:bg-black">
     <div class="mx-auto max-w-7xl px-6 pb-8 pt-8 sm:pt-12 lg:px-8 lg:pt-16">
+
       <div class="xl:grid xl:grid-cols-3 xl:gap-4">
         <div class="space-y-8 flex flex-col items-center">
           <img class="h-40" src="/assets/images/logo/Logo.jpg" alt="Superior Meat" />
@@ -9,36 +10,29 @@
         </div>
         <div class="mt-8 grid grid-cols-2 gap-4 xl:col-span-2 xl:mt-0">
           <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <h3 class="text-lg text-gray-700 font-anton tracking-wide">Home</h3>
-              <ul role="list" class="mt-3 space-y-3">
+            <div class="mt-10 md:mt-0">
+              <h3 class="text-lg text-gray-700 font-anton tracking-wide uppercase">Home</h3>
+              <ul role="list" class="mt-3 space-y-6">
                 <li v-for="item in navigation.home" :key="item.name">
                   <a :href="item.href" class="text-normal text-white hover:text-gray-900">{{ item.name }}</a>
                 </li>
               </ul>
             </div>
             <div class="mt-10 md:mt-0">
-              <h3 class="text-lg text-gray-700 font-anton tracking-wide">Brand</h3>
-              <ul role="list" class="mt-3 space-y-3">
+              <h3 class="text-lg text-gray-700 font-anton tracking-wide uppercase">Brand</h3>
+              <ul role="list" class="mt-3 space-y-6">
                 <li v-for="item in navigation.brand" :key="item.name">
                   <a :href="item.href" class="text-normal text-white hover:text-gray-900">{{ item.name }}</a>
                 </li>
               </ul>
             </div>
+
           </div>
-          <div class="md:grid md:grid-cols-2 md:gap-8">
+          <div class="md:grid md:grid-cols-2 md:gap-8 ms-6">
             <div>
-              <h3 class="text-lg text-gray-700 font-anton tracking-wide">Company</h3>
-              <ul role="list" class="mt-3 space-y-3">
+              <h3 class="text-lg text-gray-700 font-anton tracking-wide uppercase">Company</h3>
+              <ul role="list" class="mt-3 space-y-6">
                 <li v-for="item in navigation.company" :key="item.name">
-                  <a :href="item.href" class="text-normal text-white hover:text-gray-900">{{ item.name }}</a>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-10 md:mt-0">
-              <h3 class="text-lg text-gray-700 font-anton tracking-wider ">Legal</h3>
-              <ul role="list" class="mt-3 space-y-3">
-                <li v-for="item in navigation.legal" :key="item.name">
                   <a :href="item.href" class="text-normal text-white hover:text-gray-900">{{ item.name }}</a>
                 </li>
               </ul>
@@ -47,7 +41,7 @@
         </div>
       </div>
       
-      <div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
+      <div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-16">
         <div class="flex gap-x-6 md:order-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
@@ -89,11 +83,6 @@ const navigation = {
     { name: 'About', href: '#' },
     { name: 'Support', href: '#' },
     { name: 'Contact', href: '#' },
-  ],
-  legal: [
-    { name: 'Terms of service ?', href: '#' },
-    { name: 'Privacy policy ?', href: '#' },
-    { name: 'License ?', href: '#' },
   ],
   social: [
     {

@@ -15,7 +15,7 @@
       <Popup v-if="showPopup" :visible="showPanel" @close="showPanel = false"/>
 
         <div v-if="true" class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6">
-            <h4 class="font-lora text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-gray-800 inline-block text-transparent bg-clip-text ">Superior Meat is Melbourne’s trusted partner for premium Australian and Japanese Wagyu, bridging the gap between world-class producers and discerning culinary professionals.</h4>
+            <h4 class="font-lora text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text ">Superior Meat is Melbourne’s trusted partner for premium Australian and Japanese Wagyu, bridging the gap between world-class producers and discerning culinary professionals.</h4>
         </div>
 
       <!-- Hero -->
@@ -26,7 +26,7 @@
             <div class="relative bg-gray-100 lg:bg-transparent py-5">
               <!-- 左侧文字 -->
               <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:grid lg:grid-cols-3 lg:px-8">
-                <div class="mx-auto max-w-2xl py-24 lg:col-span-1">
+                <div class="mx-auto max-w-2xl py-36 lg:col-span-1">
                   <div class="lg:pr-16">
                     <h1 class="font-anton text-3xl sm:text-4xl lg:text-3xl font-normal tracking-wide text-white uppercase">
                       Elevate Culinary Craft
@@ -44,12 +44,12 @@
            <!--双图片切换-->
             <div id="baContainer" class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-2/3 relative overflow-hidden">
               <!-- After 图 (底层) -->
-              <img id="afterImg" src="/assets/images/banner/banner06.png" alt="after"
+              <img id="afterImg" src="/assets/images/banner/Niku-11.jpg" alt="after"
                    class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none" />
 
               <!-- AFTER 标签：固定在底层右下 -->
               <div id="afterLabel"
-                   class="absolute flex items-center justify-center bottom-4 right-4 z-10 pointer-events-none select-none bg-white text-black px-3 py-1 rounded-md text-sm h-10 w-24 uppercase font-medium tracking-wider">
+                   class="absolute flex items-center justify-center bottom-4 right-8 z-10 pointer-events-none select-none bg-white text-black px-3 py-1 rounded-md text-sm h-10 w-24 uppercase font-medium tracking-wider">
                 After
               </div>
 
@@ -60,7 +60,7 @@
 
               <!-- BEFORE 标签：固定在上层左上 -->
               <div id="beforeLabel"
-                   class="absolute flex items-center justify-center top-4 left-4 z-20 pointer-events-none select-none bg-white  text-black px-3 py-1 rounded-xl text-sm h-10 w-24 uppercase font-medium tracking-wider">
+                   class="absolute flex items-center justify-center top-4 left-8 z-20 pointer-events-none select-none bg-white  text-black px-3 py-1 rounded-xl text-sm h-10 w-24 uppercase font-medium tracking-wider">
                 Before
               </div>
 
@@ -209,14 +209,14 @@
       <div v-if="true" class="bg-cyan-500 mt-8">
         <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-12 sm:px-6 sm:py-20 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div class="">
-            <h2 class=" font-anton text-white text-3xl font-bold tracking-wide  sm:text-4xl dark:text-white uppercase">Partner with PARDOO WAGYU </h2>
-            <p class="font-lora tracking-wide dark:text-white mt-4 text-xl text-gray-200">Superior Meat proudly partners with Okan Purebred Wagyu and Sher Wagyu Black Label — two of Australia’s most iconic wagyu brands.
-              Through exclusive supply authorization from these legendary producers, Superior Meat extends their legacy with our unique precision processing techniques. We are committed to preserving the exceptional quality and heritage of these brands while delivering their finest wagyu products directly to our customers.</p>
+            <h2 class=" font-anton text-white text-3xl font-bold tracking-wide  sm:text-4xl dark:text-white uppercase">Partner with World-Class Wagyu Brands</h2>
+            <p class="font-lora tracking-wide text-white dark:text-white mt-4 text-xl">
+              Superior Meat proudly partners with Okan Purebred Wagyu and Sher Wagyu Black Label, two of Australia’s most iconic wagyu brands, along with other premier producers. With exclusive supply authorization from these legendary names, Superior Meat enhances their legacy through our precise processing techniques. We are dedicated to preserving the heritage and exceptional quality of these brands, delivering the finest wagyu products directly to our customers.</p>
 
             <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
               <div v-for="feature in features" :key="feature.name" class=" dark:text-white border-t border-yellow-400 pt-4">
-                <dt class=" font-lora text-white font-normal text-2xl  dark:text-white">{{ feature.name }}</dt>
-                <dd class="font-lora text-white mt-2 text-base  dark:text-white">{{ feature.description }} {{ feature.descriptionCN }}</dd>
+                <dt class=" font-lora text-white font-normal text-2xl  dark:text-white uppercase">{{ feature.name }}</dt>
+                <dd class="font-lora text-white mt-2 text-base  dark:text-white">{{ feature.description }}</dd>
               </div>
             </dl>
           </div>
@@ -277,7 +277,7 @@
         </div>
       <!--series slider-->
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h2 class="font-anton text-4xl font-normal tracking-wide my-6 uppercase">Our Premium Series</h2>
+            <h2 class="font-anton text-4xl my-6 uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text">Our Premium Series</h2>
 
             <section id="slider" class="mt-5 flex justify-center">
                 <swiper
@@ -293,7 +293,7 @@
                     }"
                     :modules="modules"
                     @autoplayTimeLeft="onAutoplayTimeLeft"
-                    class="mySwiper"
+                    class="mySwiper w-full max-w-4xl mx-auto "
                 >
 
                     <swiper-slide class="" v-for="(slide, index) in slides" :key="index">
@@ -317,7 +317,7 @@
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div  class="mx-auto max-w-2xl lg:max-w-none text-white">
                     <div class="text-center">
-                        <h2 class=" font-anton text-4xl font-normal tracking-wide my-6 uppercase">Our Brand</h2>
+                        <h2 class=" font-anton text-4xl font-normal tracking-wide my-6 uppercase ">Our Brand</h2>
                     </div>
                   <dl class="m-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 text-center gap-8">
                     <div
@@ -326,11 +326,11 @@
                         class="flex flex-col items-center bg-white dark:bg-blue-950 p-6  rounded-xl"
                     >
                       <!-- 图片部分：固定高度、居中对齐 -->
-                      <div class="flex items-center justify-center w-48 h-48 ">
+                      <div class="flex items-center justify-center w-48 h-48">
                         <img
                             :src="item.img"
                             :alt="item.name"
-                            class="w-40 h-40 object-contain"
+                            class="w-40 h-40 object-cover"
                         />
                       </div>
 
@@ -352,7 +352,7 @@
         </div>
       <!--company news-->
       <div v-if="true" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 class="font-anton text-4xl font-normal tracking-wide my-6 uppercase">Company News</h2>
+        <h2 class="font-anton text-4xl my-6 uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-900 to-amber-400 inline-block text-transparent bg-clip-text">Company News</h2>
         <section id="smnews">
           <template v-for="(item, index) in newsList" :key="index">
             <div
@@ -416,46 +416,39 @@
       </div>
       <!--why -->
       <section class="flex flex-col md:my-14 w-full mx-auto max-w-7xl px-5">
-        <p
-            class="font-bold text-2xl md:text-4xl text-center"><span>Why</span> <span
-            class="text-primary">Superior Meat</span></p>
-        <p class="text-center font-normal text-lg mt-5 self-center max-w-[900px] text-gray-700 dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem ipsum dolor sit amet, consectetur adipiscing elit.onsectetur adipiscing elit..
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem ipsum dolor sit amet, consectetur adipiscing elit.onsectetur adipiscing elit.</p>
+
+        <h2 class="text-2xl md:text-4xl text-center font-anton my-6 uppercase font-bold tracking-tight">
+          <span class="bg-gradient-to-r from-yellow-600 via-gray-900 to-amber-400 text-transparent bg-clip-text [ -webkit-background-clip:text ] inline-block">
+            Why Choose Superior Meat
+          </span>
+        </h2>
+        <p class="text-center font-normal text-lg mt-5 self-center max-w-[900px] text-gray-700 dark:text-white">
+          Based in Melbourne, Australia, Superior Meat delivers unparalleled wagyu wholesale. We source premium wagyu directly from Australia’s top ranches, ensuring authentic, premium flavor. Our skilled artisans expertly craft cuts that highlight exquisite marbling, unmatched by competitors. Rigorous inspections and traceable cold-chain processes guarantee exceptional freshness and quality. With customized orders and seamless logistics, we empower your business with tailored solutions for success.</p>
         <div
             class="mt-14 flex items-center justify-center flex-wrap gap-10 sm:gap-x-16 md:gap-x-28 gap-y-12 md:gap-y-20">
           <div class="flex flex-col justify-center items-center">
             <div class="h-24 w-24 text-orange-500">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-
+              <img src="/assets/images/icons/aus.svg" alt="Check Icon" class="h-24 w-24" />
             </div>
-            <p class="font-medium text-lg mt-4 text-center dark:text-white">Money</p></div>
+            <p class="font-medium text-lg mt-4 text-center dark:text-white">Authentic Sourcing</p></div>
           <div class="flex flex-col justify-center items-center">
             <div class="h-24 w-24 text-orange-500">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
-              </svg>
-
+              <img src="/assets/images/icons/steak.svg" alt="Check Icon" class="h-24 w-24" />
             </div>
-            <p class="font-medium text-lg mt-4 text-center dark:text-white">Premium quality</p></div>
+            <p class="font-medium text-lg mt-4 text-center dark:text-white">Precision Butchery</p></div>
           <div class="flex flex-col justify-center items-center">
             <div class="h-24 w-24 text-orange-500">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
-              </svg>
+              <img src="/assets/images/icons/certificate.svg" alt="Check Icon" class="h-24 w-24" />
 
 
             </div>
-            <p class="font-medium text-lg mt-4 text-center dark:text-white">Service</p></div>
+            <p class="font-medium text-lg mt-4 text-center dark:text-white">Unrivaled Quality</p></div>
           <div class="flex flex-col justify-center items-center">
             <div class="h-24 w-24 text-orange-500">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" />
-              </svg>
+              <img src="/assets/images/icons/money.svg" alt="Check Icon" class="h-24 w-24" />
 
             </div>
-            <p class="font-medium text-lg mt-4 text-center dark:text-white">Wagyu ID</p></div>
+            <p class="font-medium text-lg mt-4 text-center dark:text-white">Tailored Solutions</p></div>
 
         </div>
       </section>
@@ -662,19 +655,21 @@ export default {
           progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
       };
       const features = ref( [
-        { name: 'Okan', description: 'Okan Wagyu is a flagship brand from Western Australia’s Pilbara region.',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'/assets/images/logo/okanlogo.png' },
+        { name: 'Okan', description: 'Okan Wagyu is a flagship brand from Western Australia’s Pilbara region.',descriptionCN:'123Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'/assets/images/logo/okanlogo.png' },
         { name: 'Kimbara', description: 'Kimbara Wagyu offers rich flavour, melt-in-your-mouth tenderness, and smoky aromas.',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-featurhero-features02.jpg' },
-        { name: 'Black Market', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit."',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features03.jpg' },
         { name: 'Sher', description: 'Australia’s delicious award winning beef produced by the Sher family.',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features04.jpg'},
+        { name: 'Black Market', description: 'Black Market Wagyu is a premium Australian beef brand known for its rich marbling, sourced from Rangers Valley."',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features03.jpg' },
       ]);
       const postStore = usePostStore()
       const posts = computed(() => postStore.posts)
       const slides =  [
-          { path: '/assets/images/01.jpg', alt: '' },
-          { path: '/assets/images/02.jpg', alt: '' },
-          { path: '/assets/images/02.jpg', alt: '' },
-          { path: '/assets/images/01.jpg', alt: '' },
-
+          { path: '/assets/images/products/ShPremium.jpg', alt: '' },
+          { path: '/assets/images/products/ShSilver.jpg', alt: '' },
+          { path: '/assets/images/products/ShSupreme.jpg', alt: '' },
+          { path: '/assets/images/products/YaGold.jpg', alt: '' },
+          { path: '/assets/images/products/YaPlatinum.jpg', alt: '' },
+          { path: '/assets/images/products/YaSilver.jpg', alt: '' },
+          { path: '/assets/images/products/YaSupreme.jpg', alt: '' },
       ]
       const brands = [
         {
@@ -683,11 +678,11 @@ export default {
         },
         {
           name: "ZUNPIN",
-          img: "/assets/images/logo/zunsquare.png",
+          img: "/assets/images/logo/Zun.png",
         },
         {
           name: "PRIME MEAT ORIGIN",
-          img: "/assets/images/logo/pmosquare.png",
+          img: "/assets/images/logo/Pmo.png",
         },
         {
           name: "NIKUSHIKI",
@@ -695,7 +690,7 @@ export default {
         },
         {
           name: "USHIMATSU",
-          img: "/assets/images/logo/nikusquare.png",
+          img: "/assets/images/logo/Ushi.png",
         },
       ];
 
@@ -744,43 +739,43 @@ export default {
           title: 'Best place in Town',
           description: 'This has got to be the best place in the Eastern suburbs if you are after a special treat! There are premium Angus, Australian wagyu, and Japanese wagyu here. ',
           author: 'Mark Wong',
-          gradient: 'bg-gradient-to-br from-[rgba(255,185,164,0.3)] via-[rgba(255,109,66,0.25)] to-[rgba(255,255,255,0.1)]'
+          gradient: 'bg-gradient-to-br from-amber-500/40 via-yellow-400/30 to-slate-900/60'
         },
         {
           title: 'A Experience Like No Other',
           description: 'Niku Shiki is a must-visit for anyone who appreciates the finest Wagyu beef. They offers an exceptional dining experience, while the butcher shop allows you to take the quality home with you.',
           author: 'Thomas Reeh',
-          gradient: 'bg-gradient-to-br from-[rgba(255,170,130,0.4)] via-[rgba(255,95,95,0.3)] to-[rgba(255,255,255,0.2)]'
+          gradient: 'bg-gradient-to-br from-orange-400/40 via-rose-300/30 to-zinc-900/60'
         },
         {
           title: 'Kristine Subagiyo',
           description: 'Niku Shiki specialises in all things Wagyu and only serve the best cuts from award-winning Stone Axe wagyu',
           author: 'Kristine Subagiyo',
-          gradient: 'bg-gradient-to-br from-[rgba(200,140,255,0.4)] via-[rgba(255,120,200,0.3)] to-[rgba(255,255,255,0.15)]'
+          gradient: 'bg-gradient-to-br from-pink-300/30 via-amber-200/25 to-slate-800/60'
         },
         {
           title: 'xxx',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem i.',
           author: 'Eddie',
-          gradient: 'bg-gradient-to-br from-[rgba(130,200,255,0.4)] via-[rgba(90,230,220,0.3)] to-[rgba(255,255,255,0.15)]'
+          gradient: 'bg-gradient-to-br from-amber-600/40 via-orange-400/30 to-neutral-900/60'
         },
         {
           title: 'xxxx',
           description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem i.',
           author: 'Glen',
-          gradient: 'bg-gradient-to-br from-[rgba(180,255,140,0.35)] via-[rgba(255,230,100,0.3)] to-[rgba(255,255,255,0.2)]'
+          gradient: 'bg-gradient-to-br from-[rgba(130,200,255,0.4)] via-[rgba(90,230,220,0.3)] to-[rgba(255,255,255,0.15)]'
         },
         {
           title: 'xxxx',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem is.',
           author: 'Lisa',
-          gradient: 'bg-gradient-to-br from-[rgba(255,200,100,0.45)] via-[rgba(255,150,80,0.35)] to-[rgba(255,255,255,0.2)]'
+          gradient: 'bg-gradient-to-br from-[rgba(200,140,255,0.4)] via-[rgba(255,120,200,0.3)] to-[rgba(255,255,255,0.15)]'
         },
         {
           title: 'xxxx',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem i.',
           author: 'Bob',
-          gradient: 'bg-gradient-to-br from-[rgba(180,240,255,0.45)] via-[rgba(160,200,255,0.3)] to-[rgba(255,255,255,0.15)]'
+          gradient: 'bg-gradient-to-br from-[rgba(255,185,164,0.3)] via-[rgba(255,109,66,0.25)] to-[rgba(255,255,255,0.1)]'
         },
       ]
 
