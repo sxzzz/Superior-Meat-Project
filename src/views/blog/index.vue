@@ -1,12 +1,12 @@
 <template>
   <div class="bg-white dark:bg-black">
-    <div class=" mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Post</h2>
+    <div class=" mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 mb-8">
+
 
       <div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 mt-4 px-6 sm:gap-y-16 lg:grid-cols-2 lg:px-8">
           <article class="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-lg ">
             <time :datetime="featuredPost.datetime" class="block text-sm/6 text-gray-600 dark:text-white">{{ featuredPost.date }}</time>
-            <h2 id="featured-post" class="mt-4 text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl bg-gradient-to-r from-teal-600 to-blue-600 inline-block text-transparent bg-clip-text">{{ featuredPost.title }}</h2>
+            <h2 id="featured-post" class="mt-4  text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl bg-gradient-to-r from-teal-600 to-blue-600 inline-block text-transparent bg-clip-text">{{ featuredPost.title }}</h2>
             <p v-for="(line, index) in descriptionLines" :key="index" class="m-2  text-gray-600 dark:text-white">{{line}}</p>
             <img :src="featuredPost.imageUrl" alt="" class="rounded-2xl bg-gray-50 object-fill group-hover:opacity-75">
             <div class="mt-4 flex flex-col justify-between gap-6 sm:mt-8 sm:flex-row-reverse sm:gap-8 lg:mt-4 lg:flex-col">
@@ -30,8 +30,9 @@
                       {{ post.title }}
                     </a>
                   </h2>
-                  <div class=" mt-2 h-48 w-[18rem] sm:h-60 sm:w-[24rem]  md:h-60 md:w-[24rem] lg:h-[14rem] lg:w-[20rem] shrink-0 group">
-                    <img :src="post.imageUrl" alt="" class="h-full w-full rounded-2xl bg-gray-50 object-fill group-hover:opacity-75" />
+                  <div class="mt-2 h-48 w-[18rem] sm:h-60 sm:w-[24rem] md:h-60 md:w-[24rem] lg:h-[20rem] lg:w-[30rem] bg-gray-50 rounded-2xl overflow-hidden">
+                    <img :src="post.imageUrl" alt=""
+                         class="h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-75" />
                   </div>
                   <p class="mt-4 text-sm/8 text-gray-600 dark:text-white "> {{ post.description }}</p>
                 </div>
@@ -60,14 +61,15 @@ import { usePostStore } from '/src/store/postStore.js'
 const featuredPost =
     {
   id: 1,
-  title: 'Superior Meat',
+  title: 'Bruce Cheung',
   href: '#',
   description:
-      '',
-  imageUrl:'/assets/images/logo/Logo.jpg',
+      'Mr. Bruce Cheung, Chair and Co-founder of China International Duty Free (CIDF), visited the Nikushiki Melbourne Central store and met with Mr. Kai Gu to exchange ideas on premium wagyu and future collaboration opportunities.',
 
-  date: 'Apr 01, 2025',
-  datetime: '2025-04-01',
+  imageUrl:'/assets/images/blog/nikicbd.png',
+
+  date: 'Jun 24 2024',
+  datetime: '2024-06-24',
   author: {
     name: 'Superior',
     href: '#',

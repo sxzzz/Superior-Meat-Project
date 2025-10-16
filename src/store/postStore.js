@@ -6,12 +6,12 @@ export const usePostStore = defineStore('postStore', {
         posts: [
             {
                 id: 10,
-                title: 'Store1 open',
+                title: 'Vicki Sher - Iconic Wagyu Brand SHER',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'/assets/images/cbdStore.png',
-                date: 'Feb 08 2025',
-                datetime: '2025-02-08',
+                    'Vicki Sher, the founder of Australia’s legendary wagyu brand SHER Wagyu, recently visited the Nikushiki Glen store. During the visit, she met with Mr. Kai Gu and engaged in a warm exchange about premium wagyu products and the growing collaboration between the two brands.',
+                imageUrl:'/assets/images/blog/03042025.png',
+                date: 'Apr 03 2025',
+                datetime: '2025-04-03',
                 author: {
                     name: 'Superior',
                     imageUrl:'assets/images/logo/Logo.jpg',
@@ -19,12 +19,12 @@ export const usePostStore = defineStore('postStore', {
             },
             {
                 id: 9,
-                title: 'Store2 open ',
+                title: 'J-LEC 2024 Seminar',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/glenStore.png',
-                date: 'Jan 31, 2025',
-                datetime: '2025-01-31',
+                    'Mr. Kai Gu participated in the 2024 seminar “Processing Meat and Cooking Skills of Japanese Wagyu Beef for Exporting Nations”, successfully hosted by the Japan Livestock Products Export Promotion Council (J-LEC).',
+                imageUrl:'assets/images/blog/01112024.png',
+                date: 'Nov 01, 2024',
+                datetime: '2024-11-01',
                 author: {
                     name: 'Superior',
                     imageUrl:'assets/images/logo/Logo.jpg',
@@ -32,12 +32,12 @@ export const usePostStore = defineStore('postStore', {
             },
             {
                 id: 8,
-                title: 'Japan trip',
+                title: 'J-LEC 2024 Seminar',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/logo/Logo.jpg',
-                date: 'Jan 17, 2025',
-                datetime: '2025-01-17',
+                    'Mr. Gu’s participation underscores his commitment to bringing authentic Japanese wagyu expertise to his operations and fostering high-quality beef standards for global markets.',
+                imageUrl:'assets/images/blog/01112024JP-1.png',
+                date: 'Nov 01, 2024',
+                datetime: '2024-11-01',
                 author: {
                     name: 'Superior',
                     imageUrl:'assets/images/logo/Logo.jpg',
@@ -45,12 +45,28 @@ export const usePostStore = defineStore('postStore', {
             },
             {
                 id: 7,
-                title: 'Pardoo trip',
+                title: 'Pardoo Wagyu',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/logo/5.jpg',
-                date: 'Dec 27, 2024',
-                datetime: '2024-12-27',
+                    'Mr. Hossam Shabayk, Director of Sales and Marketing at Pardoo Wagyu, recently paid an official visit to the Nikishiku Glen store. During the visit, Mr. Shabayk met with Mr. Kai Gu to discuss strategic opportunities for deeper collaboration between Pardoo Wagyu and Superior Meat.\n' +
+                    '\n' +
+                    'The meeting highlighted both parties’ shared commitment to promoting the finest Australian wagyu and enhancing the premium dining experience for customers. The discussion also explored future partnership initiatives aimed at strengthening their long-term cooperation in the Australian and international markets.',
+                imageUrl:'assets/images/blog/03092024.jpg',
+                date: 'Sep 03, 2024',
+                datetime: '2024-09-03',
+                author: {
+                    name: 'Superior',
+                    imageUrl:'assets/images/logo/Logo.jpg',
+                },
+            },
+
+            {
+                id: 5,
+                title: 'Pardoo farm visit',
+                description:
+                    'Mr. Kai Gu toured Pardoo Wagyu farm to see first-hand how premium Australian wagyu is raised and cared for. A great day learning about top-notch cattle management and wagyu production!',
+                imageUrl:'assets/images/blog/18042024.jpg',
+                date: 'Apr 18, 2024',
+                datetime: '2024-04-18',
                 author: {
                     name: 'Superior',
                     imageUrl:'assets/images/logo/Logo.jpg',
@@ -58,123 +74,17 @@ export const usePostStore = defineStore('postStore', {
             },
             {
                 id: 6,
-                title: 'ushimatsu open',
+                title: 'Origin Omi Beef Trip',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/logo/5.jpg',
-                date: 'Nov 20, 2024',
-                datetime: '2024-11-20',
+                    'Mr. Kai Gu visited Azuchi-cho, renowned for premium Omi Beef. He toured the farm, observed cattle management, and discussed production techniques with the experts, reflecting his commitment to authentic Japanese wagyu practices.',
+                imageUrl:'assets/images/blog/05092023-1.jpg',
+                date: 'Sep 09, 2023',
+                datetime: '2023-09-05',
                 author: {
                     name: 'Superior',
                     imageUrl:'assets/images/logo/Logo.jpg',
                 },
             },
-            {
-                id: 5,
-                title: 'trip',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/logo/5.jpg',
-                date: 'Nov 18, 2024',
-                datetime: '2024-11-18',
-                author: {
-                    name: 'Superior',
-                    imageUrl:'assets/images/logo/Logo.jpg',
-                },
-            },
-            {
-                id: 4,
-                title: 'trip',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/logo/5.jpg',
-                date: 'Nov 11, 2024',
-                datetime: '2024-11-11',
-                author: {
-                    name: 'Superior',
-                    imageUrl:'assets/images/logo/Logo.jpg',
-                },
-            },
-            {
-                id: 3,
-                title: 'okan trip',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/logo/5.jpg',
-                date: 'Oct 07, 2024',
-                datetime: '2024-10-07',
-                author: {
-                    name: 'Superior',
-                    imageUrl:'assets/images/logo/Logo.jpg',
-                },
-            },
-            {
-                id: 2,
-                title: 'store open',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/logo/5.jpg',
-                date: 'Sep 15, 2024',
-                datetime: '2024-09-15',
-                author: {
-                    name: 'Superior',
-                    imageUrl:'assets/images/logo/Logo.jpg',
-                },
-            },
-            {
-                id: 1,
-                title: 'store open',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/logo/5.jpg',
-                date: 'Sep 02, 2024',
-                datetime: '2024-09-02',
-                author: {
-                    name: 'Superior',
-                    imageUrl:'assets/images/logo/Logo.jpg',
-                },
-            },
-            {
-                id: 13,
-                title: 'store open"',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/logo/5.jpg',
-                date: 'Sep 01, 2024',
-                datetime: '2024-09-01',
-                author: {
-                    name: 'Superior',
-                    imageUrl:'assets/images/logo/Logo.jpg',
-                },
-            },
-            {
-                id: 12,
-                title: 'trip"',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/logo/5.jpg',
-                date: 'Dec 28, 2023',
-                datetime: '2023-09-28',
-                author: {
-                    name: 'Superior',
-                    imageUrl:'assets/images/logo/Logo.jpg',
-                },
-            },
-            {
-                id: 11,
-                title: 'Vue 3.3 "Rurouni Kenshin"',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'assets/images/logo/5.jpg',
-                date: 'June 11, 2023',
-                datetime: '2023-06-11',
-                author: {
-                    name: 'Superior',
-                    imageUrl:'assets/images/logo/Logo.jpg',
-                },
-            },
-
-
         ]
     }),
     actions: {

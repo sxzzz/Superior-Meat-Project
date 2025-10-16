@@ -7,8 +7,8 @@
     <div class="mx-auto max-w-2xl px-4 lg:max-w-none">
       <div class="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
         <div>
-          <h2 class="text-4xl font-bold tracking-tight text-gray-900">Superior Meat</h2>
-          <p class="mt-4 text-gray-500">
+          <h2 class="text-4xl  uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text">Superior Meat</h2>
+          <p class="mt-4 text-gray-500 text-xl">
             Superior Meat is Melbourne’s trusted partner for premium Australian and Japanese Wagyu, bridging the gap between world-class producers and discerning culinary professionals. Specialising in ethically sourced, marbling-rich Wagyu, we serve diverse clients—from multi-hats restaurants to home gourmets—through tailored supply solutions. Regulated by PrimeSafe and HACCP certified by DQS, we ensure traceability, consistency, and unmatched quality. We specialise in premium Wagyu solutions for:
           </p>
         </div>
@@ -31,8 +31,8 @@
           <!-- 图片部分 -->
           <div class="flex items-center justify-center">
             <img
-                class="size-12 rounded-2xl object-contain transition-transform duration-700 ease-out
-               group-hover:scale-110 group-hover:brightness-110"
+                class="w-full h-60 rounded-2xl object-cover transition-transform duration-700 ease-out
+           group-hover:scale-110 group-hover:brightness-110"
                 :src="incentive.imageSrc"
                 alt=""
             />
@@ -41,12 +41,12 @@
           <!-- 文字部分 -->
           <div class="mt-6 text-center">
             <h3
-                class="text-base font-semibold text-gray-900 transition-colors duration-500 group-hover:text-indigo-600"
+                class="text-lg font-semibold text-gray-900 transition-colors duration-500 group-hover:text-indigo-600"
             >
               {{ incentive.name }}
             </h3>
             <p
-                class="mt-2 text-sm text-gray-500 transition-all duration-500 group-hover:text-gray-700"
+                class="mt-2 text-base text-gray-500 transition-all duration-500 group-hover:text-gray-700"
             >
               {{ incentive.description }}
             </p>
@@ -67,32 +67,52 @@
       <!-- Details section -->
       <section aria-labelledby="details-heading">
         <div class="flex flex-col items-center text-center">
-          <h2 id="details-heading" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">尊品</h2>
-          <p class="mt-3 max-w-3xl text-lg text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <h2 id="details-heading" class="text-4xl  uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text">ZUN PIN</h2>
+          <p class="mt-3 max-w-3xl text-xl text-gray-600">
+            We have an exclusive partnership with Oriental Merchant, one of the world’s leading distributors of Asian food products and condiments.
+            Through this collaboration, we developed a dedicated brand <span class=" text-2xl font-bold">ZUN PIN</span> exclusively designed for Oriental Merchant, with products distributed to Asian supermarkets across Australia.
           </p>
         </div>
 
         <div class="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
-          <div class="overflow-hidden rounded-2xl group cursor-pointer transition-transform duration-500">
+          <div class="overflow-hidden rounded-2xl group cursor-pointer transition-transform duration-500 relative">
+            <!-- 默认图片 -->
             <img
-                src="/assets/images/yakibb.jpg"
-                alt="Drawstring top with elastic loop closure and textured interior padding."
-                class="aspect-[3/2] w-full rounded-2xl object-cover transform transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:-translate-y-2 group-hover:brightness-110 group-hover:shadow-xl"
+                src="/assets/images/products/triTip.jpg"
+                alt="Primary image"
+                class="aspect-[3/2] w-full rounded-2xl object-cover transition-all duration-700 ease-in-out group-hover:opacity-0"
             />
-            <p class="mt-8 text-base text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            <!-- hover 图片 -->
+            <img
+                src="/assets/images/parts/BeefTriTip.png"
+                alt="Hover image"
+                class="absolute inset-0 w-full h-full rounded-2xl object-contain opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
+            />
+
+            <p class="mt-8 text-base text-gray-500 relative z-10">
+              Tri Tip
             </p>
           </div>
 
-          <div class="overflow-hidden rounded-2xl group cursor-pointer transition-transform duration-500">
+
+          <div class="overflow-hidden rounded-2xl group cursor-pointer transition-transform duration-500 relative">
+            <!-- 默认图片 -->
             <img
                 src="/assets/images/yakicer.jpg"
-                alt="Front zipper pouch with included key ring."
-                class="aspect-[3/2] w-full rounded-2xl object-cover transform transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:-translate-y-2 group-hover:brightness-110 group-hover:shadow-xl"
+                alt="Primary image"
+                class="aspect-[3/2] w-full rounded-2xl object-cover transition-all duration-700 ease-in-out group-hover:opacity-0"
             />
-            <p class="mt-8 text-base text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            <!-- hover 图片 -->
+            <img
+                src="/assets/images/parts/BeefChuckEyeRoll.png"
+                alt="Hover image"
+                class="absolute inset-0 w-full h-full rounded-2xl object-contain opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
+            />
+
+            <p class="mt-8 text-base text-gray-500 relative z-10">
+              Chuck Eye Roll
             </p>
           </div>
         </div>
@@ -106,8 +126,8 @@
       <div class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
         <div>
           <div class="border-b border-gray-200 pb-10">
-            <h2 class="font-medium text-gray-500">上品肉源</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl uppercase">Prime Meat Origin</p>
+            <h2 class="text-3xl font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 text-transparent bg-clip-text">上品肉源</h2>
+            <p class="mt-2 text-4xl  uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text">Prime Meat Origin</p>
           </div>
 
           <dl class="mt-10 space-y-10">
@@ -133,7 +153,7 @@
     <!--四季和牛-->
     <div class="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
       <div class="mx-auto max-w-3xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">NIKU SHIKI</h2>
+        <h2 class="text-4xl  uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text">NIKU SHIKI</h2>
         <p class="mt-4 text-gray-500">Niku Shiki celebrates Japanese tradition with premium Wagyu Beef through our contemporary menu and take-home products. Our butcher section offers restaurant-quality Wagyu, condiments, and sauces for an authentic Yakiniku or Shabu Shabu experience at home.</p>
       </div>
 
@@ -167,20 +187,20 @@ import divider from "/src/components/divider/index.vue";
 
 const incentives = [
   {
-    name: 'Feature1',
-    imageSrc: '/assets/images/Wagyu Platter.jpg',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: 'Wagyu Platter',
+    imageSrc: '/assets/images/brands/Niku186.jpg',
+    description: "Kagoshima Beef - Combination of Striploin, Outside Flat, Cube Roll, Chuck Eye Roll",
   },
   {
-    name: 'Feature2',
-    imageSrc: '/assets/images/Wagyu Platter.jpg',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: 'Wagyu Sushi',
+    imageSrc: '/assets/images/sm02.jpg',
+    description: "Exquisite wagyu sushi, where tender marbled beef meets delicate craftsmanship.",
   },
   {
-    name: 'Feature3',
-    imageSrc: '/assets/images/Wagyu Platter.jpg',
+    name: 'Wagyu Dish',
+    imageSrc: '/assets/images/sm03.jpg',
     description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Ultimate Truffle Foie Gras and Wagyu with Garlic Fried Rice",
   },
 ]
 
@@ -207,7 +227,7 @@ const nikushiki = [
     name: ' NIKUSHIKI GLEN',
     description:
         'Located in The Glen Shopping Centre, our restaurant and butcher store invite you to enjoy expertly prepared Wagyu Beef and the finest Japanese hospitality in Melbourne.',
-    imageSrc: '/assets/images/brands/niku01.jpg',
+    imageSrc: '/assets/images/brands/Niku01.jpg',
     imageAlt: '123',
   },
   {

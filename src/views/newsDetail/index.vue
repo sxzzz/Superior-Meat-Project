@@ -1,6 +1,6 @@
 <template>
     <div class="bg-white dark:bg-black">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-4 pb-8">
             <div class="mx-auto max-w-2xl items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
                 <ul class="">
                     <li v-for="news in filteredNewsList" :key="news.id" >
@@ -25,16 +25,21 @@
                                     <img :src="news.imageUrl" alt="" class="mt-6 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]">
                                 </div>
                                 <div class="basis-1/2">
-                                    <div class="py-8 relative flex flex-wrap gap-x-3">
-                                        <div class="flex items-center mb-4">
-                                            <p class="w-full flex-none text-xl font-semibold tracking-tight text-gray-900 dark:text-gray-300">{{news.title}}</p>
-                                        </div>
 
-                                        <div class="whitespace-pre-line ... dark:text-gray-300">
-                                            {{news.content}}
-                                        </div>
 
+                                  <div class="space-y-2">
+                                    <!-- 标题部分 -->
+                                    <div class="flex items-center py-10">
+                                      <p class="w-full text-2xl lg:text-3xl font-anton font-medium tracking-wide text-gray-700 dark:text-gray-100">
+                                        {{ news.title }}
+                                      </p>
                                     </div>
+
+                                    <!-- 内容部分 -->
+                                    <div class="whitespace-pre-line text-xl leading-relaxed text-gray-700 dark:text-gray-300">
+                                      {{ news.content }}
+                                    </div>
+                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -58,28 +63,28 @@ export default {
     data() {
         const newsList = [
             {
-                id:'01102025',
-                date:'01 Oct 2025',
-                title:'NIKUSHIKI GLEN ',
-                content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem ipsum dolor sit amet, consectetur adipiscing elit.onsectetur adipiscing elit.',
+                id:'03042025',
+                date:'03 Apr 2025',
+                title:' Vicki Sher - Iconic Wagyu Brand SHER',
+                content:'Vicki Sher, the founder of Australia’s legendary wagyu brand SHER Wagyu, recently visited the Nikushiki Glen store. During the visit, she met with Mr. Kai Gu and engaged in a warm exchange about premium wagyu products and the growing collaboration between the two brands.',
                 contentCn:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'/assets/images/01.jpg'
+                imageUrl:'/assets/images/blog/03042025.png'
             },
             {
-                id:'02102025',
-                date:'02 Oct 2025',
-              title:'NIKUSHIKI GLEN CBD',
-              content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem ipsum dolor sit amet, consectetur adipiscing elit.onsectetur adipiscing elit.',
+                id:'24062024',
+                date:'24 Jun 2024',
+              title:'Bruce Cheung - Executive Chairman of Pardoo Beef Corporation ',
+              content:'Mr Bruce Cheung the Executive Chairman of Pardoo Beef Corporation, played a visit the Nikushiki Melbourne Central store and met with Mr. Kai Gu to exchange ideas on premium wagyu and future collaboration opportunities.',
               contentCn:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-              imageUrl:'/assets/images/01.jpg'
+              imageUrl:'/assets/images/blog/nikicbd.png'
             },
             {
-                id:'03102025',
-                date:'03 Oct 2025',
-              title:'PARDOO TRIP',
-              content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem ipsum dolor sit amet, consectetur adipiscing elit.onsectetur adipiscing elit.',
+                id:'01112024',
+                date:'01 Nov 2024',
+              title:'Japan Trip',
+              content:'Mr. Kai Gu participated in the 2024 seminar “Processing Meat and Cooking Skills of Japanese Wagyu Beef for Exporting Nations”, successfully hosted by the Japan Livestock Products Export Promotion Council (J-LEC).',
               contentCn:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-              imageUrl:'/assets/images/01.jpg'
+              imageUrl:'/assets/images/blog/01112024JP.png'
             },
         ]
         const Switch1 = {

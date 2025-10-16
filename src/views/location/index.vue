@@ -2,7 +2,7 @@
   <div class="bg-white dark:bg-black">
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div class="h-screen flex flex-col">
-        <h2 class="ms-2 text-4xl my-2 dark:text-white">Our Store</h2>
+        <h2 class="mb-2 text-4xl uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text">Our Store</h2>
 
         <div class="flex-1 flex flex-col md:flex-row min-h-0">
           <!-- 左侧列表：在移动端根据视图切换 -->

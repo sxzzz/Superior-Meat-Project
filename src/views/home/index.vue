@@ -1,19 +1,6 @@
 <template>
     <div class="bg-white dark:bg-black relative">
 
-      <!-- Feedback 按钮（从下往上垂直排列）-->
-      <div v-if="showPopup" class="fixed right-0 bottom-1/4 z-40 hidden sm:block">
-        <button
-            class="bg-purple-700 text-white text-sm font-semibold px-4 py-2 rounded-t-xl shadow-md hover:bg-purple-800 transition origin-bottom-right tracking-wider"
-            style="transform: rotate(-90deg); transform-origin: bottom right;"
-            @click="togglePanel"
-        >
-          SPECIAL
-        </button>
-      </div>
-      <!-- 右侧滑出 Panel -->
-      <Popup v-if="showPopup" :visible="showPanel" @close="showPanel = false"/>
-
         <div v-if="true" class=" mx-auto max-w-7xl px-6 lg:px-8 mt-6">
             <h4 class="font-lora text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text ">Superior Meat is Melbourne’s trusted partner for premium Australian and Japanese Wagyu, bridging the gap between world-class producers and discerning culinary professionals.</h4>
         </div>
@@ -223,8 +210,7 @@
           <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8  ">
             <div class="relative group aspect-square overflow-hidden rounded-lg">
               <img src="/assets/images/logo/ok.jpg" alt="" class="rounded-lg bg-gray-100 w-full h-full object-cover" />
-              <img src="/assets/images/logo/5.jpg" alt=""
-                   class="rounded-lg bg-gray-100 absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+              <img src="/assets/images/logo/5.jpg" alt="" class="rounded-lg bg-gray-100 absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
             </div>
             <div  class="relative group aspect-square">
               <img src="/assets/images/logo/kim.jpg" alt="" class="rounded-lg bg-gray-100 w-full h-full object-cover" />
@@ -243,38 +229,6 @@
         </div>
       </div>
 
-      <!--帖子 暂时不用-->
-        <div v-if="false" class="bg-cyan-500 dark:bg-cyan-900 py-6 text-white">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8 ">
-
-                <div class="mt-2 space-y-8">
-                  <div class="">
-                    <button type="button" class="text-sm font-semibold leading-6 dark:text-gray-300 hover:text-rose-500 dark:hover:text-orange-600 " @click="toggleShowMore" >View all posts <span aria-hidden="true"><i v-if="!showMore" class="ms-1 bi-arrow-right-circle"></i><i v-else class=" ms-1 bi bi-arrow-down-circle"></i></span></button>
-                  </div>
-                        <!-- moments -->
-                        <article v-for="post in itemsToShow" :key="post.id" class="relative isolate flex flex-col items-center gap-4 lg:flex-row">
-                            <div class="relative h-64 w-[21rem] sm:h-[28rem] sm:w-[40rem] lg:w-64 lg:h-48 shrink-0 group">
-                                <img :src="post.imageUrl" alt="" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover group-hover:opacity-75" />
-                                <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
-                            </div>
-                            <div class="dark:text-gray-400">
-                                <div class="flex items-center gap-x-4 text-xs ">
-                                    <time :datetime="post.datetime" class="">{{ post.date }}</time>
-                                    <div>
-                                        <img :src="post.author.imageUrl" alt="" class="h-8 w-8 rounded-full bg-gray-50" />
-                                    </div>
-                                    <p>{{post.author.name}}</p>
-                                </div>
-                                <div class="group relative w-[21rem] sm:w-[40rem]">
-                                    <p class="font-bold">{{post.title}}</p>
-                                    <p class="mt-5 text-base leading-6">{{ post.description }}</p>
-                                </div>
-                            </div>
-                        </article>
-
-                </div>
-            </div>
-        </div>
       <!--series slider-->
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <h2 class="font-anton text-4xl my-6 uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text">Our Premium Series</h2>
@@ -453,14 +407,11 @@
         </div>
       </section>
       <!--  review    -->
-      <section class=" w-full mx-auto max-w-7xl px-5my-20 z-10">
-        <div class="flex flex-col items-center ">
-          <p class="text-2xl md:text-4xl text-[#171717] text-center mb-5 font-bold dark:text-white">Our
-            <span class="text-primary ">Reviews</span>
-          </p>
-          <p class="text-base text-[#515151] text-center mb-10 mx-auto max-w-[650px] dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem i
-          </p>
+      <section class="w-full mx-auto max-w-7xl px-5my-20 z-10">
+        <div class="flex flex-col items-center text-2xl md:text-4xl text-center font-anton my-6 uppercase font-bold tracking-tight ">
+          <p class="bg-gradient-to-r from-yellow-600 via-gray-900 to-amber-400 text-transparent bg-clip-text [ -webkit-background-clip:text ] inline-block">Our Reviews</p>
         </div>
+        <p class="text-base  text-center mb-10 mx-auto  ">Our loyal customers’ feedback</p>
 
         <div id="row1" class="relative flex overflow-x-scroll no-scrollbar md:overflow-x-hidden overflow-y-hidden">
           <div class="flex animate-marquee-right z-30">
@@ -523,7 +474,7 @@
 <script>
 import { ref,computed,onMounted} from 'vue';
 import { useRoute } from 'vue-router';
-// Import Swiper Vue.js components
+
 import { Swiper, SwiperSlide } from 'swiper/vue';
 // Import Swiper styles
 import 'swiper/css';
@@ -531,12 +482,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../../index.css';
 import  { Autoplay, Pagination,Navigation } from 'swiper';
-import {useWeatherStore}  from '@/store/weather.js'
 import {usePostStore}  from '@/store/postStore.js'
 import WeatherWidget from '@/components/weather/index.vue';
 import divider from "/src/components/divider/index.vue";
 import HtmlCompareSlider from "/src/components/HtmlCompareSlider/index.vue";
-import Popup from '/src/components/Popup/index.vue';
 export default {
     components: {
         Swiper,
@@ -544,7 +493,6 @@ export default {
         WeatherWidget,
         divider,
         HtmlCompareSlider,
-        Popup
     },
     setup() {
       onMounted(() => {
@@ -696,24 +644,24 @@ export default {
 
       const newsList = [
         {
-          id: "01102025",
-          date: "01/10/2025",
+          id: "03042025",
+          date: "03/04/2025",
           title: "NIKUSHIKI GLEN",
-          img: "/assets/images/glenStore.png",
+          img: "/assets/images/brands/Niku01.jpg",
           reverse: false,
         },
         {
-          id: "02102025",
-          date: "02/10/2025",
-          title: "NIKUSHIKI CBD",
+          id: "24062024",
+          date: "24/06/2024",
+          title: "NIKUSHIKI MELBOURNE CENTRAL",
           img: "/assets/images/cbdStore.png",
           reverse: true,
         },
         {
-          id: "03102025",
-          date: "03/10/2025",
-          title: "PARDOO TRIP",
-          img: "/assets/images/cbdStore.png",
+          id: "01112024",
+          date: "01/11/2024",
+          title: "Japan Trip",
+          img: "/assets/images/japanfarm.jpg",
           reverse: false,
         },
       ];
@@ -754,26 +702,26 @@ export default {
           gradient: 'bg-gradient-to-br from-pink-300/30 via-amber-200/25 to-slate-800/60'
         },
         {
-          title: 'xxx',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem i.',
+          title: 'Liam Robertson',
+          description: 'Exceptional Wagyu every time! The team really knows their product and always delivers premium cuts that our customers love. Fast delivery, great service, and unbeatable quality. Highly recommended for anyone in the food business.',
           author: 'Eddie',
           gradient: 'bg-gradient-to-br from-amber-600/40 via-orange-400/30 to-neutral-900/60'
         },
         {
-          title: 'xxxx',
-          description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem i.',
+          title: 'Olivia Bennett',
+          description: 'Superior Meat has been a fantastic supplier for our restaurant. Consistent quality, fair pricing, and excellent customer support. Our chefs love working with their Wagyu — it’s always a standout on the menu.',
           author: 'Glen',
           gradient: 'bg-gradient-to-br from-[rgba(130,200,255,0.4)] via-[rgba(90,230,220,0.3)] to-[rgba(255,255,255,0.15)]'
         },
         {
-          title: 'xxxx',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem is.',
+          title: 'Emily Wong',
+          description: 'Brilliant experience dealing with the team at Wagyu Wholesale. Very responsive, professional, and their products are simply world-class. If you’re looking for genuine premium Wagyu, this is the place to go.',
           author: 'Lisa',
           gradient: 'bg-gradient-to-br from-[rgba(200,140,255,0.4)] via-[rgba(255,120,200,0.3)] to-[rgba(255,255,255,0.15)]'
         },
         {
-          title: 'xxxx',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cLorem i.',
+          title: 'Rachel Miller',
+          description: 'The beef is absolutely incredible. You can really taste the difference.',
           author: 'Bob',
           gradient: 'bg-gradient-to-br from-[rgba(255,185,164,0.3)] via-[rgba(255,109,66,0.25)] to-[rgba(255,255,255,0.1)]'
         },

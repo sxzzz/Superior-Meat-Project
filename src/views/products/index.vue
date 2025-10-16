@@ -11,7 +11,7 @@
     >
       <div class="sm:flex sm:items-baseline sm:justify-between">
         <h2
-            class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text"
+            class="text-4xl uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text"
         >
           {{ galleryItem.subtitle }}
         </h2>
@@ -54,18 +54,14 @@
 
           <!-- ✅ 下方信息区 -->
           <div
-              class="bg-gradient-to-b from-gray-50 to-gray-100 px-4 py-5 text-center transition duration-500 group-hover:from-pink-50 group-hover:to-pink-100"
+              class="bg-white px-4 py-5 text-center transition duration-500 group-hover:from-pink-50 group-hover:to-pink-100"
           >
             <h3
                 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-pink-600 transition-all duration-500"
             >
               {{ image.title }}
             </h3>
-                        <p
-                            class="text-sm text-gray-500 opacity-90 transition duration-500 group-hover:text-gray-700"
-                        >
-                          {{ image.description }}
-                        </p>
+
           </div>
         </div>
       </div>
@@ -79,7 +75,7 @@
     >
       <div class="sm:flex sm:items-baseline sm:justify-between">
         <h2
-            class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text"
+            class="text-4xl uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text"
         >
           {{ galleryItem.subtitle }}
         </h2>
@@ -107,7 +103,7 @@
                 class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 bg-black bg-opacity-50 text-white font-semibold text-lg"
             >
               <button
-                  @click="openYakinikuModal(image)"
+                  @click="openShabuModal(image)"
                   class="px-4 py-2 bg-pink-600 rounded-lg hover:bg-pink-700 transition"
               >
                 View More
@@ -122,18 +118,13 @@
 
           <!-- ✅ 下方信息区 -->
           <div
-              class="bg-gradient-to-b from-gray-50 to-gray-100 px-4 py-5 text-center transition duration-500 group-hover:from-pink-50 group-hover:to-pink-100"
+              class="bg-white px-4 py-5 text-center transition duration-500 group-hover:from-pink-50 group-hover:to-pink-100"
           >
             <h3
                 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-pink-600 transition-all duration-500"
             >
               {{ image.title }}
             </h3>
-            <!--            <p-->
-            <!--                class="text-sm text-gray-500 opacity-90 transition duration-500 group-hover:text-gray-700"-->
-            <!--            >-->
-            <!--              {{ image.description }}-->
-            <!--            </p>-->
           </div>
         </div>
       </div>
@@ -147,7 +138,7 @@
     >
       <div class="sm:flex sm:items-baseline sm:justify-between">
         <h2
-            class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text"
+            class="text-4xl uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text"
         >
           {{ galleryItem.subtitle }}
         </h2>
@@ -175,7 +166,7 @@
                 class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 bg-black bg-opacity-50 text-white font-semibold text-lg"
             >
               <button
-                  @click="openYakinikuModal(image)"
+                  @click="openSteakModal(image)"
                   class="px-4 py-2 bg-pink-600 rounded-lg hover:bg-pink-700 transition"
               >
                 View More
@@ -190,7 +181,7 @@
 
           <!-- ✅ 下方信息区 -->
           <div
-              class="bg-gradient-to-b from-gray-50 to-gray-100 px-4 py-5 text-center transition duration-500 group-hover:from-pink-50 group-hover:to-pink-100"
+              class="bg-white px-4 py-5 text-center transition duration-500 group-hover:from-pink-50 group-hover:to-pink-100"
           >
             <h3
                 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-pink-600 transition-all duration-500"
@@ -215,7 +206,7 @@
     >
       <div class="sm:flex sm:items-baseline sm:justify-between">
         <h2
-            class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text"
+            class="text-4xl uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text"
         >
           {{ galleryItem.subtitle }}
         </h2>
@@ -258,7 +249,7 @@
 
           <!-- ✅ 下方信息区 -->
           <div
-              class="bg-gradient-to-b from-gray-50 to-gray-100 px-4 py-5 text-center transition duration-500 group-hover:from-pink-50 group-hover:to-pink-100"
+              class="bg-white px-4 py-5 text-center transition duration-500 group-hover:from-pink-50 group-hover:to-pink-100"
           >
             <h3
                 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-pink-600 transition-all duration-500"
@@ -319,95 +310,260 @@
         </div>
       </div>
     </transition>
+    <!-- yakiniku弹出拖拽窗口暂时不用 -->
+<!--    <transition name="fade">-->
+<!--      <div v-if="isYakinikuModalOpen" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">-->
+<!--        <div class="relative w-full max-w-7xl mx-4">-->
+<!--          &lt;!&ndash; 关闭按钮 &ndash;&gt;-->
+<!--          <button-->
+<!--              class="absolute top-2 right-[85px] z-50 text-white bg-cyan-300 bg-opacity-30 rounded-full w-5 h-5 flex items-center justify-center hover:bg-black hover:bg-opacity-50 transition"-->
+<!--              @click="closeYakinikuModal"-->
+<!--          >-->
+<!--            &times;-->
+<!--          </button>-->
+
+<!--          <HtmlCompareSlider :width="selectedYakinikuImage?.sliderWidth || 1200" :height="selectedYakinikuImage?.sliderHeight || 600">-->
+<!--            &lt;!&ndash; before &ndash;&gt;-->
+<!--            <template #before>-->
+<!--              <div class="w-full h-full flex flex-col items-center justify-center px-8 py-12 space-y-6 bg-white text-gray-900">-->
+<!--&lt;!&ndash;                <h1 class="text-4xl font-extrabold text-pink-600">{{ selectedYakinikuImage?.title }} - Before</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="text-lg max-w-xl text-center">{{ selectedYakinikuImage?.description }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="bg-gray-100 border border-gray-300 rounded-xl shadow p-6 space-y-2 w-full max-w-2xl">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <h2 class="text-xl font-bold text-gray-700">Details</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <ul class="list-disc list-inside text-sm text-gray-700">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li v-for="(detail, i) in selectedYakinikuImage?.details" :key="i">{{ detail.subtitle }}: {{ detail.text }}</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+
+<!--                <h1 class="text-5xl font-extrabold text-pink-600">-->
+<!--                  ☀️ {{ selectedYakinikuImage?.titleBefore }}  Gold Cut-->
+<!--                </h1>-->
+<!--                <p class="text-lg max-w-xl leading-relaxed text-center">-->
+<!--                  {{ selectedYakinikuImage?.descriptionBefore }}-->
+<!--                </p>-->
+
+<!--                <div class="bg-gray-100 border border-gray-300 rounded-xl shadow p-6 space-y-3 max-w-2xl ">-->
+<!--                  <h2 class="text-xl font-bold text-gray-700">🥩 Product Details</h2>-->
+<!--                  <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">-->
+<!--                    <li-->
+<!--                        v-for="(detail, i) in selectedYakinikuImage?.detailsBefore"-->
+<!--                        :key="'before-'+i"-->
+<!--                    >-->
+<!--                      {{ detail.subtitle }}: {{ detail.text }}-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+
+<!--                <div class="mt-4 text-2xl font-bold text-red-600">-->
+<!--                  💰 Price: {{ selectedYakinikuImage?.priceBefore || '$189 / kg' }}-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </template>-->
+
+<!--            &lt;!&ndash; after &ndash;&gt;-->
+<!--            <template #after>-->
+<!--              <div class="w-full h-full flex flex-col items-center justify-center px-8 py-12 space-y-6 bg-gray-900 text-gray-200">-->
+<!--&lt;!&ndash;                <h1 class="text-4xl font-extrabold text-red-400">{{ selectedYakinikuImage?.title }} - After</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="text-lg max-w-xl text-center">{{ selectedYakinikuImage?.description }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="bg-gray-800 rounded-xl shadow-lg p-6 space-y-2 w-full max-w-2xl">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <h2 class="text-xl font-bold text-yellow-400">Highlights</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <ul class="list-disc list-inside text-sm text-gray-300">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li v-for="(detail, i) in selectedYakinikuImage?.details" :key="i">{{ detail.subtitle }}: {{ detail.text }}</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--                <h1 class="text-5xl font-extrabold text-red-400">-->
+<!--                  🌙 {{ selectedYakinikuImage?.titleAfter }}  Platinum Cut-->
+<!--                </h1>-->
+<!--                <p class="text-lg max-w-xl leading-relaxed text-center">-->
+<!--                  {{ selectedYakinikuImage?.descriptionAfter }}-->
+<!--                </p>-->
+<!--                <div class="bg-gray-800 rounded-xl shadow-lg p-6 space-y-3 max-w-2xl ">-->
+<!--                  <h2 class="text-xl font-bold text-yellow-400">✨ Key Highlights</h2>-->
+<!--                  <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">-->
+<!--                    <li-->
+<!--                        v-for="(detail, i) in selectedYakinikuImage?.detailsAfter"-->
+<!--                        :key="'after-'+i"-->
+<!--                    >-->
+<!--                      {{ detail.subtitle }}: {{ detail.text }}-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+
+<!--                <div class="mt-4 text-2xl font-bold text-green-400">-->
+<!--                  💰 Price: {{ selectedYakinikuImage?.priceAfter || '$329 / kg' }}-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </template>-->
+<!--          </HtmlCompareSlider>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </transition>-->
+
     <!-- yakiniku弹出窗口 -->
     <transition name="fade">
-      <div v-if="isYakinikuModalOpen" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-        <div class="relative w-full max-w-7xl mx-4">
+      <div
+          v-if="isYakinikuModalOpen"
+          class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+      >
+        <!-- 弹窗主体 -->
+        <div class="relative w-full max-w-7xl mx-4 bg-white rounded-2xl overflow-hidden shadow-2xl">
           <!-- 关闭按钮 -->
           <button
-              class="absolute top-2 right-[85px] z-50 text-white bg-cyan-300 bg-opacity-30 rounded-full w-5 h-5 flex items-center justify-center hover:bg-black hover:bg-opacity-50 transition"
+              class="absolute top-4 right-4 z-50 text-black bg-gray-200 hover:bg-gray-300 rounded-full w-8 h-8 flex items-center justify-center transition"
               @click="closeYakinikuModal"
           >
             &times;
           </button>
 
-          <HtmlCompareSlider :width="selectedYakinikuImage?.sliderWidth || 1200" :height="selectedYakinikuImage?.sliderHeight || 600">
-            <!-- before -->
-            <template #before>
-              <div class="w-full h-full flex flex-col items-center justify-center px-8 py-12 space-y-6 bg-white text-gray-900">
-<!--                <h1 class="text-4xl font-extrabold text-pink-600">{{ selectedYakinikuImage?.title }} - Before</h1>-->
-<!--                <p class="text-lg max-w-xl text-center">{{ selectedYakinikuImage?.description }}</p>-->
-<!--                <div class="bg-gray-100 border border-gray-300 rounded-xl shadow p-6 space-y-2 w-full max-w-2xl">-->
-<!--                  <h2 class="text-xl font-bold text-gray-700">Details</h2>-->
-<!--                  <ul class="list-disc list-inside text-sm text-gray-700">-->
-<!--                    <li v-for="(detail, i) in selectedYakinikuImage?.details" :key="i">{{ detail.subtitle }}: {{ detail.text }}</li>-->
-<!--                  </ul>-->
-<!--                </div>-->
+          <!-- 内容区 -->
+          <div class="p-8 text-center">
+            <!-- 主标题 -->
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">{{selectedYakinikuImage?.title}}</h2>
 
-                <h1 class="text-5xl font-extrabold text-pink-600">
-                  ☀️ {{ selectedYakinikuImage?.titleBefore }}  Gold Cut
-                </h1>
-                <p class="text-lg max-w-xl leading-relaxed text-center">
-                  {{ selectedYakinikuImage?.descriptionBefore }}
-                </p>
+            <!-- 副标题 -->
+            <h3 class="text-xl text-gray-700 mb-4 font-medium">{{ selectedYakinikuImage?.subtitle }}</h3>
 
-                <div class="bg-gray-100 border border-gray-300 rounded-xl shadow p-6 space-y-3 max-w-2xl ">
-                  <h2 class="text-xl font-bold text-gray-700">🥩 Product Details</h2>
-                  <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                    <li
-                        v-for="(detail, i) in selectedYakinikuImage?.detailsBefore"
-                        :key="'before-'+i"
-                    >
-                      {{ detail.subtitle }}: {{ detail.text }}
-                    </li>
-                  </ul>
-                </div>
+            <!-- 描述 -->
+            <div class="flex flex-col md:flex-row items-start justify-center gap-8 max-w-5xl mx-auto text-left md:text-left mb-8">
+              <p class="text-gray-600  leading-relaxed">
+                {{ selectedYakinikuImage?.description }}
+              </p>
+            </div>
 
-                <div class="mt-4 text-2xl font-bold text-red-600">
-                  💰 Price: {{ selectedYakinikuImage?.priceBefore || '$189 / kg' }}
-                </div>
+            <!-- 图片展示 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+              <div class="overflow-hidden rounded-xl shadow border-amber-500 border  ">
+                <img
+                    :src="selectedYakinikuImage.path"
+
+                    alt="Shabu Beef Left"
+                    class="w-full h-[300px] md:h-[450px] lg:h-[500px] object-contain hover:scale-105 transition-transform duration-500"
+                />
               </div>
-            </template>
-
-            <!-- after -->
-            <template #after>
-              <div class="w-full h-full flex flex-col items-center justify-center px-8 py-12 space-y-6 bg-gray-900 text-gray-200">
-<!--                <h1 class="text-4xl font-extrabold text-red-400">{{ selectedYakinikuImage?.title }} - After</h1>-->
-<!--                <p class="text-lg max-w-xl text-center">{{ selectedYakinikuImage?.description }}</p>-->
-<!--                <div class="bg-gray-800 rounded-xl shadow-lg p-6 space-y-2 w-full max-w-2xl">-->
-<!--                  <h2 class="text-xl font-bold text-yellow-400">Highlights</h2>-->
-<!--                  <ul class="list-disc list-inside text-sm text-gray-300">-->
-<!--                    <li v-for="(detail, i) in selectedYakinikuImage?.details" :key="i">{{ detail.subtitle }}: {{ detail.text }}</li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-                <h1 class="text-5xl font-extrabold text-red-400">
-                  🌙 {{ selectedYakinikuImage?.titleAfter }}  Platinum Cut
-                </h1>
-                <p class="text-lg max-w-xl leading-relaxed text-center">
-                  {{ selectedYakinikuImage?.descriptionAfter }}
-                </p>
-                <div class="bg-gray-800 rounded-xl shadow-lg p-6 space-y-3 max-w-2xl ">
-                  <h2 class="text-xl font-bold text-yellow-400">✨ Key Highlights</h2>
-                  <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
-                    <li
-                        v-for="(detail, i) in selectedYakinikuImage?.detailsAfter"
-                        :key="'after-'+i"
-                    >
-                      {{ detail.subtitle }}: {{ detail.text }}
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="mt-4 text-2xl font-bold text-green-400">
-                  💰 Price: {{ selectedYakinikuImage?.priceAfter || '$329 / kg' }}
-                </div>
+              <div class="overflow-hidden rounded-xl shadow border-amber-500 border  ">
+                <img
+                    :src="selectedYakinikuImage.preview"
+                    alt="Shabu Beef Right"
+                    class="w-full h-[300px] md:h-[450px] lg:h-[500px] object-contain hover:scale-105 transition-transform duration-500"
+                />
               </div>
-            </template>
-          </HtmlCompareSlider>
-
+            </div>
+          </div>
         </div>
       </div>
     </transition>
+
+    <!-- Shabu弹出窗口 -->
+    <transition name="fade">
+      <div
+          v-if="isShabuModalOpen"
+          class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+      >
+        <!-- 弹窗主体 -->
+        <div class="relative w-full max-w-7xl mx-4 bg-white rounded-2xl overflow-hidden shadow-2xl">
+          <!-- 关闭按钮 -->
+          <button
+              class="absolute top-4 right-4 z-50 text-black bg-gray-200 hover:bg-gray-300 rounded-full w-8 h-8 flex items-center justify-center transition"
+              @click="closeShabuModal"
+          >
+            &times;
+          </button>
+
+          <!-- 内容区 -->
+          <div class="p-8 text-center">
+            <!-- 主标题 -->
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">{{selectedShabuImage?.title}}</h2>
+
+            <!-- 副标题 -->
+            <h3 class="text-xl text-gray-700 mb-4 font-medium">{{ selectedShabuImage?.subtitle }}</h3>
+
+            <!-- 描述 -->
+            <div class="flex flex-col md:flex-row items-start justify-center gap-8 max-w-5xl mx-auto text-left md:text-left mb-8">
+              <p class="text-gray-600  leading-relaxed">
+                {{ selectedShabuImage?.description }}
+              </p>
+            </div>
+
+            <!-- 图片展示 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+              <div class="overflow-hidden rounded-xl shadow border-amber-500 border  ">
+                <img
+                    :src="selectedShabuImage.path"
+
+                    alt="Shabu Beef Left"
+                    class="w-full h-[300px] md:h-[450px] lg:h-[500px] object-contain hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="overflow-hidden rounded-xl shadow border-amber-500 border  ">
+                <img
+                    :src="selectedShabuImage.preview"
+                    alt="Shabu Beef Right"
+                    class="w-full h-[300px] md:h-[450px] lg:h-[500px] object-contain hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+    <!-- Steak弹出窗口 -->
+    <transition name="fade">
+      <div
+          v-if="isSteakModalOpen"
+          class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+      >
+        <!-- 弹窗主体 -->
+        <div class="relative w-full max-w-7xl mx-4 bg-white rounded-2xl overflow-hidden shadow-2xl">
+          <!-- 关闭按钮 -->
+          <button
+              class="absolute top-4 right-4 z-50 text-black bg-gray-200 hover:bg-gray-300 rounded-full w-8 h-8 flex items-center justify-center transition"
+              @click="closeSteakModal"
+          >
+            &times;
+          </button>
+
+          <!-- 内容区 -->
+          <div class="p-8 text-center">
+            <!-- 主标题 -->
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">{{selectedSteakImage?.title}}</h2>
+
+            <!-- 副标题 -->
+            <h3 class="text-xl text-gray-700 mb-4 font-medium">{{ selectedSteakImage?.subtitle }}</h3>
+
+            <!-- 描述 -->
+            <div class="flex flex-col md:flex-row items-start justify-center gap-8 max-w-5xl mx-auto text-left md:text-left mb-8">
+              <p class="text-gray-600  leading-relaxed">
+                {{ selectedSteakImage?.description }}
+              </p>
+            </div>
+
+            <!-- 图片展示 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+              <div class="overflow-hidden rounded-xl shadow border-amber-500 border  ">
+                <img
+                    :src="selectedSteakImage.path"
+
+                    alt="Shabu Beef Left"
+                    class="w-full h-[300px] md:h-[450px] lg:h-[500px] object-contain hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="overflow-hidden rounded-xl shadow border-amber-500 border  ">
+                <img
+                    :src="selectedSteakImage.preview"
+                    alt="Shabu Beef Right"
+                    class="w-full h-[300px] md:h-[450px] lg:h-[500px] object-contain hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+
+
+
+
 
   </div>
 </template>
@@ -427,60 +583,66 @@ const platters = ref([
     subtitle: 'Platter',
     images: [
       {
-        path: '/assets/images/products/plaShabuGoldS.jpeg',
+        path: '/assets/images/products/ShPremium-1.jpg',
         alt: '',
-        title: 'Shabu Gold Platter',
-        description: 'This platter highlights rich marbling and perfect cuts for shabu shabu lovers.',
-        preview: '/assets/images/products/plaShabuGoldS.jpeg',
+        title: 'Shabu Premium Platter',
+        description: 'Savor the art of shabu-shabu with a refined selection of prime ingredients.\n' +
+            'The Shabu Premium Platter offers a perfectly balanced mix of flavor, texture, and freshness — designed for those who appreciate simple elegance in every dip.',
+        preview: '/assets/images/products/ShPremium.jpg',
         details: [
-          { subtitle: 'Origin', text: 'Western Australia' },
-          { subtitle: 'Cut Type', text: 'Thin sliced ribeye' },
+          { subtitle: 'Quality', text: 'Savor the finest cuts, perfectly curated for a premium shabu experience.' },
+          { subtitle: 'Experience', text: 'A premium shabu journey in every bite.' },
         ]
       },
       {
-        path: '/assets/images/products/plaShabuPlatinumS.jpg',
+        path: '/assets/images/products/ShSupreme-1.jpg',
         alt: '',
-        title: 'Shabu Platinum Platter',
-        description: 'Premium Wagyu slices for a luxurious hotpot experience.',
-        preview: '/assets/images/products/plaShabuPlatinumS.jpg',
+        title: 'Shabu Supreme Platter',
+        description: 'Immerse yourself in the ultimate shabu-shabu experience.\n' +
+            'The Shabu Supreme Platter features top-grade meats and farm-fresh vegetables, offering unmatched richness and depth.',
+        preview: '/assets/images/products/ShSupreme.jpg',
         details: [
-          { subtitle: 'Marbling Score', text: 'MB9+' },
-          { subtitle: 'Texture', text: 'Melt-in-mouth tenderness' },
+          { subtitle: 'Quality', text: 'Indulge in the ultimate shabu feast – the supreme selection for true connoisseurs.' },
+          { subtitle: 'Experience', text: 'Make every gathering unforgettable with the ultimate shabu indulgence.' },
         ]
       },
       {
-        path: '/assets/images/products/plaYakiGoldS.jpeg',
-        alt: '',
-        title: 'Yakiniku Gold Platter',
-        description: 'Ideal for grilling, rich in umami with a clean aftertaste.',
-        preview: '/assets/images/products/plaYakiGoldS.jpeg',
-        details: [
-          { subtitle: 'Cooking', text: 'Yakiniku-style' },
-          { subtitle: 'Serving', text: 'Fresh cut and chilled' },
-        ]
-      },
-      {
-        path: '/assets/images/products/plaYakiPlatinumS.jpg',
+        path: '/assets/images/products/YaPlatinum-1.jpg',
         alt: '',
         title: 'Yakiniku Platinum Platter',
-        description: 'Top-grade wagyu with a buttery flavor and balanced fat ratio.',
-        preview: '/assets/images/products/plaYakiPlatinumS.jpg',
+        description: 'For those who desire nothing but the best.\n' +
+            'The Yakiniku Platinum Platter showcases premium, hand-selected cuts of beef — each one bursting with umami and tenderness.\n' +
+            'It’s not just yakiniku; it’s a platinum-level indulgence.',
+        preview: '/assets/images/products/YaPlatinum.jpg',
         details: [
-          { subtitle: 'Flavor', text: 'Buttery & delicate sweetness' },
-          { subtitle: 'Recommended', text: 'Grill medium rare' },
+          { subtitle: 'Quality', text: 'Indulge in the ultimate yakiniku feast – the platinum standard of flavor.' },
+          { subtitle: 'Experience', text: 'Generous, mouth-watering, and nothing less than platinum.' },
+        ]
+      },
+      {
+        path: '/assets/images/products/YaGold-1.jpg',
+        alt: '',
+        title: 'Yakiniku Gold Platter',
+        description: 'Experience the golden balance of flavor and texture.\n' +
+            'The Yakiniku Gold Platter brings together perfectly marbled cuts, grilled to perfection for a rich yet elegant dining experience.\n' +
+            'A true celebration of craftsmanship and taste.',
+        preview: '/assets/images/products/YaGold.jpg',
+        details: [
+          { subtitle: 'Quality', text: 'Elevate your dinner with golden flavors and quality cuts.' },
+          { subtitle: 'Experience', text: 'Perfectly portioned for a deliciously satisfying meal.' },
         ]
       },
     ]
   }
 ])
 
-const yakiniku = ref([
+const yakiniku222 = ref([
   {
     id: 4,
     subtitle: 'Yakiniku',
     images: [
       {
-        path: '/assets/images/products/yakiCrS.jpg',
+        path: '/assets/images/products/yaShortRib.jpg',
         title:'test1',
         titleBefore: 'Chuck Roll MB9+',
         descriptionBefore: 'Australian Wagyu MB9+ is admired for its balance of flavor, tenderness, and marbling Perfect for grilling, yakiniku, or even hotpot, it’s a versatile choice for premium dining.',
@@ -572,6 +734,48 @@ const yakiniku = ref([
   },
 ])
 
+const yakiniku = ref([
+  {
+    id: 4,
+    subtitle: 'Yakiniku',
+    images: [
+      {
+        path: '/assets/images/products/yaShortRib.jpg',
+        alt: '',
+        title: 'Yakiniku Short Rib',
+        subtitle: 'Richly Marbled with Deep, Savory Flavor',
+        description: 'Cut from the short plate, this Yakiniku Short Rib delivers a perfect balance of tenderness and juiciness. Its beautiful marbling creates an indulgent melt-in-your-mouth texture when grilled, releasing rich umami in every bite.',
+        preview: '/assets/images/parts/BeefShortRib.png',
+      },
+      {
+        path: '/assets/images/products/yaChuckRib.jpg',
+        alt: '',
+        title: 'Yakiniku Chuck Rib',
+        subtitle: 'Bold Flavor and Beautiful Texture',
+        description: 'From the shoulder section, the Yakiniku Chuck Rib offers a hearty beef aroma and satisfying bite. When grilled over charcoal, its marbling transforms into a juicy, flavorful finish that embodies the essence of authentic yakiniku.',
+        preview: '/assets/images/parts/BeefChuckRib.png',
+      },
+      {
+        path: '/assets/images/products/yaPlankSteak.jpg',
+        alt: '',
+        title: 'Yakiniku Plank Steak',
+        subtitle: 'Lean, Tender, and Full of Character',
+        description: 'The Yakiniku Plank Steak is known for its fine grain and lean texture. It stays tender and juicy even when seared at high heat, delivering a clean, meaty taste that pairs perfectly with classic yakiniku dipping sauces.',
+        preview: '/assets/images/parts/BeefPlankSteak.png',
+      },
+      {
+        path: '/assets/images/products/yaTriTip.jpg',
+        alt: '',
+        title: 'Yakiniku Tri Tip',
+        subtitle: 'Distinctly Tender with a Sweet Beefy Aroma',
+        description: 'Cut from the sirloin’s triangular tip, the Yakiniku Tri Tip combines a tender bite with a subtle, naturally sweet beef flavor. Lightly grilled, it offers a satisfying balance of juiciness and texture—ideal for premium yakiniku dining.',
+        preview: '/assets/images/parts/BeefTriTip.png',
+
+      },
+    ]
+  }
+])
+
 const shabu = ref([
   {
     id: 4,
@@ -580,50 +784,45 @@ const shabu = ref([
       {
         path: '/assets/images/products/shaCerS.jpg',
         alt: '',
-        title: 'Shabu 1',
-        description: 'Shabu 1',
-        preview: '/assets/images/products/shaCerS.jpeg',
-        details: [
-          { subtitle: 'cooking', text: 'xxxxx1' },
-          { subtitle: 'service', text: 'xxxx2' },
-        ]
+        title: 'Shabu Chuck Eye Roll',
+        subtitle: 'A Perfect Balance of Tenderness and Rich Flavor',
+        description: 'Cut from the shoulder area, the Shabu Chuck Eye Roll offers the ideal blend of marbling and texture.\n' +
+            '                Each slice delivers a deep, beefy richness while remaining incredibly tender — perfect for hotpot lovers\n' +
+            '                who appreciate both flavor and softness in every bite.',
+        preview: '/assets/images/parts/BeefChuckEyeRoll.png',
       },
       {
         path: '/assets/images/products/shaCtfS.jpeg',
         alt: '',
-        title: 'Shabu 2',
-        description: 'Premium Wagyu slices for a luxurious hotpot experience.',
-        preview: '/assets/images/products/plaShabuPlatinumS.jpg',
-        details: [
-          { subtitle: 'Marbling Score', text: 'MB9+' },
-          { subtitle: 'Texture', text: 'Melt-in-mouth tenderness' },
-        ]
+        title: 'Shabu Chuck Tail Flap',
+        subtitle: 'Rich, Juicy, and Full of Character',
+        description: 'The Shabu Chuck Tail Flap, taken from the lower shoulder, offers a deep and savory beef flavor with beautiful marbling throughout. ' +
+            'Each slice brings a satisfying chew balanced with tenderness — perfect for those who love a bold, flavorful hotpot experience.',
+        preview: '/assets/images/parts/BeefFlapMeat.png',
       },
       {
-        path: '/assets/images/products/shaKarubisS.jpg',
+        path: '/assets/images/products/shaBrisket.jpg',
         alt: '',
-        title: 'Shabu 3',
-        description: 'Ideal for grilling, rich in umami with a clean aftertaste.',
-        preview: '/assets/images/products/plaYakiGoldS.jpeg',
-        details: [
-          { subtitle: 'Cooking', text: 'Yakiniku-style' },
-          { subtitle: 'Serving', text: 'Fresh cut and chilled' },
-        ]
+        title: 'Shabu Brisket Point End',
+        subtitle: 'Deep Flavor with a Buttery Finish',
+        description: 'Cut from the brisket point, this wagyu selection features rich layers of marbling that melt beautifully when cooked. ' +
+            'It offers a full-bodied flavor and velvety texture, making it an excellent choice for shabu-shabu enthusiasts who enjoy a rich, hearty taste.',
+        preview: '/assets/images/parts/BeefBrisketPointEnd.png',
       },
       {
         path: '/assets/images/products/shaSirloinIS.jpeg',
         alt: '',
-        title: 'Shabu 4',
-        description: 'Top-grade wagyu with a buttery flavor and balanced fat ratio.',
-        preview: '/assets/images/products/plaYakiPlatinumS.jpg',
-        details: [
-          { subtitle: 'Flavor', text: 'Buttery & delicate sweetness' },
-          { subtitle: 'Recommended', text: 'Grill medium rare' },
-        ]
+        title: 'Shabu Sirloin',
+        subtitle: 'Refined Flavor, Perfectly Balanced Texture',
+        description: 'The Shabu Sirloin delivers a smooth and buttery mouthfeel with just the right amount of marbling. ' +
+            'Known for its clean, elegant flavor and tenderness, this cut represents the ideal harmony between richness and refinement in Japanese shabu-shabu.',
+        preview: '/assets/images/parts/BeefStriploin.png',
+
       },
     ]
   }
 ])
+
 
 const steak = ref([
   {
@@ -631,48 +830,36 @@ const steak = ref([
     subtitle: 'Steak',
     images: [
       {
-        path: '/assets/images/products/stCerS.jpg',
+        path: '/assets/images/products/stCube.jpg',
         alt: '',
-        title: 'Chuck R',
-        description: 'Chuck R',
-        preview: '/assets/images/products/yakiCrs.jpg',
-        details: [
-          { subtitle: 'cooking', text: 'xxxxx1' },
-          { subtitle: 'service', text: 'xxxx2' },
-        ]
+        title: 'Steak Cube Roll',
+        subtitle: 'Exceptional Marbling with a Luxurious, Buttery Finish',
+        description: 'Cut from the rib section, the Steak Cube Roll is celebrated for its rich marbling and melt-in-your-mouth tenderness. When seared, the fat renders beautifully, creating a deep, savory flavor that defines premium steak dining.',
+        preview: '/assets/images/parts/BeefCubeRoll.png',
       },
       {
-        path: '/assets/images/products/stCrS.jpg',
+        path: '/assets/images/products/stOyster.jpg',
         alt: '',
-        title: 'Re',
-        description: 'Premium Wagyu slices for a luxurious hotpot experience.',
-        preview: '/assets/images/products/plaShabuPlatinumS.jpg',
-        details: [
-          { subtitle: 'Marbling Score', text: 'MB9+' },
-          { subtitle: 'Texture', text: 'Melt-in-mouth tenderness' },
-        ]
+        title: 'Steak Oyster Blade',
+        subtitle: 'Fine Grain, Tender Bite, and Robust Flavor',
+        description: 'Sourced from the shoulder, the Steak Oyster Blade offers a unique combination of tenderness and flavor depth. Its fine texture and natural juiciness make it ideal for grilling or pan-searing, delivering a rich and satisfying taste.',
+        preview: '/assets/images/parts/BeefOysterBlade.png',
       },
       {
-        path: '/assets/images/products/stObS.jpg',
+        path: '/assets/images/products/stRibEye.jpg',
         alt: '',
-        title: 'Tri Tip',
-        description: 'Ideal for grilling, rich in umami with a clean aftertaste.',
-        preview: '/assets/images/products/plaYakiGoldS.jpeg',
-        details: [
-          { subtitle: 'Cooking', text: 'Yakiniku-style' },
-          { subtitle: 'Serving', text: 'Fresh cut and chilled' },
-        ]
+        title: 'Steak Rib Cap',
+        subtitle: 'Delicately Tender with Intense Beef Umami',
+        description: 'Known as the prized crown of the ribeye, the Steak Rib Cap boasts incredible tenderness and bold marbling. Each bite releases layers of buttery umami flavor, making it one of the most sought-after cuts for true steak connoisseurs.',
+        preview: '/assets/images/parts/BeefRibCap.png',
       },
       {
-        path: '/assets/images/products/stReS.jpg',
+        path: '/assets/images/products/stRump.jpg',
         alt: '',
-        title: 'Sr',
-        description: 'Top-grade wagyu with a buttery flavor and balanced fat ratio.',
-        preview: '/assets/images/products/plaYakiPlatinumS.jpg',
-        details: [
-          { subtitle: 'Flavor', text: 'Buttery & delicate sweetness' },
-          { subtitle: 'Recommended', text: 'Grill medium rare' },
-        ]
+        title: 'Steak Rump',
+        subtitle: 'Full-Bodied Flavor with a Firm, Juicy Texture',
+        description: 'Cut from the hindquarter, the Steak Rump offers a hearty, beef-forward taste with satisfying chew. It’s a versatile and flavorful cut, perfect for grilling, roasting, or pan-searing to bring out its rich, meaty essence.',
+        preview: '/assets/images/parts/BeefDRump.png',
       },
     ]
   }
