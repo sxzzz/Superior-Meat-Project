@@ -131,18 +131,34 @@
           </div>
 
           <dl class="mt-10 space-y-10">
-            <div v-for="feature in zunpin" :key="feature.name">
-              <dt class="text-sm font-medium text-gray-900">{{ feature.name }}</dt>
-              <dd class="mt-3 text-sm text-gray-500">{{ feature.description }}</dd>
+            <div v-for="feature in primeMeatOrigin" :key="feature.name">
+              <dt class="text-lg font-medium text-gray-900">{{ feature.name }}</dt>
+              <dd class="mt-3 text-base text-gray-500">{{ feature.description }}</dd>
             </div>
           </dl>
         </div>
 
         <div>
-          <img src="/assets/images/banner/banner03.png" alt="Black kettle with long pour spot and angled body on marble counter next to coffee mug and pour-over system." class="aspect-square w-full rounded-lg bg-gray-100 object-cover" />
+          <img
+              src="/assets/images/brands/slider03.jpg"
+              alt="..."
+              class="aspect-square w-full rounded-lg bg-gray-100 object-cover transition-transform duration-700 ease-out hover:scale-105 hover:brightness-110"
+          />
           <div class="mt-4 grid grid-cols-2 gap-4 sm:mt-6 sm:gap-6 lg:mt-8 lg:gap-8">
-            <img src="/assets/images/banner/banner05.png" alt="Detail of temperature setting button on kettle bass with digital degree readout." class="aspect-square w-full rounded-lg bg-gray-100 object-cover" />
-            <img src="/assets/images/banner/banner06.png" alt="Kettle spout pouring boiling water into coffee grounds in pour-over mug." class="aspect-square w-full rounded-lg bg-gray-100 object-cover" />
+            <div class="w-full h-64 overflow-hidden rounded-lg bg-gray-100">
+              <img
+                  src="/assets/images/brands/463.jpg"
+                  alt="..."
+                  class="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105 hover:brightness-110"
+              />
+            </div>
+            <div class="w-full h-64 overflow-hidden rounded-lg bg-gray-100">
+              <img
+                  src="/assets/images/brands/531.jpg"
+                  alt="..."
+                  class="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105 hover:brightness-110"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -172,8 +188,36 @@
 
     <divider class="mt-6"></divider>
     <!--USHIMATSU-->
-    <div class="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
-      <img src="/assets/images/logo/UshiLandscape.jpg" alt="" class="object-cover max-w-6xl mx-auto" />
+
+    <div class="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-16 lg:max-w-7xl lg:px-8">
+      <div class="mt-8 overflow-hidden ">
+        <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
+            <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
+              <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">USHIMATSU</h2>
+              <p class="mt-6 text-xl/8 text-gray-700">UshiMatsu is a boutique destination dedicated to premium Wagyu excellence.
+                Located in Melbourne’s renowned Chadstone Shopping Centre, UshiMatsu offers an exclusive selection of elite Wagyu, curated for true connoisseurs of fine meat.</p>
+              <p class="mt-6 text-base/7 text-gray-600">With a focus on quality, craftsmanship, and authenticity, every cut embodies the essence of luxury dining and the spirit of Japan’s Wagyu heritage.</p>
+            </div>
+            <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
+              <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+                <img src="/assets/images/brands/ushi04.jpg" alt="" class="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover max-sm:w-[30rem]" />
+              </div>
+              <div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
+                <div class="order-first flex w-64 flex-none justify-end self-end max-sm:w-40 lg:w-auto">
+                  <img src="/assets/images/brands/ushi03.jpg" alt="" class="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover" />
+                </div>
+                <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
+                  <img src="/assets/images/brands/ushi02.jpg" alt="" class=" aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover max-sm:w-[30rem]" />
+                </div>
+                <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
+                  <img src="/assets/images/brands/slider02.jpg" alt="" class="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <divider class=""></divider>
@@ -188,7 +232,7 @@ import divider from "/src/components/divider/index.vue";
 const incentives = [
   {
     name: 'Wagyu Platter',
-    imageSrc: '/assets/images/brands/Niku186.jpg',
+    imageSrc: '/assets/images/brands/niki02.jpg',
     description: "Kagoshima Beef - Combination of Striploin, Outside Flat, Cube Roll, Chuck Eye Roll",
   },
   {
@@ -205,19 +249,19 @@ const incentives = [
 ]
 
 
-const zunpin = [
+const primeMeatOrigin = [
   {
-    name: 'name1',
+    name: 'Authentic Provenance',
     description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'Every cut is traceable to its true origin — from renowned farms that uphold the highest standards of breeding and care.',
   },
-  { name: 'name2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  { name: 'Exceptional Craftsmanship', description: 'Our artisans handle each cut with precision and reverence, preserving its natural texture, flavor, and beauty.' },
   {
-    name: 'name3',
+    name: 'Purity and Integrity',
     description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'We commit to uncompromising transparency — ensuring every product reflects honesty, quality, and trust.',
   },
-  { name: 'name4', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+  { name: 'The Art of Taste', description: "Beyond premium meat, we deliver a sensory journey — an elevated dining experience where heritage meets refinement." },
 ]
 
 
@@ -227,7 +271,7 @@ const nikushiki = [
     name: ' NIKUSHIKI GLEN',
     description:
         'Located in The Glen Shopping Centre, our restaurant and butcher store invite you to enjoy expertly prepared Wagyu Beef and the finest Japanese hospitality in Melbourne.',
-    imageSrc: '/assets/images/brands/Niku01.jpg',
+    imageSrc: '/assets/images/brands/niku01.jpg',
     imageAlt: '123',
   },
   {

@@ -103,7 +103,7 @@
     "website": "https://ushimatsu.shop",
     "tel": "(03) 9367 1111",
     "coords": [-37.88638990281749, 145.08239020885716],
-    "image": "/assets/images/ushiStore.png",
+    "image": "/assets/images/brands/ushi04.jpg",
     "notes": "Niku Shiki embodies the essence of Japanese culture and tradition, with an unwavering commitment to showcasing premium Wagyu Beef through our contemporary Japanese menu and innovative take-home products. Our butcher section for Japanese BBQ and hot pot offers a comprehensive selection of restaurant-quality Wagyu Beef, condiments, and sauces, providing everything you need for an authentic Yakiniku or Shabu Shabu dining experience in the comfort of your home."
   }
 

@@ -31,7 +31,7 @@
            <!--双图片切换-->
             <div id="baContainer" class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-2/3 relative overflow-hidden">
               <!-- After 图 (底层) -->
-              <img id="afterImg" src="/assets/images/banner/Niku-11.jpg" alt="after"
+              <img id="afterImg" src="/assets/images/banner/banner07.jpg" alt="after"
                    class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none" />
 
               <!-- AFTER 标签：固定在底层右下 -->
@@ -41,7 +41,7 @@
               </div>
 
               <!-- Before 图 (上层)，和底层完全重叠，但用 clip-path 裁切 -->
-              <img id="beforeImg" src="/assets/images/banner/banner05.png" alt="before"
+              <img id="beforeImg" src="/assets/images/brands/slider03.jpg" alt="before"
                    class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
                    style="-webkit-clip-path: inset(0 50% 0 0); clip-path: inset(0 50% 0 0);" />
 
@@ -647,7 +647,7 @@ export default {
           id: "03042025",
           date: "03/04/2025",
           title: "NIKUSHIKI GLEN",
-          img: "/assets/images/brands/Niku01.jpg",
+          img: "/assets/images/brands/niku01.jpg",
           reverse: false,
         },
         {
