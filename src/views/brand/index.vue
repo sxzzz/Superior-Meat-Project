@@ -65,7 +65,7 @@
 
     <div class="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8">
       <!-- Details section -->
-      <section aria-labelledby="details-heading">
+      <section v-if="false" aria-labelledby="details-heading">
         <div class="flex flex-col items-center text-center">
           <h2 id="details-heading" class="text-4xl  uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text">ZUN PIN</h2>
           <p class="mt-3 max-w-3xl text-xl text-gray-600">
@@ -117,13 +117,128 @@
           </div>
         </div>
       </section>
+
+
+
+      <div class="bg-white">
+        <div class="flex flex-col border-b border-gray-200 lg:border-0 ">
+          <!-- 上方的导航部分 -->
+
+          <div class="mx-auto max-w-7xl lg:px-8 text-center m-6">
+            <h2 class="text-4xl  uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text">
+              Partner with Oriental Merchant
+            </h2>
+            <p class="mt-4 text-xl text-gray-600">
+              We have an exclusive partnership with Oriental Merchant, one of the world’s leading distributors of Asian food products and condiments, supplying Asian supermarkets across Australia.
+            </p>
+          </div>
+
+          <div class="mx-auto mt-6 max-w-3xl sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 gap-8 justify-items-center">
+              <img
+                  src="/assets/images/logo/om01.jpg"
+                  alt="Oriental Merchant"
+                  class="aspect-[3/4]  w-full max-w-[250px] rounded-xl object-cover transition-transform duration-700 ease-out hover:scale-105 hover:-translate-y-1 shadow-md hover:shadow-xl border border-amber-200"
+              />
+              <img
+                  src="/assets/images/logo/Zun.png"
+                  alt="Zun Logo"
+                  class="aspect-[3/4] w-full max-w-[250px] rounded-xl object-cover transition-transform duration-700 ease-out hover:scale-105 hover:-translate-y-1 shadow-md hover:shadow-xl"
+              />
+            </div>
+          </div>
+
+          <!-- 下方主内容部分 -->
+          <div v-if="false" class="bg-gray-100">
+            <div class="mx-auto max-w-7xl grid lg:grid-cols-2">
+              <!-- 左边文字区域 -->
+              <div class="h-full w-full">
+                <img
+                    src="/assets/images/logo/om01.jpg"
+                    alt="Oriental Merchant"
+                    class="w-full h-full object-cover"
+                />
+              </div>
+
+              <!-- 右边图片区域 -->
+              <div class="h-full w-full">
+                <img
+                    src="/assets/images/logo/Zun.png"
+                    alt="Oriental Merchant"
+                    class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto mt-8 grid border-t border-amber-200 max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div class="overflow-hidden rounded-2xl group cursor-pointer transition-transform duration-500 relative mt-8 shadow-sm hover:shadow-xl hover:scale-[1.02] bg-white border border-amber-200 ">
+            <!-- 默认图片 -->
+            <img
+                src="/assets/images/bolarblade.jpg"
+                alt="Primary image"
+                class="aspect-[3/2] w-full rounded-2xl object-cover   inset-0 transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+            />
+
+            <!-- hover 图片 -->
+            <img
+                src="/assets/images/parts/Bolar%20Blade.jpg"
+                alt="Hover image"
+                class="absolute inset-0 w-full h-full rounded-2xl object-contain opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
+            />
+
+            <p class="ms-4 mt-8 text-base text-gray-500 relative z-10">
+              Shabu Bolar Blade
+            </p>
+          </div>
+          <div class="overflow-hidden rounded-2xl group cursor-pointer transition-transform duration-500 relative mt-8 shadow-sm hover:shadow-xl hover:scale-[1.02] bg-white border border-amber-200 ">
+            <!-- 默认图片 -->
+            <img
+                src="/assets/images/chuckeyeroll.jpg"
+                alt="Primary image"
+                class="aspect-[3/2] w-full rounded-2xl object-cover transition-all duration-700 ease-in-out group-hover:opacity-0"
+            />
+
+            <!-- hover 图片 -->
+            <img
+                src="/assets/images/parts/Chuck%20Eye%20Roll.jpg"
+                alt="Hover image"
+                class="absolute inset-0 w-full h-full rounded-2xl object-contain opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
+            />
+
+            <p class="ms-4 mt-8 text-base text-gray-500 relative z-10">
+              Shabu Chuck Eye Roll
+            </p>
+          </div>
+          <div class="overflow-hidden rounded-2xl group cursor-pointer transition-transform duration-500 relative mt-8 shadow-sm hover:shadow-xl hover:scale-[1.02] bg-white border border-amber-200 ">
+            <!-- 默认图片 -->
+            <img
+                src="/assets/images/brisket.jpg"
+                alt="Primary image"
+                class="aspect-[3/2] w-full rounded-2xl object-cover transition-all duration-700 ease-in-out group-hover:opacity-0"
+            />
+
+            <!-- hover 图片 -->
+            <img
+                src="/assets/images/parts/Brisket%20Point%20end.jpg"
+                alt="Hover image"
+                class="absolute inset-0 w-full h-full rounded-2xl object-contain opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
+            />
+
+            <p class=" ms-4 mt-8 text-base text-gray-500 relative z-10">
+              Shabu Brisket
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 
     <divider class="mt-6"></divider>
     <!--上品肉源-->
     <div class="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8">
-      <div class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
+      <div class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-[30%_70%]">
         <div>
           <div class="border-b border-gray-200 pb-10">
             <h2 class="text-3xl font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 text-transparent bg-clip-text">上品肉源</h2>
@@ -137,28 +252,45 @@
             </div>
           </dl>
         </div>
-
+        <!--上图-->
         <div>
           <img
               src="/assets/images/brands/slider03.jpg"
               alt="..."
               class="aspect-square w-full rounded-lg bg-gray-100 object-cover transition-transform duration-700 ease-out hover:scale-105 hover:brightness-110"
           />
+
+
           <div class="mt-4 grid grid-cols-2 gap-4 sm:mt-6 sm:gap-6 lg:mt-8 lg:gap-8">
-            <div class="w-full h-64 overflow-hidden rounded-lg bg-gray-100">
+
+            <!-- 左图 -->
+            <div class="w-full h-60 overflow-hidden rounded-lg relative group">
               <img
-                  src="/assets/images/brands/463.jpg"
-                  alt="..."
-                  class="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105 hover:brightness-110"
+                  src="/assets/images/brands/pmo01.JPG"
+                  alt="Default"
+                  class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+              />
+              <img
+                  src="/assets/images/parts/Bolar%20Blade.jpg"
+                  alt="Hover"
+                  class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
               />
             </div>
-            <div class="w-full h-64 overflow-hidden rounded-lg bg-gray-100">
+
+            <!-- 右图 -->
+            <div class="w-full h-60 overflow-hidden rounded-lg relative group">
               <img
-                  src="/assets/images/brands/531.jpg"
-                  alt="..."
-                  class="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105 hover:brightness-110"
+                  src="/assets/images/brands/pmo02.jpg"
+                  alt="Default"
+                  class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+              />
+              <img
+                  src="/assets/images/parts/Chuck%20Eye%20Roll.jpg"
+                  alt="Hover"
+                  class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
               />
             </div>
+
           </div>
         </div>
       </div>
@@ -180,7 +312,8 @@
             <p class="mt-2 text-sm text-gray-500">{{ feature.description }}</p>
           </div>
           <div :class="[featureIdx % 2 === 0 ? 'lg:col-start-6 xl:col-start-5' : 'lg:col-start-1', 'flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8']">
-            <img :src="feature.imageSrc" :alt="feature.imageAlt" class="aspect-[5/2] w-full rounded-lg bg-gray-100 object-cover" />
+            <img :src="feature.imageSrc" :alt="feature.imageAlt" class="aspect-[5/2] w-full rounded-lg bg-gray-100 object-cover transition-transform duration-500 ease-out
+         hover:scale-105 hover:brightness-110 hover:shadow-2xl" />
           </div>
         </div>
       </div>
@@ -194,24 +327,28 @@
         <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
             <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-              <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">USHIMATSU</h2>
+              <h2 class="text-4xl  uppercase font-bold tracking-tight bg-gradient-to-r from-yellow-500 via-gray-600 to-amber-400 inline-block text-transparent bg-clip-text">USHIMATSU</h2>
               <p class="mt-6 text-xl/8 text-gray-700">UshiMatsu is a boutique destination dedicated to premium Wagyu excellence.
                 Located in Melbourne’s renowned Chadstone Shopping Centre, UshiMatsu offers an exclusive selection of elite Wagyu, curated for true connoisseurs of fine meat.</p>
               <p class="mt-6 text-base/7 text-gray-600">With a focus on quality, craftsmanship, and authenticity, every cut embodies the essence of luxury dining and the spirit of Japan’s Wagyu heritage.</p>
             </div>
             <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
               <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-                <img src="/assets/images/brands/ushi04.jpg" alt="" class="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover max-sm:w-[30rem]" />
+                <img src="/assets/images/brands/ushi04.jpg" alt="" class="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover max-sm:w-[30rem] transition-transform duration-500 ease-out
+         hover:scale-105 hover:brightness-110 hover:shadow-2xl" />
               </div>
               <div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
                 <div class="order-first flex w-64 flex-none justify-end self-end max-sm:w-40 lg:w-auto">
-                  <img src="/assets/images/brands/ushi03.jpg" alt="" class="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover" />
+                  <img src="/assets/images/brands/ushi03.jpg" alt="" class="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover transition-transform duration-500 ease-out
+         hover:scale-105 hover:brightness-110 hover:shadow-2xl" />
                 </div>
                 <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
-                  <img src="/assets/images/brands/ushi02.jpg" alt="" class=" aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover max-sm:w-[30rem]" />
+                  <img src="/assets/images/brands/ushi02.jpg" alt="" class=" aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover max-sm:w-[30rem] transition-transform duration-500 ease-out
+         hover:scale-105 hover:brightness-110 hover:shadow-2xl" />
                 </div>
                 <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
-                  <img src="/assets/images/brands/slider02.jpg" alt="" class="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover" />
+                  <img src="/assets/images/brands/slider02.jpg" alt="" class="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover transition-transform duration-500 ease-out
+         hover:scale-105 hover:brightness-110 hover:shadow-2xl" />
                 </div>
               </div>
             </div>
@@ -281,6 +418,12 @@ const nikushiki = [
     imageSrc: '/assets/images/cbdStore.png',
     imageAlt: '456',
   },
+]
+
+const zunpinOffers = [
+  { name: 'Oriental Merchant', description: 'world’s leading distributors', href: '#' },
+  { name: "Exclusive Partnership", description: '60 days of free returns', href: '#' },
+  { name: 'Serving all Asian Supermarkets', description: '15% off your first order', href: '#' },
 ]
 
 

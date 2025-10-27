@@ -68,7 +68,7 @@ export default {
                 title:' Vicki Sher - Iconic Wagyu Brand SHER',
                 content:'Vicki Sher, the founder of Australia’s legendary wagyu brand SHER Wagyu, recently visited the Nikushiki Glen store. During the visit, she met with Mr. Kai Gu and engaged in a warm exchange about premium wagyu products and the growing collaboration between the two brands.',
                 contentCn:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                imageUrl:'/assets/images/blog/03042025.png'
+                imageUrl:'/assets/images/blog/03042025.jpg'
             },
             {
                 id:'24062024',
@@ -76,7 +76,7 @@ export default {
               title:'Bruce Cheung - Executive Chairman of Pardoo Beef Corporation ',
               content:'Mr Bruce Cheung the Executive Chairman of Pardoo Beef Corporation, played a visit the Nikushiki Melbourne Central store and met with Mr. Kai Gu to exchange ideas on premium wagyu and future collaboration opportunities.',
               contentCn:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-              imageUrl:'/assets/images/blog/nikicbd.png'
+              imageUrl:'/assets/images/blog/brace.jpg'
             },
             {
                 id:'01112024',
@@ -84,7 +84,7 @@ export default {
               title:'Japan Trip',
               content:'Mr. Kai Gu participated in the 2024 seminar “Processing Meat and Cooking Skills of Japanese Wagyu Beef for Exporting Nations”, successfully hosted by the Japan Livestock Products Export Promotion Council (J-LEC).',
               contentCn:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-              imageUrl:'/assets/images/blog/01112024JP.png'
+              imageUrl:'/assets/images/blog/01112024.jpg'
             },
         ]
         const Switch1 = {

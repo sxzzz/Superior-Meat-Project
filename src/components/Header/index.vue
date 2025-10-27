@@ -2,7 +2,7 @@
   <div class="">
     <div>
         <!-- banner 图 -->
-      <img id="logo" class="h-52 w-full object-cover object-[center_top_20%] lg:h-[500px]" src="/assets/images/banner/banner01.png" alt="" />
+      <img id="logo" class="h-52 w-full object-cover object-[center_top_20%] lg:h-[500px]" src="/assets/images/banner/banner05.jpg" alt="" />
     </div>
     <div v-if="true" class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="-mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">

@@ -745,15 +745,15 @@ const yakiniku = ref([
         title: 'Yakiniku Short Rib',
         subtitle: 'Richly Marbled with Deep, Savory Flavor',
         description: 'Cut from the short plate, this Yakiniku Short Rib delivers a perfect balance of tenderness and juiciness. Its beautiful marbling creates an indulgent melt-in-your-mouth texture when grilled, releasing rich umami in every bite.',
-        preview: '/assets/images/parts/BeefShortRib.png',
+        preview: '/assets/images/parts/Short Ribs.jpg',
       },
       {
-        path: '/assets/images/products/yaChuckRib.jpg',
+        path: '/assets/images/products/yaChuckTailFlap.jpg',
         alt: '',
-        title: 'Yakiniku Chuck Rib',
+        title: 'Yakiniku Chuck Tail Flap',
         subtitle: 'Bold Flavor and Beautiful Texture',
-        description: 'From the shoulder section, the Yakiniku Chuck Rib offers a hearty beef aroma and satisfying bite. When grilled over charcoal, its marbling transforms into a juicy, flavorful finish that embodies the essence of authentic yakiniku.',
-        preview: '/assets/images/parts/BeefChuckRib.png',
+        description: 'Yakiniku Chuck Tail Flap is a richly marbled cut from the shoulder area, prized for its deep beef flavor and juicy tenderness when grilled or slow-cooked.',
+        preview: '/assets/images/parts/Chuck Tail Flap.jpg',
       },
       {
         path: '/assets/images/products/yaPlankSteak.jpg',
@@ -761,7 +761,7 @@ const yakiniku = ref([
         title: 'Yakiniku Plank Steak',
         subtitle: 'Lean, Tender, and Full of Character',
         description: 'The Yakiniku Plank Steak is known for its fine grain and lean texture. It stays tender and juicy even when seared at high heat, delivering a clean, meaty taste that pairs perfectly with classic yakiniku dipping sauces.',
-        preview: '/assets/images/parts/BeefPlankSteak.png',
+        preview: '/assets/images/parts/Plank Steak.jpg',
       },
       {
         path: '/assets/images/products/yaTriTip.jpg',
@@ -769,7 +769,7 @@ const yakiniku = ref([
         title: 'Yakiniku Tri Tip',
         subtitle: 'Distinctly Tender with a Sweet Beefy Aroma',
         description: 'Cut from the sirloin’s triangular tip, the Yakiniku Tri Tip combines a tender bite with a subtle, naturally sweet beef flavor. Lightly grilled, it offers a satisfying balance of juiciness and texture—ideal for premium yakiniku dining.',
-        preview: '/assets/images/parts/BeefTriTip.png',
+        preview: '/assets/images/parts/TriTip.jpg',
 
       },
     ]
@@ -781,7 +781,16 @@ const shabu = ref([
     id: 4,
     subtitle: 'Shabu Shabu',
     images: [
-      {
+        {
+        path: '/assets/images/products/shaCtfS.jpeg',
+        alt: '',
+        title: 'Shabu Chuck Tail Flap',
+        subtitle: 'Rich, Juicy, and Full of Character',
+        description: 'The Shabu Chuck Tail Flap, taken from the lower shoulder, offers a deep and savory beef flavor with beautiful marbling throughout. ' +
+            'Each slice brings a satisfying chew balanced with tenderness — perfect for those who love a bold, flavorful hotpot experience.',
+        preview: '/assets/images/parts/Chuck Tail Flap.jpg',
+      },
+        {
         path: '/assets/images/products/shaCerS.jpg',
         alt: '',
         title: 'Shabu Chuck Eye Roll',
@@ -789,17 +798,9 @@ const shabu = ref([
         description: 'Cut from the shoulder area, the Shabu Chuck Eye Roll offers the ideal blend of marbling and texture.\n' +
             '                Each slice delivers a deep, beefy richness while remaining incredibly tender — perfect for hotpot lovers\n' +
             '                who appreciate both flavor and softness in every bite.',
-        preview: '/assets/images/parts/BeefChuckEyeRoll.png',
+        preview: '/assets/images/parts/Chuck Eye Roll.jpg',
       },
-      {
-        path: '/assets/images/products/shaCtfS.jpeg',
-        alt: '',
-        title: 'Shabu Chuck Tail Flap',
-        subtitle: 'Rich, Juicy, and Full of Character',
-        description: 'The Shabu Chuck Tail Flap, taken from the lower shoulder, offers a deep and savory beef flavor with beautiful marbling throughout. ' +
-            'Each slice brings a satisfying chew balanced with tenderness — perfect for those who love a bold, flavorful hotpot experience.',
-        preview: '/assets/images/parts/BeefFlapMeat.png',
-      },
+
       {
         path: '/assets/images/products/shaBrisket.jpg',
         alt: '',
@@ -807,7 +808,7 @@ const shabu = ref([
         subtitle: 'Deep Flavor with a Buttery Finish',
         description: 'Cut from the brisket point, this wagyu selection features rich layers of marbling that melt beautifully when cooked. ' +
             'It offers a full-bodied flavor and velvety texture, making it an excellent choice for shabu-shabu enthusiasts who enjoy a rich, hearty taste.',
-        preview: '/assets/images/parts/BeefBrisketPointEnd.png',
+        preview: '/assets/images/parts/Brisket Point end.jpg',
       },
       {
         path: '/assets/images/products/shaSirloinIS.jpeg',
@@ -816,7 +817,7 @@ const shabu = ref([
         subtitle: 'Refined Flavor, Perfectly Balanced Texture',
         description: 'The Shabu Sirloin delivers a smooth and buttery mouthfeel with just the right amount of marbling. ' +
             'Known for its clean, elegant flavor and tenderness, this cut represents the ideal harmony between richness and refinement in Japanese shabu-shabu.',
-        preview: '/assets/images/parts/BeefStriploin.png',
+        preview: '/assets/images/parts/Striploin.jpg',
 
       },
     ]
@@ -830,12 +831,12 @@ const steak = ref([
     subtitle: 'Steak',
     images: [
       {
-        path: '/assets/images/products/stCube.jpg',
+        path: '/assets/images/products/StCerS.jpg',
         alt: '',
-        title: 'Steak Cube Roll',
+        title: 'Steak Chuck Eye Roll',
         subtitle: 'Exceptional Marbling with a Luxurious, Buttery Finish',
-        description: 'Cut from the rib section, the Steak Cube Roll is celebrated for its rich marbling and melt-in-your-mouth tenderness. When seared, the fat renders beautifully, creating a deep, savory flavor that defines premium steak dining.',
-        preview: '/assets/images/parts/BeefCubeRoll.png',
+        description: 'Cut from the rib section, the Steak Chuck Eye Roll is celebrated for its rich marbling and melt-in-your-mouth tenderness. When seared, the fat renders beautifully, creating a deep, savory flavor that defines premium steak dining.',
+        preview: '/assets/images/parts/Chuck Eye Roll.jpg',
       },
       {
         path: '/assets/images/products/stOyster.jpg',
@@ -843,7 +844,7 @@ const steak = ref([
         title: 'Steak Oyster Blade',
         subtitle: 'Fine Grain, Tender Bite, and Robust Flavor',
         description: 'Sourced from the shoulder, the Steak Oyster Blade offers a unique combination of tenderness and flavor depth. Its fine texture and natural juiciness make it ideal for grilling or pan-searing, delivering a rich and satisfying taste.',
-        preview: '/assets/images/parts/BeefOysterBlade.png',
+        preview: '/assets/images/parts/Oyster Blade.jpg',
       },
       {
         path: '/assets/images/products/stRibEye.jpg',
@@ -851,15 +852,15 @@ const steak = ref([
         title: 'Steak Rib Cap',
         subtitle: 'Delicately Tender with Intense Beef Umami',
         description: 'Known as the prized crown of the ribeye, the Steak Rib Cap boasts incredible tenderness and bold marbling. Each bite releases layers of buttery umami flavor, making it one of the most sought-after cuts for true steak connoisseurs.',
-        preview: '/assets/images/parts/BeefRibCap.png',
+        preview: '/assets/images/parts/Rip Cap.jpg',
       },
       {
-        path: '/assets/images/products/stRump.jpg',
+        path: '/assets/images/products/stSIRLOIN.jpg',
         alt: '',
-        title: 'Steak Rump',
+        title: 'Steak Sirloin',
         subtitle: 'Full-Bodied Flavor with a Firm, Juicy Texture',
-        description: 'Cut from the hindquarter, the Steak Rump offers a hearty, beef-forward taste with satisfying chew. It’s a versatile and flavorful cut, perfect for grilling, roasting, or pan-searing to bring out its rich, meaty essence.',
-        preview: '/assets/images/parts/BeefDRump.png',
+        description: 'Sirloin steak is a tender, flavorful cut taken from the rear of the cow, known for its perfect balance of leanness and rich beefy taste. It’s ideal for grilling or pan-searing.',
+        preview: '/assets/images/parts/Striploin.jpg',
       },
     ]
   }

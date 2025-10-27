@@ -66,7 +66,7 @@ const featuredPost =
   description:
       'Mr. Bruce Cheung, Chair and Co-founder of China International Duty Free (CIDF), visited the Nikushiki Melbourne Central store and met with Mr. Kai Gu to exchange ideas on premium wagyu and future collaboration opportunities.',
 
-  imageUrl:'/assets/images/blog/nikicbd.png',
+  imageUrl:'/assets/images/blog/brace.jpg',
 
   date: 'Jun 24 2024',
   datetime: '2024-06-24',

@@ -1,33 +1,43 @@
 <template>
 
   <div class="bg-white py-16">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
-        <div class="w-full lg:max-w-lg lg:flex-auto">
-          <h2 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Contact us</h2>
-          <img src="/assets/images/contactus.jpg" alt="" class="mt-16 aspect-[6/5] w-full rounded-2xl object-cover outline outline-1 -outline-offset-1 outline-black/5 lg:aspect-auto lg:h-[34.5rem]" />
-        </div>
-        <div class="w-full lg:max-w-xl lg:flex-auto">
-          <ul class="-my-8 divide-y divide-yellow-200">
-            <li v-for="opening in jobOpenings" :key="opening.id" class="py-8">
-              <dl class="relative flex flex-wrap gap-x-3">
-                <dt class="sr-only">Role</dt>
-                <dd class="w-full flex-none text-lg font-semibold tracking-tight text-gray-900">
-                  <a :href="opening.href">
-                    {{ opening.office }}
-                    <span class="absolute inset-0" aria-hidden="true" />
-                  </a>
-                </dd>
-                <dt class="sr-only">Description</dt>
-                <dd class="mt-4 w-full text-base/7 font-semibold text-gray-900">{{ opening.location }}</dd>
-                <dd class="mt-4 w-full text-base/7 font-semibold text-gray-900">{{ opening.tel }}</dd>
-                <dd class="mt-4 w-full text-base/7 font-semibold text-gray-900">{{ opening.email }}</dd>
+    <div class="mx-auto max-w-5xl px-6 lg:px-8 text-center">
+      <!-- 标题 -->
+      <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+        Contact us
+      </h2>
 
-              </dl>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <!-- 图片 -->
+      <img
+          src="/assets/images/contact03.jpg"
+          alt="Contact"
+          class="mt-10 w-full  object-cover rounded-2xl "
+      />
+
+
+      <!-- 联系信息 - Grid 布局 + 黄色分割线 -->
+      <ul class="mt-16 grid grid-cols-1 md:grid-cols-4 text-left max-w-6xl mx-auto border-t border-yellow-500">
+        <li
+            v-for="(opening, index) in jobOpenings"
+            :key="opening.id"
+            :class="['py-8 px-6', index !== 0 ? 'md:border-l md:border-yellow-500' : '']"
+        >
+          <dl class="relative flex flex-col gap-1">
+            <dt class="sr-only">Office</dt>
+            <dd class="text-base font-semibold tracking-tight text-gray-900">
+              <a :href="opening.href" class="hover:text-yellow-600 transition-colors">
+                {{ opening.office }}
+                <span class="absolute inset-0" aria-hidden="true" />
+              </a>
+            </dd>
+            <dd class="text-sm  text-gray-900">{{ opening.location }}</dd>
+            <dd class="text-sm  text-gray-900">{{ opening.tel }}</dd>
+            <dd class="text-sm text-gray-900">{{ opening.email }}</dd>
+          </dl>
+        </li>
+      </ul>
+
+
     </div>
   </div>
 
@@ -54,11 +64,19 @@ const jobOpenings = [
   },
   {
     id: 3,
-    office: 'Nikushiki Melbourne Central',
+    office: 'Nikushiki CBD',
     href: '#',
     location: 'Melbourne Central, Shop GD070/360 Elizabeth St, Melbourne VIC 3000',
     email: '',
     tel: ' (03) 9367 9823',
+  },
+  {
+    id: 4,
+    office: 'USHIMATSU Chadstone',
+    href: '#',
+    location: 'G-121 Chadstone Shopping Centre, Dandenong Road, Malvern East VIC',
+    email: '',
+    tel: ' (03) xxxx xxxx',
   },
 ]
 

@@ -193,12 +193,12 @@
       </div>
 
       <!--合作伙伴-->
-      <div v-if="true" class="bg-cyan-500 mt-8">
+      <div v-if="true" class="bg-gray-800 mt-8">
         <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-12 sm:px-6 sm:py-20 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div class="">
             <h2 class=" font-anton text-white text-3xl font-bold tracking-wide  sm:text-4xl dark:text-white uppercase">Partner with World-Class Wagyu Brands</h2>
             <p class="font-lora tracking-wide text-white dark:text-white mt-4 text-xl">
-              Superior Meat proudly partners with Okan Purebred Wagyu and Sher Wagyu Black Label, two of Australia’s most iconic wagyu brands, along with other premier producers. With exclusive supply authorization from these legendary names, Superior Meat enhances their legacy through our precise processing techniques. We are dedicated to preserving the heritage and exceptional quality of these brands, delivering the finest wagyu products directly to our customers.</p>
+              Superior Meat is the appointed distributor for the Australia’s most celebrated wagyu brands — Pardoo Wagyu, Sher Wagyu, JAC Wagyu, Futari, and Oishi Wagyu. In close partnership with these iconic producers, we honor their heritage and craftsmanship, bringing their exceptional wagyu to discerning customers. Through our expert processing and dedication to quality, every cut from Superior Meat delivers the rich flavors, tenderness, and premium experience that these legendary brands are known for.</p>
 
             <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
               <div v-for="feature in features" :key="feature.name" class=" dark:text-white border-t border-yellow-400 pt-4">
@@ -207,23 +207,33 @@
               </div>
             </dl>
           </div>
-          <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8  ">
-            <div class="relative group aspect-square overflow-hidden rounded-lg">
-              <img src="/assets/images/logo/ok.jpg" alt="" class="rounded-lg bg-gray-100 w-full h-full object-cover" />
-              <img src="/assets/images/logo/5.jpg" alt="" class="rounded-lg bg-gray-100 absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+          <div class="grid grid-cols-2 grid-rows-2 gap-2   ">
+            <div class="relative group aspect-square scale-90 overflow-hidden rounded-lg">
+              <img src="/assets/images/logo/ok.jpg" alt="" class="rounded-lg w-full h-full object-cover" />
+              <img src="/assets/images/logo/5.jpg" alt="" class="rounded-lg  absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
             </div>
-            <div  class="relative group aspect-square">
-              <img src="/assets/images/logo/kim.jpg" alt="" class="rounded-lg bg-gray-100 w-full h-full object-cover" />
-              <img src="/assets/images/logo/6.jpg" alt="" class="rounded-lg bg-gray-100 absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+            <div  class="relative group aspect-square scale-90">
+              <img src="/assets/images/logo/sh.jpg" alt="" class="rounded-lg w-full h-full object-cover" />
+              <img src="/assets/images/logo/7.png" alt="" class="rounded-lg  absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
             </div>
-            <div  class="relative group aspect-square">
-              <img src="/assets/images/logo/sh.jpg" alt="" class="rounded-lg bg-gray-100 w-full h-full object-cover" />
-              <img src="/assets/images/logo/7.jpg" alt="" class="rounded-lg bg-gray-100 absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+            <div  class="relative group aspect-square scale-90">
+              <img src="/assets/images/logo/kim.jpg" alt="" class="rounded-lg w-full h-full object-cover" />
+              <img src="/assets/images/logo/6.jpg" alt="" class="rounded-lg absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
             </div>
-            <div  class="relative group aspect-square">
-              <img src="/assets/images/logo/bm.jpg" alt="" class="rounded-lg bg-gray-100 w-full h-full object-cover" />
-              <img src="/assets/images/logo/8.jpg" alt="" class="rounded-lg bg-gray-100 absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+            <div  class="relative group aspect-square scale-90">
+              <img src="/assets/images/logo/jac.png" alt="" class="rounded-lg w-full h-full object-contain" />
+              <img src="/assets/images/logo/8.jpg" alt="" class="rounded-lg absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
             </div>
+
+            <div  class="relative group aspect-square scale-90">
+              <img src="/assets/images/logo/futari.png" alt="" class="rounded-lg w-full h-full object-cover" />
+              <img src="/assets/images/logo/9.jpg" alt="" class="rounded-lg absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+            </div>
+            <div  class="relative group aspect-square scale-90">
+              <img src="/assets/images/logo/oishi.png" alt="" class="rounded-lg w-full h-full object-cover" />
+              <img src="/assets/images/logo/9.jpg" alt="" class="rounded-lg absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
+            </div>
+
           </div>
 
         </div>
@@ -604,9 +614,14 @@ export default {
       };
       const features = ref( [
         { name: 'Okan', description: 'Okan Wagyu is a flagship brand from Western Australia’s Pilbara region.',descriptionCN:'123Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'/assets/images/logo/okanlogo.png' },
-        { name: 'Kimbara', description: 'Kimbara Wagyu offers rich flavour, melt-in-your-mouth tenderness, and smoky aromas.',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-featurhero-features02.jpg' },
         { name: 'Sher', description: 'Australia’s delicious award winning beef produced by the Sher family.',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features04.jpg'},
-        { name: 'Black Market', description: 'Black Market Wagyu is a premium Australian beef brand known for its rich marbling, sourced from Rangers Valley."',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-features03.jpg' },
+        { name: 'Kimbara', description: 'Kimbara Wagyu offers rich flavour, melt-in-your-mouth tenderness, and smoky aromas.',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-featurhero-features02.jpg' },
+        { name: 'JAC', description: 'JAC Wagyu Australia’s Finest Wagyu, Crafted from the Ground Up.',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-featurhero-features02.jpg' },
+        { name: 'Futari', description: ' Fullblood Wagyu in the best Japanese Tradition.',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-featurhero-features02.jpg' },
+        { name: 'OISHI', description: 'Oishi Wagyu crafted to redefine luxury with every cut, every bite, every experience',descriptionCN:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',imageUrl:'https://d1nuow4z6t9ani.cloudfront.net/images/hero/hero-featurhero-features02.jpg' },
+
+
+
       ]);
       const postStore = usePostStore()
       const posts = computed(() => postStore.posts)

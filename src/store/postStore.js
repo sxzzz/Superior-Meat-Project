@@ -9,7 +9,7 @@ export const usePostStore = defineStore('postStore', {
                 title: 'Vicki Sher - Iconic Wagyu Brand SHER',
                 description:
                     'Vicki Sher, the founder of Australia’s legendary wagyu brand SHER Wagyu, recently visited the Nikushiki Glen store. During the visit, she met with Mr. Kai Gu and engaged in a warm exchange about premium wagyu products and the growing collaboration between the two brands.',
-                imageUrl:'/assets/images/blog/03042025.png',
+                imageUrl:'/assets/images/blog/03042025.jpg',
                 date: 'Apr 03 2025',
                 datetime: '2025-04-03',
                 author: {
@@ -22,7 +22,7 @@ export const usePostStore = defineStore('postStore', {
                 title: 'J-LEC 2024 Seminar',
                 description:
                     'Mr. Kai Gu participated in the 2024 seminar “Processing Meat and Cooking Skills of Japanese Wagyu Beef for Exporting Nations”, successfully hosted by the Japan Livestock Products Export Promotion Council (J-LEC).',
-                imageUrl:'assets/images/blog/01112024.png',
+                imageUrl:'assets/images/blog/01112024.jpg',
                 date: 'Nov 01, 2024',
                 datetime: '2024-11-01',
                 author: {
@@ -35,7 +35,7 @@ export const usePostStore = defineStore('postStore', {
                 title: 'J-LEC 2024 Seminar',
                 description:
                     'Mr. Gu’s participation underscores his commitment to bringing authentic Japanese wagyu expertise to his operations and fostering high-quality beef standards for global markets.',
-                imageUrl:'assets/images/blog/01112024JP-1.png',
+                imageUrl:'assets/images/blog/01112024JP-1.jpg',
                 date: 'Nov 01, 2024',
                 datetime: '2024-11-01',
                 author: {
@@ -77,7 +77,7 @@ export const usePostStore = defineStore('postStore', {
                 title: 'Origin Omi Beef Trip',
                 description:
                     'Mr. Kai Gu visited Azuchi-cho, renowned for premium Omi Beef. He toured the farm, observed cattle management, and discussed production techniques with the experts, reflecting his commitment to authentic Japanese wagyu practices.',
-                imageUrl:'assets/images/blog/05092023-1.jpg',
+                imageUrl:'assets/images/blog/05092023.jpg',
                 date: 'Sep 09, 2023',
                 datetime: '2023-09-05',
                 author: {

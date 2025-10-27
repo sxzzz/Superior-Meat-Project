@@ -13,12 +13,12 @@
             <div
                 v-for="shop in shops"
                 :key="shop.name"
-                class="border rounded-lg p-2 shadow cursor-pointer hover:bg-gray-50 border border-gray-300"
+                class="rounded-lg p-2 shadow cursor-pointer hover:bg-gray-50 border border-gray-300"
                 @click="focusOnMap(shop)"
                 @mouseenter="startBounce(shop)"
                 @mouseleave="stopBounce(shop)"
             >
-              <img :src="shop.image" alt="park photo" class="w-full h-48 object-cover rounded" />
+              <img :src="shop.image" alt="park photo" class="w-full h-56 object-cover rounded" />
               <h2 class="text-xl font-bold mt-2">{{ shop.name }}</h2>
               <p class="text-sm text-gray-600">{{ shop.suburb }} · {{ shop.address }}</p>
               <p class="mt-2 text-gray-700">{{ shop.notes }}</p>
